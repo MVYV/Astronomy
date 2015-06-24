@@ -5,8 +5,8 @@
 <body>
 <div id="global_navigation">
     <ul id="global_menu">
-        <li><a href="#">Main</a></li>
-        <li><a href="#">Новини</a></li>
+        <li><a href="#">Maibbbbn</a></li>
+        <li><a href="#">Новиниnnn</a></li>
         <li><a href="#">Клуби</a>
           <!--  <ul>
                 <li><a href="#">Європа</a></li>
