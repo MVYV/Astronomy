@@ -2,7 +2,17 @@
 <html>
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link type="text/css" rel="stylesheet" href="/styles/global_navigation_style.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="WEB-INF/pages/styles/global_navigation_style.css"/>
+    <%--<link type="text/css" rel="stylesheet" href="/styles/global_navigation_style.css">--%>
+    <style type="text/css">
+        #global_menu, #global_menu ul
+        {
+            list-style:none;
+            margin:0px;
+            padding:0px;
+            width:240px;
+        }
+    </style>
 </head>
 <body>
 <div id="global_navigation">
