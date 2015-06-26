@@ -21,7 +21,7 @@
         <div class="main_item"><li><a href="#">Новини</a></li></div>
         <div class="main_item"><li><a href="#">Клуби</a>
           <!--  <ul>
-                <li><a href="#">Європа</a></li>
+                <li><a href="#">Євр,,опа</a></li>
                 <li><a href="#">Латинська Америка</a></li>
                 <li><a href="#">Північна Америка</a></li>
             </ul> -->
