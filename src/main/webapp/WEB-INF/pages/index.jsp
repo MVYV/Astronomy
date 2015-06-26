@@ -5,7 +5,7 @@
 <body>
 <div id="global_navigation">
     <ul id="global_menu">
-        <li><a href="#">Main</a></li>
+        <li><a href="#">M</a></li>
         <li><a href="#">Новиниnnn</a></li>
         <li><a href="#">Клуби</a>
           <!--  <ul>
