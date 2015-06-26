@@ -1,0 +1,7 @@
+#global_menu, #global_menu ul
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    width:240px;
+}
