@@ -12,6 +12,11 @@
             padding:0px;
             width:240px;
         }
+        #global_navigation
+        {
+            margin: 0 auto;
+            
+        }
     </style>
 </head>
 <body>
