@@ -61,7 +61,7 @@
         <li><div class="main_item"><a href="#">7</a></div>
           <!--  <ul>
                 <li><a href="#">Євр,,опа</a></li>
-                <li><a href="#">Латинська Америка</a></li>
+                <li><a href="#">Латинська jfАмерика</a></li>
                 <li><a href="#">Північна Америка</a></li>
             </ul> -->
         </li>
