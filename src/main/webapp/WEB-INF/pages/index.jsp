@@ -67,7 +67,7 @@
         </li>
        <li><div class="main_item"><a href="#">8</a></div>
           <!--  <ul>
-                <li><a href="#">Європа</a></li>
+                <li><a href="#">Європаf</a></li>
                 <li><a href="#">Латинська Америка</a></li>
                 <li><a href="#">Північна Америка</a></li>
                 <li><a href="#">Азія і Океанія</a></li>
