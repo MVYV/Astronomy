@@ -18,12 +18,16 @@
 }
 #global_menu li a
 {
-    float: left;
+    
     display: block;
+    text-align: center;
+    text-decoration: none;
+    color: green;
 }
 .main_item, .main_item_unique
 {
     float: left;
+    text-align: center;
 
 }
 .main_item
