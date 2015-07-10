@@ -24,7 +24,7 @@
        Note that, with Spring 3.0, this tag works in Servlet MVC only!  -->
        <mvc:annotation-driven />
 
-       <mvc:resources mapping="/resources/**" location="/WEB-INF/pages/styles" />
+       <mvc:resources mapping="/resources/**" location="/resources/" />
 
        <!-- Imports datasource configuration -->
        <!--<import resource="spring-data.xml"/>-->

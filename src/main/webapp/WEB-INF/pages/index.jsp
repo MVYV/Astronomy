@@ -2,50 +2,11 @@
 <html>
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <link rel="stylesheet" type="text/css" media="screen" href="WEB-INF/pages/styles/global_navigation_style.css"/>
+    <%--<link rel="stylesheet" type="text/css" media="screen" href="WEB-INF/pages/styles/global_navigation_style.css"/>--%>
     <%--<link type="text/css" rel="stylesheet" href="/styles/global_navigation_style.css">--%>
+    <link href="<c:url value="/resources/css/global_navigation_style.css" />" rel="stylesheet">
     <style type="text/css">
-        #global_menu, #global_menu ul
-        {
-            list-style:none;
-            margin: 0px;
-            padding: 0px;
-        }
-        #global_navigation
-        {
-            width: 700px;
-            height: 420px;
-            border: 1px solid;
-            top: 50%;
-            left: 50%;
-            position: absolute;
-            margin-top: -210px;
-            margin-left: -350px;
-            overflow: hidden;
-        }
-        #global_menu li a
-        {
-            float: left;
-            display: block;
-        }
-        .main_item, .main_item_unique
-        {
-            float: left;
 
-        }
-        .main_item
-        {
-            width: 173px;
-            height: 138px;
-            border: 1px dashed salmon;
-
-        }
-        .main_item_unique
-        {
-            width: 346px;
-            height: 138px;
-            border: 1px dashed salmon;
-        }
     </style>
 </head>
 <body>
