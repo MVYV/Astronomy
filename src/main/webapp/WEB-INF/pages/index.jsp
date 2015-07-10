@@ -28,7 +28,7 @@
             float: left;
             display: block;
         }
-        .main_item, #main_item_unique
+        .main_item, .main_item_unique
         {
             float: left;
 
@@ -40,7 +40,7 @@
             border: 1px dashed salmon;
 
         }
-        #main_item_unique
+        .main_item_unique
         {
             width: 346px;
             height: 138px;
@@ -56,7 +56,7 @@
         <li><div class="main_item"><a href="#">3</a></div></li>
         <li><div class="main_item"><a href="#">4</a></div></li>
         <li><div class="main_item"><a href="#">5</a></div></li>
-        <li><div class="main_item" id="main_item_unique"><a href="#">тутоатуооиуеиупиупуоуоптуиури</a></div></li>
+        <li><div class="main_item_unique"><a href="#">тутоатуооиуеиупиупуоуоптуиури</a></div></li>
         <li><div class="main_item"><a href="#">6</a></div></li>
         <li><div class="main_item"><a href="#">7</a></div>
           <!--  <ul>
