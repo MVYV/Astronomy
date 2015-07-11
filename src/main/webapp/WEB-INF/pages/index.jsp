@@ -17,7 +17,7 @@
         <li><div class="main_item"><a href="#">3</a></div></li>
         <li><div class="main_item"><a href="#">4</a></div></li>
         <li><div class="main_item"><a href="#">5</a></div></li>
-        <li><div class="main_item_unique"><a href="#">тутоатуооиуеиупиупуоуоптуиури</a></div></li>
+        <li><div class="main_item_unique"><a href="/planets">тутоатуооиуеиупиупуоуоптуиури</a></div></li>
         <li><div class="main_item"><a href="#">6</a></div></li>
         <li><div class="main_item"><a href="#">7</a></div>
           <!--  <ul>
