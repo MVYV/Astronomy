@@ -3,10 +3,33 @@
 <html>
 <head>
     <title></title>
+    <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+    <script src="<c:url value='/resources/js/jquery.js' />" ></script>
+    <script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>
 </head>
 <body>
+<div class="container">
+    <h2>Planets</h2>
+    <p>Planets of Solar system:</p>
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Satellites number</th>
+            <th>Radius</th>
+        </tr>
+        </thead>
 <c:forEach var="num" items="${planetsList}">
-    <p>${num.name} ${num.satellites} ${num.radius}</p>
+    <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
+        <tbody>
+        <tr>
+            <td>${num.name}</td>
+            <td>${num.satellites}</td>
+            <td>${num.radius}</td>
+        </tr>
 </c:forEach>
+        </tbody>
+    </table>
+</div>
 </body>
 </html>
