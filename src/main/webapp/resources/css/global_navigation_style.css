@@ -8,7 +8,7 @@
 {
     width: 700px;
     height: 420px;
-    border: 1px solid;
+    border: 2px solid;
     top: 50%;
     left: 50%;
     position: absolute;
@@ -18,7 +18,7 @@
 }
 #global_menu li a
 {
-    
+
     display: block;
     text-align: center;
     text-decoration: none;
