@@ -1,45 +1,72 @@
-#global_menu, #global_menu ul
+@font-face
 {
-    list-style:none;
-    margin: 0px;
-    padding: 0px;
+    font-family: 'bodonitown';
+    src: url('/resources/fonts/bodonitown.eot');
+    src: url('/resources/fonts/bodonitown.eot?#iefix') format('embedded-opentype'),
+    url('/resources/fonts/bodonitown.woff') format('woff'),
+    url('/resources/fonts/bodonitown.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'bree serif';
+    src: url('/resources/fonts/breeserif_reg.eot');
+    src: url('/resources/fonts/breeserif_reg.eot?#iefix') format('embedded-opentype'),
+    url('/resources/fonts/breeserif_reg.woff') format('woff'),
+    url('/resources/fonts/breeserif_reg.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face
+{
+    font-family: 'corduroy';
+    src: url('/resources/fonts/corduroy-regular.eot');
+    src: url('/resources/fonts/corduroy-regular.eot?#iefix') format('embedded-opentype'),
+    url('/resources/fonts/corduroy-regular.woff') format('woff'),
+    url('/resources/fonts/corduroy-regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
 }
 #global_navigation
 {
-    width: 700px;
-    height: 420px;
-    border: 2px solid;
+    min-width: 700px;
+    min-height: 420px;
+    border: 1px solid;
     top: 50%;
     left: 50%;
     position: absolute;
     margin-top: -210px;
     margin-left: -350px;
     overflow: hidden;
+    box-sizing: border-box;
 }
-#global_menu li a
+.navigation_button, .navigation_button_unique
 {
-
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    color: green;
-}
-.main_item, .main_item_unique
-{
+    border: 1px solid #000000;
     float: left;
     text-align: center;
-
+    box-sizing: border-box;
 }
-.main_item
+.navigation_button
 {
-    width: 173px;
-    height: 138px;
-    border: 1px dashed salmon;
-
+    width: 25%;
+    height: 140px;
 }
-.main_item_unique
+.navigation_button_unique
 {
-    width: 346px;
-    height: 138px;
-    border: 1px dashed salmon;
+    width: 50%;
+    height: 140px;
+}
+.container_four
+{
+    overflow: hidden;
+}
+.navigation_button a
+{
+    font-family: "corduroy";
+    text-decoration: none;
+    color: darkslategrey;
+    display: block;
+    background-color: gainsboro;
 }
