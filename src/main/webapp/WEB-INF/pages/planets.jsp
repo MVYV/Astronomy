@@ -6,15 +6,16 @@
     <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
     <script src="<c:url value='/resources/js/jquery.js' />" ></script>
     <script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>
+    <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
 </head>
 <body>
 <div class="container">
     <h2>Planets</h2>
-    <p>Planets of Solar system:</p>
+    <p>Planets of The Solar system:</p>
     <table class="table table-striped">
         <thead>
         <tr>
-            <th>Name</th>
+            <th id="name" name="name">Name</th>
             <th>Satellites number</th>
             <th>Radius</th>
         </tr>
@@ -23,7 +24,7 @@
     <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
         <tbody>
         <tr>
-            <td>${num.name}</td>
+            <td onclick="getAbout()">${num.name}</td>
             <td>${num.satellites}</td>
             <td>${num.radius}</td>
         </tr>
