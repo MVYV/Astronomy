@@ -2,8 +2,8 @@ package com.mandy.astronomy.entity;
 
 import javax.persistence.*;
 
-@Entity(name = "planets")
-public class Planets {
+@Entity(name = "stars")
+public class Stars {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -13,20 +13,20 @@ public class Planets {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "satellites")
-    private int satellites;
+    @Column(name = "distance")
+    private String distance;
 
     @Column(name = "radius")
-    private double radius;
+    private String radius;
 
     @Column(name = "about")
     private String about;
 
-    public Planets(){}
+    public Stars(){}
 
-    public Planets(String name, int satellites, double radius,String about){
+    public Stars(String name, String distance, String radius, String about){
         this.name = name;
-        this.satellites = satellites;
+        this.distance = distance;
         this.radius = radius;
         this.about = about;
     }
@@ -47,19 +47,19 @@ public class Planets {
         return name;
     }
 
-    public void setSatellites(int satellites){
-        this.satellites = satellites;
+    public void setDistance(String distance1){
+        this.distance = distance1;
     }
 
-    public int getSatellites(){
-        return satellites;
+    public String getDistance(){
+        return distance;
     }
 
-    public void setRadius(double radius){
+    public void setRadius(String radius){
         this.radius = radius;
     }
 
-    public double getRadius(){
+    public String getRadius(){
         return radius;
     }
 
