@@ -14,7 +14,7 @@
     <div class="container_four">
         <div class="navigation_button"><a href="#">NEWS</a></div>
         <div class="navigation_button"><a href="#">PUBLICATIONS</a></div>
-        <div class="navigation_button"><a href="#">PLANETS</a></div>
+        <div class="navigation_button"><a href="/WEB-INF/pages/planets.jsp">PLANETS</a></div>
         <div class="navigation_button"><a href="#">STARS</a></div>
     </div>
     <div class="container_four">
