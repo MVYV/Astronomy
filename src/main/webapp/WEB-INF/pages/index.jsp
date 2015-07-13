@@ -11,33 +11,23 @@
 </head>
 <body>
 <div id="global_navigation">
-    <ul id="global_menu">
-        <li><div class="main_item"><a href="#">1</a></div></li>
-        <li><div class="main_item"><a href="#">2</a></div></li>
-        <li><div class="main_item"><a href="#">3</a></div></li>
-        <li><div class="main_item"><a href="#">4</a></div></li>
-        <li><div class="main_item"><a href="#">5</a></div></li>
-        <li><div class="main_item_unique"><a href="/planets">тутоатуооиуеиупиупуоуоптуиури</a></div></li>
-        <li><div class="main_item"><a href="#">6</a></div></li>
-        <li><div class="main_item"><a href="#">7</a></div>
-          <!--  <ul>
-                <li><a href="#">Євр,,опа</a></li>
-                <li><a href="#">Латинська Америка</a></li>
-                <li><a href="#">Північна Америка</a></li>
-            </ul> -->
-        </li>
-       <li><div class="main_item"><a href="#">8</a></div>
-          <!--  <ul>
-                <li><a href="#">Європаf</a></li>
-                <li><a href="#">Латинська Америка</a></li>
-                <li><a href="#">Північна Америка</a></li>
-                <li><a href="#">Азія і Океанія</a></li>
-                <li><a href="#">Африка</a></li>
-            </ul> -->
-        </li>
-        <li><div class="main_item"><a href="#">9</a></div></li>
-        <li><div class="main_item"><a href="#">10</a></div></li>
-    </ul>
+    <div class="container_four">
+        <div class="navigation_button"><a href="#">NEWS</a></div>
+        <div class="navigation_button"><a href="#">PUBLICATIONS</a></div>
+        <div class="navigation_button"><a href="#">PLANETS</a></div>
+        <div class="navigation_button"><a href="#">STARS</a></div>
+    </div>
+    <div class="container_four">
+        <div class="navigation_button"><a href="#">SATELLITES</a></div>
+        <div class="navigation_button_unique"></div>
+        <div class="navigation_button"><a href="#">SOLAR SYSTEM</a></div>
+    </div>
+    <div class="container_four">
+        <div class="navigation_button"><a href="#">GALAXIES</a></div>
+        <div class="navigation_button"><a href="#">UNIVERSE</a></div>
+        <div class="navigation_button"><a href="#">ABOUT</a></div>
+        <div class="navigation_button"><a href="#">SIGN IN</a></div>
+    </div>
 </div>
 
 
