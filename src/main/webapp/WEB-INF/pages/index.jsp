@@ -5,9 +5,7 @@
     <%--<link rel="stylesheet" type="text/css" media="screen" href="WEB-INF/pages/styles/global_navigation_style.css"/>--%>
     <%--<link type="text/css" rel="stylesheet" href="/styles/global_navigation_style.css">--%>
     <link href="<c:url value="/resources/css/global_navigation_style.css" />" rel="stylesheet">
-    <style type="text/css">
 
-    </style>
 </head>
 <body>
 <div id="global_navigation">
@@ -22,8 +20,7 @@
         </div>
         <div class="navigation_button">
             <div class="link_part"><a href="/planets">PLANETS</a></div>
-            <div class="image_part"><!--<img src="/resources/images/planet.png" onmouseover="this.src='/resources/images/planet_over.png'"
-                                                                            onmouseout="this.src='/resources/images/planet.png'"></div>-->
+            <div class="image_part"></div>
         </div>
         <div class="navigation_button">
             <div class="link_part"><a href="/stars">STARS</a></div>
