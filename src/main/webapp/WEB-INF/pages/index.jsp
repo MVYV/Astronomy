@@ -22,8 +22,8 @@
         </div>
         <div class="navigation_button">
             <div class="link_part"><a href="/planets">PLANETS</a></div>
-            <div class="image_part"><img src="/resources/images/planet.png" onmouseover="this.src='/resources/images/planet_over.png'"
-                                                                            onmouseout="this.src='/resources/images/planet.png'"></div>
+            <div class="image_part"><!--<img src="/resources/images/planet.png" onmouseover="this.src='/resources/images/planet_over.png'"
+                                                                            onmouseout="this.src='/resources/images/planet.png'"></div>-->
         </div>
         <div class="navigation_button">
             <div class="link_part"><a href="/stars">STARS</a></div>
