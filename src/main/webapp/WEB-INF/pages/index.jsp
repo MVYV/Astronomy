@@ -12,21 +12,52 @@
 <body>
 <div id="global_navigation">
     <div class="container_four">
-        <div class="navigation_button"><a href="#">NEWS</a></div>
-        <div class="navigation_button"><a href="#">PUBLICATIONS</a></div>
-        <div class="navigation_button"><a href="/planets">PLANETS</a></div>
-        <div class="navigation_button"><a href="/stars">STARS</a></div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">NEWS</a></div>
+            <div class="image_part"></div>
+        </div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">PUBLICATIONS</a></div>
+            <div class="image_part"></div>
+        </div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="/planets">PLANETS</a></div>
+            <div class="image_part"><img src="/resources/images/planet.png" onmouseover="this.src='/resources/images/planet_over.png'"
+                                                                            onmouseout="this.src='/resources/images/planet.png'"></div>
+        </div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="/stars">STARS</a></div>
+            <div class="image_part"></div>
+        </div>
     </div>
     <div class="container_four">
-        <div class="navigation_button"><a href="#">SATELLITES</a></div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">SATELLITES</a></div>
+            <div class="image_part"></div>
+        </div>
         <div class="navigation_button_unique"></div>
-        <div class="navigation_button"><a href="#">SOLAR SYSTEM</a></div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">SOLAR SYSTEM</a></div>
+            <div class="image_part"></div>
+        </div>
     </div>
     <div class="container_four">
-        <div class="navigation_button"><a href="#">GALAXIES</a></div>
-        <div class="navigation_button"><a href="#">UNIVERSE</a></div>
-        <div class="navigation_button"><a href="#">ABOUT</a></div>
-        <div class="navigation_button"><a href="#">SIGN IN</a></div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">GALAXIES</a></div>
+            <div class="image_part"></div>
+        </div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">UNIVERSE</a></div>
+            <div class="image_part"></div>
+        </div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">ABOUT</a></div>
+            <div class="image_part"></div>
+        </div>
+        <div class="navigation_button">
+            <div class="link_part"><a href="#">SIGN IN</a></div>
+            <div class="image_part"></div>
+        </div>
     </div>
 </div>
 

@@ -67,6 +67,29 @@
     font-family: "corduroy";
     text-decoration: none;
     color: darkslategrey;
-    display: block;
     background-color: gainsboro;
+    font-size: 100%;
+    display: block;
+    padding-top: 15px;
+}
+.link_part, .image_part
+{
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+}
+.link_part
+{
+    border: 1px solid #000000;
+    height: 25%;
+}
+.image_part
+{
+    background-color: ivory;
+    height: 75%;
+}
+.image_part img
+{
+    width: 75%;
+    height: 100%;
 }
