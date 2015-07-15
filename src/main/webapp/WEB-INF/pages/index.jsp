@@ -1,10 +1,11 @@
-﻿<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <%--<link rel="stylesheet" type="text/css" media="screen" href="WEB-INF/pages/styles/global_navigation_style.css"/>--%>
-    <%--<link type="text/css" rel="stylesheet" href="/styles/global_navigation_style.css">--%>
-    <link href="<c:url value="/resources/css/global_navigation_style.css" />" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
+    <%--<link href="<c:url value="/resources/css/global_navigation_style.css" />" rel="stylesheet">--%>
 
 </head>
 <body>
