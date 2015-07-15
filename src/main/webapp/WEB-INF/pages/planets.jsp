@@ -3,7 +3,7 @@
 <html>
 <head>
     <title></title>
-    <link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
+    <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
     <script src="<c:url value='/resources/js/jquery.js' />" ></script>
     <script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
@@ -24,7 +24,7 @@
     <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
         <tbody>
         <tr>
-            <td onclick="getAbout()">${num.name}</td>
+            <td name="name"><a href="/about">${num.name}</a></td>
             <td>${num.satellites}</td>
             <td>${num.radius}</td>
         </tr>
