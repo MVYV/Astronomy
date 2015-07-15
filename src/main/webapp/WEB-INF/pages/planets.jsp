@@ -15,7 +15,7 @@
     <table class="table table-striped">
         <thead>
         <tr>
-            <th id="name" name="name">Name</th>
+            <th>Name</th>
             <th>Satellites number</th>
             <th>Radius</th>
         </tr>
@@ -24,7 +24,7 @@
     <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
         <tbody>
         <tr>
-            <td name="name"><a href="/about">${num.name}</a></td>
+            <td><a href="/about" name="name">${num.name}</a></td>
             <td>${num.satellites}</td>
             <td>${num.radius}</td>
         </tr>
