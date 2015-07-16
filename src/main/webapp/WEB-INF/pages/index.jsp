@@ -9,52 +9,42 @@
 
 </head>
 <body>
-<div id="global_navigation">
+<div id="global_nav">
     <div class="container_four">
         <div class="navigation_button">
-            <div class="link_part"><a href="#">NEWS</a></div>
-            <div class="image_part"></div>
+            <a href="#">NEWS</a>
         </div>
         <div class="navigation_button">
-            <div class="link_part"><a href="#">PUBLICATIONS</a></div>
-            <div class="image_part"></div>
+            <a href="#">PUBLICATIONS</a>
         </div>
         <div class="navigation_button">
-            <div class="link_part"><a href="/planets">PLANETS</a></div>
-            <div class="image_part"></div>
+            <a href="/planets">PLANETS</a>
         </div>
         <div class="navigation_button">
-            <div class="link_part"><a href="/stars">STARS</a></div>
-            <div class="image_part"></div>
+            <a href="/stars">STARS</a>
         </div>
     </div>
     <div class="container_four">
         <div class="navigation_button">
-            <div class="link_part"><a href="#">SATELLITES</a></div>
-            <div class="image_part"></div>
+            <a href="#">SATELLITES</a>
         </div>
         <div class="navigation_button_unique"></div>
         <div class="navigation_button">
-            <div class="link_part"><a href="#">SOLAR SYSTEM</a></div>
-            <div class="image_part"></div>
+            <a href="#">SOLAR SYSTEM</a>
         </div>
     </div>
     <div class="container_four">
         <div class="navigation_button">
-            <div class="link_part"><a href="#">GALAXIES</a></div>
-            <div class="image_part"></div>
+            <a href="#">GALAXIES</a>
         </div>
         <div class="navigation_button">
-            <div class="link_part"><a href="#">UNIVERSE</a></div>
-            <div class="image_part"></div>
+            <a href="#">UNIVERSE</a>
         </div>
         <div class="navigation_button">
-            <div class="link_part"><a href="#">ABOUT</a></div>
-            <div class="image_part"></div>
+            <a href="#">ABOUT</a>
         </div>
         <div class="navigation_button">
-            <div class="link_part"><a href="#">SIGN IN</a></div>
-            <div class="image_part"></div>
+            <a href="#">SIGN IN</a>
         </div>
     </div>
 </div>
