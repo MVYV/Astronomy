@@ -8,7 +8,7 @@
     font-weight: normal;
     font-style: normal;
 }
-#global_navigation
+#global_nav
 {
     min-width: 700px;
     min-height: 420px;
@@ -32,6 +32,7 @@
 {
     width: 25%;
     height: 140px;
+    display: table;
 }
 .navigation_button_unique
 {
@@ -46,10 +47,28 @@
 {
     font-family: "corduroy";
     text-decoration: none;
-    color: darkslategrey;
-    background-color: gainsboro;
-    font-size: 100%;
-    display: block;
-    padding-top: 15px;
+    color: #2f4f4f;
+    background: #dbdbdb;
+    background: -moz-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    background: -webkit-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    background: -o-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    background: -ms-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    background: linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    font-size: 20px;
+    display: table-cell;
+    padding: 10% 0;
     height: 100%;
+    vertical-align: middle;
+}
+.navigation_button a:hover
+{
+    color: #ffff00;
+    text-shadow: 0 0 30px #ffff88;
+    background: #2f4f4f;
+    background: -moz-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
+    background: -webkit-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
+    background: -o-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
+    background: -ms-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
+    background: linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
+
 }
