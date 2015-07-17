@@ -3,9 +3,9 @@
 <html>
 <head>
     <title></title>
-    <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
+    <%--<link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">--%>
     <%--<script src="<c:url value='/resources/js/jquery.js' />" ></script>--%>
-    <script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>
+    <%--<script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>--%>
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
 </head>
 <body>
@@ -25,8 +25,12 @@
         <tbody>
         <tr>
             <td>
-                <c:set var="about" scope="application" value="${num.about}" />
-                <a href="/about" name="name">${num.name}</a>
+                <%--<c:set var="about" scope="application" value="${num.about}" />--%>
+                    <%--<c:url value="/about" var="myURL">--%>
+                        <%--<c:param name="trackingId" value="1234"/>--%>
+                        <%--<c:param name="reportType" value="summary"/>--%>
+                    <%--</c:url>--%>
+                <a href="/about?&name=${num.name}">${num.name}</a>
 
             </td>
             <td>${num.satellites}</td>

@@ -7,6 +7,6 @@
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
 </head>
 <body>
-<c:out value="${about}" />
+${planet.about}
 </body>
 </html>
