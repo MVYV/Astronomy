@@ -3,10 +3,10 @@
 <html>
 <head>
     <title></title>
-    <script src="<c:url value='/resources/js/jquery.js' />" ></script>
+    <%--<script src="<c:url value='/resources/js/jquery.js' />" ></script>--%>
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
 </head>
 <body>
-<p>${about}</p>
+<c:out value="${about}" />
 </body>
 </html>

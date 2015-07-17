@@ -4,7 +4,7 @@
 <head>
     <title></title>
     <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
-    <script src="<c:url value='/resources/js/jquery.js' />" ></script>
+    <%--<script src="<c:url value='/resources/js/jquery.js' />" ></script>--%>
     <script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
 </head>
@@ -24,7 +24,11 @@
     <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
         <tbody>
         <tr>
-            <td><a href="/about" name="name">${num.name}</a></td>
+            <td>
+                <c:set var="about" scope="application" value="${num.about}" />
+                <a href="/about" name="name">${num.name}</a>
+
+            </td>
             <td>${num.satellites}</td>
             <td>${num.radius}</td>
         </tr>
