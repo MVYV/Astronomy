@@ -27,7 +27,7 @@ public class RootController {
         return "about";
     }
 
-    @RequestMapping(value = "/aboutc", method = RequestMethod.GET)
+    @RequestMapping(value = "/about", method = RequestMethod.GET)
     public @ResponseBody
     Planets getAbout(
             @RequestParam(value = "name", required = true) String name)
