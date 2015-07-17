@@ -22,7 +22,12 @@ public class RootController {
         return "index";
     }
 
-    @RequestMapping(value = "/about", method = RequestMethod.POST)
+    @RequestMapping(value = "/about")
+    public String getAbout(){
+        return "about";
+    }
+
+    @RequestMapping(value = "/aboutc", method = RequestMethod.GET)
     public @ResponseBody
     Planets getAbout(
             @RequestParam(value = "name", required = true) String name)
