@@ -44,19 +44,40 @@
             <a href="#">ABOUT</a>
         </div>
         <div class="navigation_button">
-            <a href="#">SIGN IN</a>
+            <a href="#modal_enter">SIGN IN</a>
         </div>
     </div>
 </div>
 
+<div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
+    <div><a href="#close" title="Закрити" class="close">X</a>
+         <form id="contact_form" action="#" method="post">																												<!-- Форма авторизації -->
+            	<table width="400" border="0">																															<!-- Таблиця для розміщення ел. форми -->
+                    <tr>																																				<!-- Рядок -->
+                        <td>
+                           <input type="text" name="name" placeholder="Please enter your name:" id="user_name" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="password" name="pass" placeholder="Please enter your password:" id="pass" value="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="Sign in" id="sub_button"   />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="#" id="autorization_link">Autorization</a>
+                        </td>
+                    </tr>
+                </table>
+         </form>
+    </div>
+</div>
 
 
-<?php
-/**
- * Created by PhpStorm.
- * User: Вальків
- * Date: 19.06.2015
- * Time: 19:47
- */?>
 </body>
 </html>
