@@ -9,46 +9,47 @@
 
 </head>
 <body>
-<div id="global_nav">
-    <div class="container_four">
-        <div class="navigation_button">
-            <a href="#">NEWS</a>
+<div id="main_global">
+    <div id="global_nav">
+        <div class="container_four">
+            <div class="navigation_button">
+                <a href="#">NEWS</a>
+            </div>
+            <div class="navigation_button">
+                <a href="#">PUBLICATIONS</a>
+            </div>
+            <div class="navigation_button">
+                <a href="/planets">PLANETS</a>
+            </div>
+            <div class="navigation_button">
+                <a href="/stars">STARS</a>
+            </div>
         </div>
-        <div class="navigation_button">
-            <a href="#">PUBLICATIONS</a>
+        <div class="container_four">
+            <div class="navigation_button">
+                <a href="#">SATELLITES</a>
+            </div>
+            <div class="navigation_button_unique"></div>
+            <div class="navigation_button">
+                <a href="#">SOLAR SYSTEM</a>
+            </div>
         </div>
-        <div class="navigation_button">
-            <a href="/planets">PLANETS</a>
-        </div>
-        <div class="navigation_button">
-            <a href="/stars">STARS</a>
-        </div>
-    </div>
-    <div class="container_four">
-        <div class="navigation_button">
-            <a href="#">SATELLITES</a>
-        </div>
-        <div class="navigation_button_unique"></div>
-        <div class="navigation_button">
-            <a href="#">SOLAR SYSTEM</a>
-        </div>
-    </div>
-    <div class="container_four">
-        <div class="navigation_button">
-            <a href="#">GALAXIES</a>
-        </div>
-        <div class="navigation_button">
-            <a href="#">UNIVERSE</a>
-        </div>
-        <div class="navigation_button">
-            <a href="#">ABOUT</a>
-        </div>
-        <div class="navigation_button">
-            <a href="#modal_enter">SIGN IN</a>
+        <div class="container_four">
+            <div class="navigation_button">
+                <a href="#">GALAXIES</a>
+            </div>
+            <div class="navigation_button">
+                <a href="#">UNIVERSE</a>
+            </div>
+            <div class="navigation_button">
+                <a href="#">ABOUT</a>
+            </div>
+            <div class="navigation_button">
+                <a href="#modal_enter">SIGN IN</a>
+            </div>
         </div>
     </div>
 </div>
-
 <div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
     <div><a href="#close" title="Закрити" class="close">X</a>
          <form id="contact_form" action="#" method="post">																												<!-- Форма авторизації -->

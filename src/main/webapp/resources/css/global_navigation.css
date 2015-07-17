@@ -8,6 +8,18 @@
     font-weight: normal;
     font-style: normal;
 }
+#main_global
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: url('/resources/images/main.jpeg');
+    background-size: cover;
+    background-attachment: fixed;
+}
 #global_nav
 {
     min-width: 700px;
@@ -38,6 +50,7 @@
 {
     width: 50%;
     height: 140px;
+    opacity: 0;
 }
 .container_four
 {
@@ -64,12 +77,13 @@
 {
     color: #ffff00;
     text-shadow: 0 0 30px #ffff88;
-    background: #2f4f4f;
+    background: rgba(0, 0, 0, 0);
+    /*background: #2f4f4f;
     background: -moz-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
     background: -webkit-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
     background: -o-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
     background: -ms-linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
-    background: linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);
+    background: linear-gradient(top, #1c1c1c 0%, #2f4f4f 50%, #000000 100%);*/
 }
 .enter
 {
