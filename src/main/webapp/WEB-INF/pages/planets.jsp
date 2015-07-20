@@ -20,24 +20,17 @@
             <th>Radius</th>
         </tr>
         </thead>
-<c:forEach var="num" items="${planetsList}">
-    <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
-        <tbody>
-        <tr>
-            <td>
-                <%--<c:set var="about" scope="application" value="${num.about}" />--%>
-                    <%--<c:url value="/about" var="myURL">--%>
-                        <%--<c:param name="trackingId" value="1234"/>--%>
-                        <%--<c:param name="reportType" value="summary"/>--%>
-                    <%--</c:url>--%>
-                <a href="/about?&name=${num.name}">${num.name}</a>
-
-            </td>
-            <td>${num.satellites}</td>
-            <td>${num.radius}</td>
-        </tr>
-</c:forEach>
-        </tbody>
+        <c:forEach var="num" items="${planetsList}">
+            <tbody>
+            <tr>
+                <td>
+                    <a href="/about?name=${num.name}">${num.name}</a>
+                </td>
+                <td>${num.satellites}</td>
+                <td>${num.radius}</td>
+            </tr>
+            </tbody>
+        </c:forEach>
     </table>
 </div>
 </body>

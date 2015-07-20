@@ -23,7 +23,9 @@
       <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
     <tbody>
     <tr>
-      <td>${num.name}</td>
+      <td>
+        <a href="/about?name=${num.name}">${num.name}</a>
+      </td>
       <td>${num.distance}</td>
       <td>${num.radius}</td>
     </tr>
