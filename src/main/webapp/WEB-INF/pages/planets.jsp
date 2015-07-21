@@ -24,7 +24,7 @@
             <tbody>
             <tr>
                 <td>
-                    <a href="/about?name=${num.name}">${num.name}</a>
+                    <a href="/about?name=${num.name}&page=planets">${num.name}</a>
                 </td>
                 <td>${num.satellites}</td>
                 <td>${num.radius}</td>

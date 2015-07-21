@@ -3,9 +3,9 @@
 <html>
 <head>
   <title></title>
-  <link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">
-  <script src="<c:url value='/resources/js/jquery.js' />" ></script>
-  <script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>
+  <%--<link href="<c:url value="/resources/css/bootstrap.css" />" rel="stylesheet">--%>
+  <%--<script src="<c:url value='/resources/js/jquery.js' />" ></script>--%>
+  <%--<script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>--%>
 </head>
 <body>
 <div class="container">
@@ -24,7 +24,7 @@
     <tbody>
     <tr>
       <td>
-        <a href="/about?name=${num.name}">${num.name}</a>
+        <a href="/about?name=${num.name}&page=stars">${num.name}</a>
       </td>
       <td>${num.distance}</td>
       <td>${num.radius}</td>
