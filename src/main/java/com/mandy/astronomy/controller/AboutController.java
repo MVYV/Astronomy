@@ -1,7 +1,9 @@
 package com.mandy.astronomy.controller;
 
 import com.mandy.astronomy.entity.Planets;
+import com.mandy.astronomy.entity.Stars;
 import com.mandy.astronomy.service.PlanetsService;
+import com.mandy.astronomy.service.StarsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -17,13 +19,36 @@ public class AboutController {
     @Autowired
     private PlanetsService planetsService;
 
+    @Autowired
+    private StarsService starsService;
+
     @RequestMapping(value = "/about", method = RequestMethod.GET)
-    public String getAbout(
-            @RequestParam("name") String name, Model model)
+    public String getPlanet(
+            @RequestParam("name") String name,
+            @RequestParam("page") String page, Model model)
     {
-        Planets planet = planetsService.getByName(name);
-        String about = planet.getAbout();
-        model.addAttribute("about", about);
+        String about;
+        if (page.equals("planets")){
+            Planets planet = planetsService.getByName(name);
+            about = planet.getAbout();
+            model.addAttribute("about", about);
+            return "about";
+        }else if (page.equals("stars")){
+            Stars star = starsService.getByName(name);
+            about = star.getAbout();
+            model.addAttribute("about", about);
+            return "about";
+        }
         return "about";
     }
+
+//    @RequestMapping(value = "/about", method = RequestMethod.GET)
+//    public String getStar(
+//        @RequestParam("name") String name, Model model)
+//    {
+//        Stars star = starsService.getByName(name);
+//        String about = star.getAbout();
+//        model.addAttribute("about", about);
+//        return "about";
+//    }
 }
