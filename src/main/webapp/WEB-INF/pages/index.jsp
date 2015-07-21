@@ -36,7 +36,7 @@
         </div>
         <div class="container_four">
             <div class="navigation_button">
-                <a href="#">GALAXIES</a>
+                <a href="/galaxies">GALAXIES</a>
             </div>
             <div class="navigation_button">
                 <a href="#">UNIVERSE</a>
