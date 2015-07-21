@@ -1,7 +1,9 @@
 package com.mandy.astronomy.controller;
 
+import com.mandy.astronomy.entity.Galaxies;
 import com.mandy.astronomy.entity.Planets;
 import com.mandy.astronomy.entity.Stars;
+import com.mandy.astronomy.service.GalaxiesService;
 import com.mandy.astronomy.service.PlanetsService;
 import com.mandy.astronomy.service.StarsService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +24,9 @@ public class AboutController {
     @Autowired
     private StarsService starsService;
 
+    @Autowired
+    private GalaxiesService galaxiesService;
+
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String getPlanet(
             @RequestParam("name") String name,
@@ -36,6 +41,11 @@ public class AboutController {
         }else if (page.equals("stars")){
             Stars star = starsService.getByName(name);
             about = star.getAbout();
+            model.addAttribute("about", about);
+            return "about";
+        }else if (page.equals("galaxies")){
+            Galaxies galaxy = galaxiesService.getByName(name);
+            about = galaxy.getAbout();
             model.addAttribute("about", about);
             return "about";
         }
