@@ -22,6 +22,11 @@ public class RootController {
         return "index";
     }
 
+    @RequestMapping(value = "/linear_navigation")
+    public String getlinear_navigation(){
+        return "linear_navigation";
+    }
+
 //    @RequestMapping(value = "/about")
 //    public String getAbout(){
 //        return "about";
