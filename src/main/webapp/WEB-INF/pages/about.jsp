@@ -7,7 +7,7 @@
     <%--<script src="<c:url value='/resources/js/getAbout.js' />" ></script>--%>
 </head>
 <body>
-<p>${planet.about}</p>
+<jsp:include page="linear_navigation.jsp"></jsp:include>
 <p><%= request.getAttribute("about")%></p>
 </body>
 </html>

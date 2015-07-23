@@ -8,6 +8,7 @@
   <%--<script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>--%>
 </head>
 <body>
+<jsp:include page="linear_navigation.jsp"></jsp:include>
 <div class="container">
   <h2>Stars</h2>
   <p>Stars in The Milky Way</p>
@@ -20,7 +21,6 @@
     </tr>
     </thead>
     <c:forEach var="num" items="${starsList}">
-      <%--<p>${num.name} ${num.satellites} ${num.radius}</p>--%>
     <tbody>
     <tr>
       <td>

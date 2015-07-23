@@ -9,6 +9,7 @@
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
 </head>
 <body>
+<jsp:include page="linear_navigation.jsp"></jsp:include>
 <div class="container">
     <h2>Planets</h2>
     <p>Planets of The Solar system:</p>
