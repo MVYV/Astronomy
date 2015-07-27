@@ -13,7 +13,7 @@ public class Users {
     @Column(name = "name")
     private String name;
 
-    @Column(name = "e-mail")
+    @Column(name = "email")
     private String email;
 
     @Column(name = "password")
@@ -79,7 +79,5 @@ public class Users {
         this.city = city;
     }
 
-    public String getCity(){
-        return city;
-    }
+    public String getCity(){ return city; }
 }
