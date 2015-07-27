@@ -6,6 +6,7 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
 </head>
 <body>
+<div id="ln_container">
 <ul id="nav">
     <li><a href="/" title="Return to main page">HOME</a></li>
     <li><a href="#" title="About us">ABOUT</a>
@@ -28,5 +29,6 @@
     <li><a href="#" title="">UNIVERSE</a></li>
     <li><a href="#" title="">SIGN IN</a></li>
 </ul>
+</div>
 </body>
 </html>
