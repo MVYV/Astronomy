@@ -7,19 +7,19 @@ public class Galaxies {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "galaxies_id")
     private long id;
 
-    @Column(name = "name")
+    @Column(name = "galaxies_name")
     private String name;
 
-    @Column(name = "distance")
+    @Column(name = "galaxies_distance")
     private String distance;
 
-    @Column(name = "type")
+    @Column(name = "galaxies_type")
     private String type;
 
-    @Column(name = "about")
+    @Column(name = "galaxies_about")
     private String about;
     
     public Galaxies(){}

@@ -7,19 +7,19 @@ public class Stars {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "stars_id")
     private long id;
 
-    @Column(name = "name")
+    @Column(name = "stars_name")
     private String name;
 
-    @Column(name = "distance")
+    @Column(name = "stars_distance")
     private String distance;
 
-    @Column(name = "radius")
+    @Column(name = "stars_radius")
     private String radius;
 
-    @Column(name = "about")
+    @Column(name = "stars_about")
     private String about;
 
     public Stars(){}

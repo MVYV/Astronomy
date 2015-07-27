@@ -7,13 +7,13 @@ public class Universe {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "universe_id")
     private byte id;
 
-    @Column(name = "name")
+    @Column(name = "universe_name")
     private String name;
 
-    @Column(name = "about")
+    @Column(name = "universe_about")
     private String about;
 
     public Universe(){}

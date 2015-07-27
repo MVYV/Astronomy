@@ -7,19 +7,19 @@ public class Planets {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "planets_id")
     private long id;
 
-    @Column(name = "name")
+    @Column(name = "planets_name")
     private String name;
 
-    @Column(name = "satellites")
+    @Column(name = "planets_satellites")
     private int satellites;
 
-    @Column(name = "radius")
+    @Column(name = "planets_radius")
     private double radius;
 
-    @Column(name = "about")
+    @Column(name = "planets_about")
     private String about;
 
     public Planets(){}

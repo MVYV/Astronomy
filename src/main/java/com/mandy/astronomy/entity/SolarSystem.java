@@ -7,13 +7,13 @@ public class SolarSystem {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "ss_id")
     private byte id;
 
-    @Column(name = "name")
+    @Column(name = "ss_name")
     private String name;
 
-    @Column(name = "about")
+    @Column(name = "ss_about")
     private String about;
 
     public SolarSystem(){}

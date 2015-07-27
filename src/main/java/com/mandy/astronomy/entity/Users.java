@@ -7,22 +7,22 @@ public class Users {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Column(name = "id")
+    @Column(name = "users_id")
     private long id;
 
-    @Column(name = "name")
+    @Column(name = "users_name")
     private String name;
 
-    @Column(name = "email")
+    @Column(name = "users_email")
     private String email;
 
-    @Column(name = "password")
+    @Column(name = "users_password")
     private String password;
 
-    @Column(name = "country")
+    @Column(name = "users_country")
     private String country;
 
-    @Column(name = "city")
+    @Column(name = "users_city")
     private String city;
 
     public Users(){}
