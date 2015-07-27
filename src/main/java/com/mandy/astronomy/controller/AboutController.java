@@ -1,11 +1,7 @@
 package com.mandy.astronomy.controller;
 
-import com.mandy.astronomy.entity.Galaxies;
-import com.mandy.astronomy.entity.Planets;
-import com.mandy.astronomy.entity.Stars;
-import com.mandy.astronomy.service.GalaxiesService;
-import com.mandy.astronomy.service.PlanetsService;
-import com.mandy.astronomy.service.StarsService;
+import com.mandy.astronomy.entity.*;
+import com.mandy.astronomy.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,6 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 @Controller
 //@RequestMapping(value = "/about")
@@ -27,12 +25,22 @@ public class AboutController {
     @Autowired
     private GalaxiesService galaxiesService;
 
+    @Autowired
+    private SolarSytemService solarSytemService;
+
+    @Autowired
+    private UniverseService universeService;
+
+    @Autowired
+    private SatellitesService satellitesService;
+
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String getPlanet(
             @RequestParam("name") String name,
             @RequestParam("page") String page, Model model)
     {
         String about;
+        byte id = 1;
         if (page.equals("planets")){
             Planets planet = planetsService.getByName(name);
             about = planet.getAbout();
@@ -46,6 +54,21 @@ public class AboutController {
         }else if (page.equals("galaxies")){
             Galaxies galaxy = galaxiesService.getByName(name);
             about = galaxy.getAbout();
+            model.addAttribute("about", about);
+            return "about";
+        }else if (page.equals("solarSystem")){
+            SolarSystem solarSystem = solarSytemService.getSolarSystem(id);
+            about = solarSystem.getAbout();
+            model.addAttribute("about", about);
+            return "about";
+        }else if (page.equals("universe")){
+            Universe universe = universeService.getUniverse(id);
+            about = universe.getAbout();
+            model.addAttribute("about", about);
+            return "about";
+        }else if (page.equals("satellites")){
+            Satellites satellite = satellitesService.getByName(name);
+            about = satellite.getAbout();
             model.addAttribute("about", about);
             return "about";
         }
