@@ -53,7 +53,7 @@
 </div>
 <div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
     <div><a href="#close" title="Close" class="close">X</a>
-         <form id="contact_form" action="#" method="post">																												<!-- Форма авторизації -->
+         <form id="contact_form" action="/login" method="post">																												<!-- Форма авторизації -->
             	<table width="400" border="0">																															<!-- Таблиця для розміщення ел. форми -->
                     <tr>																																				<!-- Рядок -->
                         <td>
