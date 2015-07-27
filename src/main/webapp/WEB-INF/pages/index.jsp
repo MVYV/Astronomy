@@ -28,11 +28,11 @@
         </div>
         <div class="container_four">
             <div class="navigation_button">
-                <a href="#">SATELLITES</a>
+                <a href="/satellites">SATELLITES</a>
             </div>
             <div class="navigation_button_unique"></div>
             <div class="navigation_button">
-                <a href="#">SOLAR SYSTEM</a>
+                <a href="/about?name=solarSystem&page=solarSystem">SOLAR SYSTEM</a>
             </div>
         </div>
         <div class="container_four">
@@ -40,7 +40,7 @@
                 <a href="/galaxies">GALAXIES</a>
             </div>
             <div class="navigation_button">
-                <a href="#">UNIVERSE</a>
+                <a href="/about?name=universe&page=universe">UNIVERSE</a>
             </div>
             <div class="navigation_button">
                 <a href="#">ABOUT</a>
