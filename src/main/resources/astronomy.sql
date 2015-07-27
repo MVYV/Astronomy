@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Час створення: Лип 27 2015 р., 16:19
+-- Час створення: Лип 27 2015 р., 17:06
 -- Версія сервера: 5.6.17
 -- Версія PHP: 5.5.12
 
@@ -183,9 +183,9 @@ INSERT INTO `universe` (`id`, `name`, `about`) VALUES
 CREATE TABLE IF NOT EXISTS `users` (
   `id` bigint(20) NOT NULL AUTO_INCREMENT,
   `name` varchar(100) NOT NULL,
-  `e-mail` varchar(100) NOT NULL,
+  `email` varchar(100) NOT NULL,
   `password` varchar(100) NOT NULL,
-  `county` varchar(100) NOT NULL,
+  `country` varchar(100) NOT NULL,
   `city` varchar(100) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
@@ -194,7 +194,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 -- Дамп даних таблиці `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `e-mail`, `password`, `county`, `city`) VALUES
+INSERT INTO `users` (`id`, `name`, `email`, `password`, `country`, `city`) VALUES
 (1, 'yura', 'yura@gmail.com', 'yura', 'Ukraine', 'Ivano-Frankivsk');
 
 --
