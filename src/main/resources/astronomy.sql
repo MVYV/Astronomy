@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Час створення: Лип 21 2015 р., 17:11
+-- Час створення: Лип 27 2015 р., 16:19
 -- Версія сервера: 5.6.17
 -- Версія PHP: 5.5.12
 
@@ -59,7 +59,9 @@ CREATE TABLE IF NOT EXISTS `planets` (
   `satellites` int(11) NOT NULL,
   `radius` double NOT NULL,
   `about` longtext NOT NULL,
-  PRIMARY KEY (`id`)
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  UNIQUE KEY `name_2` (`name`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
@@ -75,6 +77,51 @@ INSERT INTO `planets` (`id`, `name`, `satellites`, `radius`, `about`) VALUES
 (6, 'Saturn', 62, 58232, 'Saturn is the sixth planet from the Sun and the second largest in the Solar System, after Jupiter. It is a gas giant with an average radius about nine times that of Earth. Although only one-eighth the average density of Earth, with its larger volume Saturn is just over 95 times more massive. Saturn is named after the Roman god of agriculture, its astronomical symbol represents the god''s sickle.\r\n\r\nSaturn''s interior is probably composed of a core of iron–nickel and rock (silicon and oxygen compounds). This core is surrounded by a deep layer of metallic hydrogen, an intermediate layer of liquid hydrogen and liquid helium, and finally outside the Frenkel line a gaseous outer layer. Saturn has a pale yellow hue due to ammonia crystals in its upper atmosphere. Electrical current within the metallic hydrogen layer is thought to give rise to Saturn''s planetary magnetic field, which is weaker than Earth''s, but has a magnetic moment 580 times that of Earth due to Saturn''s larger size. Saturn''s magnetic field strength is around one-twentieth the strength of Jupiter''s. The outer atmosphere is generally bland and lacking in contrast, although long-lived features can appear. Wind speeds on Saturn can reach 1,800 km/h (500 m/s), higher than on Jupiter, but not as high as those on Neptune.\r\n\r\nSaturn has a prominent ring system that consists of nine continuous main rings and three discontinuous arcs and that is composed mostly of ice particles with a smaller amount of rocky debris and dust. Sixty-two moons are known to orbit Saturn, of which fifty-three are officially named. This does not include the hundreds of moonlets comprising the rings. Titan, Saturn''s largest and the Solar System''s second largest moon, is larger than the planet Mercury and is the only moon in the Solar System to have a substantial atmosphere.'),
 (7, 'Uranus', 27, 25362, 'Uranus is the seventh planet from the Sun. It has the third-largest planetary radius and fourth-largest planetary mass in the Solar System. Uranus is similar in composition to Neptune, and both have different bulk chemical composition from that of the larger gas giants Jupiter and Saturn. Therefore, astronomers increasingly place them in a separate category called "ice giants". Uranus''s atmosphere, although similar to Jupiter''s and Saturn''s in its primary composition of hydrogen and helium, contains more "ices", such as water, ammonia, and methane, along with traces of other hydrocarbons. It is the coldest planetary atmosphere in the Solar System, with a minimum temperature of 49 K (−224.2 °C), and has a complex, layered cloud structure, with water thought to make up the lowest clouds, and methane the uppermost layer of clouds. The interior of Uranus is mainly composed of ices and rock.\r\n\r\nUranus is the only planet whose name is derived from a figure from Greek mythology, from the Latinized version of the Greek god of the sky, Ouranos. Like the other giant planets, Uranus has a ring system, a magnetosphere, and numerous moons. The Uranian system has a unique configuration among those of the planets because its axis of rotation is tilted sideways, nearly into the plane of its revolution about the Sun. Its north and south poles therefore lie where most other planets have their equators. In 1986, images from Voyager 2 showed Uranus as an almost featureless planet in visible light, without the cloud bands or storms associated with the other giant planets. Observations from Earth have shown seasonal change and increased weather activity as Uranus approached its equinox in 2007. The wind speeds on Uranus can reach 250 metres per second (900 km/h, 560 mph).'),
 (8, 'Neptune', 14, 24622, 'Neptune is the eighth and farthest planet from the Sun in the Solar System. It is the fourth-largest planet by diameter and the third-largest by mass. Among the gaseous planets in the Solar System, Neptune is the most dense. Neptune is 17 times the mass of Earth and is slightly more massive than its near-twin Uranus, which is 15 times the mass of Earth, and not as dense as Neptune. Neptune orbits the Sun at an average distance of 30.1 astronomical units (4.50×109 km). Named after the Roman god of the sea, its astronomical symbol is ♆, a stylised version of the god Neptune''s trident.\r\n\r\nNeptune is not visible to the unaided eye and was the first and only planet found by mathematical prediction rather than by empirical observation. Unexpected changes in the orbit of Uranus led Alexis Bouvard to deduce that its orbit was subject to gravitational perturbation by an unknown planet. Neptune was subsequently observed with a telescope on 23 September 1846 by Johann Galle within a degree of the position predicted by Urbain Le Verrier. Its largest moon, Triton, was discovered shortly thereafter, though none of the planet''s remaining 13 moons were located telescopically until the 20th century. The planet''s distance from Earth gives it a very small apparent size, making it challenging to study with Earth-based telescopes. Neptune was visited by Voyager 2, when it flew by the planet on 25 August 1989. The advent of Hubble Space Telescope and large ground-based telescopes with adaptive optics has allowed for more-detailed observations.\r\n\r\nNeptune is similar in composition to Uranus, and both have compositions that differ from those of the larger gas giants, Jupiter and Saturn. Neptune''s atmosphere, like Jupiter''s and Saturn''s, is composed primarily of hydrogen and helium, along with traces of hydrocarbons and possibly nitrogen; it contains a higher proportion of "ices" such as water, ammonia, and methane. Astronomers sometimes categorise Uranus and Neptune as "ice giants" to emphasise this distinction. The interior of Neptune, like that of Uranus, is primarily composed of ices and rock. Traces of methane in the outermost regions in part account for the planet''s blue appearance.\r\n\r\nIn contrast to the hazy, relatively featureless atmosphere of Uranus, Neptune''s atmosphere has active and visible weather patterns. For example, at the time of the 1989 Voyager 2 flyby, the planet''s southern hemisphere had a Great Dark Spot comparable to the Great Red Spot on Jupiter. These weather patterns are driven by the strongest sustained winds of any planet in the Solar System, with recorded wind speeds as high as 2,100 kilometres per hour (580 m/s; 1,300 mph). Because of its great distance from the Sun, Neptune''s outer atmosphere is one of the coldest places in the Solar System, with temperatures at its cloud tops approaching 55 K (−218 °C). Temperatures at the planet''s centre are approximately 5,400 K (5,100 °C). Neptune has a faint and fragmented ring system (labelled "arcs"), which may have been detected during the 1960s but was indisputably confirmed only in 1989 by Voyager 2.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `satellites`
+--
+
+CREATE TABLE IF NOT EXISTS `satellites` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `temperature` varchar(100) NOT NULL,
+  `about` longtext NOT NULL,
+  `planet_name` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `planet_name` (`planet_name`),
+  KEY `planet_name_2` (`planet_name`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп даних таблиці `satellites`
+--
+
+INSERT INTO `satellites` (`id`, `name`, `temperature`, `about`, `planet_name`) VALUES
+(1, 'Moon', '130-230 K', 'The Moon (Latin: Luna) is Earth''s only natural satellite. It is one of the largest natural satellites in the Solar System, and, among planetary satellites, the largest relative to the size of the planet it orbits (its primary). It is the second-densest satellite among those whose densities are known (after Jupiter''s satellite Io).\r\n\r\nThe Moon is thought to have formed approximately 4.5 billion years ago, not long after Earth. Although there have been several hypotheses for its origin in the past, the current most widely accepted explanation is that the Moon formed from the debris left over after a giant impact between Earth and a Mars-sized body called Theia.\r\n\r\nThe Moon is in synchronous rotation with Earth, always showing the same face with its near side marked by dark volcanic maria that fill between the bright ancient crustal highlands and the prominent impact craters. It is the second-brightest regularly visible celestial object in Earth''s sky (after the Sun), as measured by illuminance on Earth''s surface. Although it can appear a very bright white, its surface is actually dark, with a reflectance just slightly higher than that of worn asphalt. Its prominence in the sky and its regular cycle of phases have, since ancient times, made the Moon an important cultural influence on language, calendars, art, and mythology.\r\n\r\nThe Moon''s gravitational influence produces the ocean tides and the slight lengthening of the day. The Moon''s current orbital distance is about thirty times the diameter of Earth, causing it to have an apparent size in the sky almost the same as that of the Sun. This allows the Moon to cover the Sun nearly precisely in total solar eclipse. This matching of apparent visual size is a coincidence. The Moon''s linear distance from Earth is currently increasing at a rate of 3.82 ± 0.07 centimetres (1.504 ± 0.028 in) per year, but this rate is not constant.\r\n\r\nThe Soviet Union''s Luna programme was the first to reach the Moon with unmanned spacecraft in 1959; the United States'' NASA Apollo program achieved the only manned missions to date, beginning with the first manned lunar orbiting mission by Apollo 8 in 1968, and six manned lunar landings between 1969 and 1972, with the first being Apollo 11. These missions returned over 380 kg of lunar rocks, which have been used to develop a geological understanding of the Moon''s origin, the formation of its internal structure, and its subsequent history. After the Apollo 17 mission in 1972, the Moon has been visited only by unmanned spacecraft.', 'Earth'),
+(2, 'Io', '110 K', 'o /ˈaɪ.oʊ/ is the innermost of the four Galilean moons of the planet Jupiter. It is the fourth-largest moon, has the highest density of all the moons, and is the driest known object in the Solar System. It was discovered in 1610 and was named after the mythological character Io, a priestess of Hera who became one of Zeus''s lovers.\r\n\r\nWith over 400 active volcanoes, Io is the most geologically active object in the Solar System. This extreme geologic activity is the result of tidal heating from friction generated within Io''s interior as it is pulled between Jupiter and the other Galilean satellites—Europa, Ganymede and Callisto. Several volcanoes produce plumes of sulfur and sulfur dioxide that climb as high as 500 km (300 mi) above the surface. Io''s surface is also dotted with more than 100 mountains that have been uplifted by extensive compression at the base of Io''s silicate crust. Some of these peaks are taller than Mount Everest. Unlike most satellites in the outer Solar System, which are mostly composed of water ice, Io is primarily composed of silicate rock surrounding a molten iron or iron sulfide core. Most of Io''s surface is composed of extensive plains coated with sulfur and sulfur dioxide frost.\r\n\r\nIo''s volcanism is responsible for many of its unique features. Its volcanic plumes and lava flows produce large surface changes and paint the surface in various subtle shades of yellow, red, white, black, and green, largely due to allotropes and compounds of sulfur. Numerous extensive lava flows, several more than 500 km (300 mi) in length, also mark the surface. The materials produced by this volcanism make up Io''s thin, patchy atmosphere and Jupiter''s extensive magnetosphere. Io''s volcanic ejecta also produce a large plasma torus around Jupiter.\r\n\r\nIo played a significant role in the development of astronomy in the 17th and 18th centuries. It was discovered in January 1610 by Galileo Galilei, along with the other Galilean satellites. This discovery furthered the adoption of the Copernican model of the Solar System, the development of Kepler''s laws of motion, and the first measurement of the speed of light. From Earth, Io remained just a point of light until the late 19th and early 20th centuries, when it became possible to resolve its large-scale surface features, such as the dark red polar and bright equatorial regions. In 1979, the two Voyager spacecraft revealed Io to be a geologically active world, with numerous volcanic features, large mountains, and a young surface with no obvious impact craters. The Galileo spacecraft performed several close flybys in the 1990s and early 2000s, obtaining data about Io''s interior structure and surface composition. These spacecraft also revealed the relationship between Io and Jupiter''s magnetosphere and the existence of a belt of high-energy radiation centered on Io''s orbit. Io receives about 3,600 rem (36 Sv) of ionizing radiation per day.\r\n\r\nFurther observations have been made by Cassini–Huygens in 2000 and New Horizons in 2007, as well as from Earth-based telescopes and the Hubble Space Telescope.', 'Jupiter');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `solar_system`
+--
+
+CREATE TABLE IF NOT EXISTS `solar_system` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `about` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп даних таблиці `solar_system`
+--
+
+INSERT INTO `solar_system` (`id`, `name`, `about`) VALUES
+(1, 'Solar System', 'The Solar System comprises the Sun and the objects that orbit it, either directly or indirectly. Of those objects that orbit the Sun directly, the largest eight are the planets that form the planetary system around it, while the remainder are significantly smaller objects, such as dwarf planets and small Solar System bodies such as comets and asteroids. Of those that orbit the Sun indirectly, two are larger than the smallest planet.\r\n\r\nThe Solar System formed 4.6 billion years ago from the gravitational collapse of a giant interstellar molecular cloud. The vast majority of the system''s mass is in the Sun, with most of the remaining mass contained in Jupiter. The four smaller inner planets, Mercury, Venus, Earth and Mars, are terrestrial planets, being primarily composed of rock and metal. The four outer planets are giant planets, being substantially more massive than the terrestrials. The two largest, Jupiter and Saturn, are gas giants, being composed mainly of hydrogen and helium; the two outermost planets, Uranus and Neptune, are ice giants, being composed largely of substances with relatively high melting points compared with hydrogen and helium, called ices, such as water, ammonia and methane. All planets have almost circular orbits that lie within a nearly flat disc called the ecliptic.\r\n\r\nThe Solar System also contains smaller objects. The asteroid belt, which lies between Mars and Jupiter, mostly contains objects composed, like the terrestrial planets, of rock and metal. Beyond Neptune''s orbit lie the Kuiper belt and scattered disc, populations of trans-Neptunian objects composed mostly of ices, and beyond them a newly discovered population of sednoids. Within these populations are several dozen to possibly tens of thousands of objects large enough to have been rounded by their own gravity. Such objects are categorized as dwarf planets. Identified dwarf planets include the asteroid Ceres and the trans-Neptunian objects Pluto and Eris. In addition to these two regions, various other small-body populations, including comets, centaurs and interplanetary dust, freely travel between regions. Six of the planets, at least three of the dwarf planets, and many of the smaller bodies are orbited by natural satellites, usually termed "moons" after Earth''s Moon. Each of the outer planets is encircled by planetary rings of dust and other small objects.\r\n\r\nThe solar wind, plasma flowing outwards from the Sun, creates a bubble in the interstellar medium known as the heliosphere. The heliopause is the point at which pressure from the solar wind is equal to the opposing pressure of interstellar wind; it extends out to the edge of the scattered disc. The Oort cloud, which is believed to be the source for long-period comets, may also exist at a distance roughly a thousand times further than the heliosphere. The Solar System is located in the Orion Arm, 26,000 light-years from the center of the Milky Way.');
 
 -- --------------------------------------------------------
 
@@ -106,6 +153,59 @@ INSERT INTO `stars` (`id`, `name`, `distance`, `radius`, `about`) VALUES
 (8, 'Pistol Star', '25.000 ly', '306R', 'The Pistol Star is a blue hypergiant and is one of the most luminous known stars in the Milky Way Galaxy. It is one of many massive young stars in the Quintuplet cluster in the Galactic Center region. The star owes its name to the shape of the Pistol Nebula, which it illuminates. It is located approximately 25,000 light years from Earth in the direction of Sagittarius. It would be visible to the naked eye as a fourth magnitude star if it were not for the interstellar dust that completely hides it from view in visible light.'),
 (9, 'Vega', '25.04 ± 0.07 ly (7.68 ± 0.02 pc)', '2.362 × 2.818[R', 'Vega (α Lyr, α Lyrae, Alpha Lyrae) is the brightest star in the constellation Lyra, the fifth brightest star in the night sky and the second brightest star in the northern celestial hemisphere, after Arcturus. It is a relatively close star at only 25 light-years from Earth, and, together with Arcturus and Sirius, one of the most luminous stars in the Sun''s neighborhood.\r\n\r\nVega has been extensively studied by astronomers, leading it to be termed "arguably the next most important star in the sky after the Sun." Vega was the northern pole star around 12,000 BCE and will be so again around the year 13,727 when the declination will be +86°14''. Vega was the first star other than the Sun to be photographed and the first to have its spectrum recorded. It was one of the first stars whose distance was estimated through parallax measurements. Vega has served as the baseline for calibrating the photometric brightness scale, and was one of the stars used to define the mean values for the UBV photometric system.\r\n\r\nVega is only about a tenth of the age of the Sun, but since it is 2.1 times as massive its expected lifetime is also one tenth of that of the Sun; both stars are at present approaching the midpoint of their life expectancies. Vega has an unusually low abundance of the elements with a higher atomic number than that of helium. Vega is also a suspected variable star that may vary slightly in magnitude in a periodic manner. It is rotating rapidly with a velocity of 274 km/s at the equator. This is causing the equator to bulge outward because of centrifugal effects, and, as a result, there is a variation of temperature across the star''s photosphere that reaches a maximum at the poles. From Earth, Vega is being observed from the direction of one of these poles.\r\n\r\nBased on an observed excess emission of infrared radiation, Vega appears to have a circumstellar disk of dust. This dust is likely to be the result of collisions between objects in an orbiting debris disk, which is analogous to the Kuiper belt in the Solar System. Stars that display an infrared excess because of dust emission are termed Vega-like stars.'),
 (10, 'Arcturus', '36.7 ± 0.2 ly (11.26 ± 0.07 pc)', '25.4±0.2R', 'Arcturus (/ɑrkˈtjʊərəs/; α Boo, α Boötis, Alpha Boötis) of the constellation Boötes is the brightest star in the northern celestial hemisphere. With a visual magnitude of −0.04, it is the fourth brightest star in the night sky, after −1.46 magnitude Sirius, −0.86 magnitude Canopus, and −0.27 magnitude Alpha Centauri. It is a relatively close star at only 36.7 light-years from Earth, and, together with Vega and Sirius, one of the most luminous stars in the Sun''s neighborhood.\r\n\r\nArcturus is a type K0 III orange giant star, with an absolute magnitude of −0.30. It has likely exhausted its hydrogen from its core and is currently in its active hydrogen shell burning phase. It will continue to expand before entering horizontal branch stage of its life cycle.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `universe`
+--
+
+CREATE TABLE IF NOT EXISTS `universe` (
+  `id` tinyint(4) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `about` longtext NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп даних таблиці `universe`
+--
+
+INSERT INTO `universe` (`id`, `name`, `about`) VALUES
+(1, 'Universe', 'The Universe is all of time and space and its contents.[ The Universe includes planets, stars, galaxies, the contents of intergalactic space, the smallest subatomic particles, and all matter and energy. The majority of matter and energy is most likely in the form of dark matter and dark energy. The observable universe is about 28 billion parsecs (91 billion light-years) in diameter at the present time. The size of the whole Universe is not known and may be infinite. Observations and the development of physical theories have led to inferences about the composition and evolution of the Universe.\r\n\r\nThroughout recorded history, cosmologies and cosmogonies, including scientific models, have been proposed to explain observations of the Universe. The earliest quantitative geocentric models were developed by ancient Greek philosophers and Indian philosophers. Over the centuries, more precise astronomical observations led to Nicolaus Copernicus''s heliocentric model of the Solar System and Johannes Kepler''s improvement on that model with elliptical orbits, which was eventually explained by Isaac Newton''s theory of gravity. Further observational improvements led to the realization that the Solar System is located in a galaxy composed of billions of stars, the Milky Way. It was subsequently discovered that our galaxy is just one of many. Observations of the distribution of these galaxies and their spectral lines have led to many of the theories of modern physical cosmology. The discovery in the early 20th century that galaxies are systematically redshifted suggested that the Universe is expanding, and the discovery of the cosmic microwave background radiation suggested that the Universe had a beginning. Finally, observations in the late 1990s indicated the rate of the expansion of the Universe is increasing.\r\n\r\nThe Big Bang theory is the prevailing cosmological model describing the development of the Universe. Space and time were created in the Big Bang, and these were imbued with a fixed amount of energy and matter; as space expands, the density of that matter and energy decreases. After the initial expansion, the Universe cooled sufficiently to allow the formation first of subatomic particles and later of simple atoms. Giant clouds of these primordial elements later coalesced through gravity to form stars. Assuming that the prevailing model is correct, the age of the Universe is measured to be 13.798±0.037 billion years.\r\n\r\nThere are many competing hypotheses about the ultimate fate of the Universe. Physicists and philosophers remain unsure about what, if anything, preceded the Big Bang. Many refuse to speculate, doubting that any information from any such prior state could ever be accessible. There are various multiverse hypotheses, in which some physicists have suggested that the Universe might be one among many universes that likewise exist.');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблиці `users`
+--
+
+CREATE TABLE IF NOT EXISTS `users` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) NOT NULL,
+  `e-mail` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  `county` varchar(100) NOT NULL,
+  `city` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+
+--
+-- Дамп даних таблиці `users`
+--
+
+INSERT INTO `users` (`id`, `name`, `e-mail`, `password`, `county`, `city`) VALUES
+(1, 'yura', 'yura@gmail.com', 'yura', 'Ukraine', 'Ivano-Frankivsk');
+
+--
+-- Обмеження зовнішнього ключа збережених таблиць
+--
+
+--
+-- Обмеження зовнішнього ключа таблиці `satellites`
+--
+ALTER TABLE `satellites`
+  ADD CONSTRAINT `satellites_ibfk_1` FOREIGN KEY (`planet_name`) REFERENCES `planets` (`name`);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
