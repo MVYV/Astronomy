@@ -58,13 +58,20 @@
 {
     font-family: "corduroy";
     text-decoration: none;
-    color: #2f4f4f;
+    color: #000000;
+    background: rgba(0, 0, 0, 0);
     background: #dbdbdb;
-    background: -moz-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    /*background: -moz-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
     background: -webkit-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
     background: -o-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
     background: -ms-linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
-    background: linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);
+    background: linear-gradient(top, #808080 0%, #dbdbdb 50%, #2f4f4f 100%);*/
+    background: -moz-linear-gradient(top, rgba(128, 128, 128, 0.5) 0%, rgba(219, 219, 219, 0.5) 50%, rgba(47, 79, 79, 0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(128, 128, 128, 0.5) 0%, rgba(219, 219, 219, 0.5) 50%, rgba(47, 79, 79, 0.5) 100%);
+    background: -o-linear-gradient(top, rgba(128, 128, 128, 0.5) 0%, rgba(219, 219, 219, 0.5) 50%, rgba(47, 79, 79, 0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(128, 128, 128, 0.5) 0%, rgba(219, 219, 219, 0.5) 50%, rgba(47, 79, 79, 0.5) 100%);
+    background: linear-gradient(top, rgba(128, 128, 128, 0.5) 0%, rgba(219, 219, 219, 0.5) 50%, rgba(47, 79, 79, 0.5) 100%);
+
     font-size: 20px;
     display: table-cell;
     padding: 10% 0;
@@ -148,6 +155,7 @@
 #user_name, #pass
 {
     width: 250px;
+    text-align: center;
 }
 #sub_button
 {
@@ -170,18 +178,29 @@
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
+#ln_container
+{
+    overflow: visible;
+    border: 1px solid sienna;
+    height: 50px;
+}
 #nav
 {
     float:left;
     width:1440px;
+    margin:0;
+    padding: 0;
+    position: relative;
     list-style:none;
-    margin-bottom:10px;
+    left: 50%;
+
 }
 #nav li
 {
     float:left;
     position:relative;
     display:block;
+    left: -50%;
 }
 #nav li a
 {
