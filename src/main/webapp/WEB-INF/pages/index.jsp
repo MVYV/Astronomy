@@ -71,7 +71,7 @@
                     </tr>
                     <tr>
                         <td>
-                            <a href="#" id="autorization_link">Autorization</a>
+                            <a href="#" id="authorization_link">Authorization</a>
                         </td>
                     </tr>
                 </table>
