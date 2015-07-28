@@ -10,7 +10,6 @@
 </head>
 <body>
 <div id="main_global">
-    <a href="/linear_navigation">test</a>
     <div id="global_nav">
         <div class="container_four">
             <div class="navigation_button">
@@ -79,7 +78,5 @@
          </form>
     </div>
 </div>
-
-
 </body>
 </html>
