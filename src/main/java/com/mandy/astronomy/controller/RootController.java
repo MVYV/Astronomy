@@ -26,6 +26,11 @@ public class RootController {
         return "linear_navigation";
     }
 
+    @RequestMapping(value = "/authorization")
+    public String getAuthorization(){
+        return "authorization";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String checkUser(
             @RequestParam("name") String name,
