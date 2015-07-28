@@ -20,7 +20,7 @@
     </div>
     <div id="page_main_content">
         <h2>Planets</h2>
-        <p>Planets of The Solar system:</p>
+        <p>Planets of The Solar system</p>
         <table class="table table-striped">
             <thead>
             <tr>
