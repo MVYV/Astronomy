@@ -24,12 +24,12 @@
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>Name</th>
+                <th>Plants</th>
                 <th>Satellites number</th>
                 <th>Radius</th>
             </tr>
             </thead>
-            <c:forEach var="num" items="${planetsList}">
+            <c:forEach var="num" items="${list}">
             <tbody>
                 <tr>
                     <td>
@@ -39,6 +39,28 @@
                     <td>${num.radius}</td>
                 </tr>
             </tbody>
+            </c:forEach>
+            <c:forEach var="numS" items="${listS}">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="/about?name=${numS.name}&page=stars">${numS.name}</a>
+                    </td>
+                    <td>${numS.distance}</td>
+                    <td>${numS.radius}</td>
+                </tr>
+                </tbody>
+            </c:forEach>
+            <c:forEach var="numG" items="${listG}">
+                <tbody>
+                <tr>
+                    <td>
+                        <a href="/about?name=${numG.name}&page=galaxies">${numG.name}</a>
+                    </td>
+                    <td>${numG.distance}</td>
+                    <td>${numG.type}</td>
+                </tr>
+                </tbody>
             </c:forEach>
         </table>
     </div>

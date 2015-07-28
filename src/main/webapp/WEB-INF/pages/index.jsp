@@ -19,10 +19,10 @@
                 <a href="#">PUBLICATIONS</a>
             </div>
             <div class="navigation_button">
-                <a href="/planets">PLANETS</a>
+                <a href="/planets?page=planets">PLANETS</a>
             </div>
             <div class="navigation_button">
-                <a href="/stars">STARS</a>
+                <a href="/planets?page=stars">STARS</a>
             </div>
         </div>
         <div class="container_four">
@@ -36,7 +36,7 @@
         </div>
         <div class="container_four">
             <div class="navigation_button">
-                <a href="/galaxies">GALAXIES</a>
+                <a href="/planets?page=galaxies">GALAXIES</a>
             </div>
             <div class="navigation_button">
                 <a href="/about?name=universe&page=universe">UNIVERSE</a>
