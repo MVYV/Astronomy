@@ -19,16 +19,44 @@
     <li><a href="#" title="">PUBLICATIONS</a></li>
     <li><a href="#" title="">TABLES</a>
         <ul>
-            <li><a href="#">PLANETS</a></li>
-            <li><a href="#">SATELLITES</a></li>
-            <li><a href="#">STARS</a></li>
-            <li><a href="#">GALAXIES</a></li>
+            <li><a href="/planets">PLANETS</a></li>
+            <li><a href="/satellites">SATELLITES</a></li>
+            <li><a href="/stars">STARS</a></li>
+            <li><a href="/galaxies">GALAXIES</a></li>
         </ul>
     </li>
-    <li><a href="#" title="">SOLAR SYSTEM</a></li>
-    <li><a href="#" title="">UNIVERSE</a></li>
-    <li><a href="#" title="">SIGN IN</a></li>
+    <li><a href="/about?name=solarSystem&page=solarSystem" title="">SOLAR SYSTEM</a></li>
+    <li><a href="/about?name=universe&page=universe" title="">UNIVERSE</a></li>
+    <li><a href="#modal_enter" title="">SIGN IN</a></li>
 </ul>
+</div>
+<div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
+    <div><a href="#close" title="Close" class="close">X</a>
+        <form id="contact_form" action="/login" method="post">																												<!-- Форма авторизації -->
+            <table width="400" border="0">																															<!-- Таблиця для розміщення ел. форми -->
+                <tr>																																				<!-- Рядок -->
+                    <td>
+                        <input type="text" name="name" placeholder="Please enter your name:" id="user_name" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="password" name="pass" placeholder="Please enter your password:" id="pass" value="" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Sign in" id="sub_button"   />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="#" id="autorization_link">Autorization</a>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
 </div>
 </body>
 </html>
