@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
     <title></title>
@@ -22,7 +23,7 @@
     <div id="page_main_content">
         <h2><%= request.getAttribute("title")%></h2>
         <p><%= request.getAttribute("subTitle")%></p>
-        <table class="object_table" border="1">
+        <table class="object_table" border="0">
             <thead>
             <tr>
                 <th><%= request.getAttribute("colOne")%></th>
@@ -32,27 +33,27 @@
             </thead>
             <tbody>
             <c:forEach var="num" items="${list}">
-                <tr>
+                <tr onclick="location.href='/about?name=${num.name}&page=planets';">
                     <td>
-                        <a href="/about?name=${num.name}&page=planets">${num.name}</a>
+                        ${num.name}
                     </td>
                     <td>${num.satellites}</td>
                     <td>${num.radius}</td>
                 </tr>
                 </c:forEach>
                 <c:forEach var="numS" items="${listS}">
-                <tr>
+                <tr onclick="location.href='/about?name=${numS.name}&page=stars';">
                     <td>
-                        <a href="/about?name=${numS.name}&page=stars">${numS.name}</a>
+                        ${numS.name}
                     </td>
                     <td>${numS.distance}</td>
                     <td>${numS.radius}</td>
                 </tr>
                 </c:forEach>
                 <c:forEach var="numG" items="${listG}">
-                <tr>
+                <tr onclick="location.href='/about?name=(${fn:escapeXml (numG.name)}&page=galaxies';">
                     <td>
-                        <a href="/about?name=${numG.name}&page=galaxies">${numG.name}</a>
+                        ${numG.name}
                     </td>
                     <td>${numG.distance}</td>
                     <td>${numG.type}</td>
