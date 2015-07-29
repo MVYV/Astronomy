@@ -49,6 +49,6 @@ public class RootController {
                 return "index";
             }
         }
-        return "stars";
+        return "planets";
     }
 }

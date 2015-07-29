@@ -4,7 +4,6 @@ import com.mandy.astronomy.entity.*;
 import com.mandy.astronomy.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -14,17 +13,6 @@ import java.util.List;
 
 @Controller
 public class PlanetsController {
-
-
-//    @RequestMapping(value = "/planets")
-//    public String getPlanets(){ return "planets"; }
-
-//    @RequestMapping(value = "/planets")
-//    public List<Planets> getPlanetsList(){
-//        List<Planets> planetsList = planetsService.getAll();
-//        System.out.println(planetsList);
-//        return planetsList;
-//    }
 
     @Autowired
     private PlanetsService planetsService;
@@ -50,7 +38,7 @@ public class PlanetsController {
             subTitle = "Planets of The Solar System";
             colOne = "Planet";
             colTwo = "Satellites number";
-            colThree = "Distance";
+            colThree = "Radius (km)";
             model.addAttribute("title", title);
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
@@ -63,8 +51,8 @@ public class PlanetsController {
             title = "Stars";
             subTitle = "Stars of The Milky Way";
             colOne = "Star";
-            colTwo = "Distance";
-            colThree = "Radius";
+            colTwo = "Distance to The Earth";
+            colThree = "Radius (R - Solar radius)";
             model.addAttribute("title", title);
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
@@ -77,7 +65,7 @@ public class PlanetsController {
             title = "Galaxies";
             subTitle = "Galaxies of The Universe";
             colOne = "Galaxy";
-            colTwo = "Distance";
+            colTwo = "Distance to The Earth";
             colThree = "type";
             model.addAttribute("title", title);
             model.addAttribute("subTitle", subTitle);
