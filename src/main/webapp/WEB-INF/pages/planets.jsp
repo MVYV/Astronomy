@@ -9,6 +9,7 @@
     <%--<script src="<c:url value='/resources/js/bootstrap.min.js' />" ></script>--%>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
+    <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
 </head>
 <body>
@@ -21,7 +22,7 @@
     <div id="page_main_content">
         <h2><%= request.getAttribute("title")%></h2>
         <p><%= request.getAttribute("subTitle")%></p>
-        <table class="table table-striped">
+        <table class="object_table" border="1">
             <thead>
             <tr>
                 <th><%= request.getAttribute("colOne")%></th>
@@ -29,8 +30,8 @@
                 <th><%= request.getAttribute("colThree")%></th>
             </tr>
             </thead>
-            <c:forEach var="num" items="${list}">
             <tbody>
+            <c:forEach var="num" items="${list}">
                 <tr>
                     <td>
                         <a href="/about?name=${num.name}&page=planets">${num.name}</a>
@@ -38,10 +39,8 @@
                     <td>${num.satellites}</td>
                     <td>${num.radius}</td>
                 </tr>
-            </tbody>
-            </c:forEach>
-            <c:forEach var="numS" items="${listS}">
-                <tbody>
+                </c:forEach>
+                <c:forEach var="numS" items="${listS}">
                 <tr>
                     <td>
                         <a href="/about?name=${numS.name}&page=stars">${numS.name}</a>
@@ -49,10 +48,8 @@
                     <td>${numS.distance}</td>
                     <td>${numS.radius}</td>
                 </tr>
-                </tbody>
-            </c:forEach>
-            <c:forEach var="numG" items="${listG}">
-                <tbody>
+                </c:forEach>
+                <c:forEach var="numG" items="${listG}">
                 <tr>
                     <td>
                         <a href="/about?name=${numG.name}&page=galaxies">${numG.name}</a>
@@ -60,8 +57,8 @@
                     <td>${numG.distance}</td>
                     <td>${numG.type}</td>
                 </tr>
-                </tbody>
             </c:forEach>
+            </tbody>
         </table>
     </div>
     <div id="right_side">
