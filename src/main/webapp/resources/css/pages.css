@@ -52,9 +52,14 @@
 }
 .object_table tbody tr:nth-child(even)
 {
-    background: #bebebe;
+    background: #e6e6fa;
 }
 .object_table tbody tr:nth-child(odd)
 {
-    background: #ffff00;
+    background: #d3d3d3;
+}
+.object_table tbody tr
+{
+    height: 50px;
+    cursor: pointer;
 }
