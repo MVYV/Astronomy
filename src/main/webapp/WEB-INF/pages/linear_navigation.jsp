@@ -19,10 +19,10 @@
     <li><a href="#" title="">PUBLICATIONS</a></li>
     <li><a href="#" title="">TABLES</a>
         <ul>
-            <li><a href="/planets">PLANETS</a></li>
+            <li><a href="/planets?page=planets">PLANETS</a></li>
             <li><a href="/satellites">SATELLITES</a></li>
-            <li><a href="/stars">STARS</a></li>
-            <li><a href="/galaxies">GALAXIES</a></li>
+            <li><a href="/planets?page=stars">STARS</a></li>
+            <li><a href="/planets?page=galaxies">GALAXIES</a></li>
         </ul>
     </li>
     <li><a href="/about?name=solarSystem&page=solarSystem" title="">SOLAR SYSTEM</a></li>
