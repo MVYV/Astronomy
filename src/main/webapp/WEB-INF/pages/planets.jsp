@@ -19,14 +19,14 @@
     <div id="left_side">
     </div>
     <div id="page_main_content">
-        <h2>Planets</h2>
-        <p>Planets of The Solar system</p>
+        <h2><%= request.getAttribute("title")%></h2>
+        <p><%= request.getAttribute("subTitle")%></p>
         <table class="table table-striped">
             <thead>
             <tr>
-                <th>Plants</th>
-                <th>Satellites number</th>
-                <th>Radius</th>
+                <th><%= request.getAttribute("colOne")%></th>
+                <th><%= request.getAttribute("colTwo")%></th>
+                <th><%= request.getAttribute("colThree")%></th>
             </tr>
             </thead>
             <c:forEach var="num" items="${list}">
