@@ -1,11 +1,11 @@
 // JavaScript Document
 
 jQuery.fn.equalHeights = function() { 
- var currentTallest = 0; 
+ var currentHeight = 0;
  jQuery(this).each(function(){ 
-  if (jQuery(this).height() > currentTallest) { currentTallest = jQuery(this).height(); } 
+  if (jQuery(this).height() > currentHeight) { currentHeight = jQuery(this).height(); }
  }); 
- jQuery(this).css({'min-height': currentTallest});  
+ jQuery(this).css({'min-height': currentHeight});
  return this; 
 }; 
 
