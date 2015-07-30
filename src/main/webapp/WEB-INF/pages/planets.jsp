@@ -32,33 +32,27 @@
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="num" items="${list}">
-                <tr onclick="location.href='/about?name=${num.name}&page=planets';">
-                    <td>
-                        ${num.name}
-                    </td>
-                    <td>${num.satellites}</td>
-                    <td>${num.radius}</td>
+                <c:forEach var="num" items="${list}">
+                <tr name="one" onclick="location.href='/about?name=${num.name}&page=planets';">
+                    <td class="data_cell">${num.name}</td>
+                    <td class="data_cell">${num.satellites}</td>
+                    <td class="data_cell">${num.radius}</td>
                 </tr>
                 </c:forEach>
                 <c:forEach var="numS" items="${listS}">
                 <tr onclick="location.href='/about?name=${numS.name}&page=stars';">
-                    <td>
-                        ${numS.name}
-                    </td>
-                    <td>${numS.distance}</td>
-                    <td>${numS.radius}</td>
+                    <td class="data_cell">${numS.name}</td>
+                    <td class="data_cell">${numS.distance}</td>
+                    <td class="data_cell">${numS.radius}</td>
                 </tr>
                 </c:forEach>
                 <c:forEach var="numG" items="${listG}">
-                <tr onclick="location.href='/about?name=(${fn:escapeXml (numG.name)}&page=galaxies';">
-                    <td>
-                        ${numG.name}
-                    </td>
-                    <td>${numG.distance}</td>
-                    <td>${numG.type}</td>
+                <tr onclick="location.href='/about?name=${numG.name}&page=galaxies';">
+                    <td class="data_cell">${numG.name}</td>
+                    <td class="data_cell">${numG.distance}</td>
+                    <td class="data_cell">${numG.type}</td>
                 </tr>
-            </c:forEach>
+                </c:forEach>
             </tbody>
         </table>
     </div>
