@@ -12,8 +12,29 @@
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
+    <script type="text/javascript">
+        function change_picture() {
+            if (!document.getElementById('stars') && !document.getElementById('galaxies'))
+            {
+                document.getElementById('page_global').style.backgroundImage = 'url("/resources/images/planets.jpg")';
+            }
+            else if (!document.getElementById('planets') && !document.getElementById('galaxies'))
+            {
+                document.getElementById('page_global').style.backgroundImage = 'url("/resources/images/stars.jpg")';
+            }
+
+            else if (!document.getElementById('planets') && !document.getElementById('stars'))
+            {
+                document.getElementById('page_global').style.backgroundImage = 'url("/resources/images/galaxies.jpg")';
+
+            }
+            else
+            {}
+        }
+    </script>
 </head>
-<body>
+<body onload="change_picture()">
+<div id="page_global">
 <div id="page_nav">
 <jsp:include page="linear_navigation.jsp"></jsp:include>
 </div>
@@ -33,21 +54,21 @@
             </thead>
             <tbody>
                 <c:forEach var="num" items="${list}">
-                <tr name="one" onclick="location.href='/about?name=${num.name}&page=planets';">
+                <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&page=planets';">
                     <td class="data_cell">${num.name}</td>
                     <td class="data_cell">${num.satellites}</td>
                     <td class="data_cell">${num.radius}</td>
                 </tr>
                 </c:forEach>
                 <c:forEach var="numS" items="${listS}">
-                <tr onclick="location.href='/about?name=${numS.name}&page=stars';">
+                <tr class="obj_select" id="stars" onclick="location.href='/about?name=${numS.name}&page=stars';">
                     <td class="data_cell">${numS.name}</td>
                     <td class="data_cell">${numS.distance}</td>
                     <td class="data_cell">${numS.radius}</td>
                 </tr>
                 </c:forEach>
                 <c:forEach var="numG" items="${listG}">
-                <tr onclick="location.href='/about?name=${numG.name}&page=galaxies';">
+                <tr class="obj_select" id="galaxies" onclick="location.href='/about?name=${numG.name}&page=galaxies';">
                     <td class="data_cell">${numG.name}</td>
                     <td class="data_cell">${numG.distance}</td>
                     <td class="data_cell">${numG.type}</td>
@@ -61,6 +82,7 @@
 </div>
 <div id="page_footer">
     All Rights Reserved
+</div>
 </div>
 </body>
 </html>
