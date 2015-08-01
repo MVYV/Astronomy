@@ -12,6 +12,7 @@
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
+    <script src="<c:url value='/resources/js/sorttable.js' />" ></script>
     <script type="text/javascript">
         function change_picture() {
             if (!document.getElementById('stars') && !document.getElementById('galaxies'))
@@ -46,7 +47,7 @@
             <p class="main_title"><%= request.getAttribute("title")%></p>
             <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
        </div>
-       <table class="object_table" border="0">
+       <table class="sortable" border="0">
             <thead>
             <tr>
                 <th><%= request.getAttribute("colOne")%></th>
