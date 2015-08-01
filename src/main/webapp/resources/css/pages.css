@@ -49,6 +49,7 @@
     margin: 10px;
     -moz-box-sizing: border-box;
     border: 1px solid firebrick;
+    background: #808080;
 }
 #page_footer
 {
@@ -80,6 +81,18 @@
     font-family: Verdana;
     font-size: 14px;
 }
+.object_table thead tr
+{
+    height: 50px;
+    font-family: Verdana;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.object_table thead tr th
+{
+    border-bottom: 3px solid #cfcfcf;
+}
 .object_table tbody tr:hover
 {
     text-decoration: underline;
@@ -93,4 +106,27 @@
     font-family: Verdana;
     font-size: 14px;
     padding: 10px;
+    text-align: justify;
+}
+.title_box
+{
+    font-family: Verdana;
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 1px solid #cfcfcf;
+}
+.main_title, .sub_title
+{
+    margin: 0;
+    padding: 0;
+}
+.main_title
+{
+    font-size: 24px;
+}
+.sub_title
+{
+    font-size: 20px;
 }
