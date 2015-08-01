@@ -42,9 +42,11 @@
     <div id="left_side">
     </div>
     <div id="page_main_content">
-        <h2><%= request.getAttribute("title")%></h2>
-        <p><%= request.getAttribute("subTitle")%></p>
-        <table class="object_table" border="0">
+        <div class="title_box">
+            <p class="main_title"><%= request.getAttribute("title")%></p>
+            <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
+       </div>
+       <table class="object_table" border="0">
             <thead>
             <tr>
                 <th><%= request.getAttribute("colOne")%></th>
