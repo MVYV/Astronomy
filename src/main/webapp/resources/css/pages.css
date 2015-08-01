@@ -57,43 +57,44 @@
     margin: 0 auto;
     border: 1px solid crimson;
 }
-.object_table
+.sortable
 {
     width: 100%;
     border-spacing: 0;
     text-align: center;
     vertical-align: middle;
 }
-.object_table tbody tr:nth-child(even)
+.sortable tbody tr:nth-child(even)
 {
     background: #363636;
     color: #cfcfcf;
 }
-.object_table tbody tr:nth-child(odd)
+.sortable tbody tr:nth-child(odd)
 {
     background: #1c1c1c;
     color: #cfcfcf;
 }
-.object_table tbody tr
+.sortable tbody tr
 {
     height: 50px;
     cursor: pointer;
     font-family: Verdana;
     font-size: 14px;
 }
-.object_table thead tr
+.sortable thead tr
 {
     height: 50px;
     font-family: Verdana;
     font-size: 14px;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
 }
-.object_table thead tr th
+.sortable thead tr th
 {
     border-bottom: 3px solid #cfcfcf;
 }
-.object_table tbody tr:hover
+.sortable tbody tr:hover
 {
     text-decoration: underline;
 }
