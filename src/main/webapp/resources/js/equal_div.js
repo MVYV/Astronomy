@@ -11,6 +11,7 @@ jQuery.fn.equalHeights = function() {
 
 
 jQuery(document).ready(function() { 
- jQuery("#left_side, #page_main_content, #right_side").equalHeights();
+ jQuery(".left_side, .page_main_content, .right_side").equalHeights();
+ jQuery(".reg_div, .right_side").equalHeights();
 }); 
 
