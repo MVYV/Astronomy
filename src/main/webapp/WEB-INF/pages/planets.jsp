@@ -40,9 +40,9 @@
 <jsp:include page="linear_navigation.jsp"></jsp:include>
 </div>
 <div id="page_container">
-    <div id="left_side">
+    <div class="left_side">
     </div>
-    <div id="page_main_content">
+    <div class="page_main_content">
         <div class="title_box">
             <p class="main_title"><%= request.getAttribute("title")%></p>
             <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
@@ -80,7 +80,7 @@
             </tbody>
         </table>
     </div>
-    <div id="right_side">
+    <div class="right_side">
     </div>
 </div>
 <div id="page_footer">
