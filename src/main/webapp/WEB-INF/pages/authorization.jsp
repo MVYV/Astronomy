@@ -57,7 +57,7 @@
                     <label for="user_password_conf">Password confirmation:</label>
                     <input type="password" name="user_password_conf" id="user_password_conf" placeholder="Please confirm password">
                     <div id="validatePasswordConfResult"></div><br>
-                    <span class="reg_rules">Confirm your password from upper field</span>
+                    <span class="reg_rules">Confirm your password from upper field.</span>
                     <div class="ghost"></div>
                 </div>
                 <div class="reg_item_unique">
