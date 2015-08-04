@@ -62,17 +62,17 @@
 {
     text-align: right;
     clear: both;
-    margin: 0 auto 10px;
+    margin: 0 auto;
     line-height: 40px;
-    width: 500px;
+    width: 530px;
 }
 .reg_item_unique
 {
     text-align: center;
     clear: both;
-    margin: 0 auto 10px;
+    margin: 0 auto;
     line-height: 40px;
-    width: 500px;
+    width: 530px;
 }
 .reg_item input, .reg_item_unique input
 {
@@ -87,7 +87,20 @@
     font-family: Verdana;
     font-size: 14px;
     float: left;
-    padding-right: 15px;
+    padding-right: 5px;
+}
+.reg_rules
+{
+    font-size: 10px;
+    font-family: Verdana;
+    color: #808080;
+}
+#validateLoginResult, #validateEmailResult, #validateCountryResult,
+#validateCityResult, #validatePasswordResult, #validatePasswordConfResult, .ghost
+{
+    height: 40px;
+    width: 40px;
+    float: right;
 }
 .page_main_content
 {
