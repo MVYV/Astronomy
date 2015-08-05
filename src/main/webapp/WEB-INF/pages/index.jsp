@@ -13,7 +13,7 @@
     <div id="global_nav">
         <div class="container_four">
             <div class="navigation_button">
-                <a href="#">NEWS</a>
+                <a href="/linear_navigation">NEWS</a>
             </div>
             <div class="navigation_button">
                 <a href="#">PUBLICATIONS</a>
@@ -52,16 +52,16 @@
 </div>
 <div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
     <div><a href="#close" title="Close" class="close">X</a>
-         <form id="contact_form" action="/login" method="post">																												<!-- Форма авторизації -->
+         <form id="contact_form" action="<c:url value='/j_spring_security_check' />" method="post">																												<!-- Форма авторизації -->
             	<table width="400" border="0">																															<!-- Таблиця для розміщення ел. форми -->
                     <tr>																																				<!-- Рядок -->
                         <td>
-                           <input type="text" name="name" placeholder="Please enter your name:" id="user_name" value="" />
+                           <input type="text" id="j_username" name="j_username" placeholder="Please enter your name:" value="" />
                         </td>
                     </tr>
                     <tr>
                         <td>
-                            <input type="password" name="pass" placeholder="Please enter your password:" id="pass" value="" />
+                            <input type="password" id="j_password" name="j_password" placeholder="Please enter your password:" value="" />
                         </td>
                     </tr>
                     <tr>

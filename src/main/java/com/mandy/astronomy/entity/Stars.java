@@ -14,17 +14,17 @@ public class Stars {
     private String name;
 
     @Column(name = "stars_distance")
-    private String distance;
+    private double distance;
 
     @Column(name = "stars_radius")
-    private String radius;
+    private double radius;
 
     @Column(name = "stars_about")
     private String about;
 
     public Stars(){}
 
-    public Stars(String name, String distance, String radius, String about){
+    public Stars(String name, double distance, double radius, String about){
         this.name = name;
         this.distance = distance;
         this.radius = radius;
@@ -47,19 +47,19 @@ public class Stars {
         return name;
     }
 
-    public void setDistance(String distance1){
-        this.distance = distance1;
+    public void setDistance(double distance){
+        this.distance = distance;
     }
 
-    public String getDistance(){
+    public double getDistance(){
         return distance;
     }
 
-    public void setRadius(String radius){
+    public void setRadius(double radius){
         this.radius = radius;
     }
 
-    public String getRadius(){
+    public double getRadius(){
         return radius;
     }
 

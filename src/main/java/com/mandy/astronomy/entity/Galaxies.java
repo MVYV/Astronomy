@@ -14,7 +14,7 @@ public class Galaxies {
     private String name;
 
     @Column(name = "galaxies_distance")
-    private String distance;
+    private double distance;
 
     @Column(name = "galaxies_type")
     private String type;
@@ -24,7 +24,7 @@ public class Galaxies {
     
     public Galaxies(){}
 
-    public Galaxies(String name, String distance, String type, String about){
+    public Galaxies(String name, double distance, String type, String about){
         this.name = name;
         this.distance = distance;
         this.type = type;
@@ -47,11 +47,11 @@ public class Galaxies {
         return name;
     }
 
-    public void setDistance(String distance){
+    public void setDistance(double distance){
         this.distance = distance;
     }
 
-    public String getDistance(){
+    public double getDistance(){
         return distance;
     }
 

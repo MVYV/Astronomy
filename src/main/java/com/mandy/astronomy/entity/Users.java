@@ -27,7 +27,7 @@ public class Users {
 
     public Users(){}
 
-    public Users(String name, String email, String password, String country, String city){
+    public Users(String name, String email, String country, String city, String password){
         this.name = name;
         this.email = email;
         this.password = password;
