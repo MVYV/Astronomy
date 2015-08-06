@@ -152,13 +152,13 @@
 {
     text-align:center;
 }
-#user_name, #pass, #sub_button
+#j_username, #j_password, #sub_button
 {
     height: 35px;
     margin-bottom: 10px;
     font-family: "Verdana, sans-serif;
 }
-#user_name, #pass
+#j_username, #j_password
 {
     width: 250px;
     text-align: center;
@@ -186,7 +186,7 @@
     color: #ffff00;
     text-decoration: underline;
 }
-#user_name
+#j_username
 {
     margin-top: 40px;
 }
