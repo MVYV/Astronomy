@@ -51,7 +51,7 @@ public class PlanetsController {
             title = "Stars";
             subTitle = "Stars of The Milky Way";
             colOne = "Star";
-            colTwo = "Distance to The Earth";
+            colTwo = "Distance to The Earth (ly)";
             colThree = "Radius (R - Solar radius)";
             model.addAttribute("title", title);
             model.addAttribute("subTitle", subTitle);
@@ -65,8 +65,8 @@ public class PlanetsController {
             title = "Galaxies";
             subTitle = "Galaxies of The Universe";
             colOne = "Galaxy";
-            colTwo = "Distance to The Earth";
-            colThree = "type";
+            colTwo = "Distance to The Earth (ly)";
+            colThree = "Type";
             model.addAttribute("title", title);
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
