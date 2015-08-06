@@ -14,7 +14,7 @@ public class Satellites {
     private String name;
 
     @Column(name = "satellites_temperature")
-    private String temperature;
+    private double temperature;
 
     @Column(name = "planet_name")
     private String planet_name;
@@ -24,7 +24,7 @@ public class Satellites {
 
     public Satellites(){}
 
-    public Satellites(String name, String temperature, String planet_name, String about){
+    public Satellites(String name, double temperature, String planet_name, String about){
         this.name = name;
         this.temperature = temperature;
         this.planet_name = planet_name;
@@ -47,11 +47,11 @@ public class Satellites {
         return name;
     }
 
-    public void setTemperature(String temperature){
+    public void setTemperature(double temperature){
         this.temperature = temperature;
     }
 
-    public String getTemperature(){
+    public double getTemperature(){
         return temperature;
     }
 
