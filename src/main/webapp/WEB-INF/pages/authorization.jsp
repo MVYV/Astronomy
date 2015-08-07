@@ -16,13 +16,13 @@
     </div>
     <div id="page_container">
         <div class="reg_div">
-            <form class="reg_form" novalidate>
+            <form class="reg_form" action="/authorization" method="POST" novalidate>
                 <div class="reg_item">
                     <label for="user_login">Login:</label>
                     <input type="text" name="user_login" id="user_login" placeholder="Please enter your login"
-                           onblur="validateLogin(2, 15, this, document.getElementById('validateLoginResult'), document.getElementById('validateLoginRules'))">
+                           onblur="validateLogin(2, 25, this, document.getElementById('validateLoginResult'), document.getElementById('validateLoginRules'))">
                     <div id="validateLoginResult"></div><br>
-                    <span class="reg_rules" id="validateLoginRules">Only symbols: {A-z, 0-9, _}. From 2 to 15 symbols</span>
+                    <span class="reg_rules" id="validateLoginRules">Only symbols: {A-z, 0-9, _}. From 2 to 25 symbols</span>
                     <div class="ghost"></div>
                 </div>
                 <div class="reg_item">
@@ -66,7 +66,7 @@
                     <div class="ghost"></div>
                 </div>
                 <div class="reg_item_unique">
-                    <input type="submit" name="user_submit" id="user_submit" value="GO!" onclick="validateForm(this.form);">
+                    <input type="button" name="user_submit" id="user_submit" value="GO!" onclick="validateForm(this.form);">
                 </div>
             </form>
         </div>
