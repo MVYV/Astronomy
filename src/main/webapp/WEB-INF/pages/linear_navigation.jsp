@@ -1,4 +1,6 @@
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <html>
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -17,7 +19,7 @@
     </li>
     <li><a href="#">NEWS</a></li>
     <li><a href="#" title="">PUBLICATIONS</a></li>
-    <li><a href="#" title="">TABLES</a>
+    <li><a href="#">TABLES</a>
         <ul>
             <li><a href="/planets?page=planets">PLANETS</a></li>
             <li><a href="/satellites">SATELLITES</a></li>
@@ -27,21 +29,31 @@
     </li>
     <li><a href="/about?name=solarSystem&page=solarSystem" title="">SOLAR SYSTEM</a></li>
     <li><a href="/about?name=universe&page=universe" title="">UNIVERSE</a></li>
-    <li><a href="#modal_enter" title="">SIGN IN</a></li>
+    <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
+        <li><a href="#modal_enter" title="">SIGN IN</a></li>
+    </sec:authorize>
+    <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
+        <li><a href="#"><%= request.getAttribute("username")%></a>
+            <ul>
+                <li><a href="#">MY PROFILE</a></li>
+                <li><a href="/j_spring_security_logout">SIGN OUT</a></li>
+            </ul>
+        </li>
+    </sec:authorize>
 </ul>
 </div>
 <div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
     <div><a href="#close" title="Close" class="close">X</a>
-        <form id="contact_form" action="/login" method="post">																												<!-- Форма авторизації -->
+        <form id="contact_form" action="<c:url value='/j_spring_security_check' />" method="post">																												<!-- Форма авторизації -->
             <table width="400" border="0">																															<!-- Таблиця для розміщення ел. форми -->
                 <tr>																																				<!-- Рядок -->
                     <td>
-                        <input type="text" name="name" placeholder="Please enter your name:" id="user_name" value="" />
+                        <input type="text" id="j_username" name="j_username" placeholder="Please enter your name:" value="" />
                     </td>
                 </tr>
                 <tr>
                     <td>
-                        <input type="password" name="pass" placeholder="Please enter your password:" id="pass" value="" />
+                        <input type="password" id="j_password" name="j_password" placeholder="Please enter your password:" value="" />
                     </td>
                 </tr>
                 <tr>
