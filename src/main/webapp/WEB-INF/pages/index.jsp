@@ -1,5 +1,6 @@
 ﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -44,9 +45,16 @@
             <div class="navigation_button">
                 <a href="#">ABOUT</a>
             </div>
-            <div class="navigation_button">
-                <a href="#modal_enter">SIGN IN</a>
-            </div>
+            <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
+                <div class="navigation_button">
+                    <a href="#modal_enter">SIGN IN</a>
+                </div>
+            </sec:authorize>
+            <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
+                <div class="navigation_button">
+                    <a href="/j_spring_security_logout">SIGN OUT</a>
+                </div>
+            </sec:authorize>
         </div>
     </div>
 </div>
