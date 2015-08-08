@@ -36,6 +36,11 @@ public class PlanetsController {
         String colOne;
         String colTwo;
         String colThree;
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
         if (page.equals("planets")){
             List<Planets> list = planetsService.getAll();
             title = "Planets";
@@ -49,7 +54,6 @@ public class PlanetsController {
             model.addAttribute("colTwo", colTwo);
             model.addAttribute("colThree", colThree);
             model.put("list", list);
-            return "planets";
         }else if (page.equals("stars")){
             List<Stars> listS = starsService.getAll();
             title = "Stars";
@@ -63,7 +67,6 @@ public class PlanetsController {
             model.addAttribute("colTwo", colTwo);
             model.addAttribute("colThree", colThree);
             model.put("listS", listS);
-            return "planets";
         }else if (page.equals("galaxies")){
             List<Galaxies> listG = galaxiesService.getAll();
             title = "Galaxies";
@@ -77,12 +80,6 @@ public class PlanetsController {
             model.addAttribute("colTwo", colTwo);
             model.addAttribute("colThree", colThree);
             model.put("listG", listG);
-            return "planets";
-        }
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)){
-            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            model.addAttribute("username", userDetails.getUsername());
         }
         return "planets";
     }
