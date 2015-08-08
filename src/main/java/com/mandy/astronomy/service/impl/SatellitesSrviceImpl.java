@@ -27,4 +27,7 @@ public class SatellitesSrviceImpl implements SatellitesService {
 
     @Override
     public List<Satellites> getAll(){ return satellitesRepository.findAll(); }
+
+    @Override
+    public List<Satellites> getByPlanetName(String name){ return satellitesRepository.findByPlanet(name); }
 }
