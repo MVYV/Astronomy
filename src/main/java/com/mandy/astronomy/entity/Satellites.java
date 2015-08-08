@@ -17,17 +17,17 @@ public class Satellites {
     private double temperature;
 
     @Column(name = "planet_name")
-    private String planet_name;
+    private String planet;
 
     @Column(name = "satellites_about")
     private String about;
 
     public Satellites(){}
 
-    public Satellites(String name, double temperature, String planet_name, String about){
+    public Satellites(String name, double temperature, String planet, String about){
         this.name = name;
         this.temperature = temperature;
-        this.planet_name = planet_name;
+        this.planet = planet;
         this.about = about;
     }
 
@@ -55,12 +55,12 @@ public class Satellites {
         return temperature;
     }
 
-    public void setPlanet_name(String planet_name){
-        this.planet_name = planet_name;
+    public void setPlanet(String planet){
+        this.planet = planet;
     }
 
-    public String getPlanet_name(){
-        return planet_name;
+    public String getPlanet(){
+        return planet;
     }
 
     public void setAbout(String about){
