@@ -9,5 +9,6 @@ public interface SatellitesService {
     Satellites addSatellite(Satellites satellite);
     void delete(long id);
     Satellites getByName(String name);
+    List<Satellites> getByPlanetName(String name);
     List<Satellites> getAll();
 }
