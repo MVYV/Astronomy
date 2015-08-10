@@ -68,6 +68,11 @@ public class AboutController {
             model.addAttribute("colTwo", colTwo);
             model.addAttribute("colThree", colThree);
             List<Satellites> list = satellitesService.getByPlanetName(name);
+            int listSize = list.size();
+            if (listSize < 1){
+                String hide = "display: none";
+                model.addAttribute("hide", hide);
+            }
             model.put("list", list);
         }else if (page.equals("stars")){
             Stars star = starsService.getByName(name);
