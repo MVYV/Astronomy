@@ -21,10 +21,10 @@
     <div id="page_main_content">
         <div id="about_object"><%= request.getAttribute("about")%></div>
 
-        <div class="title_box">
+        <div class="title_box" style="<%= request.getAttribute("hide")%>">
             <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
         </div>
-        <table class="sortable" border="0">
+        <table class="sortable" border="0" style="<%= request.getAttribute("hide")%>">
             <thead>
             <tr>
                 <th><%= request.getAttribute("colOne")%></th>

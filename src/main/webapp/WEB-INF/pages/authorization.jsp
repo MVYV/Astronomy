@@ -20,7 +20,7 @@
                 <div class="reg_item">
                     <label for="user_login">Login:</label>
                     <input type="text" name="user_login" id="user_login" placeholder="Please enter your login"
-                           onblur="validateLogin(2, 25, this, document.getElementById('validateLoginResult'), document.getElementById('validateLoginRules'))">
+                           onblur="validateLogin(2, 25, this)">
                     <div id="validateLoginResult"></div><br>
                     <span class="reg_rules" id="validateLoginRules">Only symbols: {A-z, 0-9, _}. From 2 to 25 symbols</span>
                     <div class="ghost"></div>
@@ -28,7 +28,7 @@
                 <div class="reg_item">
                     <label for="user_email">Email:</label>
                     <input type="email" name="user_email" id="user_email" placeholder="Please enter your email"
-                           onblur="validateEmail(this, document.getElementById('validateEmailResult'), document.getElementById('validateEmailRules'))">
+                           onblur="validateEmail(this)">
                     <div id="validateEmailResult"></div><br>
                     <span class="reg_rules" id="validateEmailRules">Only correct email with symbol {@}</span>
                     <div class="ghost"></div>
@@ -36,7 +36,7 @@
                 <div class="reg_item">
                     <label for="user_country">Country:</label>
                     <input type="text" name="user_country" id="user_country" placeholder="Please enter your country"
-                           onblur="validateCountry(this, document.getElementById('validateCountryResult'), document.getElementById('validateCountryRules'))">
+                           onblur="validateCountry(this)">
                     <div id="validateCountryResult"></div><br>
                     <span class="reg_rules" id="validateCountryRules">Only symbols: {A-z}</span>
                     <div class="ghost"></div>
@@ -44,7 +44,7 @@
                 <div class="reg_item">
                     <label for="user_city">City:</label>
                     <input type="text" name="user_city" id="user_city" placeholder="Please enter your city"
-                           onblur="validateCity(this, document.getElementById('validateCityResult'), document.getElementById('validateCityRules'))">
+                           onblur="validateCity(this)">
                     <div id="validateCityResult"></div><br>
                     <span class="reg_rules" id="validateCityRules">Only symbols: {A-z}</span>
                     <div class="ghost"></div>
@@ -52,7 +52,7 @@
                 <div class="reg_item">
                     <label for="user_password">Password:</label>
                     <input type="password" name="user_password" id="user_password" placeholder="Please enter password"
-                           onblur="validatePassword(this, document.getElementById('validatePasswordResult'), document.getElementById('validatePasswordRules'))">
+                           onblur="validatePassword(this)">
                     <div id="validatePasswordResult"></div><br>
                     <span class="reg_rules" id="validatePasswordRules">At least one:[A-z,0-9,special symbol].Min 8 symbols</span>
                     <div class="ghost"></div>
@@ -60,13 +60,13 @@
                 <div class="reg_item">
                     <label for="user_password_conf">Password confirmation:</label>
                     <input type="password" name="user_password_conf" id="user_password_conf" placeholder="Please confirm password"
-                           onblur="validatePasswordConfirmation(document.getElementById('user_password'), this, document.getElementById('validatePasswordConfResult'), document.getElementById('validatePasswordConfRules'))" >
+                           onblur="validatePasswordConfirmation(document.getElementById('user_password'), this)" >
                     <div id="validatePasswordConfResult"></div><br>
                     <span class="reg_rules" id="validatePasswordConfRules">Confirm your password from upper field.</span>
                     <div class="ghost"></div>
                 </div>
                 <div class="reg_item_unique">
-                    <input type="button" name="user_submit" id="user_submit" value="GO!" onclick="validateForm(this.form);">
+                    <input type="submit" name="user_submit" id="user_submit" value="GO!" onclick="validateForm(this.form);">
                 </div>
             </form>
         </div>
