@@ -2,105 +2,131 @@ function validationCorrect(vResult, vRules)
 {
     vResult.style.backgroundImage = 'url("/resources/images/validYes.png")';
     vRules.style.color = '#008000';
-    return true;
+    //return true;
 }
 
 function validationUnCorrect(vResult, vRules)
 {
     vResult.style.backgroundImage = 'url("/resources/images/validNo.png")';
     vRules.style.color = '#ff0000';
-    return false;
+    //return false;
 }
 
-function validateLogin(minLength, maxLength, inputField, validationResult, validationRules)
+function validateLogin(minLength, maxLength, inputField)
 {
     var regExpression = /^[A-z0-9_]+$/;
+    var vResult = document.getElementById('validateLoginResult');
+    var vRules =  document.getElementById('validateLoginRules');
     if(inputField.value.length < minLength || inputField.value.length > maxLength || !inputField.value.match(regExpression))
     {
-        validationUnCorrect(validationResult, validationRules)
+        validationUnCorrect(vResult, vRules);
+        return false;
     }
     else
     {
-        validationCorrect(validationResult, validationRules)
+        validationCorrect(vResult, vRules);
+        return true;
     }
 }
 
-function validateEmail(inputField, validationResult, validationRules)
+function validateEmail(inputField)
 {
     var regExpression = /^[-\w.]+@([A-z0-9][-A-z0-9]+\.)+[A-z]{2,4}$/;
+    var vResult = document.getElementById('validateEmailResult');
+    var vRules =  document.getElementById('validateEmailRules');
     if(!inputField.value.match(regExpression))
     {
-        validationUnCorrect(validationResult, validationRules)
+        validationUnCorrect(vResult, vRules);
+        return false;
     }
     else
     {
-        validationCorrect(validationResult, validationRules)
+        validationCorrect(vResult, vRules);
+        return true;
     }
 }
 
-function validateCountry(inputField, validationResult, validationRules)
+function validateCountry(inputField)
 {
     var regExpression = /^[a-zA-Z]+$/;
+    var vResult = document.getElementById('validateCountryResult');
+    var vRules =  document.getElementById('validateCountryRules');
     if(!inputField.value.match(regExpression))
     {
-        validationUnCorrect(validationResult, validationRules)
+        validationUnCorrect(vResult, vRules);
+        return false;
     }
     else
     {
-        validationCorrect(validationResult, validationRules)
+        validationCorrect(vResult, vRules);
+        return true;
     }
 }
 
-function validateCity(inputField, validationResult, validationRules)
+function validateCity(inputField)
 {
     var regExpression = /^[a-zA-Z]+$/;
+    var vResult = document.getElementById('validateCityResult');
+    var vRules =  document.getElementById('validateCityRules');
     if(!inputField.value.match(regExpression))
     {
-        validationUnCorrect(validationResult, validationRules)
+        validationUnCorrect(vResult, vRules);
+        return false;
     }
     else
     {
-        validationCorrect(validationResult, validationRules)
+        validationCorrect(vResult, vRules);
+        return true;
     }
 }
 
 
-function validatePassword(inputField, validationResult, validationRules)
+function validatePassword(inputField)
 {
     var regExpression = /(?=^.{8,}$)((?=.*\d)|(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/;
+    var vResult = document.getElementById('validatePasswordResult');
+    var vRules =  document.getElementById('validatePasswordRules');
     if(!inputField.value.match(regExpression))
     {
-        validationUnCorrect(validationResult, validationRules)
+        validationUnCorrect(vResult, vRules);
+        return false;
     }
     else
     {
-        validationCorrect(validationResult, validationRules)
+        validationCorrect(vResult, vRules);
+        return true;
     }
 }
 
-function validatePasswordConfirmation(inputFieldPass, inputFieldPassConf, validationResult, validationRules)
+function validatePasswordConfirmation(inputFieldPass, inputFieldPassConf)
 {
+    var vResult = document.getElementById('validatePasswordConfResult');
+    var vRules =  document.getElementById('validatePasswordConfRules');
     if(inputFieldPass.value == inputFieldPassConf.value)
     {
-        validationCorrect(validationResult, validationRules)
+        validationCorrect(vResult, vRules);
+        return true;
     }
     else if(inputFieldPass.value != inputFieldPassConf.value)
     {
-        validationUnCorrect(validationResult, validationRules)
+        validationUnCorrect(vResult, vRules);
+        return false;
     }
     else{}
 }
 
 function validateForm(form)
 {
-    if(validateLogin(2, 25, form["user_login"], form["validateLoginResult"], form["validateLoginRules"]) &&
-       validateEmail(form["user_email"], form["validateEmailResult"], form["validateEmailRules"]) &&
-       validateCountry(form["user_country"], form["validateCountryResult"], form["validateCountryRules"]) &&
-       validateCity(form["user_city"], form["validateCityResult"], form["validateCityRules"]) &&
-       validatePassword(form["user_password"], form["validatePasswordResult"], form["validatePasswordRules"]) &&
-       validatePasswordConfirmation(form["user_password"], form["user_password_conf"], form["validatePasswordConfResult"], form["validatePasswordConfRules"]))
+    if(validateLogin(2, 25, form["user_login"]) &&
+       validateEmail(form["user_email"]) &&
+       validateCountry(form["user_country"]) &&
+       validateCity(form["user_city"]) &&
+       validatePassword(form["user_password"]) &&
+       validatePasswordConfirmation(form["user_password"], form["user_password_conf"]))
     {
-        form.submit();
+        //form.submit();
+        alert("GOOD!!!");
+        return true;
     }
     else
     {
