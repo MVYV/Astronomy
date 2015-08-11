@@ -124,13 +124,19 @@ function validateForm(form)
        validatePassword(form["user_password"]) &&
        validatePasswordConfirmation(form["user_password"], form["user_password_conf"]))
     {
-        //form.submit();
-        alert("GOOD!!!");
+        form.submit();
         return true;
     }
     else
     {
-        alert("FATAL ERROR!!!");
+        document.getElementById('user_submit').style.cssText =
+        "color:#ffffff;" +
+        "background:#cd2626;" +
+        "background: -moz-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
+        "background: -webkit-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
+        "background: -o-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
+        "background: -ms-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
+        "background: linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);"
     }
 }
 
