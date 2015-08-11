@@ -2,14 +2,12 @@ function validationCorrect(vResult, vRules)
 {
     vResult.style.backgroundImage = 'url("/resources/images/validYes.png")';
     vRules.style.color = '#008000';
-    //return true;
 }
 
 function validationUnCorrect(vResult, vRules)
 {
     vResult.style.backgroundImage = 'url("/resources/images/validNo.png")';
     vRules.style.color = '#ff0000';
-    //return false;
 }
 
 function validateLogin(minLength, maxLength, inputField)
