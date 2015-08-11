@@ -60,8 +60,8 @@ public class AboutController {
             about = planet.getAbout();
             model.addAttribute("about", about);
             subTitle = name + "'s satellites";
-            colOne = "Satellite";
-            colTwo = "Temperature";
+            colOne = "Name";
+            colTwo = "Temperature (K)";
             colThree = "Planet";
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
@@ -77,22 +77,32 @@ public class AboutController {
         }else if (page.equals("stars")){
             Stars star = starsService.getByName(name);
             about = star.getAbout();
+            String hide = "display: none";
+            model.addAttribute("hide", hide);
             model.addAttribute("about", about);
         }else if (page.equals("galaxies")){
             Galaxies galaxy = galaxiesService.getByName(name);
             about = galaxy.getAbout();
+            String hide = "display: none";
+            model.addAttribute("hide", hide);
             model.addAttribute("about", about);
         }else if (page.equals("solarSystem")){
             SolarSystem solarSystem = solarSytemService.getSolarSystem(id);
             about = solarSystem.getAbout();
+            String hide = "display: none";
+            model.addAttribute("hide", hide);
             model.addAttribute("about", about);
         }else if (page.equals("universe")){
             Universe universe = universeService.getUniverse(id);
             about = universe.getAbout();
+            String hide = "display: none";
+            model.addAttribute("hide", hide);
             model.addAttribute("about", about);
         }else if (page.equals("satellites")){
             Satellites satellite = satellitesService.getByName(name);
             about = satellite.getAbout();
+            String hide = "display: none";
+            model.addAttribute("hide", hide);
             model.addAttribute("about", about);
         }
         return "about";

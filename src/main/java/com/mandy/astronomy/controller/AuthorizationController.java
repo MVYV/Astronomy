@@ -18,12 +18,11 @@ public class AuthorizationController {
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(
-            @RequestParam("name") String name,
-            @RequestParam("email") String email,
-            @RequestParam("country") String country,
-            @RequestParam("city") String city,
-            @RequestParam("pwd") String pwd,
-            @RequestParam("pwdConfirm") String pwdConfirm, ModelMap modelMap
+            @RequestParam(value = "user_login", required = false) String name,
+            @RequestParam(value = "user_email", required = false) String email,
+            @RequestParam(value = "user_country", required = false) String country,
+            @RequestParam(value = "user_city", required = false) String city,
+            @RequestParam(value = "password", required = false) String pwd, ModelMap modelMap
     ){
         String mail = AuthorizationController.md5Apache(email);
         Users user = new Users(name, mail, country, city, pwd);

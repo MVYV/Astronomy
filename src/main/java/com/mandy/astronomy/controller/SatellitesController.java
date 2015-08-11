@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import java.util.List;
@@ -20,13 +21,14 @@ public class SatellitesController {
     private SatellitesService satellitesService;
 
     @RequestMapping(value = "/satellites")
-    public List<Satellites> getSatellitesList(Model model){
+    public String getSatellitesList(ModelMap model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
         List<Satellites> satellitesList = satellitesService.getAll();
-        return satellitesList;
+        model.put("satellitesList", satellitesList);
+        return "satellites";
     }
 }

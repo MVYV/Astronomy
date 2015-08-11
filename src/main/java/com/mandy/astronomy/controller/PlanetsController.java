@@ -45,7 +45,7 @@ public class PlanetsController {
             List<Planets> list = planetsService.getAll();
             title = "Planets";
             subTitle = "Planets of The Solar System";
-            colOne = "Planet";
+            colOne = "Name";
             colTwo = "Satellites number";
             colThree = "Radius (km)";
             model.addAttribute("title", title);
@@ -58,7 +58,7 @@ public class PlanetsController {
             List<Stars> listS = starsService.getAll();
             title = "Stars";
             subTitle = "Stars of The Milky Way";
-            colOne = "Star";
+            colOne = "Name";
             colTwo = "Distance to The Earth (ly)";
             colThree = "Radius (R - Solar radius)";
             model.addAttribute("title", title);
@@ -71,7 +71,7 @@ public class PlanetsController {
             List<Galaxies> listG = galaxiesService.getAll();
             title = "Galaxies";
             subTitle = "Galaxies of The Universe";
-            colOne = "Galaxy";
+            colOne = "Name";
             colTwo = "Distance to The Earth (ly)";
             colThree = "Type";
             model.addAttribute("title", title);
