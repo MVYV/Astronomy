@@ -16,7 +16,7 @@
     </div>
     <div id="page_container">
         <div class="reg_div">
-            <form class="reg_form" action="/authorization" method="POST" novalidate>
+            <form class="reg_form" id="rForm" action="/authorization" method="POST" novalidate>
                 <div class="reg_item">
                     <label for="user_login">Login:</label>
                     <input type="text" name="user_login" id="user_login" placeholder="Please enter your login"
@@ -66,7 +66,7 @@
                     <div class="ghost"></div>
                 </div>
                 <div class="reg_item_unique">
-                    <input type="submit" name="user_submit" id="user_submit" value="GO!" onclick="validateForm(this.form);">
+                    <input type="submit" name="user_submit" id="user_submit" value="GO!" onclick="return validateForm(this.form);">
                 </div>
             </form>
         </div>
