@@ -136,7 +136,8 @@ function validateForm(form)
         "background: -webkit-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
         "background: -o-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
         "background: -ms-linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);" +
-        "background: linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);"
+        "background: linear-gradient(top, #cd2626 0%, #ff3030 50%, #ff0000 100%);";
+        return false;
     }
 }
 
