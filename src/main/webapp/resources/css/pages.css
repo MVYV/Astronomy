@@ -1,4 +1,10 @@
-#page_global
+table
+{
+    border-spacing: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+.page_global, #page_global_changer
 {
     position: fixed;
     top: 0;
@@ -9,14 +15,14 @@
     background-size: cover;
     background-attachment: fixed;
 }
-#page_container
+.page_container
 {
     width: 1440px;
     margin: 0 auto;
     overflow: hidden;
     /*border: 3px solid #000000;*/
 }
-#page_nav
+.page_nav
 {
     overflow: visible;
     height: 50px;
@@ -55,8 +61,36 @@
     -webkit-box-sizing: border-box;
     margin: 10px 10px 10px 0;
     border: 1px solid darkblue;
+}
+#upperBox, #lowerBox, #loaderBox
+{
+    width: 1142px;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    margin-bottom: 10px;
     padding: 10px;
-
+    text-align: center;
+}
+#lowerBox, #loaderBox
+{
+    display: none;
+}
+#upperBox .userLoginData
+{
+    width: 530px;
+    margin: 0 auto;
+}
+#upperBox .userLoginData tr
+{
+    width: 50%;
+    height: 40px;
+}
+#upperBox .userLoginData tr th
+{
+    border-bottom: 1px solid #000000;
 }
 .reg_item
 {
@@ -125,7 +159,7 @@
     border: 1px solid firebrick;
     background: #808080;
 }
-#page_footer
+.page_footer
 {
     width: 1440px;
     margin: 0 auto;
@@ -134,9 +168,6 @@
 .sortable
 {
     width: 100%;
-    border-spacing: 0;
-    text-align: center;
-    vertical-align: middle;
 }
 .sortable tbody tr:nth-child(even)
 {
