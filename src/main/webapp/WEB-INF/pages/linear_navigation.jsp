@@ -35,7 +35,7 @@
     <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
         <li><a href="#"><%= request.getAttribute("username")%></a>
             <ul>
-                <li><a href="#">MY PROFILE</a></li>
+                <li><a href="/profile">MY PROFILE</a></li>
                 <li><a href="/j_spring_security_logout">SIGN OUT</a></li>
             </ul>
         </li>

@@ -10,13 +10,13 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
 </head>
 <body>
-<div id="page_global">
-    <div id="page_nav">
+<div class="page_global">
+    <div class="page_nav">
         <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
-    <div id="page_container">
+    <div class="page_container">
         <div class="reg_div">
-            <form class="reg_form" id="rForm" action="/authorization" method="POST" novalidate>
+            <form class="reg_form" id="rForm" action="/registration" method="POST" novalidate>
                 <div class="reg_item">
                     <label for="user_login">Login:</label>
                     <input type="text" name="user_login" id="user_login" placeholder="Please enter your login"
@@ -74,7 +74,7 @@
 
         </div>
     </div>
-    <div id="page_footer">
+    <div class="page_footer">
         All Rights Reserved
     </div>
 
