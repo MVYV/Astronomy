@@ -2,7 +2,7 @@ package com.mandy.astronomy.entity;
 
 import javax.persistence.*;
 
-@Entity(name = "user_role")
+@Entity(name = "user_roles")
 public class Role {
 
     @Id
@@ -15,6 +15,13 @@ public class Role {
 
     @Column(name = "r_roles")
     private String role;
+
+    public Role(){}
+
+    public Role(String name, String role){
+        this.name = name;
+        this.role = role;
+    }
 
     public void setId(long id){
         this.id = id;

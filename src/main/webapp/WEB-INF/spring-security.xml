@@ -39,6 +39,7 @@
                                        "select users_name, users_password, enabled from users where users_name=?"
                                authorities-by-username-query=
                                        "select r_user_name, r_roles from user_roles where r_user_name =?" />
+            <password-encoder hash="md5"/>
         </authentication-provider>
     </authentication-manager>
 </beans:beans>
