@@ -39,7 +39,7 @@
     <div class="page_container">
         <div class="reg_div">
             <div id="upperBox">
-                <table class="userLoginData" border="1">
+                <table class="userLoginData" border="0">
                     <tr>
                         <td class="userLD"></td>
                         <td class="userLD"></td>
