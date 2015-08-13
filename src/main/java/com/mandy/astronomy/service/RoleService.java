@@ -5,4 +5,5 @@ import com.mandy.astronomy.entity.Role;
 public interface RoleService {
 
     Role addRole(Role role);
+    Role getByName(String name);
 }

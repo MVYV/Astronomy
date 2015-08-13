@@ -18,6 +18,9 @@ public class UsersServiceImpl implements UsersService{
     public Users addUser(Users user){ return usersRepository.save(user); }
 
     @Override
+    public Users updateUser(Users user){ return usersRepository.saveAndFlush(user); }
+
+    @Override
     public void delete(long id){ usersRepository.delete(id); }
 
     @Override

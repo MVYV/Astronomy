@@ -28,10 +28,10 @@ public class RootController {
         return "index";
     }
 
-    @RequestMapping(value = "/profile")
-    public String getProfile(){
-        return "profile";
-    }
+//    @RequestMapping(value = "/profile")
+//    public String getProfile(){
+//        return "profile";
+//    }
 
     @RequestMapping(value = "/linear_navigation")
     public String getlinear_navigation(Model model){

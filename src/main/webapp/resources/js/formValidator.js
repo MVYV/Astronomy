@@ -46,7 +46,7 @@ function validateEmail(inputField)
 
 function validateCountry(inputField)
 {
-    var regExpression = /^[a-zA-Z]+$/;
+    var regExpression = /^[a-zA-Z-]+$/;
     var vResult = document.getElementById('validateCountryResult');
     var vRules =  document.getElementById('validateCountryRules');
     if(!inputField.value.match(regExpression))
@@ -63,7 +63,7 @@ function validateCountry(inputField)
 
 function validateCity(inputField)
 {
-    var regExpression = /^[a-zA-Z]+$/;
+    var regExpression = /^[a-zA-Z-]+$/;
     var vResult = document.getElementById('validateCityResult');
     var vRules =  document.getElementById('validateCityRules');
     if(!inputField.value.match(regExpression))

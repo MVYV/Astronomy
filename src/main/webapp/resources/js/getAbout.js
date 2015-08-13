@@ -1,13 +1,12 @@
-function getAbout(){
+function changeProfile(){
 
     $.ajax({
-        url: "about",
+        url: "/profile/change",
         type: "POST",
         dataType: 'json',
 
         success: function(data){
-            $('#getAbout').tmpl(data).appendTo('#about');
-            getRegion();
+            $('#upperBox').tmpl(data).appendTo('#userData');
         }
     })
 }
