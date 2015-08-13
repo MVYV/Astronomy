@@ -88,7 +88,7 @@ table
     width: 50%;
     height: 40px;
 }
-#upperBox .userLoginData tr th
+#upperBox .userLoginData tr td
 {
     border-bottom: 1px solid #000000;
 }
