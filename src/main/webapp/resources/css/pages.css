@@ -12,8 +12,59 @@ table
     width: 100%;
     height: 100%;
     overflow: hidden;
+}
+#page_global_changer
+{
     background-size: cover;
     background-attachment: fixed;
+}
+.page_global
+{
+    background: repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 50px,
+            #000000 20px,
+            #465298 50px,
+            #000000 20px,
+            #465298 60px
+    );
+    background: -moz-repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 50px,
+            #000000 20px,
+            #465298 50px,
+            #000000 20px,
+            #465298 60px
+    );
+    background: -o-repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 50px,
+            #000000 20px,
+            #465298 50px,
+            #000000 20px,
+            #465298 60px
+    );
+    background: -webkit-repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 50px,
+            #000000 20px,
+            #465298 50px,
+            #000000 20px,
+            #465298 60px
+    );
+    background: -ms-repeating-linear-gradient(
+            45deg,
+            #606dbc,
+            #606dbc 50px,
+            #000000 20px,
+            #465298 50px,
+            #000000 20px,
+            #465298 60px
+    );
 }
 .page_container
 {
