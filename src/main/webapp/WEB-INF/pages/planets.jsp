@@ -17,16 +17,16 @@
         function change_picture() {
             if (!document.getElementById('stars') && !document.getElementById('galaxies'))
             {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/planets.jpg")';
+                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/kosmos.jpg")';
             }
             else if (!document.getElementById('planets') && !document.getElementById('galaxies'))
             {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/stars.jpg")';
+                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/kosmos.jpg")';
             }
 
             else if (!document.getElementById('planets') && !document.getElementById('stars'))
             {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/galaxies.jpg")';
+                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/kosmos.jpg")';
 
             }
             else
@@ -41,6 +41,9 @@
 </div>
 <div class="page_container">
     <div class="left_side">
+        <c:forEach var="num" items="${newsList}">
+            <a href="/about?name=${num.title}&page=news"><p>${num.title}</p></a>
+        </c:forEach>
     </div>
     <div class="page_main_content">
         <div class="title_box">

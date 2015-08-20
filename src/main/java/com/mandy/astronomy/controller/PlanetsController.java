@@ -27,6 +27,9 @@ public class PlanetsController {
     @Autowired
     private GalaxiesService galaxiesService;
 
+    @Autowired
+    private NewsService newsService;
+
     @RequestMapping(value = "/planets", method = RequestMethod.GET)
     public String getPlanet(
             @RequestParam("page") String page, ModelMap model)
@@ -36,11 +39,16 @@ public class PlanetsController {
         String colOne;
         String colTwo;
         String colThree;
+
+        List<News> newsList = newsService.getAll();
+        model.put("newsList", newsList);
+
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+
         if (page.equals("planets")){
             List<Planets> list = planetsService.getAll();
             title = "Planets";

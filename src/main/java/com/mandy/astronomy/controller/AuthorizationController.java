@@ -12,7 +12,6 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -25,6 +24,12 @@ public class AuthorizationController {
 
     @Autowired
     private RoleService roleService;
+
+    @Autowired
+    private UserDetailsService userDetailsService;
+
+    @Autowired
+    private AuthenticationManager authenticationManager;
 
     @RequestMapping(value = "/registration", method = RequestMethod.POST)
     public String registration(
@@ -39,24 +44,30 @@ public class AuthorizationController {
         Role role = new Role(name, "ROLE_USER");
         usersService.addUser(user);
         roleService.addRole(role);
-//        try {
-//            UserDetails userDetails = userDetailsService.loadUserByUsername(user.getEmail());
-//            UsernamePasswordAuthenticationToken authenticationToken =
-//                    new UsernamePasswordAuthenticationToken(userDetails, user.getPassword(), userDetails.getAuthorities());
-//            authenticationManager.authenticate(authenticationToken);
-//
-//            if(authenticationToken.isAuthenticated()) {
-//                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
-//            }
-//        } catch (Exception e) {
-//            e.printStackTrace("Error of auto login user.");
-//        }
-//        }
+		
+		/*setPassword because for autologining you need to have password with letters not in hex*/
+        user.setPassword(pwd);
+        autoLogin(user);
         return "index";
     }
 
     public static String md5Apache(String st) {
         String md5Hex = DigestUtils.md5Hex(st);
         return md5Hex;
+    }
+
+    public void autoLogin(Users user) {
+        try {
+            UserDetails userDetails = userDetailsService.loadUserByUsername(user.getName());
+            UsernamePasswordAuthenticationToken authenticationToken =
+                    new UsernamePasswordAuthenticationToken(userDetails, user.getPassword(), userDetails.getAuthorities());
+            authenticationManager.authenticate(authenticationToken);
+
+            if (authenticationToken.isAuthenticated()) {
+                SecurityContextHolder.getContext().setAuthentication(authenticationToken);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }

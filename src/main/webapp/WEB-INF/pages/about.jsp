@@ -32,7 +32,10 @@
 
     </div>
     <div class="page_main_content">
-        <div id="about_object"><%= request.getAttribute("about")%></div>
+        <div id="about_object">
+            <p><%= request.getAttribute("name")%></p>
+            <p><%= request.getAttribute("about")%></p>
+        </div>
         <div class="imageGallery">
             <ul>
                 <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
@@ -41,6 +44,7 @@
             </ul>
         </div>
         <div class="title_box" style="<%= request.getAttribute("hide")%>">
+            <p>See also:</p>
             <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
         </div>
         <table class="sortable" border="0" style="<%= request.getAttribute("hide")%>">
