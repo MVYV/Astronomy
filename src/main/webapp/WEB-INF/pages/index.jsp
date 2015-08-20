@@ -6,55 +6,83 @@
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
-    <script>
-        $(document).ready(function () {
-            var imageBox = new Array();
-            imageBox[0] = "/resources/images/main_img/main_img.jpg";
-            imageBox[1] = "/resources/images/main_img/main_img1.jpg";
-            imageBox[2] = "/resources/images/main_img/main_img2.jpg";
-            imageBox[3] = "/resources/images/main_img/main_img3.jpg";
-            imageBox[4] = "/resources/images/main_img/main_img4.jpg";
-            imageBox[5] = "/resources/images/main_img/main_img5.jpg";
-            imageBox[6] = "/resources/images/main_img/main_img6.jpg";
-            imageBox[7] = "/resources/images/main_img/main_img7.jpg";
-            imageBox[8] = "/resources/images/main_img/main_img8.jpg";
-            imageBox[9] = "/resources/images/main_img/main_img9.jpg";
-            imageBox[10] = "/resources/images/main_img/main_img10.jpg";
-            imageBox[11] = "/resources/images/main_img/main_img11.jpg";
-
-            var $globalBox = $('#globalBox');
-            n = 0;
-            t = 800;
-            play = setInterval("chImg(0)", 5000);
-            function chImg(num) {
-                if (num!=0) n = num-2;
-                $globalBox.fadeOut(t, function() {    //для картинок
-                    $(this).css('background', imageBox[n]).fadeIn(t);
-                });
-
-
-                n++;
-                if (n>=imgs.length) n=0;
-            }
-
-
+    <script src="<c:url value='/resources/js/jquery.cycle.all.js' />" ></script>
+    <script src="<c:url value='/resources/js/jquery.cycle.all.min.js' />" ></script>
+    <script src="<c:url value='/resources/js/jquery.easing.1.1.1.js' />" ></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#globalBox').cycle({
+                fx: 'fade',
+                speed: 200,
+                timeout: 1000
+            });
         });
     </script>
-
 
 </head>
 <body>
 <div id="globalBox">
-<div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->
-    <div><a href="#close" title="Close" class="close">X</a>
-         <form id="contact_form" action="<c:url value='/j_spring_security_check' />" method="post">																												<!-- Форма авторизації -->
-            <input type="text" id="j_username" name="j_username" placeholder="Please enter your name:" value="" />
-            <input type="password" id="j_password" name="j_password" placeholder="Please enter your password:" value="" />
-            <input type="submit" value="Sign in" id="sub_button"   />
-            <a href="/authorization" id="authorization_link">Authorization</a>
-         </form>
-    </div>
+    <img src="/resources/images/main_img/main_img.jpg" class="globalChUnique"/>
+    <img src="/resources/images/main_img/main_img1.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img2.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img3.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img4.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img5.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img6.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img7.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img8.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img9.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img10.jpg" class="globalCh"/>
+    <img src="/resources/images/main_img/main_img11.jpg" class="globalCh"/>
+<%--<div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->--%>
+    <%--<div><a href="#close" title="Close" class="close">X</a>--%>
+         <%--<form id="contact_form" action="<c:url value='/j_spring_security_check' />" method="post">																												<!-- Форма авторизації -->--%>
+            <%--<input type="text" id="j_username" name="j_username" placeholder="Please enter your name:" value="" />--%>
+            <%--<input type="password" id="j_password" name="j_password" placeholder="Please enter your password:" value="" />--%>
+            <%--<input type="submit" value="Sign in" id="sub_button"   />--%>
+            <%--<a href="/authorization" id="authorization_link">Authorization</a>--%>
+         <%--</form>--%>
+    <%--</div>--%>
+<%--</div>--%>
 </div>
-</div>
+<%--<script type="text/javascript">--%>
+        <%--/*var imageBox = ["/resources/images/main_img/main_img.jpg",--%>
+                        <%--"/resources/images/main_img/main_img1.jpg",--%>
+                        <%--"/resources/images/main_img/main_img2.jpg",--%>
+                        <%--"/resources/images/main_img/main_img3.jpg",--%>
+                        <%--"/resources/images/main_img/main_img4.jpg",--%>
+                        <%--"/resources/images/main_img/main_img5.jpg",--%>
+                        <%--"/resources/images/main_img/main_img6.jpg",--%>
+                        <%--"/resources/images/main_img/main_img7.jpg",--%>
+                        <%--"/resources/images/main_img/main_img8.jpg",--%>
+                        <%--"/resources/images/main_img/main_img9.jpg",--%>
+                        <%--"/resources/images/main_img/main_img10.jpg",--%>
+                        <%--"/resources/images/main_img/main_img11.jpg"];*/--%>
+        <%--var imgNum = 12;--%>
+        <%--var interval = 5000;--%>
+        <%--var time = 10;--%>
+        <%--var i = 0;--%>
+        <%--var timeout;--%>
+        <%--var opacity = 100;--%>
+
+        <%--function changeImg() {--%>
+            <%--opacity--;--%>
+            <%--var j = i + 1;--%>
+            <%--var currentImg = 'img' + i;--%>
+            <%--if (i == imgNum) j = 1;--%>
+            <%--var nextImg = 'img' + j;--%>
+            <%--document.getElementById(currentImg).style.opacity=opacity/100;--%>
+            <%--document.getElementById(currentImg).style.filter='alpha(opacity='+opacity+')';--%>
+            <%--document.getElementById(nextImg).style.opacity=(100-opacity)/100;--%>
+            <%--document.getElementById(nextImg).style.filter='alpha(opacity='+(100-opacity)+')';--%>
+            <%--timeout = setTimeout("changeImg()", time);--%>
+            <%--if (opacity==1) {--%>
+                <%--opacity = 100;--%>
+                <%--clearTimeout(timeout);--%>
+            <%--}--%>
+        <%--}--%>
+
+        <%--setInterval (function() {i++; if (i>imgNum) i=1; changeImg();}, interval);--%>
+<%--</script>--%>
 </body>
 </html>
