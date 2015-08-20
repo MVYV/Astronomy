@@ -4,10 +4,23 @@
 <head>
     <title></title>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
+    <link type="text/css" rel="stylesheet" href="/resources/css_pirobox/style_1/style.css"/>
     <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
     <script src="<c:url value='/resources/js/sorttable.js' />" ></script>
+    <script src="<c:url value='/resources/js/jquery.min.js' />"></script>
+    <script src="<c:url value='/resources/js/jquery-ui-1.8.2.custom.min.js' />"></script>
+    <script src="<c:url value='/resources/js/pirobox_extended.js' />"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $().piroBox_ext({
+                piro_speed : 700,
+                bg_alpha : 0.5,
+                piro_scroll : true //pirobox always positioned at the center of the page
+            });
+        });
+    </script>
 </head>
 <body>
 <div class="page_global">
@@ -20,7 +33,13 @@
     </div>
     <div class="page_main_content">
         <div id="about_object"><%= request.getAttribute("about")%></div>
-
+        <div class="imageGallery">
+            <ul>
+                <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
+                <li><a href="/resources/img/sun.jpg" rel="gallery"  class="pirobox_gall" title="Sun"><img src="/resources/img/sunSmall.jpg"  /></a></li>
+                <li><a href="/resources/img/spaceship.jpg" rel="gallery"  class="pirobox_gall" title="Space Ship"><img src="/resources/img/spaceshipSmall.jpg"  /></a></li>
+            </ul>
+        </div>
         <div class="title_box" style="<%= request.getAttribute("hide")%>">
             <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
         </div>
