@@ -24,6 +24,18 @@
 
 </head>
 <body>
+<div id="glassBox">
+    <div id="glassContainer">
+        <div id="glassTitle">
+            <span id="gTitle">ASTRONOMY</span>
+        </div>
+        <div id="glassEnter">
+            <div id="gEnter">
+                <a href="#" id="glassRef">Enter Astronomy</a>
+            </div>
+        </div>
+    </div>
+</div>
 <div id="globalBox">
     <img src="/resources/images/main_img/main_img.jpg" class="globalChUnique"/>
     <img src="/resources/images/main_img/main_img1.jpg" class="globalCh"/>
@@ -37,6 +49,8 @@
     <img src="/resources/images/main_img/main_img9.jpg" class="globalCh"/>
     <img src="/resources/images/main_img/main_img10.jpg" class="globalCh"/>
     <img src="/resources/images/main_img/main_img11.jpg" class="globalCh"/>
+
+
 <%--<div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->--%>
     <%--<div><a href="#close" title="Close" class="close">X</a>--%>
          <%--<form id="contact_form" action="<c:url value='/j_spring_security_check' />" method="post">																												<!-- Форма авторизації -->--%>
@@ -48,6 +62,7 @@
     <%--</div>--%>
 <%--</div>--%>
 </div>
+
 <%--<script type="text/javascript">--%>
         <%--/*var imageBox = ["/resources/images/main_img/main_img.jpg",--%>
                         <%--"/resources/images/main_img/main_img1.jpg",--%>

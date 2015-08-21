@@ -15,20 +15,92 @@
     left: 0;
     width: 100%;
     height: 100%;
-    overflow: hidden;
+    overflow: auto;
+    z-index: 1;
 }
 .globalChUnique, .globalCh
 {
     position: fixed;
-    /*right: 0;*/
-    /*bottom: 0;*/
     width: 100%;
     height: 100%;
     min-width: 100%;
     max-width: 100%;
     min-height: 100%;
     max-height: 100%;
+}
+#glassBox
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+    font-family: corduroy;
+}
+#glassContainer
+{
+    width: 1050px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -150px;
+    margin-left: -525px;
+    overflow: hidden;
+}
+#glassTitle
+{
+    border-bottom: 1px solid #ffffff;
+}
+#glassTitle, #glassEnter
+{
+    width: 100%;
+    height: 50%;
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
 
+}
+#gTitle
+{
+    font-size: 150px;
+    text-align: center;
+    color: #ffffff;
+
+}
+#gTitle, #gEnter
+{
+
+}
+#gEnter
+{
+    width: 200px;
+    line-height: 50px;
+    margin: 25px auto;
+    border: 5px solid #dcdcdc;
+    background: #dcdcdc;
+    background: -moz-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: -o-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+}
+#gEnter:hover
+{
+    background: -moz-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: -webkit-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+}
+#glassRef
+{
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
 }
 .enter
 {
