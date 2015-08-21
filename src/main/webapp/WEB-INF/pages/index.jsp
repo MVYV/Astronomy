@@ -5,16 +5,19 @@
 <head>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
-    <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
+    <%--<script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>--%>
+    <script src="<c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.min.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.easing.1.1.1.js' />" ></script>
+
+    <%--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>--%>
     <script type="text/javascript">
         $(document).ready(function() {
             $('#globalBox').cycle({
                 fx: 'fade',
-                speed: 200,
-                timeout: 1000
+                speed: 1000,
+                timeout: 7000
             });
         });
     </script>
