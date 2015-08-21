@@ -37,13 +37,11 @@
 <body onload="change_picture()">
 <div id="page_global_changer">
 <div class="page_nav">
-<jsp:include page="linear_navigation.jsp"></jsp:include>
+
 </div>
 <div class="page_container">
     <div class="left_side">
-        <c:forEach var="num" items="${newsList}">
-            <a href="/about?name=${num.title}&page=news"><p>${num.title}</p></a>
-        </c:forEach>
+        <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
     <div class="page_main_content">
         <div class="title_box">

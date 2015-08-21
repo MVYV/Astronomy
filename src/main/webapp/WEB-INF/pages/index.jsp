@@ -35,6 +35,19 @@
             </div>
         </div>
     </div>
+    <div id="glassFooter">
+        <table id="glassTable" border="0" style="font-family: Verdana;">
+            <tr>
+                <th class="glassLink" id="glassL"><a href="/planets?page=planets">Planets</a></th>
+                <th class="glassLink"><a href="/satellites">Satellites</a></th>
+                <th class="glassLink"><a href="/planets?page=stars">Stars</a></th>
+                <th class="glassLink"><a href="/planets?page=galaxies">Galaxies</a></th>
+                <th class="glassLink"><a href="/about?name=solarSystem&page=solarSystem">Solar System</a></th>
+                <th class="glassLink"><a href="/about?name=universe&page=universe">Universe</a></th>
+                <th class="glassLink"><a href="">Sign In</a></th>
+            </tr>
+        </table>
+    </div>
 </div>
 <div id="globalBox">
     <img src="/resources/images/main_img/main_img.jpg" class="globalChUnique"/>

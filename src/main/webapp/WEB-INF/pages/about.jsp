@@ -25,11 +25,11 @@
 <body>
 <div class="page_global">
 <div class="page_nav">
-    <jsp:include page="linear_navigation.jsp"></jsp:include>
+
 </div>
 <div class="page_container">
     <div class="left_side">
-
+        <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
     <div class="page_main_content">
         <div id="about_object">
