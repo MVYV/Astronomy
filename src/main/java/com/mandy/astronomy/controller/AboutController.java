@@ -64,9 +64,14 @@ public class AboutController {
             about = planet.getAbout();
             model.addAttribute("about", about);
             subTitle = name + "'s satellites";
+            if (name.equals("Uranus")){
+                subTitle = name + "' satellites";
+            }
             colOne = "Name";
             colTwo = "Temperature (K)";
             colThree = "Planet";
+            String hiddenNewsImage = "display: none";
+            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("name", name);
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
@@ -83,6 +88,8 @@ public class AboutController {
             Stars star = starsService.getByName(name);
             about = star.getAbout();
             String hide = "display: none";
+            String hiddenNewsImage = "display: none";
+            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -90,6 +97,8 @@ public class AboutController {
             Galaxies galaxy = galaxiesService.getByName(name);
             about = galaxy.getAbout();
             String hide = "display: none";
+            String hiddenNewsImage = "display: none";
+            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -97,6 +106,8 @@ public class AboutController {
             SolarSystem solarSystem = solarSytemService.getSolarSystem(id);
             about = solarSystem.getAbout();
             String hide = "display: none";
+            String hiddenNewsImage = "display: none";
+            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -104,6 +115,8 @@ public class AboutController {
             Universe universe = universeService.getUniverse(id);
             about = universe.getAbout();
             String hide = "display: none";
+            String hiddenNewsImage = "display: none";
+            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -111,6 +124,8 @@ public class AboutController {
             Satellites satellite = satellitesService.getByName(name);
             about = satellite.getAbout();
             String hide = "display: none";
+            String hiddenNewsImage = "display: none";
+            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);

@@ -19,8 +19,8 @@
                 <li><a href="#">ABOUT SITE</a></li>
             </ul>
         </li>
-        <li><span><a href="#">NEWS</a></span>
-        <li><span><a href="#">PUBLICATIONS</a></span>
+        <li><span><a href="/news">NEWS</a></span></li>
+        <li><span><a href="#">PUBLICATIONS</a></span></li>
         <li><span><a href="#">TABLES</a></span>
             <ul>
                 <li><a href="/planets?page=planets">PLANETS</a></li>
@@ -31,7 +31,17 @@
         </li>
         <li><span><a href="/about?name=solarSystem&page=solarSystem">SOLAR SYSTEM</a></span>
         <li><span><a href="/about?name=universe&page=universe">UNIVERSE</a></span>
-        <li><span><a href="#">SIGN IN</a></span>
+        <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
+            <li><span><a href="#modal_enter" title="">SIGN IN</a></span></li>
+        </sec:authorize>
+        <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
+            <li><span><a href="#"><%= request.getAttribute("username")%></a></span>
+                <ul>
+                    <li><a href="/profile">MY PROFILE</a></li>
+                    <li><a href="/j_spring_security_logout">SIGN OUT</a></li>
+                </ul>
+            </li>
+        </sec:authorize>
     </ul>
 </div>
 <div id="modal_enter" class="enter">																																	<!-- Модальне вікно для авторизації (з'являється після натискання на кнопку "Вхід") -->

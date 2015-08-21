@@ -82,6 +82,10 @@
         </table>
     </div>
     <div class="right_side">
+        <c:forEach var="num" items="${newsList}">
+            <c:url value="/about?name=${num.title}&page=news" var="news" />
+            <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
+        </c:forEach>
     </div>
 </div>
 <div class="page_footer">

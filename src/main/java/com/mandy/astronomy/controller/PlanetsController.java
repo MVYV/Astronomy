@@ -39,8 +39,6 @@ public class PlanetsController {
         String colOne;
         String colTwo;
         String colThree;
-        String hiddenNewsImage = "display: none";
-        model.addAttribute("hiddenNewsImage", hiddenNewsImage);
 
         List<News> newsList = newsService.getAll();
         model.put("newsList", newsList);
