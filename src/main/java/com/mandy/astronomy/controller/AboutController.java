@@ -57,6 +57,7 @@ public class AboutController {
         String colTwo;
         String colThree;
         String about;
+        String imagePath;
         byte id = 1;
         if (page.equals("planets")){
             Planets planet = planetsService.getByName(name);
@@ -116,8 +117,11 @@ public class AboutController {
         }else if (page.equals("news")){
             News news = newsService.getByTitle(name);
             about = news.getText();
+            imagePath = news.getImage();
             String hide = "display: none";
+            model.addAttribute("newsImage", imagePath);
             model.addAttribute("hide", hide);
+            model.addAttribute("hiddenImages", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
         }

@@ -34,9 +34,12 @@
     <div class="page_main_content">
         <div id="about_object">
             <p><%= request.getAttribute("name")%></p>
+            <div style="<%= request.getAttribute("hiddenNewsImage")%>">
+                <img src="<%= request.getAttribute("newsImage")%>">
+            </div>
             <p><%= request.getAttribute("about")%></p>
         </div>
-        <div class="imageGallery">
+        <div class="imageGallery" style="<%= request.getAttribute("hiddenImages")%>">
             <ul>
                 <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
                 <li><a href="/resources/img/sun.jpg" rel="gallery"  class="pirobox_gall" title="Sun"><img src="/resources/img/sunSmall.jpg"  /></a></li>

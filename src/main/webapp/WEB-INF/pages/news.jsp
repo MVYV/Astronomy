@@ -1,5 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 <head>
   <title></title>
@@ -18,7 +19,8 @@
     <div class="page_main_content">
       <div id="about_object">
         <c:forEach var="num" items="${newsList}">
-          <a href="/about?name=${num.title}&page=news"> <p>${num.title}</p> </a>
+          <c:url value="/about?name=${num.title}&page=news" var="news" />
+          <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
           <p>${num.shortText}</p>
         </c:forEach>
       </div>

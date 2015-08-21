@@ -74,7 +74,7 @@
                 </tr>
                 </c:forEach>
                 <c:forEach var="numG" items="${listG}">
-                <tr class="obj_select" id="galaxies" onclick="location.href='/about?name=${numG.name}&page=galaxies';">
+                <tr class="obj_select" id="galaxies" onclick="location.href='<c:out value="${'/about?name=${numG.name}&page=galaxies'}" escapeXml="true" />';">
                     <td class="data_cell">${numG.name}</td>
                     <td class="data_cell">${numG.distance}</td>
                     <td class="data_cell">${numG.type}</td>

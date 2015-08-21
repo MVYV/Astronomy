@@ -19,12 +19,16 @@ public class News {
     @Column(name = "news_text")
     private String text;
 
+    @Column(name = "news_image")
+    private String image;
+
     public News(){}
 
-    public News(String title, String shortText, String text){
+    public News(String title, String shortText, String text, String image){
         this.title = title;
         this.shortText = shortText;
         this.text = text;
+        this.image = image;
     }
 
     public void setId(long id){
@@ -57,5 +61,13 @@ public class News {
 
     public String getText(){
         return text;
+    }
+
+    public void setImage(String image){
+        this.image = image;
+    }
+
+    public String getImage(){
+        return image;
     }
 }
