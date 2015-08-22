@@ -17,16 +17,16 @@
         function change_picture() {
             if (!document.getElementById('stars') && !document.getElementById('galaxies'))
             {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/kosmos.jpg")';
+                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/planets.jpg")';
             }
             else if (!document.getElementById('planets') && !document.getElementById('galaxies'))
             {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/kosmos.jpg")';
+                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/stars.jpg")';
             }
 
             else if (!document.getElementById('planets') && !document.getElementById('stars'))
             {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/kosmos.jpg")';
+                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/galaxies.jpg")';
 
             }
             else
@@ -35,62 +35,64 @@
     </script>
 </head>
 <body onload="change_picture()">
-<div id="page_global_changer">
-<div class="page_nav">
+<div class="globalGlass">
+    <div class="page_nav">
 
-</div>
-<div class="page_container">
-    <div class="left_side">
-        <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
-    <div class="page_main_content">
-        <div class="title_box">
-            <p class="main_title"><%= request.getAttribute("title")%></p>
-            <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
-       </div>
-       <table class="sortable" border="0">
-            <thead>
-            <tr>
-                <th><%= request.getAttribute("colOne")%></th>
-                <th><%= request.getAttribute("colTwo")%></th>
-                <th><%= request.getAttribute("colThree")%></th>
-            </tr>
-            </thead>
-            <tbody>
-                <c:forEach var="num" items="${list}">
-                <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&page=planets';">
-                    <td class="data_cell">${num.name}</td>
-                    <td class="data_cell">${num.satellites}</td>
-                    <td class="data_cell">${num.radius}</td>
+    <div class="page_container">
+        <div class="left_side">
+            <jsp:include page="linear_navigation.jsp"></jsp:include>
+        </div>
+        <div class="page_main_content">
+            <div class="title_box">
+                <p class="main_title"><%= request.getAttribute("title")%></p>
+                <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
+            </div>
+            <table class="sortable" border="0">
+                <thead>
+                <tr>
+                    <th><%= request.getAttribute("colOne")%></th>
+                    <th><%= request.getAttribute("colTwo")%></th>
+                    <th><%= request.getAttribute("colThree")%></th>
                 </tr>
+                </thead>
+                <tbody>
+                <c:forEach var="num" items="${list}">
+                    <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&page=planets';">
+                        <td class="data_cell">${num.name}</td>
+                        <td class="data_cell">${num.satellites}</td>
+                        <td class="data_cell">${num.radius}</td>
+                    </tr>
                 </c:forEach>
                 <c:forEach var="numS" items="${listS}">
-                <tr class="obj_select" id="stars" onclick="location.href='/about?name=${numS.name}&page=stars';">
-                    <td class="data_cell">${numS.name}</td>
-                    <td class="data_cell">${numS.distance}</td>
-                    <td class="data_cell">${numS.radius}</td>
-                </tr>
+                    <tr class="obj_select" id="stars" onclick="location.href='/about?name=${numS.name}&page=stars';">
+                        <td class="data_cell">${numS.name}</td>
+                        <td class="data_cell">${numS.distance}</td>
+                        <td class="data_cell">${numS.radius}</td>
+                    </tr>
                 </c:forEach>
                 <c:forEach var="numG" items="${listG}">
-                <tr class="obj_select" id="galaxies" onclick="location.href='<c:out value="${'/about?name=${numG.name}&page=galaxies'}" escapeXml="true" />';">
-                    <td class="data_cell">${numG.name}</td>
-                    <td class="data_cell">${numG.distance}</td>
-                    <td class="data_cell">${numG.type}</td>
-                </tr>
+                    <tr class="obj_select" id="galaxies" onclick="location.href='<c:out value="${'/about?name=${numG.name}&page=galaxies'}" escapeXml="true" />';">
+                        <td class="data_cell">${numG.name}</td>
+                        <td class="data_cell">${numG.distance}</td>
+                        <td class="data_cell">${numG.type}</td>
+                    </tr>
                 </c:forEach>
-            </tbody>
-        </table>
+                </tbody>
+            </table>
+        </div>
+        <div class="right_side">
+            <c:forEach var="num" items="${newsList}">
+                <c:url value="/about?name=${num.title}&page=news" var="news" />
+                <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
+            </c:forEach>
+        </div>
     </div>
-    <div class="right_side">
-        <c:forEach var="num" items="${newsList}">
-            <c:url value="/about?name=${num.title}&page=news" var="news" />
-            <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
-        </c:forEach>
+    <div class="page_footer">
+        All Rights Reserved
     </div>
 </div>
-<div class="page_footer">
-    All Rights Reserved
-</div>
+<div id="page_global_changer">
 </div>
 </body>
 </html>

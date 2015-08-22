@@ -31,10 +31,10 @@
     </script>
 </head>
 <body>
-<div class="page_global">
-<div class="page_nav">
-    <jsp:include page="linear_navigation.jsp"></jsp:include>
-</div>
+<div class="globalGlass">
+    <div class="page_nav">
+        <jsp:include page="linear_navigation.jsp"></jsp:include>
+    </div>
     <div class="page_container">
         <div class="reg_div">
             <div id="upperBox">
@@ -124,9 +124,11 @@
     </div>
 
 
-<div class="page_footer">
-    All Rights Reserved
+    <div class="page_footer">
+        All Rights Reserved
+    </div>
 </div>
+<div class="page_global">
 </div>
 
 </body>

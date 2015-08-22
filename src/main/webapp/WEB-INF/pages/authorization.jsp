@@ -10,7 +10,7 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
 </head>
 <body>
-<div class="page_global">
+<div class="globalGlass">
     <div class="page_nav">
         <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
@@ -77,7 +77,8 @@
     <div class="page_footer">
         All Rights Reserved
     </div>
-
+</div>
+<div class="page_global">
 </div>
 </body>
 </html>

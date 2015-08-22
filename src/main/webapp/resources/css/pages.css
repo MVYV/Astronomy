@@ -4,6 +4,17 @@ table
     text-align: center;
     vertical-align: middle;
 }
+.globalGlass
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+}
 .page_global, #page_global_changer
 {
     position: fixed;
@@ -12,59 +23,18 @@ table
     width: 100%;
     height: 100%;
     overflow: auto;
+    z-index: 1;
 }
-#page_global_changer
+#page_global_changer, .page_global
 {
     background-size: cover;
     background-attachment: fixed;
 }
 .page_global
 {
-    background: repeating-linear-gradient(
-            180deg,
-            #363636,
-            #363636 50px,
-            #000000 20px,
-            #1c1c1c 50px,
-            #000000 20px,
-            #1c1c1c 60px
-    );
-   /* background: -moz-repeating-linear-gradient(
-            0deg,
-            #606dbc,
-            #606dbc 50px,
-            #000000 20px,
-            #465298 50px,
-            #000000 20px,
-            #465298 60px
-    );
-    background: -o-repeating-linear-gradient(
-            0deg,
-            #606dbc,
-            #606dbc 50px,
-            #000000 20px,
-            #465298 50px,
-            #000000 20px,
-            #465298 60px
-    );
-    background: -webkit-repeating-linear-gradient(
-            0deg,
-            #606dbc,
-            #606dbc 50px,
-            #000000 20px,
-            #465298 50px,
-            #000000 20px,
-            #465298 60px
-    );
-    background: -ms-repeating-linear-gradient(
-            0deg,
-            #606dbc,
-            #606dbc 50px,
-            #000000 20px,
-            #465298 50px,
-            #000000 20px,
-            #465298 60px
-    );*/
+    background: url("/resources/img/earth.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 }
 .page_container
 {
@@ -72,7 +42,6 @@ table
     margin: 0 auto;
     overflow: hidden;
     background: rgba(0,0,0,0);
-    /*border: 3px solid #000000;*/
 }
 .page_nav
 {
@@ -90,7 +59,6 @@ table
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     margin: 10px 0;
-    border: 1px solid darkblue;
 }
 .right_side
 {

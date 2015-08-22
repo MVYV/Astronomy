@@ -11,32 +11,35 @@
 
 </head>
 <body>
+<div class="globalGlass">
+    <div class="page_nav">
+
+    </div>
+    <div class="page_container">
+        <div class="left_side">
+            <jsp:include page="linear_navigation.jsp"></jsp:include>
+        </div>
+        <div class="page_main_content">
+            <div id="about_object">
+                <c:forEach var="num" items="${newsList}">
+                    <c:url value="/about?name=${num.title}&page=news" var="news" />
+                    <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
+                    <p>${num.shortText}</p>
+                </c:forEach>
+            </div>
+        </div>
+        <div class="right_side">
+
+        </div>
+    </div>
+
+
+    <div class="page_footer">
+        All Rights Reserved
+    </div>
+
+</div>
 <div class="page_global">
-  <div class="page_nav">
-
-  </div>
-  <div class="page_container">
-    <div class="left_side">
-      <jsp:include page="linear_navigation.jsp"></jsp:include>
-    </div>
-    <div class="page_main_content">
-      <div id="about_object">
-        <c:forEach var="num" items="${newsList}">
-          <c:url value="/about?name=${num.title}&page=news" var="news" />
-          <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
-          <p>${num.shortText}</p>
-        </c:forEach>
-      </div>
-    </div>
-    <div class="right_side">
-
-    </div>
-  </div>
-
-
-  <div class="page_footer">
-    All Rights Reserved
-  </div>
 </div>
 
 </body>
