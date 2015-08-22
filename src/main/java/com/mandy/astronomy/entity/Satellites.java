@@ -22,13 +22,17 @@ public class Satellites {
     @Column(name = "satellites_about")
     private String about;
 
+    @Column(name = "satellites_radius")
+    private double radius;
+
     public Satellites(){}
 
-    public Satellites(String name, double temperature, String planet, String about){
+    public Satellites(String name, double temperature, String planet, String about, double radius){
         this.name = name;
         this.temperature = temperature;
         this.planet = planet;
         this.about = about;
+        this.radius = radius;
     }
 
     public void setId(long id){
@@ -69,5 +73,13 @@ public class Satellites {
 
     public String getAbout(){
         return about;
+    }
+
+    public void setRadius(double radius){
+        this.radius = radius;
+    }
+
+    public double getRadius(){
+        return radius;
     }
 }
