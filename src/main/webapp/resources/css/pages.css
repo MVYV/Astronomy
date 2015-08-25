@@ -96,6 +96,8 @@ table
 {
     -moz-transform:scale(1.10);
     -webkit-transform:scale(1.10);
+    -o-transform:scale(1.10);
+    transform:scale(1.10);
 }
 .reg_div
 {
@@ -207,7 +209,7 @@ table
 }
 .page_main_contentUnique
 {
-    /*padding: 5px;*/
+    padding: 5px;
 }
 .page_main_content
 {
@@ -302,18 +304,38 @@ table
 }
 .itemBox
 {
-    width: 201px;
+    width: 198px;
     margin: 5px;
-    border: 1px solid #ffff00;
+    /*border: 1px solid #ffff00;*/
     float: left;
+    background: white;
+    font-family: Verdana;
+    font-size: 12px;
+    cursor: pointer;
+}
+.itemBox:hover
+{
+    -moz-transform:scale(1.05);
+    -webkit-transform:scale(1.05);
+    -o-transform:scale(1.05);
+    transform:scale(1.05);
+}
+.itemProp
+{
+    background: #dcdcdc;
+    width: 100%;
+    border-bottom: 1px solid #a9a9a9;
+    text-align: center;
+    padding: 5px;
+}
+.itemBox, .itemProp
+{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: white;
 }
-.itemProp
+.itemData
 {
-    background: deeppink;
-    border-bottom: 2px dotted #ffffff;
+    font-weight: bold;
 }
