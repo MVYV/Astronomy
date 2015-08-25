@@ -49,7 +49,7 @@
                 <div class="itemImg">
                     <img src="/resources/images/planets/earthplanet.jpg" alt="planet or something else"/>
                 </div>
-                <div class="itemProp" style="font-weight: bold;">
+                <div class="itemProp" style="font-weight: bold; text-transform: uppercase;">
                     ${num.name}
                 </div>
                 <div class="itemProp">
