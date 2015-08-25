@@ -193,16 +193,25 @@ table
     width: 40px;
     float: right;
 }
-.page_main_content
+.page_main_content, .page_main_contentUnique
 {
     width: 844px;
     float: left;
+    border: 1px solid mediumvioletred;
     box-sizing: border-box;
     margin: 10px;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     background: rgba(0,0,0,0);
+}
+.page_main_contentUnique
+{
+    /*padding: 5px;*/
+}
+.page_main_content
+{
+    padding: 10px;
 }
 .page_footer
 {
@@ -290,4 +299,21 @@ table
 .sub_title
 {
     font-size: 20px;
+}
+.itemBox
+{
+    width: 201px;
+    margin: 5px;
+    border: 1px solid #ffff00;
+    float: left;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: white;
+}
+.itemProp
+{
+    background: deeppink;
+    border-bottom: 2px dotted #ffffff;
 }
