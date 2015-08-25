@@ -22,21 +22,21 @@ public class Planets {
     @Column(name = "planets_about")
     private String about;
 
-//    @Column(name = "planets_temperature")
-//    private double temperature;
-//
-//    @Column(name = "planets_image")
-//    private String image;
+    @Column(name = "planets_temperature")
+    private double temperature;
+
+    @Column(name = "planets_image")
+    private String image;
 
     public Planets(){}
 
-    public Planets(String name, int satellites, double radius,String about/*, double temperature, String image*/){
+    public Planets(String name, int satellites, double radius,String about, double temperature, String image){
         this.name = name;
         this.satellites = satellites;
         this.radius = radius;
         this.about = about;
-//        this.temperature = temperature;
-//        this.image = image;
+        this.temperature = temperature;
+        this.image = image;
     }
 
     public void setId(long id){
@@ -75,19 +75,19 @@ public class Planets {
 
     public String getAbout(){ return about; }
 
-//    public void setTemperature(double temperature){
-//        this.temperature =temperature;
-//    }
-//
-//    public double getTemperature(){
-//        return temperature;
-//    }
-//
-//    public void setImage(String image){
-//        this.image = image;
-//    }
-//
-//    public String getImage(){
-//        return image;
-//    }
+    public void setTemperature(double temperature){
+        this.temperature =temperature;
+    }
+
+    public double getTemperature(){
+        return temperature;
+    }
+
+    public void setImage(String image){
+        this.image = image;
+    }
+
+    public String getImage(){
+        return image;
+    }
 }

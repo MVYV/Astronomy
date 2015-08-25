@@ -47,7 +47,7 @@
             <c:forEach var="num" items="${list}">
             <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${num.name}&page=planets';">
                 <div class="itemImg">
-                    <img src="/resources/images/planets/earthplanet.jpg" alt="planet or something else"/>
+                    <img src="${num.image}" alt="planet or something else"/>
                 </div>
                 <div class="itemProp" style="font-weight: bold; text-transform: uppercase;">
                     ${num.name}
@@ -56,7 +56,10 @@
                     <span>Number of satellites:&nbsp</span><span class="itemData">${num.satellites}</span>
                 </div>
                 <div class="itemProp">
-                     <span>Radius:&nbsp</span><span class="itemData">${num.radius}</span>
+                     <span>Radius:&nbsp</span><span class="itemData">${num.radius}&nbspkm</span>
+                </div>
+                <div class="itemProp">
+                    <span>Temperature:&nbsp</span><span class="itemData">${num.temperature}&nbspK</span>
                 </div>
             </div>
             </c:forEach>

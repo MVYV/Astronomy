@@ -22,13 +22,17 @@ public class Stars {
     @Column(name = "stars_about")
     private String about;
 
+    @Column(name = "stars_image")
+    private String image;
+
     public Stars(){}
 
-    public Stars(String name, double distance, double radius, String about){
+    public Stars(String name, double distance, double radius, String about, String image){
         this.name = name;
         this.distance = distance;
         this.radius = radius;
         this.about = about;
+        this.image = image;
     }
 
     public void setId(long id){
@@ -66,4 +70,12 @@ public class Stars {
     public void setAbout(String about){ this.about = about; }
 
     public String getAbout(){ return about; }
+
+    public void setImage(String image){
+        this.image = image;
+    }
+
+    public String getImage(){
+        return image;
+    }
 }

@@ -21,14 +21,18 @@ public class Galaxies {
 
     @Column(name = "galaxies_about")
     private String about;
+
+    @Column(name = "galaxies_image")
+    private String image;
     
     public Galaxies(){}
 
-    public Galaxies(String name, double distance, String type, String about){
+    public Galaxies(String name, double distance, String type, String about,String image){
         this.name = name;
         this.distance = distance;
         this.type = type;
         this.about = about;
+        this.image = image;
     }
 
     public void setId(long id){
@@ -66,4 +70,12 @@ public class Galaxies {
     public void setAbout(String about){ this.about = about; }
 
     public String getAbout(){ return about; }
+
+    public void setImage(String image){
+        this.image = image;
+    }
+
+    public String getImage(){
+        return image;
+    }
 }
