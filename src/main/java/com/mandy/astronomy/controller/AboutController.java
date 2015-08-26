@@ -45,7 +45,7 @@ public class AboutController {
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String getPlanet(
             @RequestParam("name") String name,
-            @RequestParam("page") String page, ModelMap model)
+            @RequestParam("object") String objectU, ModelMap model)
     {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
@@ -59,7 +59,7 @@ public class AboutController {
         String about;
         String imagePath;
         byte id = 1;
-        if (page.equals("planets")){
+        if (objectU.equals("planets")){
             Planets planet = planetsService.getByName(name);
             about = planet.getAbout();
             model.addAttribute("about", about);
@@ -84,7 +84,7 @@ public class AboutController {
                 model.addAttribute("hide", hide);
             }
             model.put("list", list);
-        }else if (page.equals("stars")){
+        }else if (objectU.equals("stars")){
             Stars star = starsService.getByName(name);
             about = star.getAbout();
             String hide = "display: none";
@@ -93,7 +93,7 @@ public class AboutController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
-        }else if (page.equals("galaxies")){
+        }else if (objectU.equals("galaxies")){
             Galaxies galaxy = galaxiesService.getByName(name);
             about = galaxy.getAbout();
             String hide = "display: none";
@@ -102,7 +102,7 @@ public class AboutController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
-        }else if (page.equals("solarSystem")){
+        }else if (objectU.equals("solarSystem")){
             SolarSystem solarSystem = solarSytemService.getSolarSystem(id);
             about = solarSystem.getAbout();
             String hide = "display: none";
@@ -111,7 +111,7 @@ public class AboutController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
-        }else if (page.equals("universe")){
+        }else if (objectU.equals("universe")){
             Universe universe = universeService.getUniverse(id);
             about = universe.getAbout();
             String hide = "display: none";
@@ -120,7 +120,7 @@ public class AboutController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
-        }else if (page.equals("satellites")){
+        }else if (objectU.equals("satellites")){
             Satellites satellite = satellitesService.getByName(name);
             about = satellite.getAbout();
             String hide = "display: none";
@@ -129,7 +129,7 @@ public class AboutController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
-        }else if (page.equals("news")){
+        }else if (objectU.equals("news")){
             News news = newsService.getByTitle(name);
             about = news.getText();
             imagePath = news.getImage();

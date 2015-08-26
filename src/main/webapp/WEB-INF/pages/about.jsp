@@ -60,7 +60,7 @@
                 </thead>
                 <tbody>
                 <c:forEach var="num" items="${list}">
-                    <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&page=satellites';">
+                    <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&object=satellites';">
                         <td class="data_cell">${num.name}</td>
                         <td class="data_cell">${num.temperature}</td>
                         <td class="data_cell">${num.planet}</td>

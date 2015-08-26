@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -28,11 +29,14 @@ public class PlanetsController {
     private GalaxiesService galaxiesService;
 
     @Autowired
+    private SatellitesService satellitesService;
+
+    @Autowired
     private NewsService newsService;
 
-    @RequestMapping(value = "/planets", method = RequestMethod.GET)
+    @RequestMapping(value = "/universeobjects", method = RequestMethod.GET)
     public String getPlanet(
-            @RequestParam("page") String page, ModelMap model)
+            @RequestParam("object") String objectU, ModelMap model)
     {
 
         List<News> newsList = newsService.getAll();
@@ -44,16 +48,22 @@ public class PlanetsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
-        if (page.equals("planets")){
+        if (objectU.equals("planets")){
             List<Planets> list = planetsService.getAll();
             model.put("list", list);
-        }else if (page.equals("stars")){
+        }else if (objectU.equals("stars")){
             List<Stars> listS = starsService.getAll();
+            Collections.sort(listS);
             model.put("listS", listS);
-        }else if (page.equals("galaxies")){
+        }else if (objectU.equals("galaxies")){
             List<Galaxies> listG = galaxiesService.getAll();
+            Collections.sort(listG);
             model.put("listG", listG);
+        }else if (objectU.equals("satellites")){
+            List<Satellites> listSat = satellitesService.getAll();
+            Collections.sort(listSat);
+            model.put("listSat", listSat);
         }
-        return "planets";
+        return "universeobjects";
     }
 }

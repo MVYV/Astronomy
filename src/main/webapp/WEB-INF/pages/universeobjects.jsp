@@ -45,7 +45,7 @@
         </div>
         <div class="page_main_contentUnique">
             <c:forEach var="num" items="${list}">
-            <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${num.name}&page=planets';">
+            <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${num.name}&object=planets';">
                 <div class="itemImg">
                     <img src="${num.image}" alt="planet or something else"/>
                 </div>
@@ -64,7 +64,7 @@
             </div>
             </c:forEach>
             <c:forEach var="numS" items="${listS}">
-                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numS.name}&page=stars';">
+                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numS.name}&object=stars';">
                     <div class="itemImg">
                         <img src="${numS.image}" alt="planet or something else"/>
                     </div>
@@ -80,7 +80,7 @@
                 </div>
             </c:forEach>
             <c:forEach var="numG" items="${listG}">
-                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numG.name}&page=galaxies';">
+                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numG.name}&object=galaxies';">
                     <div class="itemImg">
                         <img src="${numG.image}" alt="planet or something else"/>
                     </div>
@@ -88,18 +88,39 @@
                             ${numG.name}
                     </div>
                     <div class="itemProp">
-                        <span>Distance to The Earth:&nbsp</span><span class="itemData">${numG.distance}&nbsply</span>
+                        <span>Distance to The Earth:&nbsp</span><span class="itemData">${numG.distance}&nbspMly</span>
                     </div>
                     <div class="itemProp">
                         <span>Type:&nbsp</span><span class="itemData">${numG.type}</span>
                     </div>
                 </div>
             </c:forEach>
+            <c:forEach var="numSat" items="${listSat}">
+                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+                    <div class="itemImg">
+                        <img src="${numSat.image}" alt="planet or something else"/>
+                    </div>
+                    <div class="itemProp" style="font-weight: bold; text-transform: uppercase;">
+                            ${numSat.name}
+                    </div>
+                    <div class="itemProp">
+                        <span>Radius:&nbsp</span><span class="itemData">${numSat.radius}&nbspkm</span>
+                    </div>
+                    <div class="itemProp">
+                        <span>Temperature:&nbsp</span><span class="itemData">${numSat.temperature}&nbspK</span>
+                    </div>
+                    <div class="itemProp">
+                        <span>Planet:&nbsp</span><span class="itemData"><a href="/about?name=${numSat.planet}&object=planets" >${numSat.planet}</a></span>
+                    </div>
+                </div>
+            </c:forEach>
         </div>
         <div class="right_side">
             <c:forEach var="num" items="${newsList}">
-                <c:url value="/about?name=${num.title}&page=news" var="news" />
-                <a href="<c:out value="${news}" escapeXml="true" />"> <p>${num.title}</p> </a>
+                <div id="oneNews${num.id}" class="oneNews">
+                    <c:url value="/about?name=${num.title}&page=news" var="news" />
+                    <a href="<c:out value="${news}" escapeXml="true" />"> <span style="font-size: 14px; font-weight: bold;">${num.title}</span> </a>
+                </div>
             </c:forEach>
         </div>
     </div>

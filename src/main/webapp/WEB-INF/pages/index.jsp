@@ -38,12 +38,12 @@
     <div id="glassFooter">
         <table id="glassTable" border="0" style="font-family: Verdana;">
             <tr>
-                <th class="glassLink" id="glassL"><a href="/planets?page=planets">Planets</a></th>
-                <th class="glassLink"><a href="/satellites">Satellites</a></th>
-                <th class="glassLink"><a href="/planets?page=stars">Stars</a></th>
-                <th class="glassLink"><a href="/planets?page=galaxies">Galaxies</a></th>
-                <th class="glassLink"><a href="/about?name=solarSystem&page=solarSystem">Solar System</a></th>
-                <th class="glassLink"><a href="/about?name=universe&page=universe">Universe</a></th>
+                <th class="glassLink" id="glassL"><a href="/universeobjects?object=planets">Planets</a></th>
+                <th class="glassLink"><a href="/universeobjects?object=satellites">Satellites</a></th>
+                <th class="glassLink"><a href="/universeobjects?object=stars">Stars</a></th>
+                <th class="glassLink"><a href="/universeobjects?object=galaxies">Galaxies</a></th>
+                <th class="glassLink"><a href="/about?name=solarSystem&object=solarSystem">Solar System</a></th>
+                <th class="glassLink"><a href="/about?name=universe&object=universe">Universe</a></th>
                 <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
                     <th class="glassLink"><a href="#modal_enter">Sign In</a></th>
                 </sec:authorize>
