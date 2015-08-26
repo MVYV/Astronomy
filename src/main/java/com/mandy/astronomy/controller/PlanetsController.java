@@ -34,11 +34,6 @@ public class PlanetsController {
     public String getPlanet(
             @RequestParam("page") String page, ModelMap model)
     {
-        String title;
-        String subTitle;
-        String colOne;
-        String colTwo;
-        String colThree;
 
         List<News> newsList = newsService.getAll();
         model.put("newsList", newsList);
@@ -51,42 +46,12 @@ public class PlanetsController {
 
         if (page.equals("planets")){
             List<Planets> list = planetsService.getAll();
-            title = "Planets";
-            subTitle = "Planets of The Solar System";
-            colOne = "Name";
-            colTwo = "Satellites number";
-            colThree = "Radius (km)";
-            model.addAttribute("title", title);
-            model.addAttribute("subTitle", subTitle);
-            model.addAttribute("colOne", colOne);
-            model.addAttribute("colTwo", colTwo);
-            model.addAttribute("colThree", colThree);
             model.put("list", list);
         }else if (page.equals("stars")){
             List<Stars> listS = starsService.getAll();
-            title = "Stars";
-            subTitle = "Stars of The Milky Way";
-            colOne = "Name";
-            colTwo = "Distance to The Earth (ly)";
-            colThree = "Radius (R - Solar radius)";
-            model.addAttribute("title", title);
-            model.addAttribute("subTitle", subTitle);
-            model.addAttribute("colOne", colOne);
-            model.addAttribute("colTwo", colTwo);
-            model.addAttribute("colThree", colThree);
             model.put("listS", listS);
         }else if (page.equals("galaxies")){
             List<Galaxies> listG = galaxiesService.getAll();
-            title = "Galaxies";
-            subTitle = "Galaxies of The Universe";
-            colOne = "Name";
-            colTwo = "Distance to The Earth (ly)";
-            colThree = "Type";
-            model.addAttribute("title", title);
-            model.addAttribute("subTitle", subTitle);
-            model.addAttribute("colOne", colOne);
-            model.addAttribute("colTwo", colTwo);
-            model.addAttribute("colThree", colThree);
             model.put("listG", listG);
         }
         return "planets";

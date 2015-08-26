@@ -34,10 +34,10 @@
                 </div>
                 <div id="smallNews">
                 <c:forEach var="num" items="${newsList}">
-                    <div id="oneNews">
-                    <c:url value="/about?name=${num.title}&page=news" var="news" />
-                    <a href="<c:out value="${news}" escapeXml="true" />"> <span style="font-size: 14px; font-weight: bold;">${num.title}</span> </a>
-                    <p style="margin-bottom: 0px;">${num.shortText}</p>
+                    <div id="oneNews${num.id}" class="oneNews">
+                        <c:url value="/about?name=${num.title}&page=news" var="news" />
+                        <a href="<c:out value="${news}" escapeXml="true" />"> <span style="font-size: 14px; font-weight: bold;">${num.title}</span> </a>
+                        <p style="margin-bottom: 0px;">${num.shortText}</p>
                     </div>
                 </c:forEach>
                 </div>

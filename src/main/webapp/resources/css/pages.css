@@ -328,7 +328,7 @@ table
     text-align: center;
     padding: 5px;
 }
-.itemBox, .itemProp, #smallNews, #largeNews, #oneNews
+.itemBox, .itemProp, #smallNews, #largeNews, .oneNews
 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -353,7 +353,7 @@ table
 {
     width: 55%;
 }
-#oneNews
+.oneNews
 {
     width: 100%;
     background: #dcdcdc;
@@ -361,12 +361,12 @@ table
     margin-bottom: 5px;
     padding: 5px;
 }
-#oneNews a
+.oneNews a
 {
     text-decoration: none;
     color: #2f4f4f;
 }
-#oneNews a:hover
+.oneNews a:hover
 {
     text-decoration: underline;
 }
