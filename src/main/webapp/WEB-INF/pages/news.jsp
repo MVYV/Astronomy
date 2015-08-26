@@ -10,9 +10,15 @@
   <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
   <script>
       $(document).ready(function () {
-          var $oneNews = $('#oneNews');
+//          var $oneNews = $('#oneNews');
           var $largeNews = $('#largeNews');
           var $smallNews = $('#smallNews');
+          var i;
+          for(i = 1; i < 6; i++)
+          {
+              $('#oneNews'+i).css('background','red');
+              delay
+          }
       });
 
   </script>
