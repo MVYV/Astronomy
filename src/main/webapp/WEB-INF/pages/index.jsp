@@ -31,7 +31,7 @@
         </div>
         <div id="glassEnter">
             <div id="gEnter">
-                <a href="#" id="glassRef">Enter Astronomy</a>
+                <a href="/news" id="glassRef">Enter Astronomy</a>
             </div>
         </div>
     </div>
@@ -99,44 +99,5 @@
     </div>
 </div>
 
-<%--<script type="text/javascript">--%>
-        <%--/*var imageBox = ["/resources/images/main_img/main_img.jpg",--%>
-                        <%--"/resources/images/main_img/main_img1.jpg",--%>
-                        <%--"/resources/images/main_img/main_img2.jpg",--%>
-                        <%--"/resources/images/main_img/main_img3.jpg",--%>
-                        <%--"/resources/images/main_img/main_img4.jpg",--%>
-                        <%--"/resources/images/main_img/main_img5.jpg",--%>
-                        <%--"/resources/images/main_img/main_img6.jpg",--%>
-                        <%--"/resources/images/main_img/main_img7.jpg",--%>
-                        <%--"/resources/images/main_img/main_img8.jpg",--%>
-                        <%--"/resources/images/main_img/main_img9.jpg",--%>
-                        <%--"/resources/images/main_img/main_img10.jpg",--%>
-                        <%--"/resources/images/main_img/main_img11.jpg"];*/--%>
-        <%--var imgNum = 12;--%>
-        <%--var interval = 5000;--%>
-        <%--var time = 10;--%>
-        <%--var i = 0;--%>
-        <%--var timeout;--%>
-        <%--var opacity = 100;--%>
-
-        <%--function changeImg() {--%>
-            <%--opacity--;--%>
-            <%--var j = i + 1;--%>
-            <%--var currentImg = 'img' + i;--%>
-            <%--if (i == imgNum) j = 1;--%>
-            <%--var nextImg = 'img' + j;--%>
-            <%--document.getElementById(currentImg).style.opacity=opacity/100;--%>
-            <%--document.getElementById(currentImg).style.filter='alpha(opacity='+opacity+')';--%>
-            <%--document.getElementById(nextImg).style.opacity=(100-opacity)/100;--%>
-            <%--document.getElementById(nextImg).style.filter='alpha(opacity='+(100-opacity)+')';--%>
-            <%--timeout = setTimeout("changeImg()", time);--%>
-            <%--if (opacity==1) {--%>
-                <%--opacity = 100;--%>
-                <%--clearTimeout(timeout);--%>
-            <%--}--%>
-        <%--}--%>
-
-        <%--setInterval (function() {i++; if (i>imgNum) i=1; changeImg();}, interval);--%>
-<%--</script>--%>
 </body>
 </html>
