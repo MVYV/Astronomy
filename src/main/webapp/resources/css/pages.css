@@ -326,7 +326,7 @@ table
     width: 100%;
     border-bottom: 1px solid #a9a9a9;
     text-align: center;
-    padding: 5px;
+    padding: 0px;
 }
 .itemBox, .itemProp, #smallNews, #largeNews, .oneNews
 {
