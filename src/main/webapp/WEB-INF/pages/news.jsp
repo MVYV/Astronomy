@@ -10,17 +10,44 @@
   <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
   <script>
       $(document).ready(function () {
-//          var $oneNews = $('#oneNews');
           var $largeNews = $('#largeNews');
           var $smallNews = $('#smallNews');
-          var i;
-          for(i = 1; i < 6; i++)
-          {
-              $('#oneNews'+i).css('background','red');
-              delay
-          }
+          $('#oneNews1').hover(function(){
+              $('#newsText').text('No TEXT1!!!');
+              $('#newsImg').attr('src','/resources/images/news/DarkEnergySurvey.jpg');
+          },function(){
+              $('#newsText').text('TEXT1');
+              $('#newsImg').attr('src','#');
+          });
+          $('#oneNews2').hover(function(){
+              $('#newsText').text('No TEXT2!!!');
+              $('#newsImg').attr('src','/resources/images/news/ladeelunarorbit.jpg');
+          },function(){
+              $('#newsText').text('TEXT2');
+              $('#newsImg').attr('src','#');
+          });
+          $('#oneNews3').hover(function(){
+              $('#newsText').text('No TEXT3!!!');
+              $('#newsImg').attr('src','/resources/images/news/Sunspots.jpg');
+          },function(){
+              $('#newsText').text('TEXT3');
+              $('#newsImg').attr('src','#');
+          });
+          $('#oneNews4').hover(function(){
+              $('#newsText').text('No TEXT4!!!');
+              $('#newsImg').attr('src','/resources/images/news/blackhole.jpg');
+          },function(){
+              $('#newsText').text('TEXT4');
+              $('#newsImg').attr('src','#');
+          });
+          $('#oneNews5').hover(function(){
+              $('#newsText').text('No TEXT5!!!');
+              $('#newsImg').attr('src','/resources/images/news/tatuooin.jpg');
+          },function(){
+              $('#newsText').text('TEXT5');
+              $('#newsImg').attr('src','#');
+          });
       });
-
   </script>
 
 </head>
@@ -36,16 +63,35 @@
         <div class="page_main_content">
             <div id="about_object">
                 <div id="largeNews">
-                    <img src="#" alt="text" />
+                    <img src="#" id="newsImg" alt="Image"/>
+                    <p id="newsText"></p>
                 </div>
                 <div id="smallNews">
-                <c:forEach var="num" items="${newsList}">
-                    <div id="oneNews${num.id}" class="oneNews">
-                        <c:url value="/about?name=${num.title}&page=news" var="news" />
-                        <a href="<c:out value="${news}" escapeXml="true" />"> <span style="font-size: 14px; font-weight: bold;">${num.title}</span> </a>
-                        <p style="margin-bottom: 0px;">${num.shortText}</p>
+                    <div class="oneNews" id="oneNews1">
+                        <c:url value="/about?name=${news0.title}&page=news" var="news" />
+                        <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle">${news0.title}</span></a>
+                        <p class="newsA">${news0.shortText}</p>
                     </div>
-                </c:forEach>
+                    <div class="oneNews" id="oneNews2">
+                        <c:url value="/about?name=${news1.title}&page=news" var="news" />
+                        <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle">${news1.title}</span></a>
+                        <p class="newsA">${news1.shortText}</p>
+                    </div>
+                    <div class="oneNews" id="oneNews3">
+                        <c:url value="/about?name=${news2.title}&page=news" var="news" />
+                        <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle">${news2.title}</span></a>
+                        <p class="newsA">${news2.shortText}</p>
+                    </div>
+                    <div class="oneNews" id="oneNews4">
+                        <c:url value="/about?name=${news3.title}&page=news" var="news" />
+                        <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle">${news3.title}</span></a>
+                        <p class="newsA">${news3.shortText}</p>
+                    </div>
+                    <div class="oneNews" id="oneNews5">
+                        <c:url value="/about?name=${news4.title}&page=news" var="news" />
+                        <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle">${news4.title}</span></a>
+                        <p class="newsA">${news4.shortText}</p>
+                    </div>
                 </div>
             </div>
         </div>

@@ -212,7 +212,7 @@ table
 }
 .page_main_content
 {
-    padding: 10px;
+    /*padding: 10px;*/
 }
 .page_footer
 {
@@ -359,6 +359,10 @@ table
     margin-bottom: 5px;
     padding: 5px;
 }
+.oneNews:hover
+{
+    background: #ede455;
+}
 .oneNews a
 {
     text-decoration: none;
@@ -367,4 +371,13 @@ table
 .oneNews a:hover
 {
     text-decoration: underline;
+}
+.newsTitle
+{
+    font-size: 14px;
+    font-weight: bold;
+}
+.newsA
+{
+    margin-bottom: 0px;
 }

@@ -28,7 +28,11 @@ public class NewsController {
         }
 
         List<News> newsList = newsService.getAll();
-        model.put("newsList", newsList);
+//        model.put("newsList", newsList);
+        for (int i = 0; i < newsList.size(); i++){
+            News news = newsList.get(i);
+            model.addAttribute("news"+i, news);
+        }
         return "news";
     }
 }
