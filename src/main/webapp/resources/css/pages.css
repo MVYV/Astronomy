@@ -267,7 +267,6 @@ table
 {
     font-family: Verdana;
     font-size: 14px;
-    padding: 10px;
     text-align: justify;
     margin-bottom: 10px;
     width: 100%;
@@ -276,7 +275,6 @@ table
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: white;
 }
 .title_box
 {
@@ -345,39 +343,54 @@ table
 #smallNews
 {
     width: 45%;
-    font-size: 10px;
 }
 #largeNews
 {
     width: 55%;
+    padding-right: 10px;
 }
 .oneNews
 {
     width: 100%;
-    background: #dcdcdc;
-    border-bottom: 1px solid #808080;
+    background: rgba(245,245,245,0.5);
+    background: -moz-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: -webkit-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: -o-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    background: linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
+    color: #000000;
     margin-bottom: 5px;
     padding: 5px;
+    border-radius: 0 10px 10px 0;
+    cursor: pointer;
 }
 .oneNews:hover
 {
-    background: #ede455;
+    background: rgba(245,245,245,0.1);
+    background: -moz-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: -webkit-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    background: linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
+    color: #ffffff;
 }
 .oneNews a
 {
     text-decoration: none;
-    color: #2f4f4f;
+    color: #000000;
 }
-.oneNews a:hover
-{
-    text-decoration: underline;
-}
+/*.oneNews a:hover*/
+/*{*/
+    /*text-decoration: underline;*/
+    /*color: #ffffff;*/
+/*}*/
 .newsTitle
 {
-    font-size: 14px;
+    font-size: 12px;
     font-weight: bold;
 }
 .newsA
 {
     margin-bottom: 0px;
+    font-size: 10px;
 }
