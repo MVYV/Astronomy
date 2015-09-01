@@ -13,28 +13,9 @@
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
     <script src="<c:url value='/resources/js/sorttable.js' />" ></script>
-    <script type="text/javascript">
-        function change_picture() {
-            if (!document.getElementById('stars') && !document.getElementById('galaxies'))
-            {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/planets.jpg")';
-            }
-            else if (!document.getElementById('planets') && !document.getElementById('galaxies'))
-            {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/stars.jpg")';
-            }
 
-            else if (!document.getElementById('planets') && !document.getElementById('stars'))
-            {
-                document.getElementById('page_global_changer').style.backgroundImage = 'url("/resources/images/galaxies.jpg")';
-
-            }
-            else
-            {}
-        }
-    </script>
 </head>
-<body onload="change_picture()">
+<body>
 <div class="globalGlass">
     <div class="page_nav">
 
@@ -128,7 +109,7 @@
         All Rights Reserved
     </div>
 </div>
-<div id="page_global_changer">
+<div class="page_global">
 </div>
 </body>
 </html>

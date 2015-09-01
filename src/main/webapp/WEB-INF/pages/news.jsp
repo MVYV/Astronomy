@@ -10,62 +10,96 @@
   <script src="<c:url value='/resources/js/equal_div.js' />" ></script>
   <script>
       $(document).ready(function () {
-          var $largeNews = $('#largeNews');
-          var $smallNews = $('#smallNews');
+          function activeNews(i){
+              $('#oneNews'+ i).css('color','#ffffff');
+              $('#oneNews'+ i).css('background','rgba(245,245,245,0.1)');
+              $('#oneNews'+ i).css('background','-moz-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
+              $('#oneNews'+ i).css('background','-webkit-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
+              $('#oneNews'+ i).css('background','-o-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
+              $('#oneNews'+ i).css('background','-ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
+              $('#oneNews'+ i).css('background','linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
+              $('#newsTitle'+ i).css('color','#ffffff');
+              $('#newsTitle'+ i).css('text-decoration','underline');
+          }
+          function clearActiveNews(k){
+              $('#oneNews'+ k).css('color','#000000');
+              $('#oneNews'+ k).css('background','rgba(245,245,245,0.5)');
+              $('#oneNews'+ k).css('background','-moz-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%)');
+              $('#oneNews'+ k).css('background','-webkit-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%)');
+              $('#oneNews'+ k).css('background','-o-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%)');
+              $('#oneNews'+ k).css('background','-ms-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%)');
+              $('#oneNews'+ k).css('background','linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%)');
+              $('#newsTitle'+ k).css('color','#000000');
+              $('#newsTitle'+ k).css('text-decoration','none');
+          }
+          var $shortText1 = $('#newsA1').text();
+          var $shortText2 = $('#newsA2').text();
+          var $shortText3 = $('#newsA3').text();
+          var $shortText4 = $('#newsA4').text();
+          var $shortText5 = $('#newsA5').text();
+          var $locationNews1 = $('#oneNews1').attr('onclick');
+          var $locationNews2 = $('#oneNews2').attr('onclick');
+          var $locationNews3 = $('#oneNews3').attr('onclick');
+          var $locationNews4 = $('#oneNews4').attr('onclick');
+          var $locationNews5 = $('#oneNews5').attr('onclick');
+          $('#newsText').text($shortText1);
+          $('#newsImg').attr('src','/resources/images/news/DarkEnergySurvey.jpg');
+          activeNews(1);
+          $('#largeNews').attr('onclick',$locationNews1);
           $('#oneNews1').hover(function(){
-              $('#newsText').text('No TEXT1!!!');
+              $('#newsText').text($shortText1);
               $('#newsImg').attr('src','/resources/images/news/DarkEnergySurvey.jpg');
-              $('#newsTitle1').css('color','#ffffff');
-              $('#newsTitle1').css('text-decoration','underline');
+              clearActiveNews(2);
+              clearActiveNews(3);
+              clearActiveNews(4);
+              clearActiveNews(5);
+              activeNews(1);
+              $('#largeNews').attr('onclick',$locationNews1);
           },function(){
-              $('#newsText').text('TEXT1');
-              $('#newsImg').attr('src','#');
-              $('#newsTitle1').css('color','#000000');
-              $('#newsTitle1').css('text-decoration','none');
           });
           $('#oneNews2').hover(function(){
-              $('#newsText').text('No TEXT2!!!');
+              $('#newsText').text($shortText2);
               $('#newsImg').attr('src','/resources/images/news/ladeelunarorbit.jpg');
-              $('#newsTitle2').css('color','#ffffff');
-              $('#newsTitle2').css('text-decoration','underline');
+              clearActiveNews(1);
+              clearActiveNews(3);
+              clearActiveNews(4);
+              clearActiveNews(5);
+              activeNews(2);
+              $('#largeNews').attr('onclick',$locationNews2);
           },function(){
-              $('#newsText').text('TEXT2');
-              $('#newsImg').attr('src','#');
-              $('#newsTitle2').css('color','#000000');
-              $('#newsTitle2').css('text-decoration','none');
           });
           $('#oneNews3').hover(function(){
-              $('#newsText').text('No TEXT3!!!');
+              $('#newsText').text($shortText3);
               $('#newsImg').attr('src','/resources/images/news/Sunspots.jpg');
-              $('#newsTitle3').css('color','#ffffff');
-              $('#newsTitle3').css('text-decoration','underline');
+              clearActiveNews(1);
+              clearActiveNews(2);
+              clearActiveNews(4);
+              clearActiveNews(5);
+              activeNews(3);
+              $('#largeNews').attr('onclick',$locationNews3);
           },function(){
-              $('#newsText').text('TEXT3');
-              $('#newsImg').attr('src','#');
-              $('#newsTitle3').css('color','#000000');
-              $('#newsTitle3').css('text-decoration','none');
           });
           $('#oneNews4').hover(function(){
-              $('#newsText').text('No TEXT4!!!');
+              $('#newsText').text($shortText4);
               $('#newsImg').attr('src','/resources/images/news/blackhole.jpg');
-              $('#newsTitle4').css('color','#ffffff');
-              $('#newsTitle4').css('text-decoration','underline');
+              clearActiveNews(1);
+              clearActiveNews(2);
+              clearActiveNews(3);
+              clearActiveNews(5);
+              activeNews(4);
+              $('#largeNews').attr('onclick',$locationNews4);
           },function(){
-              $('#newsText').text('TEXT4');
-              $('#newsImg').attr('src','#');
-              $('#newsTitle4').css('color','#000000');
-              $('#newsTitle4').css('text-decoration','none');
           });
           $('#oneNews5').hover(function(){
-              $('#newsText').text('No TEXT5!!!');
+              $('#newsText').text($shortText5);
               $('#newsImg').attr('src','/resources/images/news/tatuooin.jpg');
-              $('#newsTitle5').css('color','#ffffff');
-              $('#newsTitle5').css('text-decoration','underline');
+              clearActiveNews(1);
+              clearActiveNews(2);
+              clearActiveNews(3);
+              clearActiveNews(4);
+              activeNews(5);
+              $('#largeNews').attr('onclick',$locationNews5);
           },function(){
-              $('#newsText').text('TEXT5');
-              $('#newsImg').attr('src','#');
-              $('#newsTitle5').css('color','#000000');
-              $('#newsTitle5').css('text-decoration','none');
           });
       });
   </script>
@@ -90,27 +124,27 @@
                     <div class="oneNews" id="oneNews1" onclick="location.href='/about?name=${news0.title}&object=news';">
                         <c:url value="/about?name=${news0.title}&object=news" var="news" />
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle1">${news0.title}</span></a>
-                        <p class="newsA">${news0.shortText}</p>
+                        <p class="newsA" id="newsA1">${news0.shortText}</p>
                     </div>
                     <div class="oneNews" id="oneNews2" onclick="location.href='/about?name=${news1.title}&object=news';">
                         <c:url value="/about?name=${news1.title}&object=news" var="news" />
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle2">${news1.title}</span></a>
-                        <p class="newsA">${news1.shortText}</p>
+                        <p class="newsA" id="newsA2">${news1.shortText}</p>
                     </div>
                     <div class="oneNews" id="oneNews3" onclick="location.href='/about?name=${news2.title}&object=news';">
                         <c:url value="/about?name=${news2.title}&object=news" var="news" />
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle3">${news2.title}</span></a>
-                        <p class="newsA">${news2.shortText}</p>
+                        <p class="newsA" id="newsA3">${news2.shortText}</p>
                     </div>
                     <div class="oneNews" id="oneNews4" onclick="location.href='/about?name=${news3.title}&object=news';">
                         <c:url value="/about?name=${news3.title}&object=news" var="news" />
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle4">${news3.title}</span></a>
-                        <p class="newsA">${news3.shortText}</p>
+                        <p class="newsA" id="newsA4">${news3.shortText}</p>
                     </div>
                     <div class="oneNews" id="oneNews5" onclick="location.href='/about?name=${news4.title}&object=news';">
                         <c:url value="/about?name=${news4.title}&object=news" var="news" />
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle5">${news4.title}</span></a>
-                        <p class="newsA">${news4.shortText}</p>
+                        <p class="newsA" id="newsA5">${news4.shortText}</p>
                     </div>
                 </div>
             </div>
