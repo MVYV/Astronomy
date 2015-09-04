@@ -41,38 +41,40 @@ table
 .page_nav
 {
     overflow: visible;
-    height: 50px;
     width: 1440px;
-    margin: 0 auto;
+    margin: 15px auto 0;
+}
+.page_footer
+{
+    width: 1440px;
+    margin: 0 auto 15px;
+}
+.left_side, .page_main_content, .page_main_contentUnique, .right_side
+{
+    border: 5px solid #a9a9a9;
 }
 .left_side
 {
-    width: 288px;
+    width: 278px;
     float: left;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     margin: 10px 0;
 }
 .right_side
 {
-    width: 288px;
+    width: 278px;
     float: right;
+    margin: 10px 0;
+}
+.imageGallery
+{
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin: 10px 0;
-    border: 1px solid indigo;
 }
 .imageGallery
 {
     width: 100%;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     margin-bottom: 10px;
     text-align: justify;
     border-top: 1px solid #000000;
@@ -203,17 +205,11 @@ table
 }
 .page_main_contentUnique
 {
-    padding: 5px;
+    padding: 0 5px;
 }
 .page_main_content
 {
     /*padding: 10px;*/
-}
-.page_footer
-{
-    width: 1440px;
-    margin: 0 auto;
-    border: 1px solid crimson;
 }
 .sortable
 {
@@ -297,8 +293,8 @@ table
 }
 .itemBox
 {
-    width: 198px;
-    margin: 5px;
+    width: 196px;
+    margin: 0 5px 10px;
     float: left;
     background: white;
     font-family: Verdana;
@@ -391,6 +387,35 @@ table
 }
 .newsA
 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     font-size: 10px;
+}
+.headerMain, .footerMain
+{
+    position: absolute;
+    width: 1440px;
+    height: 213px;
+    overflow: auto;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.4);
+    -webkit-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
+    -moz-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
+    -o-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
+    -ms-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
+    box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
+    font-family: corduroy;
+}
+.headerHide, .footerHide
+{
+    width: 1440px;
+    height: 213px;
+    z-index: 1;
+}
+.headerHide
+{
+    background: url("/resources/images/header.jpg");
+}
+.footerHide
+{
+    background: url("/resources/images/footer.jpg");
 }

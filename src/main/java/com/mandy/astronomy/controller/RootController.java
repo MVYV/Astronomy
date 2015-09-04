@@ -28,6 +28,11 @@ public class RootController {
         return "index";
     }
 
+    @RequestMapping(value = "/header")
+    public String getHeader(){
+        return "header";
+    }
+
 //    @RequestMapping(value = "/profile")
 //    public String getProfile(){
 //        return "profile";
