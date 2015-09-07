@@ -25,7 +25,7 @@
 <body>
 <div class="globalGlass">
     <div class="page_nav">
-
+        <jsp:include page="header.jsp"></jsp:include>
     </div>
     <div class="page_container">
         <div class="left_side">
@@ -44,9 +44,6 @@
                     <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
                     <li><a href="/resources/img/sun.jpg" rel="gallery"  class="pirobox_gall" title="Sun"><img src="/resources/img/sunSmall.jpg"  /></a></li>
                     <li><a href="/resources/img/spaceship.jpg" rel="gallery"  class="pirobox_gall" title="Space Ship"><img src="/resources/img/spaceshipSmall.jpg"  /></a></li>
-                    <c:forEach var="ph" items="${photo}">
-                    <li><a href="/resources/images/planets/${ph}" rel="gallery"  class="pirobox_gall" title="Space Ship"><c:forEach var="pS" items="${photoSmall}"> <img src="/resources/images/planets/${pS}"  /></c:forEach></a></li>
-                    </c:forEach>
                 </ul>
             </div>
             <div class="title_box" style="<%= request.getAttribute("hide")%>">
@@ -77,7 +74,7 @@
         </div>
     </div>
     <div class="page_footer">
-        All Rights Reserved
+        <jsp:include page="footer.jsp"></jsp:include>
     </div>
 </div>
 <div class="page_global">
