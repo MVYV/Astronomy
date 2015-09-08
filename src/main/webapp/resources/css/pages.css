@@ -40,7 +40,7 @@ table
 }
 .page_nav
 {
-    overflow: visible;
+    overflow: hidden;
     width: 1440px;
     margin: 15px auto 0;
 }
@@ -49,9 +49,10 @@ table
     width: 1440px;
     margin: 0 auto 15px;
 }
-.left_side, .page_main_content, .page_main_contentUnique, .right_side
+.left_side, .page_main_content, .page_main_contentUnique, .right_side, .reg_div
 {
     border: 5px solid #a9a9a9;
+    background: rgba(100, 100, 100, 0.3);
 }
 .left_side
 {
@@ -96,20 +97,9 @@ table
     -o-transform:scale(1.10);
     transform:scale(1.10);
 }
-.reg_div
-{
-    width: 1142px;
-    float: left;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    margin: 10px 10px 10px 0;
-    border: 1px solid darkblue;
-}
 #upperBox, #lowerBox, #loaderBox
 {
-    width: 1142px;
+    width: 844px;
     float: left;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -127,15 +117,23 @@ table
 {
     width: 530px;
     margin: 0 auto;
+    font-family: Verdana;
 }
 #upperBox .userLoginData tr
 {
     width: 50%;
     height: 40px;
+    color: #dcdcdc;
 }
 #upperBox .userLoginData tr td
 {
-    border-bottom: 1px solid #000000;
+    border-bottom: 1px solid #dcdcdc;
+}
+#profileChange
+{
+    margin-top: 10px;
+    background: #2f4f4f;
+    color: #dcdcdc;
 }
 .reg_item
 {
@@ -176,6 +174,7 @@ table
 {
     font-family: Verdana;
     font-size: 14px;
+    color: #dcdcdc;
     float: left;
     padding-right: 5px;
 }
@@ -192,7 +191,7 @@ table
     width: 40px;
     float: right;
 }
-.page_main_content, .page_main_contentUnique
+.page_main_content, .page_main_contentUnique, .reg_div
 {
     width: 844px;
     float: left;
@@ -201,11 +200,10 @@ table
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    background: rgba(0,0,0,0);
 }
-.page_main_contentUnique
+.page_main_contentUnique, .reg_div
 {
-    padding: 0 5px;
+    padding: 10px 5px 5px;
 }
 .page_main_content
 {
@@ -372,7 +370,6 @@ table
     color: #000000;
     margin-bottom: 5px;
     padding: 5px;
-    border-radius: 0 10px 10px 0;
     cursor: pointer;
 }
 .oneNews a
@@ -418,4 +415,63 @@ table
 .footerHide
 {
     background: url("/resources/images/footer.jpg");
+}
+#objectInfo
+{
+    padding: 10px;
+}
+.objectInfoTitle
+{
+    text-align: center;
+    font-family: corduroy;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+.objectInfoImg
+{
+    float: left;
+    margin: 0 10px 0 0;
+}
+.objectInfoText
+{
+    font-family: Verdana;
+    font-size: 14px;
+    text-align: justify;
+}
+#headerTable .headerLink
+{
+    border-right: 1px solid #808080;
+    width: 144px;
+    font-size: 12px;
+    color: #ffffff;
+    vertical-align: middle;
+    background: rgba(169,169,169,1);
+}
+#headerTable #headerL
+{
+    border-left: 1px solid #808080;
+}
+#headerTable .headerLink a
+{
+    color: #000000;
+    display: block;
+    text-decoration: none;
+}
+#headerTable .headerLink a:hover
+{
+    text-decoration: underline;
+}
+.headerUpper
+{
+    width: 1440px;
+    height: 90%;
+}
+.headerList
+{
+    width: 1440px;
+    height: 10%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
 }

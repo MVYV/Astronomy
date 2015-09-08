@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.File;
+import java.net.URL;
 import java.util.List;
 
 @Controller
@@ -63,27 +65,63 @@ public class AboutController {
             Planets planet = planetsService.getByName(name);
             about = planet.getAbout();
             model.addAttribute("about", about);
+            imagePath = planet.getImageMain();
+            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = planet.getImages();
+            String [] imagesResult = imagesList.split(",");
+            String imagesSmallList = planet.getImagesSmall();
+            String [] imagesSmallResult = imagesSmallList.split(",");
+            for (String token : imagesResult){
+                model.addAttribute("");
+            }
+
             subTitle = name + "'s satellites";
             if (name.equals("Uranus")){
                 subTitle = name + "' satellites";
+            }
+            if (name.equals("Solar System")){
+                name = "Solar System";
             }
             colOne = "Name";
             colTwo = "Temperature (K)";
             colThree = "Planet";
             String hiddenNewsImage = "display: none";
-            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
+//            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("name", name);
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
             model.addAttribute("colTwo", colTwo);
             model.addAttribute("colThree", colThree);
-            List<Satellites> list = satellitesService.getByPlanetName(name);
-            int listSize = list.size();
+            List<Satellites> listSat = satellitesService.getByPlanetName(name);
+            int listSize = listSat.size();
             if (listSize < 1){
                 String hide = "display: none";
                 model.addAttribute("hide", hide);
             }
-            model.put("list", list);
+            model.put("list", listSat);
+
+//            String nameN = name.toLowerCase();
+//
+//            File dir1 = new File("src/main/webapp/resources/images/planets/"+nameN);
+//            File dir2 = new File("C:/users//Yura//IdeaProjects//Astronomy//src//main//webapp//resources//images//planets/"+nameN+"Small");
+//            System.out.println(dir1.getAbsolutePath());
+//
+//            String [] dirContent = dir1.list();
+//            int dirLength = dirContent.length;
+//            String [] dirContent2 = dir2.list();
+//            int dirLength2 = dirContent2.length;
+//            String [] photoPath = new String[dirLength];
+//            String [] photoSmallPath = new String[dirLength2];
+//            for (int i =0; i < dirLength; i++){
+//                photoPath [i] = nameN+"/"+dirContent[i];
+//            }
+//            for (int i =0; i < dirLength2; i++){
+//                photoSmallPath [i] = nameN+"Small/"+dirContent2[i];
+//            }
+//            model.put("photo", photoPath);
+//            model.put("photoSmall", photoSmallPath);
+
         }else if (objectU.equals("stars")){
             Stars star = starsService.getByName(name);
             about = star.getAbout();
@@ -134,7 +172,7 @@ public class AboutController {
             about = news.getText();
             imagePath = news.getImage();
             String hide = "display: none";
-            model.addAttribute("newsImage", imagePath);
+            model.addAttribute("mainImage", imagePath);
             model.addAttribute("hide", hide);
             model.addAttribute("hiddenImages", hide);
             model.addAttribute("about", about);

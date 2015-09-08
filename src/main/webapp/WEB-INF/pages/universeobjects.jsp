@@ -56,7 +56,7 @@
                         <span>Distance to The Earth:&nbsp</span><span class="itemData">${numS.distance}&nbsply</span>
                     </div>
                     <div class="itemProp">
-                        <span>Radius:&nbsp</span><span class="itemData">${numS.radius}&nbspkm</span>
+                        <span>Radius:&nbsp</span><span class="itemData">${numS.radius}&nbsp${radius}</span>
                     </div>
                 </div>
             </c:forEach>

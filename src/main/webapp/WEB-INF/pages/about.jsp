@@ -17,7 +17,7 @@
             $().piroBox_ext({
                 piro_speed : 700,
                 bg_alpha : 0.5,
-                piro_scroll : true //pirobox always positioned at the center of the page
+                piro_scroll : true
             });
         });
     </script>
@@ -33,41 +33,43 @@
         </div>
         <div class="page_main_content">
             <div id="about_object">
-                <p><%= request.getAttribute("name")%></p>
-                <div style="<%= request.getAttribute("hiddenNewsImage")%>">
-                    <img src="<%= request.getAttribute("newsImage")%>">
+                <div id="objectInfo">
+                    <p class="objectInfoTitle"><%= request.getAttribute("name")%></p>
+                    <div style="<%= request.getAttribute("hiddenNewsImage")%>">
+                        <img class="objectInfoImg" src="<%= request.getAttribute("mainImage")%>" width="400" height="225">
+                    </div>
+                    <p class="objectInfoText"><%= request.getAttribute("about")%></p>
                 </div>
-                <p><%= request.getAttribute("about")%></p>
             </div>
-            <div class="imageGallery" style="<%= request.getAttribute("hiddenImages")%>">
-                <ul>
-                    <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
-                    <li><a href="/resources/img/sun.jpg" rel="gallery"  class="pirobox_gall" title="Sun"><img src="/resources/img/sunSmall.jpg"  /></a></li>
-                    <li><a href="/resources/img/spaceship.jpg" rel="gallery"  class="pirobox_gall" title="Space Ship"><img src="/resources/img/spaceshipSmall.jpg"  /></a></li>
-                </ul>
-            </div>
-            <div class="title_box" style="<%= request.getAttribute("hide")%>">
-                <p>See also:</p>
-                <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
-            </div>
-            <table class="sortable" border="0" style="<%= request.getAttribute("hide")%>">
-                <thead>
-                <tr>
-                    <th><%= request.getAttribute("colOne")%></th>
-                    <th><%= request.getAttribute("colTwo")%></th>
-                    <th><%= request.getAttribute("colThree")%></th>
-                </tr>
-                </thead>
-                <tbody>
-                <c:forEach var="num" items="${list}">
-                    <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&object=satellites';">
-                        <td class="data_cell">${num.name}</td>
-                        <td class="data_cell">${num.temperature}</td>
-                        <td class="data_cell">${num.planet}</td>
+                <div class="imageGallery" style="<%= request.getAttribute("hiddenImages")%>">
+                    <ul>
+                        <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
+                        <li><a href="/resources/img/sun.jpg" rel="gallery"  class="pirobox_gall" title="Sun"><img src="/resources/img/sunSmall.jpg"  /></a></li>
+                        <li><a href="/resources/img/spaceship.jpg" rel="gallery"  class="pirobox_gall" title="Space Ship"><img src="/resources/img/spaceshipSmall.jpg"  /></a></li>
+                    </ul>
+                </div>
+                <div class="title_box" style="<%= request.getAttribute("hide")%>">
+                    <p>See also:</p>
+                    <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
+                </div>
+                <table class="sortable" border="0" style="<%= request.getAttribute("hide")%>">
+                    <thead>
+                    <tr>
+                        <th><%= request.getAttribute("colOne")%></th>
+                        <th><%= request.getAttribute("colTwo")%></th>
+                        <th><%= request.getAttribute("colThree")%></th>
                     </tr>
-                </c:forEach>
-                </tbody>
-            </table>
+                    </thead>
+                    <tbody>
+                    <c:forEach var="num" items="${list}">
+                        <tr class="obj_select" id="planets" onclick="location.href='/about?name=${num.name}&object=satellites';">
+                            <td class="data_cell">${num.name}</td>
+                            <td class="data_cell">${num.temperature}</td>
+                            <td class="data_cell">${num.planet}</td>
+                        </tr>
+                    </c:forEach>
+                    </tbody>
+                </table>
         </div>
         <div class="right_side">
 

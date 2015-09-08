@@ -12,9 +12,12 @@
 <body>
 <div class="globalGlass">
     <div class="page_nav">
-        <jsp:include page="linear_navigation.jsp"></jsp:include>
+        <jsp:include page="header.jsp"></jsp:include>
     </div>
     <div class="page_container">
+        <div class="left_side">
+            <jsp:include page="linear_navigation.jsp"></jsp:include>
+        </div>
         <div class="reg_div">
             <form class="reg_form" id="rForm" action="/registration" method="POST" novalidate>
                 <div class="reg_item">
@@ -75,7 +78,7 @@
         </div>
     </div>
     <div class="page_footer">
-        All Rights Reserved
+        <jsp:include page="footer.jsp"></jsp:include>
     </div>
 </div>
 <div class="page_global">
