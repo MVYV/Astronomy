@@ -53,10 +53,10 @@
                             ${numS.name}
                     </div>
                     <div class="itemProp">
-                        <span>Distance to The Earth:&nbsp</span><span class="itemData">${numS.distance}&nbsply</span>
+                        <span>Distance to The Earth:&nbsp</span><span class="itemData">${numS.distance}&nbsp<c:if test="${numS.name == 'Sun'}"><c:out value="km" /></c:if><c:if test="${numS.name != 'Sun'}"><c:out value="ly" /></c:if></span>
                     </div>
                     <div class="itemProp">
-                        <span>Radius:&nbsp</span><span class="itemData">${numS.radius}&nbsp${radius}</span>
+                        <span>Radius:&nbsp</span><span class="itemData">${numS.radius}&nbsp<c:if test="${numS.name == 'Sun'}"><c:out value="km" /></c:if><c:if test="${numS.name != 'Sun'}"><c:out value="Rs" /></c:if></span>
                     </div>
                 </div>
             </c:forEach>

@@ -42,11 +42,11 @@
                 </div>
             </div>
                 <div class="imageGallery" style="<%= request.getAttribute("hiddenImages")%>">
-                    <ul>
-                        <li><a href="/resources/img/earth.jpg" rel="gallery"  class="pirobox_gall" title="Earth"><img src="/resources/img/earthSmall.jpg"  /></a></li>
-                        <li><a href="/resources/img/sun.jpg" rel="gallery"  class="pirobox_gall" title="Sun"><img src="/resources/img/sunSmall.jpg"  /></a></li>
-                        <li><a href="/resources/img/spaceship.jpg" rel="gallery"  class="pirobox_gall" title="Space Ship"><img src="/resources/img/spaceshipSmall.jpg"  /></a></li>
-                    </ul>
+                    <c:forEach var="num" items="${objectImages}">
+                        <ul>
+                            <li><a href="/resources/images${num}" rel="gallery"  class="pirobox_gall" title="${name}"><img src="/resources/imagesSmall${num}"  /></a></li>
+                        </ul>
+                    </c:forEach>
                 </div>
                 <div class="title_box" style="<%= request.getAttribute("hide")%>">
                     <p>See also:</p>

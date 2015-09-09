@@ -17,7 +17,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-public class PlanetsController {
+public class UniverseObjectsController {
 
     @Autowired
     private PlanetsService planetsService;
