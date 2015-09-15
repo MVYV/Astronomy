@@ -29,8 +29,9 @@
                 <li><a href="/universeobjects?object=galaxies">GALAXIES</a></li>
             </ul>
         </li>
-        <li><span><a href="/about?name=solarSystem&object=solarSystem">SOLAR SYSTEM</a></span>
-        <li><span><a href="/about?name=universe&object=universe">UNIVERSE</a></span>
+        <li><span><a href="#">CONSTELLATIONS</a></span></li>
+        <li><span><a href="/about?name=solarSystem&object=solarSystem">SOLAR SYSTEM</a></span></li>
+        <li><span><a href="/about?name=universe&object=universe">UNIVERSE</a></span></li>
         <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
             <li><span><a href="#modal_enter" title="">SIGN IN</a></span></li>
         </sec:authorize>

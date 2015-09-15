@@ -51,7 +51,7 @@ table
 }
 .left_side, .page_main_content, .page_main_contentUnique, .right_side, .reg_div
 {
-    border: 5px solid #a9a9a9;
+    border: 5px solid rgba(245,245,245,0.1);;
     background: rgba(100, 100, 100, 0.3);
 }
 .left_side
@@ -395,11 +395,11 @@ table
     overflow: auto;
     z-index: 2;
     background-color: rgba(0,0,0,0.4);
-    -webkit-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
-    -moz-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
-    -o-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
-    -ms-box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
-    box-shadow: inset 0px 0px 0px 5px rgba(169,169,169,1);
+    -webkit-box-shadow: inset 0px 0px 0px 5px rgba(59,59,59,1);
+    -moz-box-shadow: inset 0px 0px 0px 5px rgba(59,59,59,1);
+    -o-box-shadow: inset 0px 0px 0px 5px rgba(59,59,59,1);
+    -ms-box-shadow: inset 0px 0px 0px 5px rgba(59,59,59,1);
+    box-shadow: inset 0px 0px 0px 5px rgba(59,59,59,1);
     font-family: corduroy;
 }
 .headerHide, .footerHide
@@ -440,20 +440,15 @@ table
 }
 #headerTable .headerLink
 {
-    border-right: 1px solid #808080;
     width: 144px;
     font-size: 12px;
     color: #ffffff;
     vertical-align: middle;
-    background: rgba(169,169,169,1);
-}
-#headerTable #headerL
-{
-    border-left: 1px solid #808080;
+    background: rgba(59,59,59,1);
 }
 #headerTable .headerLink a
 {
-    color: #000000;
+    color: #deb887;
     display: block;
     text-decoration: none;
 }
@@ -474,4 +469,45 @@ table
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
+}
+.footerTable
+{
+    width: 844px;
+    font-family: Verdana;
+    font-size: 10px;
+    color: #deb887;
+}
+.footerTable .footerLink
+{
+    vertical-align: middle;
+    text-align: center;
+}
+.footerTable thead
+{
+    text-transform: uppercase;
+}
+.footerTable thead .footerLink
+{
+    border-bottom: 1px solid #f5deb3;
+}
+.footerTable .footerLink a
+{
+    color: #f5deb3;
+    text-decoration: none;
+}
+.footerTable .footerLink a:hover
+{
+    text-decoration: underline;
+}
+.footerNav
+{
+    padding: 9px;
+    width: 720px;
+    float: left;
+}
+.footerLogo
+{
+    width: 288px;
+    float: left;
+    border: 1px solid rgba(0,0,0,0);
 }

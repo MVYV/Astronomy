@@ -261,7 +261,7 @@ table
     text-align: center;
     font-size: 14px;
     font-family: Verdana;
-    margin-bottom: 1px;
+    /*margin-bottom: 1px;*/
     padding: 10px;
 }
 
@@ -273,28 +273,18 @@ table
     font-size: 12px;
     font-family: Verdana;
     padding: 5px;
-    width: 240px;
-    margin: 0 auto 1px;
+    width: 258px;
+    margin: 0 auto 0;
 }
 #menu li span a:hover, #menu ul li a
 {
     background: rgba(245,245,245,0.1);
-    background: -moz-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
-    background: -webkit-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
-    background: -o-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
-    background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
-    background: linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
-    color: #ffffff;
+    color: #deb887
 }
 #menu ul li a:hover, #menu li span a
 {
-    background: rgba(245,245,245,0.5);
-    background: -moz-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
-    background: -webkit-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
-    background: -o-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
-    background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
-    background: linear-gradient(top, rgba(220, 220, 220, 0.5) 0%, rgba(245, 245, 245, 0.5) 50%, rgba(220, 220, 220, 0.5) 100%);
-    color: #000000;
+    background: rgba(245,245,245,0.1);
+    color: #ffffff;
 }
 #menu li span a:hover, #menu ul li a:hover
 {
