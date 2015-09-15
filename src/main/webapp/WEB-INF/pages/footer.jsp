@@ -29,76 +29,76 @@
             <td class="footerLink" colspan="6"></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">Home</a></td>
-            <td class="footerLink"><a href="#">Mercury</a></td>
-            <td class="footerLink"><a href="#">Moon</a></td>
-            <td class="footerLink"><a href="#">Sun</a></td>
-            <td class="footerLink"><a href="#">Andromeda Galaxy</a><br></td>
-            <td class="footerLink"><a href="#">Solar System</a><br></td>
+            <td class="footerLink"><a href="/">Home</a></td>
+            <td class="footerLink"><a href="/about?name=Mercury&object=planets">Mercury</a></td>
+            <td class="footerLink"><a href="/about?name=Moon&object=satellites">Moon</a></td>
+            <td class="footerLink"><a href="/about?name=Sun&object=stars">Sun</a></td>
+            <td class="footerLink"><a href="/about?name=Andromeda Galaxy&object=galaxies">Andromeda Galaxy</a><br></td>
+            <td class="footerLink"><a href="/about?name=solarSystem&object=solarSystem">Solar System</a><br></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">News</a></td>
-            <td class="footerLink"><a href="#">Venus</a></td>
-            <td class="footerLink"><a href="#">Phobos</a></td>
-            <td class="footerLink"><a href="#">Aldebaran</a></td>
-            <td class="footerLink"><a href="#">Black Eye Galaxy</a><br></td>
-            <td class="footerLink"><a href="#">Universe</a></td>
+            <td class="footerLink"><a href="/news">News</a></td>
+            <td class="footerLink"><a href="/about?name=Venus&object=planets">Venus</a></td>
+            <td class="footerLink"><a href="/about?name=Phobos&object=satellites">Phobos</a></td>
+            <td class="footerLink"><a href="/about?name=Aldebaran&object=stars">Aldebaran</a></td>
+            <td class="footerLink"><a href="/about?name=Black Eye Galaxy&object=galaxies">Black Eye Galaxy</a><br></td>
+            <td class="footerLink"><a href="/about?name=universe&object=universe">Universe</a></td>
         </tr>
         <tr>
             <td class="footerLink"><a href="#">About site</a><br></td>
-            <td class="footerLink"><a href="#">Earth</a></td>
-            <td class="footerLink"><a href="#">Deimos</a></td>
-            <td class="footerLink"><a href="#">Antares</a></td>
-            <td class="footerLink"><a href="#">Cartwheel Galaxy</a><br></td>
+            <td class="footerLink"><a href="/about?name=Earth&object=planets">Earth</a></td>
+            <td class="footerLink"><a href="/about?name=Deimos&object=satellites">Deimos</a></td>
+            <td class="footerLink"><a href="/about?name=Antares&object=stars">Antares</a></td>
+            <td class="footerLink"><a href="/about?name=Cartwheel Galaxy&object=galaxies">Cartwheel Galaxy</a><br></td>
             <td class="footerLink"><a href="#">Publications</a></td>
         </tr>
         <tr>
             <td class="footerLink"><a href="#">Contacts</a></td>
-            <td class="footerLink"><a href="#">Mars</a></td>
-            <td class="footerLink"><a href="#">Io</a></td>
-            <td class="footerLink"><a href="#">Arcturus</a></td>
-            <td class="footerLink"><a href="#">Cigar Galaxy</a><br></td>
+            <td class="footerLink"><a href="/about?name=Mars&object=planets">Mars</a></td>
+            <td class="footerLink"><a href="/about?name=Io&object=satellites">Io</a></td>
+            <td class="footerLink"><a href="/about?name=Arcturus&object=stars">Arcturus</a></td>
+            <td class="footerLink"><a href="/about?name=Cigar Galaxy&object=galaxies">Cigar Galaxy</a><br></td>
             <td class="footerLink" rowspan="8"></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">Sign in</a><br></td>
-            <td class="footerLink"><a href="#">Jupiter</a></td>
-            <td class="footerLink"><a href="#">Europa</a></td>
-            <td class="footerLink"><a href="#">Betelgeuse</a></td>
-            <td class="footerLink"><a href="#">Comet Galaxy</a><br></td>
+            <td class="footerLink"><a href="#modal_enter">Sign in</a><br></td>
+            <td class="footerLink"><a href="/about?name=Jupiter&object=planets">Jupiter</a></td>
+            <td class="footerLink"><a href="/about?name=Europa&object=satellites">Europa</a></td>
+            <td class="footerLink"><a href="/about?name=Betelgeuse&object=stars">Betelgeuse</a></td>
+            <td class="footerLink"><a href="/about?name=Comet Galaxy&object=galaxies">Comet Galaxy</a><br></td>
         </tr>
         <tr>
             <td class="footerLink" rowspan="6"></td>
-            <td class="footerLink"><a href="#">Saturn</a></td>
-            <td class="footerLink"><a href="#">Ganymede</a></td>
-            <td class="footerLink"><a href="#">Pistol Star</a><br></td>
-            <td class="footerLink"><a href="#">Messier 81</a><br></td>
+            <td class="footerLink"><a href="/about?name=Saturn&object=planets">Saturn</a></td>
+            <td class="footerLink"><a href="/about?name=Ganymede&object=satellites">Ganymede</a></td>
+            <td class="footerLink"><a href="/about?name=Pistol Star&object=stars">Pistol Star</a><br></td>
+            <td class="footerLink"><a href="/about?name=Messier 81&object=galaxies">Messier 81</a><br></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">Uranus</a></td>
-            <td class="footerLink"><a href="#">Titan</a></td>
-            <td class="footerLink"><a href="#">Rigel</a></td>
-            <td class="footerLink"><a href="#">See more...</a><br></td>
+            <td class="footerLink"><a href="/about?name=Uranus&object=planets">Uranus</a></td>
+            <td class="footerLink"><a href="/about?name=Titan&object=satellites">Titan</a></td>
+            <td class="footerLink"><a href="/about?name=Rigel&object=stars">Rigel</a></td>
+            <td class="footerLink"><a href="/universeobjects?object=galaxies">See more...</a><br></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">Neptune</a></td>
-            <td class="footerLink"><a href="#">Mimas</a></td>
-            <td class="footerLink"><a href="#">Sirius</a></td>
+            <td class="footerLink"><a href="/about?name=Neptune&object=planets">Neptune</a></td>
+            <td class="footerLink"><a href="/about?name=Mimas&object=satellites">Mimas</a></td>
+            <td class="footerLink"><a href="/about?name=Sirius&object=stars">Sirius</a></td>
             <td class="footerLink" rowspan="4"></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">See more...</a></td>
-            <td class="footerLink"><a href="#">Enceladus</a></td>
-            <td class="footerLink"><a href="#">VY Canis Majoris</a><br></td>
+            <td class="footerLink"><a href="/universeobjects?object=planets">See more...</a></td>
+            <td class="footerLink"><a href="/about?name=Enceladus&object=satellites">Enceladus</a></td>
+            <td class="footerLink"><a href="/about?name=VY Canis Majoris&object=stars">VY Canis Majoris</a><br></td>
         </tr>
         <tr>
             <td class="footerLink" rowspan="2"></td>
-            <td class="footerLink"><a href="#">Umbriel</a><br></td>
-            <td class="footerLink"><a href="#">Vega</a></td>
+            <td class="footerLink"><a href="/about?name=Umbriel&object=satellites">Umbriel</a><br></td>
+            <td class="footerLink"><a href="/about?name=Vega&object=stars">Vega</a></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">See more...</a><br></td>
-            <td class="footerLink"><a href="#">See more...</a></td>
+            <td class="footerLink"><a href="/universeobjects?object=satellites">See more...</a><br></td>
+            <td class="footerLink"><a href="/universeobjects?object=stars">See more...</a></td>
         </tr>
         </tbody>
     </table>
