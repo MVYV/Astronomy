@@ -55,7 +55,7 @@
     </div>
 </div>
 <div id="globalBox">
-    <img src="/resources/images/main_img/main_img.jpg" class="globalChUnique"/>
+    <img src="/resources/images/main_img/main_img.png" class="globalChUnique"/>
     <img src="/resources/images/main_img/main_img1.jpg" class="globalCh"/>
     <img src="/resources/images/main_img/main_img2.jpg" class="globalCh"/>
     <img src="/resources/images/main_img/main_img3.jpg" class="globalCh"/>

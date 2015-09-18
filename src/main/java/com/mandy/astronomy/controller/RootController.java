@@ -33,6 +33,12 @@ public class RootController {
         return "header";
     }
 
+    @RequestMapping(value = "/about_site")
+    public String getAboutSite() { return  "about_site"; }
+
+    @RequestMapping(value = "/left_side_addition")
+    public String getLeftSiteAddition() { return  "left_side_addition"; }
+
 //    @RequestMapping(value = "/profile")
 //    public String getProfile(){
 //        return "profile";

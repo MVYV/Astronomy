@@ -511,3 +511,16 @@ table
     float: left;
     border: 1px solid rgba(0,0,0,0);
 }
+#rotationMain
+{
+    width: 278px;
+    border-bottom: 3px solid skyblue;
+}
+#rotationObject1, #rotationObject2, #rotationObject3, #rotationObject4, #rotationObject5
+{
+    border-bottom: 1px solid green;
+}
+#rotationObject2, #rotationObject3, #rotationObject4, #rotationObject5
+{
+    display: none;
+}

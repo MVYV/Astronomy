@@ -16,7 +16,7 @@
         <li><span><a href="#">ABOUT</a></span>
             <ul>
                 <li><a href="#">CONTACTS</a></li>
-                <li><a href="#">ABOUT SITE</a></li>
+                <li><a href="/about_site">ABOUT SITE</a></li>
             </ul>
         </li>
         <li><span><a href="/news">NEWS</a></span></li>

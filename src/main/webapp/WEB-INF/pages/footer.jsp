@@ -45,7 +45,7 @@
             <td class="footerLink"><a href="/about?name=universe&object=universe">Universe</a></td>
         </tr>
         <tr>
-            <td class="footerLink"><a href="#">About site</a><br></td>
+            <td class="footerLink"><a href="/about_site">About site</a><br></td>
             <td class="footerLink"><a href="/about?name=Earth&object=planets">Earth</a></td>
             <td class="footerLink"><a href="/about?name=Deimos&object=satellites">Deimos</a></td>
             <td class="footerLink"><a href="/about?name=Antares&object=stars">Antares</a></td>
