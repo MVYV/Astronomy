@@ -4,34 +4,170 @@
 <html>
 <head>
     <title></title>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
+    <script>
+      $(document).ready(function () {
+        $(function () {
+          var $blocks = $('.rotationRadio .rRadio');
+          var timeout = 3000;
+          var index = 1;
+          var j = 0;
+          $blocks.eq(j).addClass('radioActive');
+          setInterval(function () {
+            $blocks.removeClass('radioActive');
+            $blocks.eq(index++).addClass('radioActive');
+            if (index == $blocks.size()) {
+              index = 0;
+            }
+          }, timeout);
+        });
+
+        $(function () {
+          var $blocks1 = $('.rotationObject');
+          var timeout1 = 3000;
+          var index1 = 1;
+          var i = 0;
+          $blocks1.eq(i).addClass('rotationObjectA');
+          setInterval(function () {
+            $blocks1.fadeOut('slow');
+            $blocks1.eq(index1++).fadeIn('slow');
+            if (index1 == $blocks1.size()) {
+              index1 = 0;
+            }
+          }, timeout1);
+        });
+        var $radio1 = $('#radio1');
+        var $radio2 = $('#radio2');
+        var $radio3 = $('#radio3');
+        var $radio4 = $('#radio4');
+        var $radio5 = $('#radio5');
+        function hideRotationObject(j){
+          $('#rotationObject'+ j).fadeOut('slow');
+        }
+        function showRotationObject(m){
+          $('#rotationObject'+ m).fadeIn('slow');
+        }
+        $radio1.click(function(){
+            showRotationObject(1);
+            hideRotationObject(2);
+            hideRotationObject(3);
+            hideRotationObject(4);
+            hideRotationObject(5);
+          });
+        $radio2.click(function(){
+            hideRotationObject(1);
+            showRotationObject(2);
+            hideRotationObject(3);
+            hideRotationObject(4);
+            hideRotationObject(5);
+        });
+        $radio3.click(function(){
+            hideRotationObject(1);
+            hideRotationObject(2);
+            showRotationObject(3);
+            hideRotationObject(4);
+            hideRotationObject(5);
+        });
+        $radio4.click(function(){
+            hideRotationObject(1);
+            hideRotationObject(2);
+            hideRotationObject(3);
+            showRotationObject(4);
+            hideRotationObject(5);
+        });
+        $radio5.click(function(){
+            hideRotationObject(1);
+            hideRotationObject(2);
+            hideRotationObject(3);
+            hideRotationObject(4);
+            showRotationObject(5);
+        });
+      });
+    </script>
 </head>
 <body>
   <div id="rotationMain">
     <div class="rotationTitle">
       <p>STARS</p>
     </div>
+    <div class="rotationRadio">
+      <div class="rRadio" id="radio1"></div>
+      <div class="rRadio" id="radio2"></div>
+      <div class="rRadio" id="radio3"></div>
+      <div class="rRadio" id="radio4"></div>
+      <div class="rRadio" id="radio5"></div>
+    </div>
     <div class="rotationObject" id="rotationObject1">
-      <p>SIRIUS Properties</p>
+      <div class="rObjProp">
+        <img src="/resources/images/stars/Sirius/siriusSmall.jpg"/>
+      </div>
+      <div class="rObjProp">
+        <p>SIRIUS</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:8.6 ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:1.711 Rs</p>
+      </div>
     </div>
     <div class="rotationObject" id="rotationObject2">
-      <p>SUN Properties</p>
+      <div class="rObjProp">
+        <img src="/resources/images/stars/Sun/sunSmall.jpg"/>
+      </div>
+      <div class="rObjProp">
+        <p>SUN</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:1.5E8 km</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:696342.0 km</p>
+      </div>
     </div>
     <div class="rotationObject" id="rotationObject3">
-      <p>ANTARES Properties</p>
+      <div class="rObjProp">
+        <img src="/resources/images/stars/Antares/antaresSmall.jpg"/>
+      </div>
+      <div class="rObjProp">
+        <p>ANTARES</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:550.0 ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:883.0 Rs</p>
+      </div>
     </div>
     <div class="rotationObject" id="rotationObject4">
-      <p>RIGEL Properties</p>
+      <div class="rObjProp">
+        <img src="/resources/images/stars/Rigel/rigelSmall.jpg"/>
+      </div>
+      <div class="rObjProp">
+        <p>RIGEL</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:860.0 ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:78.9 Rs</p>
+      </div>
     </div>
     <div class="rotationObject" id="rotationObject5">
-      <p>BETELGEUSE Properties</p>
-    </div>
-    <div class="rotationRadio">
-      <input type="radio" name="radiobutton" value="radiobutton" checked />
-      <input type="radio" name="radiobutton" value="radiobutton" />
-      <input type="radio" name="radiobutton" value="radiobutton" />
-      <input type="radio" name="radiobutton" value="radiobutton" />
-      <input type="radio" name="radiobutton" value="radiobutton" />
+      <div class="rObjProp">
+        <img src="/resources/images/stars/Betelgeuse/betelgeuseSmall.jpg"/>
+      </div>
+      <div class="rObjProp">
+        <p>BETELGEUSE</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:643.0 ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:820.0 Rs</p>
+      </div>
     </div>
   </div>
 </body>

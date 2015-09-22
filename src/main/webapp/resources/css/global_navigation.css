@@ -279,12 +279,12 @@ table
 #menu li span a:hover, #menu ul li a
 {
     background: rgba(245,245,245,0.1);
-    color: #deb887
+    color: #ffffff;
 }
 #menu ul li a:hover, #menu li span a
 {
     background: rgba(245,245,245,0.1);
-    color: #ffffff;
+    color: #deb887;
 }
 #menu li span a:hover, #menu ul li a:hover
 {

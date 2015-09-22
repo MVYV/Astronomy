@@ -10,14 +10,14 @@
   <script>
       $(document).ready(function () {
           function activeNews(i){
-              $('#oneNews'+ i).css('color','#ffffff');
+              $('#oneNews'+ i).css('color','#deb887');
               $('#oneNews'+ i).css('background','rgba(245,245,245,0.1)');
               $('#oneNews'+ i).css('background','-moz-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
               $('#oneNews'+ i).css('background','-webkit-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
               $('#oneNews'+ i).css('background','-o-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
               $('#oneNews'+ i).css('background','-ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
               $('#oneNews'+ i).css('background','linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%)');
-              $('#newsTitle'+ i).css('color','#ffffff');
+              $('#newsTitle'+ i).css('color','#deb887');
               $('#newsTitle'+ i).css('text-decoration','underline');
           }
           function clearActiveNews(k){

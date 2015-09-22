@@ -49,9 +49,9 @@ table
     width: 1440px;
     margin: 0 auto 15px;
 }
-.left_side, .page_main_content, .page_main_contentUnique, .right_side, .reg_div
+.left_side, .page_main_content, .page_main_contentUnique, .reg_div
 {
-    border: 5px solid rgba(245,245,245,0.1);;
+    border: 5px solid rgba(245,245,245,0.1);
     background: rgba(100, 100, 100, 0.3);
 }
 .left_side
@@ -62,7 +62,7 @@ table
 }
 .right_side
 {
-    width: 278px;
+    width: 288px;
     float: right;
     margin: 10px 0;
 }
@@ -294,7 +294,7 @@ table
     width: 196px;
     margin: 0 5px 10px;
     float: left;
-    background: white;
+    background: #deb887;
     font-family: Verdana;
     font-size: 12px;
     cursor: pointer;
@@ -308,9 +308,9 @@ table
 }
 .itemProp
 {
-    background: #dcdcdc;
+    background: #deb887;
     width: 100%;
-    border-bottom: 1px solid #a9a9a9;
+    border-bottom: 1px solid #2f4f4f;
     text-align: center;
     padding: 5px 0 5px;
 }
@@ -338,7 +338,7 @@ table
 {
     width: 55%;
     padding-right: 10px;
-    color: #ffffff;
+    color: #deb887;
     cursor: pointer;
 }
 #newsText
@@ -349,8 +349,7 @@ table
     background: -o-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
     background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
     background: linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
-    color: #ffffff;
-    border-radius: 0 0 10px 10px;
+    color: #deb887;
     margin-top: 0;
     padding: 5px;
 }
@@ -513,14 +512,67 @@ table
 }
 #rotationMain
 {
-    width: 278px;
-    border-bottom: 3px solid skyblue;
+    width: 288px;
+    position: fixed;
+    text-align: center;
+    color: #deb887;
 }
 #rotationObject1, #rotationObject2, #rotationObject3, #rotationObject4, #rotationObject5
 {
-    border-bottom: 1px solid green;
+    width: 278px;
+    position: absolute;
+    margin-bottom: 5px;
+    border: 5px solid rgba(245,245,245,0.1);
+    background: rgba(100, 100, 100, 0.3);
 }
-#rotationObject2, #rotationObject3, #rotationObject4, #rotationObject5
+.rotationObject
 {
     display: none;
+}
+.rObjProp
+{
+    border-bottom: 1px solid #deb887;
+}
+.rObjProp:first-child, .rObjProp:last-child
+{
+    border-bottom: none;
+}
+.rotationObjectA
+{
+    display: block;
+}
+.rRadio
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    border: 3px solid #deb887;
+    background: #2f4f4f;
+    float: left;
+    margin-right: 10px;
+    cursor: pointer;
+}
+#radio1
+{
+    margin-left: 68px;
+}
+.radioActive, .rRadio:active
+{
+    width: 15px;
+    height: 15px;
+    border-radius: 7px;
+    border: 3px solid #deb887;
+    background: #000000;
+}
+.rObjectActive
+{
+    display: block;
+}
+.rotationTitle
+{
+    color: #deb887;
+}
+.rotationTitle, .rotationRadio {
+    width: 288px;
+    height: 30px;
 }
