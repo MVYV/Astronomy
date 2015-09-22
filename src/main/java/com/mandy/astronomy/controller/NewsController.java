@@ -1,7 +1,9 @@
 package com.mandy.astronomy.controller;
 
 import com.mandy.astronomy.entity.News;
+import com.mandy.astronomy.entity.Stars;
 import com.mandy.astronomy.service.NewsService;
+import com.mandy.astronomy.service.StarsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,6 +20,9 @@ public class NewsController {
 
     @Autowired
     private NewsService newsService;
+
+    @Autowired
+    private StarsService starsService;
 
     @RequestMapping(value = "/news")
     public String news(ModelMap model){
