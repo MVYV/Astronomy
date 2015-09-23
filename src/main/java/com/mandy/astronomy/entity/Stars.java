@@ -25,14 +25,22 @@ public class Stars implements Comparable<Stars>{
     @Column(name = "stars_image")
     private String image;
 
+    @Column(name = "stars_mainimage")
+    private String imageMain;
+
+    @Column(name = "stars_images")
+    private String images;
+
     public Stars(){}
 
-    public Stars(String name, double distance, double radius, String about, String image){
+    public Stars(String name, double distance, double radius, String about, String image, String images, String imageMain){
         this.name = name;
         this.distance = distance;
         this.radius = radius;
         this.about = about;
         this.image = image;
+        this.images = images;
+        this.imageMain = imageMain;
     }
 
     public int compareTo(Stars star){
@@ -82,4 +90,12 @@ public class Stars implements Comparable<Stars>{
     public String getImage(){
         return image;
     }
+
+    public void setImages(String images) { this.images = images; }
+
+    public String getImages() { return images; }
+
+    public void setImageMain(String imageMain) { this.imageMain = imageMain; }
+
+    public String getImageMain() { return imageMain; }
 }

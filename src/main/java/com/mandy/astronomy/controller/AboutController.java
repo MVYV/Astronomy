@@ -20,7 +20,6 @@ import java.net.URL;
 import java.util.List;
 
 @Controller
-//@RequestMapping(value = "/about")
 public class AboutController {
 
     @Autowired
@@ -93,19 +92,29 @@ public class AboutController {
             model.put("list", listSat);
         }else if (objectU.equals("stars")){
             Stars star = starsService.getByName(name);
+            imagePath = star.getImageMain();
+            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = star.getImages();
+            String [] imagesResult = imagesList.split(",");
+            model.put("objectImages", imagesResult);
+
             about = star.getAbout();
-            String hide = "display: none";
-            String hiddenNewsImage = "display: none";
-            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
+            String hide = "display: none";;
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
         }else if (objectU.equals("galaxies")){
             Galaxies galaxy = galaxiesService.getByName(name);
+            imagePath = galaxy.getImageMain();
+            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = galaxy.getImages();
+            String [] imagesResult = imagesList.split(",");
+            model.put("objectImages", imagesResult);
+
             about = galaxy.getAbout();
             String hide = "display: none";
-            String hiddenNewsImage = "display: none";
-            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -130,10 +139,15 @@ public class AboutController {
             model.addAttribute("name", name);
         }else if (objectU.equals("satellites")){
             Satellites satellite = satellitesService.getByName(name);
+            imagePath = satellite.getImageMain();
+            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = satellite.getImages();
+            String [] imagesResult = imagesList.split(",");
+            model.put("objectImages", imagesResult);
+
             about = satellite.getAbout();
             String hide = "display: none";
-            String hiddenNewsImage = "display: none";
-            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);

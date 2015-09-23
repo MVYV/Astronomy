@@ -24,15 +24,23 @@ public class Galaxies implements Comparable<Galaxies>{
 
     @Column(name = "galaxies_image")
     private String image;
+
+    @Column(name = "galaxies_mainimage")
+    private String imageMain;
+
+    @Column(name = "galaxies_images")
+    private String images;
     
     public Galaxies(){}
 
-    public Galaxies(String name, double distance, String type, String about,String image){
+    public Galaxies(String name, double distance, String type, String about,String image, String images, String imageMain){
         this.name = name;
         this.distance = distance;
         this.type = type;
         this.about = about;
         this.image = image;
+        this.images = images;
+        this.imageMain = imageMain;
     }
 
     public int compareTo(Galaxies galaxy){
@@ -82,4 +90,12 @@ public class Galaxies implements Comparable<Galaxies>{
     public String getImage(){
         return image;
     }
+
+    public void setImages(String images) { this.images = images; }
+
+    public String getImages(){ return images; }
+
+    public void setImageMain(String imageMain) { this.imageMain = imageMain; }
+
+    public String getImageMain() { return imageMain; }
 }

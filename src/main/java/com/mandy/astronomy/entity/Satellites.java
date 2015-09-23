@@ -28,15 +28,23 @@ public class Satellites implements Comparable<Satellites>{
     @Column(name = "satellites_image")
     private String image;
 
+    @Column(name = "satellites_mainimage")
+    private String imageMain;
+
+    @Column(name = "satellites_images")
+    private String images;
+
     public Satellites(){}
 
-    public Satellites(String name, double temperature, String planet, String about, double radius, String image){
+    public Satellites(String name, double temperature, String planet, String about, double radius, String image, String images, String imageMain){
         this.name = name;
         this.temperature = temperature;
         this.planet = planet;
         this.about = about;
         this.radius = radius;
         this.image = image;
+        this.images = images;
+        this.imageMain = imageMain;
     }
 
     public int compareTo(Satellites satellite){
@@ -98,4 +106,12 @@ public class Satellites implements Comparable<Satellites>{
     public String getImage(){
         return image;
     }
+
+    public void setImages(String images) { this.images = images; }
+
+    public String getImages() { return images; }
+
+    public void setImageMain(String imageMain) { this.imageMain = imageMain; }
+
+    public String getImageMain() { return imageMain; }
 }
