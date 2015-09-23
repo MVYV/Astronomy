@@ -13,6 +13,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 import java.util.List;
 
 @Controller
@@ -31,6 +34,20 @@ public class NewsController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+
+        List<Stars> starsList = starsService.getAll();
+        List<Stars> stars = new ArrayList<>();
+        for (int i = 0; i <6; i++){
+            int rand = (int) (Math.random()*10);
+            System.out.print(rand);
+            Stars star = starsList.get(rand);
+
+            stars.add(i, star);
+//            model.addAttribute("star" + i, star);
+
+        }
+        stars.remove(0);
+        model.put("stars", stars);
 
         List<News> newsList = newsService.getAll();
 //        model.put("newsList", newsList);

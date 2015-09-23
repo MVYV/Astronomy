@@ -98,76 +98,78 @@
     <div class="rRadio" id="radio4"></div>
     <div class="rRadio" id="radio5"></div>
   </div>
-  <div class="rotationObject" id="rotationObject1">
+  <c:forEach var="star1" items="${stars}">
+  <div class="rotationObject" id="rotationObject${star1.id}">
     <div class="rObjProp">
       <img src="/resources/images/stars/Sirius/siriusSmall.jpg"/>
     </div>
     <div class="rObjProp">
-      <p>SIRIUS</p>
+      <p>${star1.name}</p>
     </div>
     <div class="rObjProp">
-      <p>Distance to the Earth:8.6 ly</p>
+      <p>Distance to the Earth:${star1.distance} ly</p>
     </div>
     <div class="rObjProp">
-      <p>Radius:1.711 Rs</p>
+      <p>Radius:${star1.radius} Rs</p>
     </div>
   </div>
-  <div class="rotationObject" id="rotationObject2">
-    <div class="rObjProp">
-      <img src="/resources/images/stars/Sun/sunSmall.jpg"/>
-    </div>
-    <div class="rObjProp">
-      <p>SUN</p>
-    </div>
-    <div class="rObjProp">
-      <p>Distance to the Earth:1.5E8 km</p>
-    </div>
-    <div class="rObjProp">
-      <p>Radius:696342.0 km</p>
-    </div>
-  </div>
-  <div class="rotationObject" id="rotationObject3">
-    <div class="rObjProp">
-      <img src="/resources/images/stars/Antares/antaresSmall.jpg"/>
-    </div>
-    <div class="rObjProp">
-      <p>ANTARES</p>
-    </div>
-    <div class="rObjProp">
-      <p>Distance to the Earth:550.0 ly</p>
-    </div>
-    <div class="rObjProp">
-      <p>Radius:883.0 Rs</p>
-    </div>
-  </div>
-  <div class="rotationObject" id="rotationObject4">
-    <div class="rObjProp">
-      <img src="/resources/images/stars/Rigel/rigelSmall.jpg"/>
-    </div>
-    <div class="rObjProp">
-      <p>RIGEL</p>
-    </div>
-    <div class="rObjProp">
-      <p>Distance to the Earth:860.0 ly</p>
-    </div>
-    <div class="rObjProp">
-      <p>Radius:78.9 Rs</p>
-    </div>
-  </div>
-  <div class="rotationObject" id="rotationObject5">
-    <div class="rObjProp">
-      <img src="/resources/images/stars/Betelgeuse/betelgeuseSmall.jpg"/>
-    </div>
-    <div class="rObjProp">
-      <p>BETELGEUSE</p>
-    </div>
-    <div class="rObjProp">
-      <p>Distance to the Earth:643.0 ly</p>
-    </div>
-    <div class="rObjProp">
-      <p>Radius:820.0 Rs</p>
-    </div>
-  </div>
+  </c:forEach>
+  <%--<div class="rotationObject" id="rotationObject2">--%>
+    <%--<div class="rObjProp">--%>
+      <%--<img src="/resources/images/stars/Sun/sunSmall.jpg"/>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>${star2.name}</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Distance to the Earth:${star2.distance} km</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Radius:${star2.radius} km</p>--%>
+    <%--</div>--%>
+  <%--</div>--%>
+  <%--<div class="rotationObject" id="rotationObject3">--%>
+    <%--<div class="rObjProp">--%>
+      <%--<img src="/resources/images/stars/Antares/antaresSmall.jpg"/>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>${star3.name}</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Distance to the Earth:${star3.distance} ly</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Radius:${star3.radius} Rs</p>--%>
+    <%--</div>--%>
+  <%--</div>--%>
+  <%--<div class="rotationObject" id="rotationObject4">--%>
+    <%--<div class="rObjProp">--%>
+      <%--<img src="/resources/images/stars/Rigel/rigelSmall.jpg"/>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>${star4.name}</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Distance to the Earth:${star4.distance} ly</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Radius:${star5.radius} Rs</p>--%>
+    <%--</div>--%>
+  <%--</div>--%>
+  <%--<div class="rotationObject" id="rotationObject5">--%>
+    <%--<div class="rObjProp">--%>
+      <%--<img src="/resources/images/stars/Betelgeuse/betelgeuseSmall.jpg"/>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>${star5.name}</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Distance to the Earth:${star5.distance} ly</p>--%>
+    <%--</div>--%>
+    <%--<div class="rObjProp">--%>
+      <%--<p>Radius:${star5.radius} Rs</p>--%>
+    <%--</div>--%>
+  <%--</div>--%>
 </div>
 </body>
 </html>

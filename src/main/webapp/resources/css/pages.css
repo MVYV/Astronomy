@@ -513,7 +513,7 @@ table
 #rotationMain
 {
     width: 288px;
-    position: fixed;
+    position: absolute;
     text-align: center;
     color: #deb887;
 }
