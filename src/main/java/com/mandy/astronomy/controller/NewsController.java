@@ -13,10 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 @Controller
 public class NewsController {
@@ -37,30 +34,26 @@ public class NewsController {
 
         List<Stars> starsList = starsService.getAll();
         List<Stars> stars = new ArrayList<>();
-        List<Stars> starsList1 = new ArrayList<>();
-//        Stars st = new Stars();
-        int i = 1;
-        if (i < 6) {
-            for (Stars st : starsList) {
-                st.setId(i);
-                starsList1.add(st);
-                i++;
+        HashSet<Integer> random = new HashSet<>();
+//        for (int i = 0; i <5; i++){
+            while (random.size() < 6) {
+                int rand = (int) (Math.random() * 10);
+                random.add(rand);
             }
-        }
-
-        for (int i = 0; i <5; i++){
-            int rand = (int) (Math.random()*10);
-            System.out.print(rand);
+        Iterator iterator = random.iterator();
+        int id = 1;
+        while (iterator.hasNext()) {
+            System.out.print(iterator.next());
+            int rand = (int) iterator.next();
             Stars star = starsList.get(rand);
-
+            star.setId(id);
+            //i++;
             stars.add(star);
-//            model.addAttribute("star" + i, star);
-
         }
+//        }
         model.put("stars", stars);
 
         List<News> newsList = newsService.getAll();
-//        model.put("newsList", newsList);
         for (int i = 0; i < newsList.size(); i++){
             News news = newsList.get(i);
             model.addAttribute("news"+i, news);
