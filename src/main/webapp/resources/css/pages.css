@@ -169,6 +169,9 @@ table
     font-size: 14px;
     font-family: Verdana;
     text-align: center;
+    -webkit-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
 }
 .reg_item label
 {
@@ -575,4 +578,49 @@ table
 .rotationTitle, .rotationRadio {
     width: 288px;
     height: 30px;
+}
+.publications, .addPublication
+{
+    width: 397px;
+    padding: 10px;
+    float: left;
+}
+.pubItem
+{
+    width: 100%;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #deb887;
+    font-family: Verdana;
+}
+#authorName, #publicationTitle
+{
+    height: 40px;
+    font-size: 14px;
+}
+#publicationA
+{
+    height: 100px;
+    font-size: 12px;
+    font-family: Verdana;
+}
+#publicationText
+{
+    height: 200px;
+    font-size: 12px;
+    font-family: Verdana;
+}
+#authorName, #publicationTitle, #publicationText, #publicationA
+{
+    width: 350px;
+    background: #deb887;
+    color: #363636;
+    margin-top: 5px;
+    font-weight: bold;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 3px;
+    -webkit-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
 }

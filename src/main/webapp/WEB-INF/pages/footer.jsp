@@ -50,7 +50,7 @@
             <td class="footerLink"><a href="/about?name=Deimos&object=satellites">Deimos</a></td>
             <td class="footerLink"><a href="/about?name=Antares&object=stars">Antares</a></td>
             <td class="footerLink"><a href="/about?name=Cartwheel Galaxy&object=galaxies">Cartwheel Galaxy</a><br></td>
-            <td class="footerLink"><a href="#">Publications</a></td>
+            <td class="footerLink"><a href="/publications">Publications</a></td>
         </tr>
         <tr>
             <td class="footerLink"><a href="#">Contacts</a></td>

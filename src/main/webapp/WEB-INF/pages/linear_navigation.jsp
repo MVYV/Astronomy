@@ -20,7 +20,7 @@
             </ul>
         </li>
         <li><span><a href="/news">NEWS</a></span></li>
-        <li><span><a href="#">PUBLICATIONS</a></span></li>
+        <li><span><a href="/publications">PUBLICATIONS</a></span></li>
         <li><span><a href="#">TABLES</a></span>
             <ul>
                 <li><a href="/universeobjects?object=planets">PLANETS</a></li>

@@ -39,6 +39,9 @@ public class RootController {
     @RequestMapping(value = "/left_side_addition")
     public String getLeftSiteAddition() { return  "left_side_addition"; }
 
+    @RequestMapping(value = "/publications")
+    public String getPublications() { return "publications"; }
+
 //    @RequestMapping(value = "/profile")
 //    public String getProfile(){
 //        return "profile";
