@@ -99,7 +99,8 @@
     <div class="rRadio" id="radio5"></div>
   </div>
   <c:forEach var="star1" items="${stars}">
-  <div class="rotationObject" id="rotationObject${star1.id}">
+  <c:set var="foo" value="${star1.id}+1"></c:set>
+  <div class="rotationObject" id="rotationObject${foo}">
     <div class="rObjProp">
       <img src="/resources/images/stars/Sirius/siriusSmall.jpg"/>
     </div>

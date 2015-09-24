@@ -37,16 +37,26 @@ public class NewsController {
 
         List<Stars> starsList = starsService.getAll();
         List<Stars> stars = new ArrayList<>();
-        for (int i = 0; i <6; i++){
+        List<Stars> starsList1 = new ArrayList<>();
+//        Stars st = new Stars();
+        int i = 1;
+        if (i < 6) {
+            for (Stars st : starsList) {
+                st.setId(i);
+                starsList1.add(st);
+                i++;
+            }
+        }
+
+        for (int i = 0; i <5; i++){
             int rand = (int) (Math.random()*10);
             System.out.print(rand);
             Stars star = starsList.get(rand);
 
-            stars.add(i, star);
+            stars.add(star);
 //            model.addAttribute("star" + i, star);
 
         }
-        stars.remove(0);
         model.put("stars", stars);
 
         List<News> newsList = newsService.getAll();
