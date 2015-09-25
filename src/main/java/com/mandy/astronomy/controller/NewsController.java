@@ -36,10 +36,12 @@ public class NewsController {
         List<Stars> stars = new ArrayList<>();
         HashSet<Integer> random = new HashSet<>();
 //        for (int i = 0; i <5; i++){
+        Random randomno = new Random();
             while (random.size() < 6) {
                 int rand = (int) (Math.random() * 10);
                 random.add(rand);
             }
+        System.out.println(random);
         Iterator iterator = random.iterator();
         int id = 1;
         while (iterator.hasNext()) {
