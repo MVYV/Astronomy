@@ -393,7 +393,6 @@ table
 {
     position: absolute;
     width: 1440px;
-    height: 213px;
     overflow: auto;
     z-index: 2;
     background-color: rgba(0,0,0,0.4);
@@ -404,19 +403,28 @@ table
     box-shadow: inset 0px 0px 0px 5px rgba(59,59,59,1);
     font-family: corduroy;
 }
+.footerMain
+{
+    height: 220px;
+}
+.headerMain
+{
+    height: 200px;
+}
 .headerHide, .footerHide
 {
     width: 1440px;
-    height: 213px;
     z-index: 1;
 }
 .headerHide
 {
     background: url("/resources/images/header.jpg");
+    height: 200px;
 }
 .footerHide
 {
     background: url("/resources/images/footer.jpg");
+    height: 220px;
 }
 #objectInfo
 {
