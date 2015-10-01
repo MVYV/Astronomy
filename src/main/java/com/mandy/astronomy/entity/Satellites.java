@@ -34,7 +34,7 @@ public class Satellites implements Comparable<Satellites>{
     @Column(name = "satellites_images")
     private String images;
 
-    @Column(name = "satellites_imagesmall")
+    @Column(name = "satellites_smallimage")
     private String imageSmall;
 
     public Satellites(){}

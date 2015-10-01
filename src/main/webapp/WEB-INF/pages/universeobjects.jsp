@@ -96,12 +96,7 @@
             </c:forEach>
         </div>
         <div class="right_side">
-            <c:forEach var="num" items="${newsList}">
-                <div id="oneNews${num.id}" class="oneNews">
-                    <c:url value="/about?name=${num.title}&page=news" var="news" />
-                    <a href="<c:out value="${news}" escapeXml="true" />"> <span style="font-size: 14px; font-weight: bold;">${num.title}</span> </a>
-                </div>
-            </c:forEach>
+            <jsp:include page="left_side_addition.jsp"></jsp:include>
         </div>
     </div>
     <div class="page_footer">

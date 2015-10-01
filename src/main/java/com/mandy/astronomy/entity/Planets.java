@@ -34,7 +34,7 @@ public class Planets {
     @Column(name = "planets_mainimage")
     private String imageMain;
 
-    @Column(name = "planets_imagesmall")
+    @Column(name = "planets_smallimage")
     private String imageSmall;
 
     public Planets(){}

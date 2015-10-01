@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -47,6 +48,11 @@ public class UniverseObjectsController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        if (objectU.equals("stars")){
+            String [] arr = {"Planets", "Galaxies", "Satellites"};
+            int random = (int) (Math.random()*10/3);
+            String listName = arr[random];
+        }
 
         if (objectU.equals("planets")){
             List<Planets> list = planetsService.getAll();
@@ -65,5 +71,27 @@ public class UniverseObjectsController {
             model.put("listSat", listSat);
         }
         return "universeobjects";
+    }
+
+    public void leftAddStars(ModelMap model){
+        List<Stars> starsList = starsService.getAll();
+        int size = starsList.size();
+        List<Stars> stars1 = new ArrayList<>();
+        List<Integer> random = new ArrayList<>();
+        for (int i = 0; i < size; i++){
+            random.add(i);
+        }
+        Collections.shuffle(random);
+        Stars star1;
+        int id = 1;
+        for (int i = 0; i < 5; i++){
+            int rndm = random.get(i);
+            star1 = starsList.get(rndm);
+            System.out.println(rndm);
+            star1.setId(id);
+            id++;
+            stars1.add(star1);
+        }
+        model.put("stars", stars1);
     }
 }

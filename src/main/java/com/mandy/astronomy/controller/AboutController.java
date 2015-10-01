@@ -17,6 +17,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.io.File;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 @Controller
@@ -53,13 +55,34 @@ public class AboutController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+
+        List<Stars> starsList = starsService.getAll();
+        int size = starsList.size();
+        List<Stars> stars1 = new ArrayList<>();
+        List<Integer> random = new ArrayList<>();
+        for (int i = 0; i < size; i++){
+            random.add(i);
+        }
+        Collections.shuffle(random);
+        Stars star1;
+        int id = 1;
+        for (int i = 0; i < 5; i++){
+            int rndm = random.get(i);
+            star1 = starsList.get(rndm);
+            System.out.println(rndm);
+            star1.setId(id);
+            id++;
+            stars1.add(star1);
+        }
+        model.put("stars", stars1);
+
         String subTitle;
         String colOne;
         String colTwo;
         String colThree;
         String about;
         String imagePath;
-        byte id = 1;
+        byte idPl = 1;
         if (objectU.equals("planets")){
             Planets planet = planetsService.getByName(name);
             about = planet.getAbout();
@@ -119,7 +142,7 @@ public class AboutController {
             model.addAttribute("about", about);
             model.addAttribute("name", name);
         }else if (objectU.equals("solarSystem")){
-            SolarSystem solarSystem = solarSytemService.getSolarSystem(id);
+            SolarSystem solarSystem = solarSytemService.getSolarSystem(idPl);
             about = solarSystem.getAbout();
             String hide = "display: none";
             String hiddenNewsImage = "display: none";
@@ -129,7 +152,7 @@ public class AboutController {
             name = solarSystem.getName();
             model.addAttribute("name", name);
         }else if (objectU.equals("universe")){
-            Universe universe = universeService.getUniverse(id);
+            Universe universe = universeService.getUniverse(idPl);
             about = universe.getAbout();
             String hide = "display: none";
             String hiddenNewsImage = "display: none";

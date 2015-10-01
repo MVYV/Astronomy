@@ -73,7 +73,7 @@
             </form>
         </div>
         <div class="right_side">
-
+            <jsp:include page="left_side_addition.jsp"></jsp:include>
         </div>
     </div>
     <div class="page_footer">

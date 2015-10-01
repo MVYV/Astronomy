@@ -31,7 +31,7 @@ public class Galaxies implements Comparable<Galaxies>{
     @Column(name = "galaxies_images")
     private String images;
 
-    @Column(name = "galaxies_smallimage")
+    @Column(name = "galaxies_imagesmall")
     private String imageSmall;
     
     public Galaxies(){}
@@ -83,9 +83,13 @@ public class Galaxies implements Comparable<Galaxies>{
         return type;
     }
 
-    public void setAbout(String about){ this.about = about; }
+    public void setAbout(String about){
+        this.about = about;
+    }
 
-    public String getAbout(){ return about; }
+    public String getAbout(){
+        return about;
+    }
 
     public void setImage(String image){
         this.image = image;
@@ -103,7 +107,7 @@ public class Galaxies implements Comparable<Galaxies>{
 
     public String getImageMain() { return imageMain; }
 
-    public void setImageSmall() { this.imageSmall = imageSmall; }
+    public void setImageSmall(String imageSmall) { this.imageSmall = imageSmall; }
 
     public String getImageSmall() {
         return imageSmall;
