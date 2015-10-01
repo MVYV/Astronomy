@@ -34,9 +34,12 @@ public class Planets {
     @Column(name = "planets_mainimage")
     private String imageMain;
 
+    @Column(name = "planets_imagesmall")
+    private String imageSmall;
+
     public Planets(){}
 
-    public Planets(String name, int satellites, double radius,String about, double temperature, String image, String images, String  imageMain){
+    public Planets(String name, int satellites, double radius,String about, double temperature, String image, String images, String  imageMain, String imageSmall){
         this.name = name;
         this.satellites = satellites;
         this.radius = radius;
@@ -45,6 +48,7 @@ public class Planets {
         this.image = image;
         this.images = images;
         this.imageMain = imageMain;
+        this.imageSmall = imageSmall;
     }
 
     public void setId(long id){
@@ -113,5 +117,13 @@ public class Planets {
 
     public String getImageMain(){
         return imageMain;
+    }
+
+    public void setImageSmall(String imageSmall) {
+        this.imageSmall = imageSmall;
+    }
+
+    public String getImageSmall() {
+        return imageSmall;
     }
 }

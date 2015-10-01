@@ -30,10 +30,13 @@ public class Galaxies implements Comparable<Galaxies>{
 
     @Column(name = "galaxies_images")
     private String images;
+
+    @Column(name = "galaxies_smallimage")
+    private String imageSmall;
     
     public Galaxies(){}
 
-    public Galaxies(String name, double distance, String type, String about,String image, String images, String imageMain){
+    public Galaxies(String name, double distance, String type, String about,String image, String images, String imageMain, String imageSmall){
         this.name = name;
         this.distance = distance;
         this.type = type;
@@ -41,6 +44,7 @@ public class Galaxies implements Comparable<Galaxies>{
         this.image = image;
         this.images = images;
         this.imageMain = imageMain;
+        this.imageSmall = imageSmall;
     }
 
     public int compareTo(Galaxies galaxy){
@@ -98,4 +102,10 @@ public class Galaxies implements Comparable<Galaxies>{
     public void setImageMain(String imageMain) { this.imageMain = imageMain; }
 
     public String getImageMain() { return imageMain; }
+
+    public void setImageSmall() { this.imageSmall = imageSmall; }
+
+    public String getImageSmall() {
+        return imageSmall;
+    }
 }
