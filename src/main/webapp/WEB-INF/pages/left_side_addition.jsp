@@ -101,7 +101,7 @@
   <c:forEach var="star1" items="${stars}">
   <div class="rotationObject" id="rotationObject${star1.id}">
     <div class="rObjProp">
-      <img src="/resources/images/stars/pistolstar/pistolstarSmall.jpg"/>
+      <img src="${star1.imageSmall}"/>
     </div>
     <div class="rObjProp">
       <p>${star1.name}</p>
