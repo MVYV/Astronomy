@@ -40,17 +40,17 @@ public class NewsController {
         }
 
         List<Stars> starsList = starsService.getAll();
-//        List<Galaxies> galaxiesList = galaxiesService.getAll();
-//        List<Satellites> satellitesList = satellitesService.getAll();
-//        List<Planets> planetsList = planetsService.getAll();
+        List<Galaxies> galaxiesList = galaxiesService.getAll();
+        List<Satellites> satellitesList = satellitesService.getAll();
+        List<Planets> planetsList = planetsService.getAll();
         int size = starsList.size();
-//        int sizeG = galaxiesList.size();
-//        int sizeP = planetsList.size();
-//        int sizeSat = satellitesList.size();
+        int sizeG = galaxiesList.size();
+        int sizeP = planetsList.size();
+        int sizeSat = satellitesList.size();
         List<Stars> stars = new ArrayList<>();
-//        List<Planets> planets = new ArrayList<>();
-//        List<Galaxies> galaxies = new ArrayList<>();
-//        List<Satellites> satellites = new ArrayList<>();
+        List<Planets> planets = new ArrayList<>();
+        List<Galaxies> galaxies = new ArrayList<>();
+        List<Satellites> satellites = new ArrayList<>();
 
         /*
         * get random number which not repeat
@@ -61,23 +61,23 @@ public class NewsController {
         }
         Collections.shuffle(random);
 
-//        List<Integer> randomP = new ArrayList<>();
-//        for (int i = 0; i < sizeP; i++){
-//            randomP.add(i);
-//        }
-//        Collections.shuffle(randomP);
-//
-//        List<Integer> randomG = new ArrayList<>();
-//        for (int i = 0; i < sizeG; i++){
-//            randomG.add(i);
-//        }
-//        Collections.shuffle(randomG);
-//
-//        List<Integer> randomSat = new ArrayList<>();
-//        for (int i = 0; i < sizeSat; i++){
-//            randomSat.add(i);
-//        }
-//        Collections.shuffle(randomSat);
+        List<Integer> randomP = new ArrayList<>();
+        for (int i = 0; i < sizeP; i++){
+            randomP.add(i);
+        }
+        Collections.shuffle(randomP);
+
+        List<Integer> randomG = new ArrayList<>();
+        for (int i = 0; i < sizeG; i++){
+            randomG.add(i);
+        }
+        Collections.shuffle(randomG);
+
+        List<Integer> randomSat = new ArrayList<>();
+        for (int i = 0; i < sizeSat; i++){
+            randomSat.add(i);
+        }
+        Collections.shuffle(randomSat);
 
         Stars star;
         int id = 1;
@@ -91,41 +91,41 @@ public class NewsController {
         }
         model.put("stars", stars);
 
-//        int idG = 1;
-//        Galaxies galaxy;
-//        for (int i = 0; i < 5; i++){
-//            int rndm = randomG.get(i);
-//            galaxy = galaxiesList.get(rndm);
-//            System.out.println(rndm);
-//            galaxy.setId(idG);
-//            id++;
-//            galaxies.add(galaxy);
-//        }
-//        model.put("galaxies", galaxies);
-//
-//        int idP = 1;
-//        Planets planet;
-//        for (int i = 0; i < 5; i++){
-//            int rndm = randomP.get(i);
-//            planet = planetsList.get(rndm);
-//            System.out.println(rndm);
-//            planet.setId(idP);
-//            id++;
-//            planets.add(planet);
-//        }
-//        model.put("planets", planets);
-//
-//        int idSat = 1;
-//        Satellites satellite;
-//        for (int i = 0; i < 5; i++){
-//            int rndm = randomSat.get(i);
-//            satellite = satellitesList.get(rndm);
-//            System.out.println(rndm);
-//            satellite.setId(idSat);
-//            id++;
-//            satellites.add(satellite);
-//        }
-//        model.put("satellites", satellites);
+        int idG = 1;
+        Galaxies galaxy;
+        for (int i = 0; i < 5; i++){
+            int rndm = randomG.get(i);
+            galaxy = galaxiesList.get(rndm);
+            System.out.println(rndm);
+            galaxy.setId(idG);
+            idG++;
+            galaxies.add(galaxy);
+        }
+        model.put("galaxies", galaxies);
+
+        int idP = 1;
+        Planets planet;
+        for (int i = 0; i < 5; i++){
+            int rndm = randomP.get(i);
+            planet = planetsList.get(rndm);
+            System.out.println(rndm);
+            planet.setId(idP);
+            idP++;
+            planets.add(planet);
+        }
+        model.put("planets", planets);
+
+        int idSat = 1;
+        Satellites satellite;
+        for (int i = 0; i < 5; i++){
+            int rndm = randomSat.get(i);
+            satellite = satellitesList.get(rndm);
+            System.out.println(rndm);
+            satellite.setId(idSat);
+            idSat++;
+            satellites.add(satellite);
+        }
+        model.put("satellites", satellites);
 
         List<News> newsList = newsService.getAll();
         for (int i = 0; i < newsList.size(); i++){

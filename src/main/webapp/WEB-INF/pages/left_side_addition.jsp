@@ -89,7 +89,7 @@
 <body>
 <div id="rotationMain">
   <div class="rotationTitle">
-    <p>STARS</p>
+    <p>${title}</p>
   </div>
   <div class="rotationRadio">
     <div class="rRadio" id="radio1"></div>
@@ -114,54 +114,54 @@
       </div>
     </div>
   </c:forEach>
-  <%--<c:forEach var="planet" items="${planets}">--%>
-    <%--<div class="rotationObject" id="rotationObject${planet.id}">--%>
-      <%--<div class="rObjProp">--%>
-        <%--<img src="${planet.imageSmall}"/>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>${planet.name}</p>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>Distance to the Earth:${planet.temperature} ly</p>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>Radius:${planet.radius} Rs</p>--%>
-      <%--</div>--%>
-    <%--</div>--%>
-  <%--</c:forEach>--%>
-  <%--<c:forEach var="satellite" items="${satellites}">--%>
-    <%--<div class="rotationObject" id="rotationObject${satellite.id}">--%>
-      <%--<div class="rObjProp">--%>
-        <%--<img src="${satellite.imageSmall}"/>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>${satellite.name}</p>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>Distance to the Earth:${satellite.temperature} ly</p>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>Radius:${satellite.radius} Rs</p>--%>
-      <%--</div>--%>
-    <%--</div>--%>
-  <%--</c:forEach>--%>
-  <%--<c:forEach var="galaxy" items="${galaxies}">--%>
-    <%--<div class="rotationObject" id="rotationObject${galaxy.id}">--%>
-      <%--<div class="rObjProp">--%>
-        <%--<img src="${galaxy.imageSmall}"/>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>${galaxy.name}</p>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>Distance to the Earth:${galaxy.distance} ly</p>--%>
-      <%--</div>--%>
-      <%--<div class="rObjProp">--%>
-        <%--<p>Radius:${galaxy.type} Rs</p>--%>
-      <%--</div>--%>
-    <%--</div>--%>
-  <%--</c:forEach>--%>
+  <c:forEach var="planet" items="${planets}">
+    <div class="rotationObject" id="rotationObject${planet.id}">
+      <div class="rObjProp">
+        <img src="${planet.imageSmall}"/>
+      </div>
+      <div class="rObjProp">
+        <p>${planet.name}</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:${planet.temperature} ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:${planet.radius} Rs</p>
+      </div>
+    </div>
+  </c:forEach>
+  <c:forEach var="satellite" items="${satellites}">
+    <div class="rotationObject" id="rotationObject${satellite.id}">
+      <div class="rObjProp">
+        <img src="${satellite.imageSmall}"/>
+      </div>
+      <div class="rObjProp">
+        <p>${satellite.name}</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:${satellite.temperature} ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:${satellite.radius} Rs</p>
+      </div>
+    </div>
+  </c:forEach>
+  <c:forEach var="galaxy" items="${galaxies}">
+    <div class="rotationObject" id="rotationObject${galaxy.id}">
+      <div class="rObjProp">
+        <img src="${galaxy.imageSmall}"/>
+      </div>
+      <div class="rObjProp">
+        <p>${galaxy.name}</p>
+      </div>
+      <div class="rObjProp">
+        <p>Distance to the Earth:${galaxy.distance} ly</p>
+      </div>
+      <div class="rObjProp">
+        <p>Radius:${galaxy.type} Rs</p>
+      </div>
+    </div>
+  </c:forEach>
 </div>
 </body>
 </html>
