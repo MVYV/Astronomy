@@ -19,10 +19,13 @@
     </div>
     <div class="page_main_content">
       <div class="publications">
-
+        <c:forEach var="pub" items="${publications}">
+          <p>Title: ${pub.title}</p>
+          <p>Author: ${pub.author}</p>
+        </c:forEach>
       </div>
       <div class="addPublication">
-        <form>
+        <form action="/publications/newpublication">
           <div class="pubItem">
             <label for="authorName">Please enter the author's name</label><br>
             <input type="text" name="authorName" id="authorName">
@@ -42,6 +45,9 @@
           <div class="pubItem">
             <label for="publicationImg">If necessary, add an image</label><br>
             <input type="file" name="publicationImg" id="publicationImg">
+          </div>
+          <div class="pubItem">
+            <input type="submit" name="submit">
           </div>
         </form>
       </div>

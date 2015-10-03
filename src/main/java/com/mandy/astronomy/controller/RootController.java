@@ -34,18 +34,25 @@ public class RootController {
     }
 
     @RequestMapping(value = "/about_site")
-    public String getAboutSite() { return  "about_site"; }
+    public String getAboutSite(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
+        return  "about_site";
+    }
 
     @RequestMapping(value = "/left_side_addition")
-    public String getLeftSiteAddition() { return  "left_side_addition"; }
+    public String getLeftSiteAddition(Model model) {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
 
-    @RequestMapping(value = "/publications")
-    public String getPublications() { return "publications"; }
-
-//    @RequestMapping(value = "/profile")
-//    public String getProfile(){
-//        return "profile";
-//    }
+        return  "left_side_addition";
+    }
 
     @RequestMapping(value = "/linear_navigation")
     public String getlinear_navigation(Model model){
@@ -74,7 +81,6 @@ public class RootController {
     {
         List<Users> usersList = usersService.getAll();
         int size = usersList.size();
-//        boolean check;
         for (int i =0; i < size; i++){
             Users user = usersList.get(i);
             String uname = user.getName();
