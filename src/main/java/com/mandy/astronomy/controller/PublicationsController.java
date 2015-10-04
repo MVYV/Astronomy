@@ -54,6 +54,8 @@ public class PublicationsController {
         }
         Publications publication = new Publications(author, title, text, img, annotation);
         publicationsService.addPublication(publication);
+        List<Publications> publicationsList = publicationsService.getAll();
+        model.put("publications", publicationsList);
         return "publications";
     }
 }
