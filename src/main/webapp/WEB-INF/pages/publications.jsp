@@ -22,6 +22,8 @@
         <c:forEach var="pub" items="${publications}">
           <p>Title: ${pub.title}</p>
           <p>Author: ${pub.author}</p>
+		  <p>Annotation: ${pub.annotation}</p>
+		  <p>Image: <img src="${pub.image}"/></p>
         </c:forEach>
       </div>
       <div class="addPublication">
