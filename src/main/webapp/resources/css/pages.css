@@ -540,12 +540,13 @@ table
     float: left;
     border: 1px solid rgba(0,0,0,0);
 }
-#rotationMain
+#rotationMain, #rotationMain1
 {
     width: 288px;
-    position: absolute;
     text-align: center;
     color: #deb887;
+    float: left;
+    height: 400px;
 }
 #rotationObject1, #rotationObject2, #rotationObject3, #rotationObject4, #rotationObject5
 {
@@ -555,23 +556,23 @@ table
     border: 5px solid rgba(245,245,245,0.1);
     background: rgba(100, 100, 100, 0.3);
 }
-.rotationObject
+.rotationObject, .rotationObject1
 {
     display: none;
 }
-.rObjProp
+.rObjProp, .rObjProp1
 {
     border-bottom: 1px solid #deb887;
 }
-.rObjProp:first-child, .rObjProp:last-child
+.rObjProp:first-child, .rObjProp:last-child, .rObjProp1:first-child, .rObjProp1:last-child
 {
     border-bottom: none;
 }
-.rotationObjectA
+.rotationObjectA, .rotationObjectA1
 {
     display: block;
 }
-.rRadio
+.rRadio, .rRadio1
 {
     width: 15px;
     height: 15px;
@@ -582,11 +583,11 @@ table
     margin-right: 10px;
     cursor: pointer;
 }
-#radio1
+#radio1, #radioo1
 {
     margin-left: 68px;
 }
-.radioActive, .rRadio:active
+.radioActive, .rRadio:active, .radioActive1, .rRadio1:active
 {
     width: 15px;
     height: 15px;
@@ -594,15 +595,16 @@ table
     border: 3px solid #deb887;
     background: #000000;
 }
-.rObjectActive
+.rObjectActive, .rObjectActive1
 {
     display: block;
 }
-.rotationTitle
+.rotationTitle1
 {
     color: #deb887;
 }
-.rotationTitle, .rotationRadio {
+.rotationTitle, .rotationRadio, .rotationTitle1, .rotationRadio1
+{
     width: 288px;
     height: 30px;
 }
