@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Час створення: Жов 02 2015 р., 13:36
+-- Час створення: Жов 04 2015 р., 15:38
 -- Версія сервера: 5.6.17
 -- Версія PHP: 5.5.12
 
@@ -125,8 +125,17 @@ CREATE TABLE IF NOT EXISTS `publications` (
   `publications_title` varchar(500) NOT NULL,
   `publications_text` text NOT NULL,
   `publications_image` varchar(300) DEFAULT NULL,
+  `publications_annotation` varchar(500) NOT NULL,
   PRIMARY KEY (`publications_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+
+--
+-- Дамп даних таблиці `publications`
+--
+
+INSERT INTO `publications` (`publications_id`, `publications_author`, `publications_title`, `publications_text`, `publications_image`, `publications_annotation`) VALUES
+(1, 'aaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaaa', 'none', ''),
+(2, '', '', '', 'none', '');
 
 -- --------------------------------------------------------
 
@@ -148,7 +157,7 @@ CREATE TABLE IF NOT EXISTS `satellites` (
   PRIMARY KEY (`satellites_id`),
   KEY `planet_name` (`planet_name`),
   KEY `planet_name_2` (`planet_name`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
 
 --
 -- Дамп даних таблиці `satellites`
