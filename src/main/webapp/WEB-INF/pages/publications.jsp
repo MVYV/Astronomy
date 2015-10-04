@@ -20,10 +20,13 @@
     <div class="page_main_content">
       <div class="publications">
         <c:forEach var="pub" items="${publications}">
-          <p>Title: ${pub.title}</p>
-          <p>Author: ${pub.author}</p>
-		  <p>Annotation: ${pub.annotation}</p>
-		  <p>Image: <img src="${pub.image}"/></p>
+          <div id="mpContainer">
+            <div id="mpImg"><img src="/resources/images/planets/earth/e2.jpg" width="150" height="100"/></div>
+            <div id="mpAuthor">${pub.author}</div>
+            <div id="mpDate">04.10.2015</div>
+            <div id="mpTitle">${pub.title}</div>
+		    <p id="mpAnnotation">${pub.annotation}</p>
+		  </div>
         </c:forEach>
       </div>
       <div class="addPublication">
