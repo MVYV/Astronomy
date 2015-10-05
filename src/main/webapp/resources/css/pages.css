@@ -643,7 +643,7 @@ table
 {
     width: 350px;
     background: #deb887;
-    color: #363636;
+    color: #000000;
     margin-top: 5px;
     font-weight: bold;
     border: 2px solid black;
@@ -656,41 +656,44 @@ table
 #mpContainer
 {
     width: 397px;
+    background: #deb887;
     font-size: 12px;
-    border-bottom: 1px solid #a9a9a9;
     margin-bottom: 20px;
+    -webkit-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    box-shadow: 7px 7px 0px 0px rgba(0,0,0,0.75);
+    padding: 10px;
 }
 #mpImg
 {
     width: 150px;
     float: left;
-    border: 1px solid salmon;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 #mpAuthor
 {
-    width: 185px;
+    width: 160px;
     font-size: 9px;
 }
 #mpAuthor, #mpTitle
 {
     float: left;
-    border: 1px solid yellow;
     text-align: center;
     font-style: oblique;
     font-weight: bold;
 }
 #mpDate
 {
-    width: 62px;
+    width: 57px;
     float: left;
-    border: 1px solid red;
     font-size: 9px;
     font-style: italic;
-    color: #808080;
+    color: #000000;
 }
 #mpTitle
 {
-    width: 247px;
+    width: 217px;
     font-size: 14px;
 }
 #mpImg, #mpAuthor, #mpDate, #mpTitle, #mpContainer
@@ -707,5 +710,5 @@ table
 }
 #mpTitle, #mpAuthor, #mpContainer
 {
-    color: #a9a9a9;
+    color: #000000;
 }
