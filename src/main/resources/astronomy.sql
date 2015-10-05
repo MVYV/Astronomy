@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: 127.0.0.1
--- Час створення: Жов 04 2015 р., 15:38
+-- Час створення: Жов 05 2015 р., 18:45
 -- Версія сервера: 5.6.17
 -- Версія PHP: 5.5.12
 
@@ -127,7 +127,7 @@ CREATE TABLE IF NOT EXISTS `publications` (
   `publications_image` varchar(300) DEFAULT NULL,
   `publications_annotation` varchar(500) NOT NULL,
   PRIMARY KEY (`publications_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
 
 --
 -- Дамп даних таблиці `publications`
@@ -135,7 +135,13 @@ CREATE TABLE IF NOT EXISTS `publications` (
 
 INSERT INTO `publications` (`publications_id`, `publications_author`, `publications_title`, `publications_text`, `publications_image`, `publications_annotation`) VALUES
 (1, 'aaaaaaaaa', 'aaaaaaaaaaa', 'aaaaaaaaaaaa', 'none', ''),
-(2, '', '', '', 'none', '');
+(2, '', '', '', 'none', ''),
+(3, 'Misko V', 'MY Publication', 'qqqqqqqqqqqqqqqwwwwwwwwwwwww eeeeeeeeeeeeeeerrrr ttttttttttttttttttttttttttttttttttr eeeeeeeeeeeeeee wwwwwwwwwwwwwwww wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ttttttttttttttttttttttttttttttttttttttttttttttttt yyyyyyyyy uuuuuuuuuuu rrrrrrrrrrrrrrrrrrr eeeeeeeeeeeeeeee tttttttttttttttttt eeeeeeeeeeeeeeeeeeee wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrr wwwwwwwwwwwwwwwwwwwwwwww eeeeeeeeeeeeeeeeeeeeeeeee', 'aldebaranstar.jpg', 'qqqqqqqqqqqqqqq ewwwwwwwww ew ewewewe. ewew cbcb., ,reerewriwerinusndaywyegq7  d,.f.s,.,sdferwirjewurhwh'),
+(4, 'Misko V', 'MY Publication', 'qqqqqqqqqqqqqqqwwwwwwwwwwwww eeeeeeeeeeeeeeerrrr ttttttttttttttttttttttttttttttttttr eeeeeeeeeeeeeee wwwwwwwwwwwwwwww wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ttttttttttttttttttttttttttttttttttttttttttttttttt yyyyyyyyy uuuuuuuuuuu rrrrrrrrrrrrrrrrrrr eeeeeeeeeeeeeeee tttttttttttttttttt eeeeeeeeeeeeeeeeeeee wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrr wwwwwwwwwwwwwwwwwwwwwwww eeeeeeeeeeeeeeeeeeeeeeeee', 'aldebaranstar.jpg', 'qqqqqqqqqqqqqqq ewwwwwwwww ew ewewewe. ewew cbcb., ,reerewriwerinusndaywyegq7  d,.f.s,.,sdferwirjewurhwh'),
+(5, 'Misko V', 'MY Publication', 'qqqqqqqqqqqqqqqwwwwwwwwwwwww eeeeeeeeeeeeeeerrrr ttttttttttttttttttttttttttttttttttr eeeeeeeeeeeeeee wwwwwwwwwwwwwwww wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ttttttttttttttttttttttttttttttttttttttttttttttttt yyyyyyyyy uuuuuuuuuuu rrrrrrrrrrrrrrrrrrr eeeeeeeeeeeeeeee tttttttttttttttttt eeeeeeeeeeeeeeeeeeee wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrr wwwwwwwwwwwwwwwwwwwwwwww eeeeeeeeeeeeeeeeeeeeeeeee', 'aldebaranstar.jpg', 'qqqqqqqqqqqqqqq ewwwwwwwww ew ewewewe. ewew cbcb., ,reerewriwerinusndaywyegq7  d,.f.s,.,sdferwirjewurhwh'),
+(6, 'Misko V', 'MY Publication', 'qqqqqqqqqqqqqqqwwwwwwwwwwwww eeeeeeeeeeeeeeerrrr ttttttttttttttttttttttttttttttttttr eeeeeeeeeeeeeee wwwwwwwwwwwwwwww wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ttttttttttttttttttttttttttttttttttttttttttttttttt yyyyyyyyy uuuuuuuuuuu rrrrrrrrrrrrrrrrrrr eeeeeeeeeeeeeeee tttttttttttttttttt eeeeeeeeeeeeeeeeeeee wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrr wwwwwwwwwwwwwwwwwwwwwwww eeeeeeeeeeeeeeeeeeeeeeeee', 'aldebaranstar.jpg', 'qqqqqqqqqqqqqqq ewwwwwwwww ew ewewewe. ewew cbcb., ,reerewriwerinusndaywyegq7  d,.f.s,.,sdferwirjewurhwh'),
+(7, 'Misko V', 'MY Publication', 'qqqqqqqqqqqqqqqwwwwwwwwwwwww eeeeeeeeeeeeeeerrrr ttttttttttttttttttttttttttttttttttr eeeeeeeeeeeeeee wwwwwwwwwwwwwwww wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr ttttttttttttttttttttttttttttttttttttttttttttttttt yyyyyyyyy uuuuuuuuuuu rrrrrrrrrrrrrrrrrrr eeeeeeeeeeeeeeee tttttttttttttttttt eeeeeeeeeeeeeeeeeeee wwwwwwwwwwwwwww rrrrrrrrrrrrrrrrrrrrrrrrr wwwwwwwwwwwwwwwwwwwwwwww eeeeeeeeeeeeeeeeeeeeeeeee', 'aldebaranstar.jpg', 'qqqqqqqqqqqqqqq ewwwwwwwww ew ewewewe. ewew cbcb., ,reerewriwerinusndaywyegq7  d,.f.s,.,sdferwirjewurhwh'),
+(8, 'q', 'q', 'q', '', 'q');
 
 -- --------------------------------------------------------
 
