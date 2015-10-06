@@ -25,14 +25,18 @@ public class Publications {
     @Column(name = "publications_annotation")
     private String annotation;
 
+    @Column(name = "publications_date")
+    private String date;
+
     public Publications(){}
 
-    public Publications(String author, String title, String text, String image, String annotation){
+    public Publications(String author, String title, String text, String image, String annotation, String date){
         this.author = author;
         this.title = title;
         this.text = text;
         this.image = image;
         this.annotation = annotation;
+        this.date = date;
     }
 
     public void setId(long id) {
@@ -81,5 +85,13 @@ public class Publications {
 
     public String getAnnotation() {
         return annotation;
+    }
+
+    public void setDate(String date) {
+        this.date = date;
+    }
+
+    public String getDate() {
+        return date;
     }
 }

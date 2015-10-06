@@ -13,6 +13,10 @@ import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -29,6 +33,9 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
+        Date date = new Date();
+        System.out.println(dateFormat.format(date));
         List<Publications> publicationsList = publicationsService.getAll();
         model.put("publications", publicationsList);
         return "publications";
@@ -48,11 +55,13 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
+        DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
+        Date date = new Date();
         String image = "none";
         if (img == null){
             img = image;
         }
-        Publications publication = new Publications(author, title, text, img, annotation);
+        Publications publication = new Publications(author, title, text, img, annotation, dateFormat.format(date));
         publicationsService.addPublication(publication);
         List<Publications> publicationsList = publicationsService.getAll();
         model.put("publications", publicationsList);

@@ -29,6 +29,9 @@
        <!-- Imports datasource configuration -->
        <import resource="spring-data.xml"/>
 
+       <bean id="multipartResolver"
+              class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/>
+
        <bean id="deployProperties" class="org.springframework.beans.factory.config.PropertiesFactoryBean"
              p:location="/WEB-INF/database.properties" />
 
