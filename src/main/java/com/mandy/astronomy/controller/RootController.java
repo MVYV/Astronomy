@@ -33,10 +33,10 @@ public class RootController {
         return "header";
     }
 
-    @RequestMapping(value = "/constellations")
-    public String getConstellations(){
-        return "constellations";
-    }
+//    @RequestMapping(value = "/constellations")
+//    public String getConstellations(){
+//        return "constellations";
+//    }
 
     @RequestMapping(value = "/about_site")
     public String getAboutSite(Model model) {

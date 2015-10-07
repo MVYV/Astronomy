@@ -25,7 +25,7 @@ public class Constellations {
     @Column(name = "constellations_nearest_star")
     private String nearestStar;
 
-    @Column(name = "constellations_main_star")
+    @Column(name = "constellations_main_stars")
     private String mainStar;
 
     @Column(name = "constellations_quadrant")
