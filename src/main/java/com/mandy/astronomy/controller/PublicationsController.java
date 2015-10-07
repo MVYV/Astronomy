@@ -33,9 +33,6 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
-        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
-        Date date = new Date();
-        System.out.println(dateFormat.format(date));
         List<Publications> publicationsList = publicationsService.getAll();
         model.put("publications", publicationsList);
         return "publications";
@@ -55,12 +52,8 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
-        DateFormat dateFormat = new SimpleDateFormat("dd.mm.yyyy");
+        DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date();
-        String image = "none";
-        if (img == null){
-            img = image;
-        }
         Publications publication = new Publications(author, title, text, img, annotation, dateFormat.format(date));
         publicationsService.addPublication(publication);
         List<Publications> publicationsList = publicationsService.getAll();

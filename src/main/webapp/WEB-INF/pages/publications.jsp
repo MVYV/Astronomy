@@ -30,7 +30,7 @@
         </c:forEach>
       </div>
       <div class="addPublication">
-        <form action="/publications/newpublication" method="post">
+        <form action="/publications/newpublication" method="post" enctype="multipart/form-data">
           <div class="pubItem">
             <label for="authorName">Please enter the author's name</label><br>
             <input type="text" name="authorName" id="authorName">
