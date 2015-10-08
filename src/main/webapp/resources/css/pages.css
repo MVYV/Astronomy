@@ -714,3 +714,60 @@ table
 {
     color: #000000;
 }
+#c_main_content
+{
+    width: 100%;
+    overflow: hidden;
+    padding: 1px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+#cContainer
+{
+    width: 200px;
+    height: 300px;
+
+    float: left;
+    margin: 4px;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+
+}
+.cTitle
+{
+    width: 200px;
+    height: 30px;
+}
+.cMain
+{
+    width: 200px;
+    height: 270px;
+
+}
+.cMain img
+{
+    position: absolute;
+}
+#slideContainer
+{
+    width: 200px;
+    height: 270px;
+    position: absolute;
+}
+.cMainUp
+{
+    width: 200px;
+    height: 270px;
+    background: rgba(0,0,0,0.9);
+    color: #deb887;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    display: none;
+    border: 1px solid #deb887;
+}
