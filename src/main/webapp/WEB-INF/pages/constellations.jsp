@@ -8,13 +8,13 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <script>
         $(document).ready(function() {
-            $('.cMain').hover(function()
-            {
-                $('.cMainUp').slideDown("normal");
-            }, function()
-            {
-                $('.cMainUp').slideUp("normal");
-            });
+            for(var k = 1; k < 10; k++) {
+                $('.cMain').hover(function () {
+                    $('.cMainUp'+ k).slideDown("normal");
+                }, function () {
+                    $('.cMainUp'+ k).slideUp("normal");
+                });
+            }
         });
 
     </script>
