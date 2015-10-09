@@ -8,7 +8,7 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <script>
         $(document).ready(function() {
-            $('#cMain').hover(function()
+            $('.cMain').hover(function()
             {
                 $('.cMainUp').slideDown("normal");
             }, function()
@@ -16,6 +16,7 @@
                 $('.cMainUp').slideUp("normal");
             });
         });
+
     </script>
 </head>
 <body>
@@ -37,7 +38,7 @@
                     <div class="cMain" id="cMain">
                         <img src="/resources/images/constellations/orionS.jpg" width="200" height="270" />
                         <div id="slideContainer">
-                            <div class="cMainUp">
+                            <div class="cMainUp" id="cMainUp">
                                 <p>${num.area}</p>
                                 <p>${num.brightestStar}</p>
                                 <p>${num.nearestStar}</p>
