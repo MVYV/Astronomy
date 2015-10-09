@@ -10,9 +10,9 @@
         $(document).ready(function() {
             for(var k = 1; k < 10; k++) {
                 $('.cMain').hover(function () {
-                    $('.cMainUp'+ k).slideDown("normal");
+                    $('#cMainUp'+ k).slideDown("normal");
                 }, function () {
-                    $('.cMainUp'+ k).slideUp("normal");
+                    $('#cMainUp'+ k).slideUp("normal");
                 });
             }
         });
