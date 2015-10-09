@@ -1,3 +1,4 @@
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -8,13 +9,13 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <script>
         $(document).ready(function() {
-            for(var k = 1; k < 10; k++) {
+            //for(var k = 1; k < 10; k++) {
                 $('.cMain').hover(function () {
-                    $('.cMainUp'+ k).slideDown("normal");
+                    $('#cMainUp1').slideDown("normal");
                 }, function () {
-                    $('.cMainUp'+ k).slideUp("normal");
+                    $('#cMainUp1').slideUp("normal");
                 });
-            }
+            //}
         });
 
     </script>
