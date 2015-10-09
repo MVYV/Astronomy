@@ -38,7 +38,7 @@
                     <div class="cMain" id="cMain">
                         <img src="/resources/images/constellations/orionS.jpg" width="200" height="270" />
                         <div id="slideContainer">
-                            <div class="cMainUp" id="cMainUp">
+                            <div class="cMainUp" id="cMainUp${num.id}">
                                 <p>${num.area}</p>
                                 <p>${num.brightestStar}</p>
                                 <p>${num.nearestStar}</p>
