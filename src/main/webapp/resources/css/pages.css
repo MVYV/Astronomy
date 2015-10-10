@@ -771,3 +771,7 @@ table
     display: none;
     border: 1px solid #deb887;
 }
+.cMain:hover .cMainUp
+{
+    display: block;
+}

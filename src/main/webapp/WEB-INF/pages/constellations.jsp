@@ -6,18 +6,17 @@
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
-    <script>
-        $(document).ready(function() {
-            for(var k = 1; k < 10; k++) {
-                $('.cMain').hover(function () {
-                    $('#cMainUp'+ k).slideDown("normal");
-                }, function () {
-                    $('#cMainUp'+ k).slideUp("normal");
-                });
-            }
-        });
-
-    </script>
+    <%--<script>--%>
+        <%--$(document).ready(function() {--%>
+            <%--for(var k = 1; k < 10; k++) {--%>
+                <%--$('.cMain').hover(function () {--%>
+                    <%--$('#cMainUp'+ k).slideDown("normal");--%>
+                <%--}, function () {--%>
+                    <%--$('#cMainUp'+ k).slideUp("normal");--%>
+                <%--});--%>
+            <%--}--%>
+        <%--});--%>
+    <%--</script>--%>
 </head>
 <body>
 <div class="globalGlass">
