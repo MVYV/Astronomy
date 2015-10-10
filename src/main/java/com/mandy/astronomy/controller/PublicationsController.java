@@ -12,7 +12,11 @@ import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -33,6 +37,8 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
+        String workingDir = System.getProperty("user.dir");
+        System.out.println(workingDir);
         List<Publications> publicationsList = publicationsService.getAll();
         model.put("publications", publicationsList);
         return "publications";
@@ -44,7 +50,7 @@ public class PublicationsController {
             @RequestParam(value = "publicationTitle", required = true) String title,
             @RequestParam(value = "publicationA", required = true) String annotation,
             @RequestParam(value = "publicationText", required = true) String text,
-            @RequestParam(value = "publicationImg", required = false) String img, ModelMap model)
+            @RequestParam(value = "publicationImg", required = false) MultipartFile file, ModelMap model)
     {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
@@ -52,8 +58,25 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
+
+        String name = file.getOriginalFilename();
+        if (!file.isEmpty()){
+            try {
+                byte [] bytes = file.getBytes();
+                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File("D:/"+name)));
+                stream.write(bytes);
+                stream.close();
+                System.out.println("Success");
+            } catch (Exception e){
+                e.printStackTrace();
+            }
+        } else {
+            System.out.println("Failed");
+        }
+
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date();
+        String img = "dsds00";
         Publications publication = new Publications(author, title, text, img, annotation, dateFormat.format(date));
         publicationsService.addPublication(publication);
         List<Publications> publicationsList = publicationsService.getAll();
