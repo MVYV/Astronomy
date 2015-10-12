@@ -37,35 +37,35 @@
           }
         }, timeout1);
       });
-//      $(document).ready(function () {
-//        $(function () {
-//          var $blocks2 = $('.rotationRadio1 .rRadio1');
-//          var timeout2 = 3000;
-//          var index2 = 1;
-//          var k = 0;
-//          $blocks2.eq(k).addClass('radioActive1');
-//          setInterval(function () {
-//            $blocks2.removeClass('radioActive1');
-//            $blocks2.eq(index2++).addClass('radioActive1');
-//            if (index2 == $blocks2.size()) {
-//              index2 = 0;
-//            }
-//          }, timeout2);
-//        });
-//        $(function () {
-//          var $blocks3 = $('.rotationObject1');
-//          var timeout3 = 3000;
-//          var index3 = 1;
-//          var m = 0;
-//          $blocks3.eq(m).addClass('rotationObjectA1');
-//          setInterval(function () {
-//            $blocks3.fadeOut('slow');
-//            $blocks3.eq(index3++).fadeIn('slow');
-//            if (index3 == $blocks3.size()) {
-//              index3 = 0;
-//            }
-//          }, timeout3);
-//        });
+
+        $(function () {
+          var $blocks2 = $('.rotationRadio1 .rRadio1');
+          var timeout2 = 3000;
+          var index2 = 1;
+          var k = 0;
+          $blocks2.eq(k).addClass('radioActive1');
+          setInterval(function () {
+            $blocks2.removeClass('radioActive1');
+            $blocks2.eq(index2++).addClass('radioActive1');
+            if (index2 == $blocks2.size()) {
+              index2 = 0;
+            }
+          }, timeout2);
+        });
+        $(function () {
+          var $blocks3 = $('.rotationObject1');
+          var timeout3 = 3000;
+          var index3 = 1;
+          var m = 0;
+          $blocks3.eq(m).addClass('rotationObjectA1');
+          setInterval(function () {
+            $blocks3.fadeOut('slow');
+            $blocks3.eq(index3++).fadeIn('slow');
+            if (index3 == $blocks3.size()) {
+              index3 = 0;
+            }
+          }, timeout3);
+        });
       var $radio1 = $('#radio1');
       var $radio2 = $('#radio2');
       var $radio3 = $('#radio3');

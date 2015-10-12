@@ -761,17 +761,27 @@ table
 .cMainUp
 {
     width: 200px;
-    height: 270px;
+    height: 0;
     background: rgba(0,0,0,0.9);
     color: #deb887;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    display: none;
+    /*display: none;*/
     border: 1px solid #deb887;
+    transition:all .5s linear;
+    -moz-transition:all .5s linear;
+    -webkit-transition:all .5s linear;
+    -o-transition:all .5s linear;
+}
 }
 .cMain:hover .cMainUp
 {
-    display: block;
+    height: 270px;
+
+}
+.cMainUp:hover
+{
+    height: 270px;
 }
