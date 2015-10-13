@@ -5,12 +5,12 @@
     <title></title>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <link type="text/css" rel="stylesheet" href="/resources/css_pirobox/style_1/style.css"/>
-    <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/sorttable.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.min.js' />"></script>
     <script src="<c:url value='/resources/js/jquery-ui-1.8.2.custom.min.js' />"></script>
     <script src="<c:url value='/resources/js/pirobox_extended.js' />"></script>
+    <script src="<c:url value='/resources/js/nav_script.js' />" ></script>
     <script type="text/javascript">
         $(document).ready(function() {
             $().piroBox_ext({

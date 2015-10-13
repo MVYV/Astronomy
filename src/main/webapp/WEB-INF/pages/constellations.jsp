@@ -8,13 +8,14 @@
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <%--<script>--%>
         <%--$(document).ready(function() {--%>
-            <%--for(var k = 1; k < 10; k++) {--%>
-                <%--$('.cMain').hover(function () {--%>
-                    <%--$('#cMainUp'+ k).slideDown("normal");--%>
-                <%--}, function () {--%>
-                    <%--$('#cMainUp'+ k).slideUp("normal");--%>
-                <%--});--%>
-            <%--}--%>
+            <%--var $box = $('#slideContainer .cMainUp');--%>
+            <%--var i = 0;--%>
+            <%--$('.cMain').hover(function () {--%>
+                <%--$box.eq(i++).addClass('cMainUpO');--%>
+            <%--}, function () {--%>
+                <%--$box.eq(i++).removeClass('cMainUpO')--%>
+            <%--});--%>
+
         <%--});--%>
     <%--</script>--%>
 </head>
@@ -38,12 +39,12 @@
                         <img src="/resources/images/constellations/orionS.jpg" width="200" height="270" />
                         <div id="slideContainer">
                             <div class="cMainUp" id="cMainUp${num.id}">
-                                <p>${num.area}</p>
-                                <p>${num.brightestStar}</p>
-                                <p>${num.nearestStar}</p>
-                                <p>${num.mainStar}</p>
-                                <p>${num.quadrant}</p>
-                                <p>${num.family}</p>
+                                <p><span>Area:</span>&nbsp${num.area}</p>
+                                <p><span>Brightest star:</span>&nbsp${num.brightestStar}</p>
+                                <p><span>Nearest star:</span>&nbsp${num.nearestStar}</p>
+                                <p><span>Main stars:</span>&nbsp${num.mainStar}</p>
+                                <p><span>Quadrant:</span>&nbsp${num.quadrant}</p>
+                                <p><span>Family:</span>&nbsp${num.family}</p>
                             </div>
                         </div>
                     </div>
