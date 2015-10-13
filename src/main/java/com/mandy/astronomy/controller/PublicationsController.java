@@ -37,8 +37,6 @@ public class PublicationsController {
             model.addAttribute("username", userDetails.getUsername());
         }
 
-        String workingDir = System.getProperty("user.dir");
-        System.out.println(workingDir);
         List<Publications> publicationsList = publicationsService.getAll();
         model.put("publications", publicationsList);
         return "publications";
@@ -60,13 +58,14 @@ public class PublicationsController {
 
 
         String name = file.getOriginalFilename();
+        String workingDir = PublicationsController.class.getResource("").getPath();
+        String pathForImage = workingDir+"../../../../../../../../src/main/webapp/resources/publicationsImages/";
         if (!file.isEmpty()){
             try {
                 byte [] bytes = file.getBytes();
-                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File("D:/"+name)));
+                BufferedOutputStream stream = new BufferedOutputStream(new FileOutputStream(new File(pathForImage + name)));
                 stream.write(bytes);
                 stream.close();
-                System.out.println("Success");
             } catch (Exception e){
                 e.printStackTrace();
             }
@@ -76,7 +75,7 @@ public class PublicationsController {
 
         DateFormat dateFormat = new SimpleDateFormat("dd.MM.yyyy");
         Date date = new Date();
-        String img = "dsds00";
+        String img = "/resources/publicationsImages/" + name;
         Publications publication = new Publications(author, title, text, img, annotation, dateFormat.format(date));
         publicationsService.addPublication(publication);
         List<Publications> publicationsList = publicationsService.getAll();

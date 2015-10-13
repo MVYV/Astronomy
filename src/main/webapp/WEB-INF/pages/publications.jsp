@@ -21,7 +21,7 @@
       <div class="publications">
         <c:forEach var="pub" items="${publications}">
           <div id="mpContainer">
-            <div id="mpImg"><img src="/resources/images/planets/earth/e2.jpg" width="150" height="100"/></div>
+            <div id="mpImg"><img src="${pub.image}" width="150" height="100"/></div>
             <div id="mpAuthor">${pub.author}</div>
             <div id="mpDate">${pub.date}</div>
             <div id="mpTitle">${pub.title}</div>
