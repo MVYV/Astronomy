@@ -45,6 +45,9 @@ public class AboutController {
     @Autowired
     private NewsService newsService;
 
+    @Autowired
+    private ConstellationsService constellationsService;
+
     @RequestMapping(value = "/about", method = RequestMethod.GET)
     public String getPlanet(
             @RequestParam("name") String name,
@@ -182,6 +185,20 @@ public class AboutController {
             model.addAttribute("mainImage", imagePath);
             model.addAttribute("hide", hide);
             model.addAttribute("hiddenImages", hide);
+            model.addAttribute("about", about);
+            model.addAttribute("name", name);
+        } else if (objectU.equals("constellations")){
+            Constellations constellation = constellationsService.getByName(name);
+//            imagePath = constellation.getImageMain();
+//            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = constellation.getImages();
+            String [] imagesResult = imagesList.split(",");
+            model.put("objectImages", imagesResult);
+
+            about = constellation.getAbout();
+            String hide = "display: none";
+            model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
         }
