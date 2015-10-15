@@ -143,11 +143,28 @@
       </div>
     </div>
   </c:forEach>
+
+    <c:forEach var="planet" items="${planets}">
+        <div class="rotationObject1" id="rotationObject${planet.id}">
+            <div class="rObjProp1">
+                <img src="${planet.imageSmall}"/>
+            </div>
+            <div class="rObjProp1">
+                <p>${planet.name}</p>
+            </div>
+            <div class="rObjProp1">
+                <p>Temperature:${planet.temperature} K</p>
+            </div>
+            <div class="rObjProp1">
+                <p>Radius:${planet.radius} Rs</p>
+            </div>
+        </div>
+    </c:forEach>
 </div>
 
 <div id="rotationMain1">
   <div class="rotationTitle1">
-    <p>${title}</p>
+    <p>${titleTwo}</p>
   </div>
   <div class="rotationRadio1">
     <div class="rRadio1" id="radioo1"></div>
@@ -156,22 +173,39 @@
     <div class="rRadio1" id="radioo4"></div>
     <div class="rRadio1" id="radioo5"></div>
   </div>
-<c:forEach var="planet" items="${planets}">
-  <div class="rotationObject1" id="rotationObject${planet.id}">
-    <div class="rObjProp1">
-      <img src="${planet.imageSmall}"/>
-    </div>
-    <div class="rObjProp1">
-      <p>${planet.name}</p>
-    </div>
-    <div class="rObjProp1">
-      <p>Distance to the Earth:${planet.temperature} ly</p>
-    </div>
-    <div class="rObjProp1">
-      <p>Radius:${planet.radius} Rs</p>
-    </div>
-  </div>
-</c:forEach>
+    <c:forEach var="satellites" items="${satellites}">
+        <div class="rotationObject1" id="rotationObject${satellites.id}">
+            <div class="rObjProp1">
+                <img src="${satellites.imageSmall}"/>
+            </div>
+            <div class="rObjProp1">
+                <p>${satellites.name}</p>
+            </div>
+            <div class="rObjProp1">
+                <p>Temperature:${satellites.temperature} K</p>
+            </div>
+            <div class="rObjProp1">
+                <p>Radius:${satellites.radius} Rs</p>
+            </div>
+        </div>
+    </c:forEach>
+
+    <c:forEach var="galaxies" items="${galaxies}">
+        <div class="rotationObject1" id="rotationObject${galaxies.id}">
+            <div class="rObjProp1">
+                <img src="${galaxies.imageSmall}"/>
+            </div>
+            <div class="rObjProp1">
+                <p>${galaxies.name}</p>
+            </div>
+            <div class="rObjProp1">
+                <p>Distance to the Earth:${galaxies.distance} ly</p>
+            </div>
+            <div class="rObjProp1">
+                <p>Type:${galaxies.type}</p>
+            </div>
+        </div>
+    </c:forEach>
 </div>
 </body>
 </html>

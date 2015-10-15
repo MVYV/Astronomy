@@ -36,7 +36,7 @@
                         <span>${num.name}</span>
                     </div>
                     <div class="cMain" id="cMain">
-                        <img src="/resources/images/constellations/orionS.jpg" width="200" height="270" />
+                        <img src="${num.image}" width="200" height="270" />
                         <div id="slideContainer">
                             <div class="cMainUp" id="cMainUp${num.id}">
                                 <p><span>Area:</span>&nbsp${num.area}</p>
