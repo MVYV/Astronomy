@@ -145,18 +145,18 @@
   </c:forEach>
 
     <c:forEach var="planet" items="${planets}">
-        <div class="rotationObject1" id="rotationObject${planet.id}">
-            <div class="rObjProp1">
+        <div class="rotationObject" id="rotationObject${planet.id}">
+            <div class="rObjProp">
                 <img src="${planet.imageSmall}"/>
             </div>
-            <div class="rObjProp1">
+            <div class="rObjProp">
                 <p>${planet.name}</p>
             </div>
-            <div class="rObjProp1">
+            <div class="rObjProp">
                 <p>Temperature:${planet.temperature} K</p>
             </div>
-            <div class="rObjProp1">
-                <p>Radius:${planet.radius} Rs</p>
+            <div class="rObjProp">
+                <p>Radius:${planet.radius} km</p>
             </div>
         </div>
     </c:forEach>
@@ -185,7 +185,7 @@
                 <p>Temperature:${satellites.temperature} K</p>
             </div>
             <div class="rObjProp1">
-                <p>Radius:${satellites.radius} Rs</p>
+                <p>Radius:${satellites.radius} km</p>
             </div>
         </div>
     </c:forEach>
