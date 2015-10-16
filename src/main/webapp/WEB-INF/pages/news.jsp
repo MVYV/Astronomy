@@ -140,8 +140,8 @@
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle4">${news3.title}</span></a>
                         <p class="newsA" id="newsA4">${news3.shortText}</p>
                     </div>
-                    <div class="oneNews" id="oneNews5" onclick="location.href='/about?name=${news4.title}&object=news';">
-                        <c:url value="/about?name=${news4.title}&object=news" var="news" />
+                    <c:url value="/about?name=${news4.title}&object=news" var="news" />
+                    <div class="oneNews" id="oneNews5" onclick="location.href='<c:out value="${news}" escapeXml="true" />';">
                         <a href="<c:out value="${news}" escapeXml="true" />"><span class="newsTitle" id="newsTitle5">${news4.title}</span></a>
                         <p class="newsA" id="newsA5">${news4.shortText}</p>
                     </div>
