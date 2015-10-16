@@ -42,8 +42,32 @@
                         <div id="slideContainer">
                             <div class="cMainUp" id="cMainUp${num.id}">
                                 <p><span>Area:</span>&nbsp${num.area}</p>
-                                <p><span>Brightest star:</span>&nbsp${num.brightestStar}</p>
-                                <p><span>Nearest star:</span>&nbsp${num.nearestStar}</p>
+                                <c:forEach var="stars" items="${starsList}">
+                                    <c:if test="${num.nearestStar == stars.name}">
+                                        <c:set var="nameStar" value="${num.nearestStar}"/>
+                                        <c:set var="nameN" value="${num.nearestStar}"/>
+                                    </c:if>
+                                    <c:if test="${num.brightestStar == stars.name}">
+                                        <c:set var="nameStarB" value="${num.brightestStar}"/>
+                                        <c:set var="nameB" value="${num.brightestStar}"/>
+                                    </c:if>
+                                </c:forEach>
+                                <c:choose>
+                                    <c:when test="${num.brightestStar == nameB}">
+                                        <p><span>Brightest star:</span>&nbsp<a href="/about?name=${nameStarB}&object=stars">${num.brightestStar}</a></p>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <p><span>Brightest star:</span>&nbsp${num.brightestStar}</p>
+                                    </c:otherwise>
+                                </c:choose>
+                                <c:choose>
+                                    <c:when test="${num.nearestStar == nameN}">
+                                        <p><span>Nearest star:</span>&nbsp<a href="/about?name=${nameStar}&object=stars">${num.nearestStar}</a></p>
+                                    </c:when>
+                                    <c:otherwise>
+                                        <p><span>Nearest star:</span>&nbsp${num.nearestStar}</p>
+                                    </c:otherwise>
+                                </c:choose>
                                 <p><span>Main stars:</span>&nbsp${num.mainStar}</p>
                                 <p><span>Quadrant:</span>&nbsp${num.quadrant}</p>
                                 <p><span>Family:</span>&nbsp${num.family}</p>
