@@ -81,7 +81,7 @@
     <div class="rRadio" id="radio5"></div>
   </div>
   <c:forEach var="star" items="${stars}">
-    <div class="rotationObject" id="rotationObject${star.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+    <div class="rotationObject" id="rotationObject${star.id}" onclick="location.href='/about?name=${star.name}&object=stars';">
       <div class="rObjProp">
         <img src="${star.imageSmall}"/>
       </div>
@@ -98,7 +98,7 @@
   </c:forEach>
 
     <c:forEach var="planet" items="${planets}">
-        <div class="rotationObject" id="rotationObject${planet.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+        <div class="rotationObject" id="rotationObject${planet.id}" onclick="location.href='/about?name=${planet.name}&object=planets';">
             <div class="rObjProp">
                 <img src="${planet.imageSmall}"/>
             </div>
@@ -127,7 +127,7 @@
     <div class="rRadio1" id="radioo5"></div>
   </div>
     <c:forEach var="satellites" items="${satellites}">
-        <div class="rotationObject1" id="rotationObject${satellites.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+        <div class="rotationObject1" id="rotationObject${satellites.id}" onclick="location.href='/about?name=${satellites.name}&object=satellites';">
             <div class="rObjProp1">
                 <img src="${satellites.imageSmall}"/>
             </div>
@@ -144,7 +144,7 @@
     </c:forEach>
 
     <c:forEach var="galaxies" items="${galaxies}">
-        <div class="rotationObject1" id="rotationObject${galaxies.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+        <div class="rotationObject1" id="rotationObject${galaxies.id}" onclick="location.href='/about?name=${galaxies.name}&object=galaxies';">
             <div class="rObjProp1">
                 <img src="${galaxies.imageSmall}"/>
             </div>

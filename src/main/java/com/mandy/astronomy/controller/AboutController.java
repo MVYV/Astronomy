@@ -274,8 +274,8 @@ public class AboutController {
             model.addAttribute("name", name);
         } else if (objectU.equals("constellations")){
             Constellations constellation = constellationsService.getByName(name);
-//            imagePath = constellation.getImageMain();
-//            model.addAttribute("mainImage", imagePath);
+            imagePath = constellation.getMainImage();
+            model.addAttribute("mainImage", imagePath);
 
             String imagesList = constellation.getImages();
             String [] imagesResult = imagesList.split(",");

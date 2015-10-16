@@ -31,7 +31,9 @@
         <div class="page_main_content">
             <div id="c_main_content">
             <c:forEach var="num" items="${constellations}">
-                <div id="cContainer" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+                <c:set var="name" value="${num.name}"/>
+                <c:if test="${num.name == 'Boötes'}"><c:set var="name" value="Bootes"/></c:if>
+                <div id="cContainer" onclick="location.href='/about?name=${name}&object=constellations';">
                     <div class="cTitle">
                         <span>${num.name}</span>
                     </div>
