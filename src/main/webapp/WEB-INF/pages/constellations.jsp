@@ -31,7 +31,7 @@
         <div class="page_main_content">
             <div id="c_main_content">
             <c:forEach var="num" items="${constellations}">
-                <div id="cContainer">
+                <div id="cContainer" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
                     <div class="cTitle">
                         <span>${num.name}</span>
                     </div>

@@ -5,8 +5,7 @@
 <head>
   <title></title>
   <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
-  <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
+  <%--<link type="text/css" rel="stylesheet" href="/resources/css/pages.css">--%>
   <script>
     $(document).ready(function () {
       $(function () {
@@ -66,52 +65,6 @@
             }
           }, timeout3);
         });
-      var $radio1 = $('#radio1');
-      var $radio2 = $('#radio2');
-      var $radio3 = $('#radio3');
-      var $radio4 = $('#radio4');
-      var $radio5 = $('#radio5');
-      function hideRotationObject(j){
-        $('#rotationObject'+ j).fadeOut('slow');
-      }
-      function showRotationObject(m){
-        $('#rotationObject'+ m).fadeIn('slow');
-      }
-      $radio1.click(function(){
-        showRotationObject(1);
-        hideRotationObject(2);
-        hideRotationObject(3);
-        hideRotationObject(4);
-        hideRotationObject(5);
-      });
-      $radio2.click(function(){
-        hideRotationObject(1);
-        showRotationObject(2);
-        hideRotationObject(3);
-        hideRotationObject(4);
-        hideRotationObject(5);
-      });
-      $radio3.click(function(){
-        hideRotationObject(1);
-        hideRotationObject(2);
-        showRotationObject(3);
-        hideRotationObject(4);
-        hideRotationObject(5);
-      });
-      $radio4.click(function(){
-        hideRotationObject(1);
-        hideRotationObject(2);
-        hideRotationObject(3);
-        showRotationObject(4);
-        hideRotationObject(5);
-      });
-      $radio5.click(function(){
-        hideRotationObject(1);
-        hideRotationObject(2);
-        hideRotationObject(3);
-        hideRotationObject(4);
-        showRotationObject(5);
-      });
     });
   </script>
 </head>
@@ -128,7 +81,7 @@
     <div class="rRadio" id="radio5"></div>
   </div>
   <c:forEach var="star" items="${stars}">
-    <div class="rotationObject" id="rotationObject${star.id}">
+    <div class="rotationObject" id="rotationObject${star.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
       <div class="rObjProp">
         <img src="${star.imageSmall}"/>
       </div>
@@ -145,7 +98,7 @@
   </c:forEach>
 
     <c:forEach var="planet" items="${planets}">
-        <div class="rotationObject" id="rotationObject${planet.id}">
+        <div class="rotationObject" id="rotationObject${planet.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
             <div class="rObjProp">
                 <img src="${planet.imageSmall}"/>
             </div>
@@ -174,7 +127,7 @@
     <div class="rRadio1" id="radioo5"></div>
   </div>
     <c:forEach var="satellites" items="${satellites}">
-        <div class="rotationObject1" id="rotationObject${satellites.id}">
+        <div class="rotationObject1" id="rotationObject${satellites.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
             <div class="rObjProp1">
                 <img src="${satellites.imageSmall}"/>
             </div>
@@ -191,7 +144,7 @@
     </c:forEach>
 
     <c:forEach var="galaxies" items="${galaxies}">
-        <div class="rotationObject1" id="rotationObject${galaxies.id}">
+        <div class="rotationObject1" id="rotationObject${galaxies.id}" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
             <div class="rObjProp1">
                 <img src="${galaxies.imageSmall}"/>
             </div>

@@ -547,6 +547,7 @@ table
     color: #deb887;
     float: left;
     height: 400px;
+    font-family: Verdana;
 }
 #rotationObject1, #rotationObject2, #rotationObject3, #rotationObject4, #rotationObject5
 {
@@ -559,6 +560,7 @@ table
 .rotationObject, .rotationObject1
 {
     display: none;
+    cursor: pointer;
 }
 .rObjProp, .rObjProp1
 {
@@ -731,6 +733,7 @@ table
     font-family: Verdana;
     float: left;
     margin: 4px;
+    cursor: pointer;
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
@@ -776,6 +779,7 @@ table
     font-size: 14px;
     text-align: center;
     padding-top: 30px;
+    cursor: pointer;
 }
 .cMainUp span
 {

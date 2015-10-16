@@ -5,7 +5,6 @@
 <head>
   <title></title>
   <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
-  <script src="<c:url value='/resources/js/getAbout.js' />" ></script>
   <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
   <script>
       $(document).ready(function () {
