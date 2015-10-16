@@ -16,11 +16,19 @@ public class Universe {
     @Column(name = "universe_about")
     private String about;
 
+    @Column(name = "universe_main_image")
+    private String mainImage;
+
+    @Column(name = "universe_images")
+    private String images;
+
     public Universe(){}
 
-    public Universe(String name, String about){
+    public Universe(String name, String about, String mainImage, String images){
         this.name = name;
         this.about = about;
+        this.mainImage = mainImage;
+        this.images = images;
     }
 
     public void setId(byte id){
@@ -45,5 +53,21 @@ public class Universe {
 
     public String getAbout(){
         return about;
+    }
+
+    public void setMainImage(String mainImage) {
+        this.mainImage = mainImage;
+    }
+
+    public String getMainImage() {
+        return mainImage;
+    }
+
+    public void setImages(String images) {
+        this.images = images;
+    }
+
+    public String getImages() {
+        return images;
     }
 }

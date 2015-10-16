@@ -40,9 +40,12 @@ public class Constellations {
     @Column(name = "constellations_images")
     private String images;
 
+    @Column(name = "constellations_main_image")
+    private String mainImage;
+
     public Constellations(){}
 
-    public Constellations(long id, String name, String about, String area, String brightestStar, String nearestStar, String mainStar, String quadrant, String family, String image, String images){
+    public Constellations(long id, String name, String about, String area, String brightestStar, String nearestStar, String mainStar, String quadrant, String family, String image, String images, String mainImage){
         this.id = id;
         this.name = name;
         this.about = about;
@@ -54,6 +57,7 @@ public class Constellations {
         this.family = family;
         this.image = image;
         this.images = images;
+        this.mainImage = mainImage;
     }
 
     public void setId(long id) {
@@ -142,5 +146,13 @@ public class Constellations {
 
     public String getImages() {
         return images;
+    }
+
+    public void setMainImage(String mainImage) {
+        this.mainImage = mainImage;
+    }
+
+    public String getMainImage() {
+        return mainImage;
     }
 }

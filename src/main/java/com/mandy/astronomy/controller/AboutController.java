@@ -30,7 +30,7 @@ public class AboutController {
     private GalaxiesService galaxiesService;
 
     @Autowired
-    private SolarSytemService solarSytemService;
+    private SolarSystemService solarSystemService;
 
     @Autowired
     private UniverseService universeService;
@@ -220,21 +220,31 @@ public class AboutController {
             model.addAttribute("about", about);
             model.addAttribute("name", name);
         }else if (objectU.equals("solarSystem")){
-            SolarSystem solarSystem = solarSytemService.getSolarSystem(idPl);
+            SolarSystem solarSystem = solarSystemService.getSolarSystem(idPl);
+            imagePath = solarSystem.getMainImage();
+            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = solarSystem.getImages();
+            String [] imagesResult = imagesList.split(",");
+            model.put("objectImages", imagesResult);
+
             about = solarSystem.getAbout();
             String hide = "display: none";
-            String hiddenNewsImage = "display: none";
-            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             name = solarSystem.getName();
             model.addAttribute("name", name);
         }else if (objectU.equals("universe")){
             Universe universe = universeService.getUniverse(idPl);
+            imagePath = universe.getMainImage();
+            model.addAttribute("mainImage", imagePath);
+
+            String imagesList = universe.getImages();
+            String [] imagesResult = imagesList.split(",");
+            model.put("objectImages", imagesResult);
+
             about = universe.getAbout();
             String hide = "display: none";
-            String hiddenNewsImage = "display: none";
-            model.addAttribute("hiddenNewsImage", hiddenNewsImage);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
