@@ -788,5 +788,55 @@ table
 .cMain:hover .cMainUp
 {
     display: block;
-
+}
+.pagination
+{
+    width: 100%;
+    text-align: center;
+    font-family: Verdana;
+}
+.pagination ul
+{
+    left: 50%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    float: left;
+    text-align: left;
+    font-size: 16px;
+}
+.pagination ul li
+{
+    list-style-type: none;
+    display: inline;
+    float: left;
+    position: relative;
+    left: -50%;
+    padding-bottom: 1px;
+}
+.pagination a, .pagination a:visited
+{
+    padding: 0 10px;
+    border: 1px solid #000000;
+    text-decoration: none;
+    color: #deb887;
+}
+.pagination a:hover, .pagination a:active
+{
+    border: 1px solid #000000;
+    color: #000000;
+    background-color: #deb887;
+}
+.pagination a.prevnext
+{
+    font-weight: bold;
+}
+.page_number
+{
+    border: 1px solid #000000;
+    margin: 0 auto;
+    color: #deb887;
+    padding:5px;
+    text-align: center;
+    width: 20px;
 }

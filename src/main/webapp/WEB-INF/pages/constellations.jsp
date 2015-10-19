@@ -6,18 +6,73 @@
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
-    <%--<script>--%>
-        <%--$(document).ready(function() {--%>
-            <%--var $box = $('#slideContainer .cMainUp');--%>
-            <%--var i = 0;--%>
-            <%--$('.cMain').hover(function () {--%>
-                <%--$box.eq(i++).addClass('cMainUpO');--%>
-            <%--}, function () {--%>
-                <%--$box.eq(i++).removeClass('cMainUpO')--%>
-            <%--});--%>
-
-        <%--});--%>
-    <%--</script>--%>
+    <script>
+        (function($){
+            $.fn.extend({
+                MyPagination: function(options) {
+                    var defaults = {
+                        height: 400,
+                        fadeSpeed: 400
+                    };
+                    var options = $.extend(defaults, options);
+                    var objContent = $(this);
+                    var fullPages = new Array();
+                    var subPages = new Array();
+                    var height = 0;
+                    var lastPage = 1;
+                    var paginatePages;
+                    init = function() {
+                        objContent.children().each(function(i){
+                            if (height + this.clientHeight > options.height) {
+                                fullPages.push(subPages);
+                                subPages = new Array();
+                                height = 0;
+                            }
+                            height += this.clientHeight;
+                            subPages.push(this);
+                        });
+                        if (height > 0) {
+                            fullPages.push(subPages);
+                        }
+                        $(fullPages).wrap("<div class='page'></div>");
+                        objContent.children().css('display','none');
+                        paginatePages = objContent.children();
+                        showPage(lastPage);
+                        showPagination($(paginatePages).length);
+                    };
+                    updateCounter = function(i) {
+                        $('#page_number').html(i);
+                    };
+                    showPage = function(page) {
+                        i = page - 1;
+                        if (paginatePages[i]) {
+                            $(paginatePages[lastPage]).css('display','none');
+                            lastPage = i;
+                            $(paginatePages[lastPage]).css('display','block');
+                            updateCounter(page);
+                        }
+                    };
+                    showPagination = function(numPages) {
+                        var pagins = '';
+                        for (var i = 1; i <= numPages; i++) {
+                            pagins += '<li><a href="#" onclick="showPage(' + i + '); return false;">' + i + '</a></li>';
+                        }
+                        $('.pagination li:first-child').after(pagins);
+                    };
+                    init();
+                    $('.pagination #prev').click(function() {
+                        showPage(lastPage);
+                    });
+                    $('.pagination #next').click(function() {
+                        showPage(lastPage+2);
+                    });
+                }
+            });
+        })(jQuery);
+        jQuery(window).load(function() {
+            $('#c_main_content').MyPagination({height: 3750, fadeSpeed: 400});
+        });
+    </script>
 </head>
 <body>
 <div class="globalGlass">
@@ -76,6 +131,15 @@
                     </div>
                 </div>
             </c:forEach>
+            </div>
+            <hr />
+            <div class="pagination">
+                <ul>
+                    <li><a href="#" id="prev" class="prevnext">«</a></li>
+                    <li><a href="#" id="next" class="prevnext">»</a></li>
+                </ul>
+                <br />
+                <div id="page_number" class="page_number">1</div>
             </div>
         </div>
         <div class="right_side">
