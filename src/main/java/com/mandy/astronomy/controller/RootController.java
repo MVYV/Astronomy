@@ -31,6 +31,11 @@ public class RootController {
         return "header";
     }
 
+    @RequestMapping(value = "/home")
+    public String getHome(){
+        return "home";
+    }
+
 //    @RequestMapping(value = "/constellations")
 //    public String getConstellations(){
 //        return "constellations";

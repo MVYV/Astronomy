@@ -31,7 +31,7 @@
         </div>
         <div id="glassEnter">
             <div id="gEnter">
-                <a href="/news" id="glassRef">Enter Astronomy</a>
+                <a href="/home" id="glassRef">Enter Astronomy</a>
             </div>
         </div>
     </div>
