@@ -49,7 +49,7 @@ table
     width: 1440px;
     margin: 0 auto 15px;
 }
-.left_side, .page_main_content, .page_main_contentUnique, .reg_div
+.left_side, .page_main_content, .page_main_contentUnique, .reg_div, .page_main_contentU
 {
     border: 5px solid rgba(245,245,245,0.1);
     background: rgba(100, 100, 100, 0.3);
@@ -66,7 +66,75 @@ table
     float: right;
     margin: 10px 0;
 }
-.imageGallery
+.page_main_contentU
+{
+    width: 1142px;
+    float: left;
+    margin: 10px 0 10px 10px;
+}
+.homeBox
+{
+    width: 556px;
+    height: 350px;
+    float: left;
+    margin: 5px;
+    border: 1px solid sandybrown;
+    color: rgba(222, 184, 135, 0);
+    text-align: right;
+    font-family: Verdana;
+    opacity: 0.45;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -o-transition: 1s;
+    -ms-transition: 1s;
+    font-size: 15px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.homeBox:hover
+{
+    opacity: 1;
+    color: rgba(222, 184, 135, 1);
+}
+.homeBoxTitle
+{
+    font-family: corduroy;
+    font-size: 22px;
+}
+.homeBox ul li
+{
+    list-style: none;
+}
+#homeBox1
+{
+    background: url("/resources/images/home/planets.jpg");
+}
+#homeBox2
+{
+    background: url("/resources/images/home/stars.jpg");
+}
+#homeBox3
+{
+    background: url("/resources/images/home/satellites.jpg");
+}
+#homeBox4
+{
+    background: url("/resources/images/home/galaxies.jpg");
+}
+#homeBox5
+{
+    background: url("/resources/images/home/constellations.jpg");
+}
+#homeBox6
+{
+    background: url("/resources/images/home/solarSystem.jpg");
+}
+#homeBox7
+{
+    background: url("/resources/images/home/universe.jpg");
+}
+.imageGallery, .page_main_contentU, #upperBox, #lowerBox, #loaderBox, .homeBox,
+.page_main_content, .page_main_contentUnique, .reg_div, #about_object
 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -101,10 +169,6 @@ table
 {
     width: 844px;
     float: left;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
     margin-bottom: 10px;
     padding: 10px;
     text-align: center;
@@ -198,11 +262,7 @@ table
 {
     width: 844px;
     float: left;
-    box-sizing: border-box;
     margin: 10px;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .page_main_contentUnique, .reg_div
 {
@@ -264,10 +324,6 @@ table
     width: 100%;
     float: left;
     color: #ffffff;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .title_box
 {
@@ -301,6 +357,7 @@ table
     font-family: Verdana;
     font-size: 12px;
     cursor: pointer;
+    transition: all 0.3s ease;
 }
 .itemBox:hover
 {
