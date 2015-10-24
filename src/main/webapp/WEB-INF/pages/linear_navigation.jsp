@@ -12,7 +12,7 @@
 <div id="nav">
 
     <ul id="menu">
-        <li><span><a href="/">HOME</a></span></li>
+        <li><span><a href="/home">HOME</a></span></li>
         <li><span><a href="#">ABOUT</a></span>
             <ul>
                 <li><a href="#">CONTACTS</a></li>
