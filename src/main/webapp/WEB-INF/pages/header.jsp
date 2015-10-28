@@ -26,7 +26,30 @@
         <th class="headerLink"><a href="/about?name=Gemini&object=constellations">Gemini</a></th>
         <th class="headerLink"><a href="/about?name=Cygnus&object=constellations">Cygnus</a></th>
         <th class="headerLink"><a href="/about?name=Auriga&object=constellations">Auriga</a></th>
-        <th class="headerLink"><a href="#">See More...</a></th>
+        <th class="headerLink">
+            <select class="headerMore" size="1">
+                <option onclick="location.href='/about?name=eridanus&object=constellations';">Eridanus</option>
+                <option>Draco</option>
+                <option>Dorado</option>
+                <option>Aquarius</option>
+                <option>Camelopardalis</option>
+                <option>Hydra</option>
+                <option>Cetus</option>
+                <option>Centaurus</option>
+                <option>Ophiuchus</option>
+                <option>Leo</option>
+                <option onclick="location.href='/about?name=eridanus&object=constellations';">Eridanus</option>
+                <option>Draco</option>
+                <option>Dorado</option>
+                <option>Aquarius</option>
+                <option>Camelopardalis</option>
+                <option>Hydra</option>
+                <option>Cetus</option>
+                <option>Centaurus</option>
+                <option>Ophiuchus</option>
+                <option>Leo</option>
+            </select>
+        </th>
       </tr>
     </table>
   </div>

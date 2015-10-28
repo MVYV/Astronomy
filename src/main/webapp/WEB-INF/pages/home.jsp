@@ -19,108 +19,81 @@
         </div>
         <div class="page_main_contentU">
             <div class="homeBox" id="homeBox1" onclick="location.href='/universeobjects?object=planets';">
-                <p class="homeBoxTitle">Planets</p>
-                <p>The term planet is ancient,<br/>
-                    with ties to history, science,<br/>
-                    mythology, and religion.<br/>
-                    Several planets in the Solar System<br/>
-                    can be seen with the naked eye.</p>
-                <p>The eight planets of the Solar System:</p>
-                <ul>
-                    <li><b>The terrestrial planets</b><br/>
-                        <span><i>Mercury, Venus, Earth</i>, and <i>Mars</i></span></li>
-                    <li><b>The giant planets</b><br/>
-                        <span><i>Jupiter</i> and <i>Saturn</i> (gas giants)</span><br/>
-                        <span><i>Uranus</i> and <i>Neptune</i> (ice giants)</span></li>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Planets</span>
+                    <p>The term planet is ancient, with ties to history, science, mythology, and religion.
+                        Several planets in the Solar System can be seen with the naked eye.</p>
+                    <p>The eight planets of the Solar System:</p>
+                    <ul>
+                        <li><b>The terrestrial planets</b><br/>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Mercury, Venus, Earth</i>, and <i>Mars</i></span></li>
+                        <li><b>The giant planets</b><br/>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Jupiter</i> and <i>Saturn</i> (gas giants)</span><br/>
+                            <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i>Uranus</i> and <i>Neptune</i> (ice giants)</span></li>
                     </ul>
+                </div>
             </div>
             <div class="homeBox" id="homeBox2" onclick="location.href='/universeobjects?object=stars';">
-                <p class="homeBoxTitle">Stars</p>
-                <p>A star is a luminous sphere of plasma<br/>
-                    held together by its own gravity.<br/>
-                    The nearest star to Earth is the Sun.<br/>
-                    Other stars are visible from Earth<br/>
-                    during the night,<br/>
-                    appearing as a multitude<br/>
-                    of fixed luminous points<br/>
-                    in the sky due to their immense<br/>
-                    distance from Earth.<br/>
-                    Historically, the most prominent stars<br/>
-                    were grouped into constellations and asterisms,<br/>
-                    and the brightest stars gained proper names.
-                </p>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Stars</span>
+                    <p>A star is a luminous sphere of plasma held together by its own gravity. The nearest star to Earth is the Sun.
+                        Other stars are visible from Earth during the night, appearing as a multitude of fixed luminous points
+                        in the sky due to their immense distance from Earth. Historically, the most prominent stars
+                        were grouped into constellations and asterisms, and the brightest stars gained proper names.
+                    </p>
+                </div>
             </div>
             <div class="homeBox" id="homeBox3" onclick="location.href='/universeobjects?object=satellites';">
-                <p class="homeBoxTitle">Satellites</p>
-                <p>A natural satellite or moon is a celestial<br/>
-                    body that orbits another body<br/>
-                    (a planet, dwarf planet,<br/>
-                    or small Solar System body),<br/>
-                    which is called its primary,<br/>
-                    and that is not artificial.<br/>
-                    In the Solar System there are 173<br/>
-                    known natural satellites orbiting within<br/>
-                    6 planetary satellite systems.<br/>
-                    In addition, several other<br/>
-                    planetary-mass objects are known to have<br/>
-                    satellite systems, including those of the IAU-listed dwarf planets,<br/>
-                    the moons of Pluto, Haumea and the Eris–Dysnomia systems.</p>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Satellites</span>
+                    <p>A natural satellite or moon is a celestial body that orbits another body (a planet, dwarf planet, or small Solar System body),
+                        which is called its primary, and that is not artificial. In the Solar System there are 173
+                        known natural satellites orbiting within 6 planetary satellite systems.
+                        In addition, several other planetary-mass objects are known to have satellite systems,
+                        including those of the IAU-listed dwarf planets, the moons of Pluto, Haumea and the Eris–Dysnomia systems.</p>
+                </div>
             </div>
             <div class="homeBox" id="homeBox4" onclick="location.href='/universeobjects?object=galaxies';">
-                <p class="homeBoxTitle">Galaxies</p>
-                <p>A galaxy is a gravitationally bound system<br/>
-                    of stars, stellar remnants,<br/>
-                    interstellar gas and dust, and dark matter.<br/>
-                    Galaxies are categorized<br/>
-                    according to their visual morphology,<br/>
-                    including elliptical, spiral, and irregular.<br/>
-                    Many galaxies are thought to have<br/>
-                    black holes at their active centers.<br/>
-                    The Milky Way's central black hole,<br/>
-                    known as Sagittarius A*,<br/>
-                    has a mass four million times greater than our own Sun.</p>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Galaxies</span>
+                    <p>A galaxy is a gravitationally bound system of stars, stellar remnants, interstellar gas and dust, and dark matter.
+                        Galaxies are categorized according to their visual morphology, including elliptical, spiral, and irregular.
+                        Many galaxies are thought to have black holes at their active centers.
+                        The Milky Way's central black hole, known as Sagittarius A*, has a mass four million times greater than our own Sun.</p>
+                </div>
             </div>
             <div class="homeBox" id="homeBox5" onclick="location.href='/constellations';">
-                <p class="homeBoxTitle">Constellations</p>
-                <p>In modern astronomy, a constellation<br/>
-                    is a specific area of the celestial sphere<br/>
-                    as defined by the International Astronomical Union (IAU).<br/>
-                    These areas had their origins in Western-traditional<br/>
-                    asterisms from which the constellations take their names.<br/>
-                    There are 88 officially recognized constellations,<br/>
-                    covering the entire sky.<br/>
-                    Thus, any given point in a celestial coordinate system<br/>
-                    can unambiguously be assigned to a constellation.<br/>
-                    It is usual in astronomy to give the constellation<br/>
-                    in which a given object is found along with its coordinates<br/>
-                    in order to convey a rough idea in which part of the sky it is located.</p>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Constellations</span>
+                    <p>In modern astronomy, a constellation is a specific area of the celestial sphere as defined by the International Astronomical Union (IAU).
+                        These areas had their origins in Western-traditional asterisms from which the constellations take their names.
+                        There are 88 officially recognized constellations, covering the entire sky.
+                        Thus, any given point in a celestial coordinate system can unambiguously be assigned to a constellation.
+                        It is usual in astronomy to give the constellation in which a given object is found along with its coordinates
+                        in order to convey a rough idea in which part of the sky it is located.</p>
+                </div>
             </div>
             <div class="homeBox" id="homeBox6" onclick="location.href='/about?name=solarSystem&object=solarSystem';">
-                <p class="homeBoxTitle">Solar System</p>
-                <p>The Solar System comprises the Sun<br/>
-                    and the planetary system<br/>
-                    that orbits it, either directly or indirectly.<br/>
-                    Of those objects that orbit the Sun directly,<br/>
-                    the largest eight are the planets,<br/>
-                    with the remainder being significantly smaller objects,<br/>
-                    such as dwarf planets and small<br/>
-                    Solar System bodies such as comets and asteroids.<br/>
-                    Of those that orbit the Sun indirectly,<br/>
-                    two are larger than the smallest planet.</p>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Solar System</span>
+                    <p>The Solar System comprises the Sun and the planetary system that orbits it, either directly or indirectly.
+                        Of those objects that orbit the Sun directly, the largest eight are the planets,
+                        with the remainder being significantly smaller objects, such as dwarf planets and small
+                        Solar System bodies such as comets and asteroids.
+                        Of those that orbit the Sun indirectly, two are larger than the smallest planet.</p>
+                </div>
             </div>
             <div class="homeBox" id="homeBox7" onclick="location.href='/about?name=universe&object=universe';">
-                <p class="homeBoxTitle">Universe</p>
-                <p>The Universe is<br/>
-                    all of time and space and its contents.<br/>
-                    The Universe includes planets, stars, galaxies,<br/>
-                    the contents of intergalactic space,<br/>
-                    the smallest subatomic particles, and all matter and energy.<br/>
-                    The observable universe is about 28 billion parsecs<br/>
-                    (91 billion light-years) in diameter at the present time.<br/>
-                    The size of the whole Universe is not known and may be infinite.<br/>
-                    Observations and the development of physical theories<br/>
-                    have led to inferences about the<br/>
-                    composition and evolution of the Universe.</p>
+                <div class="homeInfo">
+                    <span class="homeBoxTitle">Universe</span>
+                    <p>The Universe is all of time and space and its contents.
+                        The Universe includes planets, stars, galaxies, the contents of intergalactic space,
+                        the smallest subatomic particles, and all matter and energy.
+                        The observable universe is about 28 billion parsecs (91 billion light-years) in diameter at the present time.
+                        The size of the whole Universe is not known and may be infinite.
+                        Observations and the development of physical theories have led to inferences about the
+                        composition and evolution of the Universe.</p>
+                </div>
             </div>
             <%--<div class="homeBox">--%>
 
