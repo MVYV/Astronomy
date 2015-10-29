@@ -841,21 +841,23 @@ table
     width: 200px;
     height: 270px;
     position: absolute;
+    display: table;
 }
 .cMainUp
 {
     width: 200px;
     height: 270px;
-    background: rgba(0,0,0,0.9);
-    color: #deb887;
+    background: rgba(0,0,0,0);
+    color: rgba(222, 184, 135, 0);
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -o-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    display: none;
+    display: table-cell;
     border: 1px solid #deb887;
     font-size: 13px;
     text-align: center;
+    vertical-align: middle;
     cursor: pointer;
 }
 .cMainUp p
@@ -868,7 +870,8 @@ table
 }
 .cMain:hover .cMainUp
 {
-    display: block;
+    background: rgba(0,0,0,0.9);
+    color: rgba(222, 184, 135, 1);
 }
 .pagination
 {

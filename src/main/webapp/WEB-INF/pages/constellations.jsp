@@ -109,7 +109,7 @@
                                 </c:forEach>
                                 <c:choose>
                                     <c:when test="${num.brightestStar == nameB}">
-                                        <p><span>Brightest star:</span>&nbsp<a href="/about?name=${nameStarB}&object=stars">${num.brightestStar}</a></p>
+                                        <p><span>Brightest star:</span>&nbsp${num.brightestStar}</p>
                                     </c:when>
                                     <c:otherwise>
                                         <p><span>Brightest star:</span>&nbsp${num.brightestStar}</p>
@@ -117,7 +117,7 @@
                                 </c:choose>
                                 <c:choose>
                                     <c:when test="${num.nearestStar == nameN}">
-                                        <p><span>Nearest star:</span>&nbsp<a href="/about?name=${nameStar}&object=stars">${num.nearestStar}</a></p>
+                                        <p><span>Nearest star:</span>&nbsp${num.nearestStar}</p>
                                     </c:when>
                                     <c:otherwise>
                                         <p><span>Nearest star:</span>&nbsp${num.nearestStar}</p>
