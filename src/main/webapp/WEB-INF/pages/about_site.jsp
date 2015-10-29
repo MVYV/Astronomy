@@ -18,10 +18,12 @@
       <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
     <div class="page_main_content">
-
+        Astronomy.rhcloud.com
+        This is noncomerical site for everyone who want to know something about Universe.
+        Here you can find some information about planets, stars, galaxies, etc.
     </div>
     <div class="right_side">
-
+      <jsp:include page="left_side_addition.jsp"></jsp:include>
     </div>
   </div>
   <div class="page_footer">

@@ -50,9 +50,7 @@ public class PublicationsController {
         String titleTwo;
         int randomNum = (int) (Math.random()*10);
         int rnd = randomNum/4;
-        System.out.println("rnd"+rnd);
         int rand = rnd + 2;
-        System.out.println("rand"+rand);
         if (rnd == 0){
             title = "STARS";
             model.addAttribute("title", title);
@@ -69,7 +67,6 @@ public class PublicationsController {
             for (int i = 0; i < 5; i++){
                 int rndm = random.get(i);
                 star1 = starsList.get(rndm);
-                System.out.println(rndm);
                 star1.setId(id);
                 id++;
                 stars1.add(star1);

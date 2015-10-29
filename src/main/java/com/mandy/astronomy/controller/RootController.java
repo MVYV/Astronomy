@@ -36,21 +36,6 @@ public class RootController {
         return "home";
     }
 
-//    @RequestMapping(value = "/constellations")
-//    public String getConstellations(){
-//        return "constellations";
-//    }
-
-    @RequestMapping(value = "/about_site")
-    public String getAboutSite(Model model) {
-        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-        if (!(authentication instanceof AnonymousAuthenticationToken)){
-            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
-            model.addAttribute("username", userDetails.getUsername());
-        }
-        return  "about_site";
-    }
-
     @RequestMapping(value = "/left_side_addition")
     public String getLeftSiteAddition(Model model) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
