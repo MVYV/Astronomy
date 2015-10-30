@@ -19,7 +19,7 @@
         </div>
         <div class="page_main_content">
             This site were created by Myhailo and Yuriy Valkiv.
-            If you want contact us, please send you wishes and remarks to
+            If you want contact us, please send you feedbacks to
             yurivalkiv@gmail.com
             mishavalkiv@gmail.com
             We will be happy to hear your thought.

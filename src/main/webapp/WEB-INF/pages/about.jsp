@@ -42,7 +42,7 @@
             </div>
                 <div class="imageGallery" style="<%= request.getAttribute("hiddenImages")%>">
                     <c:forEach var="num" items="${objectImages}">
-                        <ul>
+                        <ul class="imageGalleryUl">
                             <li><a href="/resources/images${num}" rel="gallery"  class="pirobox_gall" title="${name}"><img src="/resources/imagesSmall${num}"  /></a></li>
                         </ul>
                     </c:forEach>

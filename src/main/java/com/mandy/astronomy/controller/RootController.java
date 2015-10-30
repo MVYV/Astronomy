@@ -32,7 +32,13 @@ public class RootController {
     }
 
     @RequestMapping(value = "/home")
-    public String getHome(){
+    public String getHome(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
+
         return "home";
     }
 
