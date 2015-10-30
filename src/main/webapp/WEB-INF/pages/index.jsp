@@ -70,8 +70,6 @@
     <img src="/resources/images/main_img/main_img12.jpg" class="globalCh"/>
     <img src="/resources/images/main_img/main_img13.jpg" class="globalCh"/>
     <img src="/resources/images/main_img/main_img14.jpg" class="globalCh"/>
-    <img src="/resources/images/main_img/main_img15.jpg" class="globalCh"/>
-    <img src="/resources/images/main_img/main_img16.jpg" class="globalCh"/>
 </div>
 
 
