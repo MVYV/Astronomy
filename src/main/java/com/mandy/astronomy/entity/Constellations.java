@@ -2,7 +2,7 @@ package com.mandy.astronomy.entity;
 
 import javax.persistence.*;
 
-@Entity
+@Entity(name = "constellations")
 public class Constellations {
 
     @Id
