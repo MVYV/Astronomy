@@ -366,8 +366,8 @@ table
     width: 196px;
     margin: 0 5px 10px;
     float: left;
-    background: #deb887;
-    color: #000000;
+    background: rgba(0,0,0,0);
+    color: #deb887;
     font-family: Verdana;
     font-size: 12px;
     cursor: pointer;
@@ -376,8 +376,8 @@ table
 }
 .itemBox:hover
 {
-    background: rgba(0,0,0,0);
-    color: #deb887;
+    background: #deb887;
+    color: #000000;
 }
 .itemProp
 {
