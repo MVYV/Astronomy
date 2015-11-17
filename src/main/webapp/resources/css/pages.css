@@ -367,6 +367,7 @@ table
     margin: 0 5px 10px;
     float: left;
     background: #deb887;
+    color: #000000;
     font-family: Verdana;
     font-size: 12px;
     cursor: pointer;
@@ -375,14 +376,11 @@ table
 }
 .itemBox:hover
 {
-    -moz-transform:scale(1.05);
-    -webkit-transform:scale(1.05);
-    -o-transform:scale(1.05);
-    transform:scale(1.05);
+    background: rgba(0,0,0,0);
+    color: #deb887;
 }
 .itemProp
 {
-    background: #deb887;
     width: 100%;
     height: 40px;
     border-bottom: 1px solid #2f4f4f;
@@ -390,6 +388,10 @@ table
     padding: 5px 0 5px;
     /*display: table-cell;*/
     /*vertical-align: middle;*/
+}
+.itemBox :last-child
+{
+    border-bottom: none;
 }
 .itemBox, .itemProp, #smallNews, #largeNews, .oneNews
 {
