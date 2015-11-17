@@ -492,12 +492,12 @@ table
 }
 .headerHide
 {
-    background: url("/resources/images/header.jpg");
+    background: url("blob:https://drive.google.com/d4f28299-b4af-47c2-8737-f9b3b3aac176");
     height: 200px;
 }
 .footerHide
 {
-    background: url("/resources/images/footer.jpg");
+    background: url("https://photos-6.dropbox.com/t/2/AABRnwNsJFVyS6Fud8vh5e3baxUqyfO_iVRJ6ko0_4nEMg/12/490156188/jpeg/32x32/1/_/1/2/footer.jpg/EMWCjv0DGPgNIAcoBw/8PBfJ9kyoZkWVksE3ICSY_cFEBi2ILLJ75KC24BDkis?size=1280x960&size_mode=2");
     height: 220px;
 }
 #objectInfo
