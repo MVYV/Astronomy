@@ -371,12 +371,12 @@ table
     font-family: Verdana;
     font-size: 12px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.35s ease-in-out;
     /*display: table;*/
 }
 .itemBox:hover
 {
-    background: #deb887;
+    background: rgba(222,184,135,1);
     color: #000000;
 }
 .itemProp

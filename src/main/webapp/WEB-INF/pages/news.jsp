@@ -1,11 +1,14 @@
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn" %>
 <html>
 <head>
-  <title></title>
-  <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
-  <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
+    <title>News | Astronomy-mvyv.rhcloud.com</title>
+    <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
+    <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
+    <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
   <script>
       $(document).ready(function () {
           function activeNews(i){

@@ -1,11 +1,13 @@
+<!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title></title>
+    <title>About | Astronomy-mvyv.rhcloud.com</title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <link type="text/css" rel="stylesheet" href="/resources/css_pirobox/style_1/style.css"/>
+    <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.min.js' />"></script>
     <script src="<c:url value='/resources/js/jquery-ui-1.8.2.custom.min.js' />"></script>

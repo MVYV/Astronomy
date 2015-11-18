@@ -1,17 +1,19 @@
-﻿<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+﻿<!DOCTYPE html>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
+    <title>Astronomy | Astronomy-mvyv.rhcloud.com</title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <META name="description" content="Site about astronomy"/>
+    <META name="keywords" content="astronomy, universe, space"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
-    <%--<script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>--%>
     <script src="<c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.min.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.easing.1.1.1.js' />" ></script>
-
-    <%--<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2'></script>--%>
+    <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
     <script type="text/javascript">
         $(document).ready(function() {
             $('#globalBox').cycle({
