@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
 <head>
-    <title>About | Astronomy-mvyv.rhcloud.com</title>
+    <title>${siteTitle} | Astronomy-mvyv.rhcloud.com</title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <link type="text/css" rel="stylesheet" href="/resources/css_pirobox/style_1/style.css"/>

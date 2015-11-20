@@ -7,7 +7,7 @@
     <title>Astronomy | Astronomy-mvyv.rhcloud.com</title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <META name="description" content="Site about astronomy"/>
-    <META name="keywords" content="astronomy, universe, space"/>
+    <META name="keywords" content="astronomy, universe, space, astronomy-mvyv.rhcloud.com"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
     <script src="<c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.js' />" ></script>

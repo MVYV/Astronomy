@@ -4,7 +4,7 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
-    <title>Universeobjects | Astronomy-mvyv.rhcloud.com</title>
+    <title>${siteTitle} | Astronomy-mvyv.rhcloud.com</title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">

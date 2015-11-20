@@ -46,6 +46,7 @@ public class UniverseObjectsController {
 
         String title;
         String titleTwo;
+        String siteTitle;
         int randomNum = (int) (Math.random()*10);
         int rnd = randomNum/5;
         System.out.println("rnd"+rnd);
@@ -144,20 +145,28 @@ public class UniverseObjectsController {
         }
 
         if (objectU.equals("planets")){
+            siteTitle = "Planets";
             List<Planets> list = planetsService.getAll();
             model.put("list", list);
+            model.put("siteTitle", siteTitle);
         }else if (objectU.equals("stars")){
+            siteTitle = "Stars";
             List<Stars> listS = starsService.getAll();
             Collections.sort(listS);
             model.put("listS", listS);
+            model.put("siteTitle", siteTitle);
         }else if (objectU.equals("galaxies")){
+            siteTitle = "Galaxies";
             List<Galaxies> listG = galaxiesService.getAll();
             Collections.sort(listG);
             model.put("listG", listG);
+            model.put("siteTitle", siteTitle);
         }else if (objectU.equals("satellites")){
+            siteTitle = "Satellites";
             List<Satellites> listSat = satellitesService.getAll();
             Collections.sort(listSat);
             model.put("listSat", listSat);
+            model.put("siteTitle", siteTitle);
         }
         return "universeobjects";
     }
