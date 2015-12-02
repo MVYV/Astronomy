@@ -20,7 +20,10 @@
       <jsp:include page="linear_navigation.jsp"></jsp:include>
     </div>
     <div class="page_main_content">
-        <div class="homeBoxTitle">
+        <div class="aboutSiteImg">
+          <img src="/resources/titleLogo.png" width="500" />
+        </div>
+        <div class="aboutSiteInfo">
             Astronomy.rhcloud.com
             This is noncomerical site for everyone who want to know something about Universe.
             Here you can find some information about planets, stars, galaxies, etc.

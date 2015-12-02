@@ -11,7 +11,7 @@
 <body>
 <div class="footerMain">
     <div class="footerLogo">
-
+        <img src="/resources/mvyvLogo.png" width="200">
     </div>
     <div class="footerNav">
     <table class="footerTable">

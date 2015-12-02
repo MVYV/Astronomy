@@ -20,11 +20,16 @@
             <jsp:include page="linear_navigation.jsp"></jsp:include>
         </div>
         <div class="page_main_content">
-            This site were created by Myhailo and Yuriy Valkiv.
-            If you want contact us, please send you feedbacks to
-            yurivalkiv@gmail.com
-            mishavalkiv@gmail.com
-            We will be happy to hear your thought.
+            <div class="contactImg">
+                <img src="/resources/mvyvLogo.png" width="200" />
+            </div>
+            <div class="contactInfo">
+                <p>This site were created by Myhailo and Yuriy Valkiv.
+                If you want contact us, please send you feedbacks to:</p>
+                <p><a href="mailto:yurivalkiv@gmail.com">yurivalkiv@gmail.com</a></p>
+                <p><a href="mailto:mishavalkiv@gmail.com">mishavalkiv@gmail.com</a></p>
+                <p>We will be happy to hear your thought!</p>
+            </div>
         </div>
         <div class="right_side">
             <jsp:include page="left_side_addition.jsp"></jsp:include>

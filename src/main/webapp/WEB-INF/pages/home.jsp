@@ -7,8 +7,12 @@
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <script src="<c:url value='/resources/js/formValidator.js' />" ></script>
+    <script src="<c:url value='/resources/js/stopBox.js' />" ></script>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
+    <script type="text/javascript">
+
+    </script>
 </head>
 <body>
 <div class="globalGlass">
