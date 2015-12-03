@@ -43,11 +43,14 @@
                 </div>
             </div>
                 <div class="imageGallery" style="<%= request.getAttribute("hiddenImages")%>">
+                    <div class="imageGallery2">
                     <c:forEach var="num" items="${objectImages}">
                         <ul class="imageGalleryUl">
-                            <li><a href="/resources/images${num}" rel="gallery"  class="pirobox_gall" title="${name}"><img src="/resources/imagesSmall${num}"  /></a></li>
+                            <%--<li><a href="/resources/images${num}" rel="gallery"  class="pirobox_gall" title="${name}"><img src="/resources/imagesSmall${num}"  /></a></li>--%>
+                                <li><a href="${num}" rel="gallery"  class="pirobox_gall" title="${name}"><img src="${num}" width="100px" /></a></li>
                         </ul>
                     </c:forEach>
+                    </div>
                 </div>
                 <div class="title_box" style="<%= request.getAttribute("hide")%>">
                     <p>See also:</p>
