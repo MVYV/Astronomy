@@ -3,7 +3,7 @@ package com.mandy.astronomy.entity;
 import javax.persistence.*;
 
 @Entity(name = "constellations")
-public class Constellations {
+public class Constellations implements Comparable<Constellations>{
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -58,6 +58,10 @@ public class Constellations {
         this.image = image;
         this.images = images;
         this.mainImage = mainImage;
+    }
+
+    public int compareTo(Constellations constellation){
+        return name.compareTo(constellation.getName());
     }
 
     public void setId(long id) {

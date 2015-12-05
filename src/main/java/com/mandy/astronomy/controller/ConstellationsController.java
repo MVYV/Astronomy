@@ -142,6 +142,7 @@ public class ConstellationsController {
 
         List<Constellations> constellationsList = constellationsService.getAll();
         List<Stars> starsList = starsService.getAll();
+        Collections.sort(constellationsList);
         model.put("starsList", starsList);
         model.put("constellations", constellationsList);
         return "constellations";
