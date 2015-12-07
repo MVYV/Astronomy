@@ -430,7 +430,6 @@ table
     background-image: -webkit-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
     background-image: -ms-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
     background-image: linear-gradient(to bottom, #525252 0%, #1F1F1F 100%);
-    /*background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(89,106,114));*/
     box-shadow: 0 -1px rgba(10,21,28,.9) inset, 0 1px rgba(255,255,255,.5) inset;
 }
 .objLink a:hover
@@ -447,22 +446,6 @@ table
     background-image: -webkit-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
     background-image: -ms-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
     background-image: linear-gradient(to bottom, #1F1F1F 0%, #525252 100%);
-}
-.objLink a:active
-{
-    background-image: -webkit-gradient(
-            linear,
-            left top,
-            left bottom,
-            color-stop(0, #525252),
-            color-stop(1, #1F1F1F)
-    );
-    background-image: -o-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
-    background-image: -moz-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
-    background-image: -webkit-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
-    background-image: -ms-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
-    background-image: linear-gradient(to bottom, #525252 0%, #1F1F1F 100%);
-    box-shadow: 0 -1px rgba(255,255,255,.4) inset;
 }
 .objLink a:before
 {
