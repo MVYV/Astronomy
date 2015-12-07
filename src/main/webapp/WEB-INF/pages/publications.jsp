@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %>
 <html>
 <head>
   <title>Publications | Astronomy-mvyv.rhcloud.com</title>
@@ -35,31 +36,39 @@
         </c:forEach>
       </div>
       <div class="addPublication">
-        <form action="/publications/newpublication" method="post" enctype="multipart/form-data">
-          <div class="pubItem">
-            <label for="authorName">Please enter the author's name</label><br>
-            <input type="text" name="authorName" id="authorName">
-          </div>
-          <div class="pubItem">
-            <label for="publicationTitle">Please enter the publication's title</label><br>
-            <input type="text" name="publicationTitle" id="publicationTitle">
-          </div>
-          <div class="pubItem">
-            <label for="publicationA">Please enter the annotation</label><br>
-            <textarea name="publicationA" id="publicationA"></textarea>
-          </div>
-          <div class="pubItem">
-            <label for="publicationText">Please write Your publication</label><br>
-            <textarea name="publicationText" id="publicationText"></textarea>
-          </div>
-          <div class="pubItem">
-            <label for="publicationImg">If necessary, add an image</label><br>
-            <input type="file" name="publicationImg" id="publicationImg">
-          </div>
-          <div class="pubItem">
-            <input type="submit" name="submit">
-          </div>
-        </form>
+        <sec:authorize access="hasAnyRole('ROLE_USER', 'ROLE_ADMIN')">
+            <form action="/publications/newpublication" method="post" enctype="multipart/form-data">
+              <div class="pubItem">
+                <label for="authorName">Please enter the author's name</label><br>
+                <input type="text" name="authorName" id="authorName">
+              </div>
+              <div class="pubItem">
+                <label for="publicationTitle">Please enter the publication's title</label><br>
+                <input type="text" name="publicationTitle" id="publicationTitle">
+              </div>
+              <div class="pubItem">
+                <label for="publicationA">Please enter the annotation</label><br>
+                <textarea name="publicationA" id="publicationA"></textarea>
+              </div>
+              <div class="pubItem">
+                <label for="publicationText">Please write Your publication</label><br>
+                <textarea name="publicationText" id="publicationText"></textarea>
+              </div>
+              <div class="pubItem">
+                <label for="publicationImg">If necessary, add an image</label><br>
+                <input type="file" name="publicationImg" id="publicationImg">
+              </div>
+              <div class="pubItem">
+                <input type="submit" name="submit">
+              </div>
+            </form>
+        </sec:authorize>
+        <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
+            <p>To create publication you have to be registered.</p>
+            <p>
+                <a href="#modal_enter">SIGN IN</a>
+            </p>
+        </sec:authorize>
       </div>
     </div>
     <div class="right_side">
