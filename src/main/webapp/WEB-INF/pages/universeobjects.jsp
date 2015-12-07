@@ -24,7 +24,7 @@
         </div>
         <div class="page_main_contentUnique">
             <c:forEach var="num" items="${list}">
-            <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${num.name}&object=planets';">
+            <div id="planetBox" class="itemBox">
                 <div class="itemImg">
                     <img src="${num.image}" alt="planet or something else"/>
                 </div>
@@ -40,10 +40,15 @@
                 <div class="itemProp">
                     <span>Temperature:&nbsp</span><span class="itemData">${num.temperature}&nbspK</span>
                 </div>
+                <div class="itemProp" style="padding-top: 9px;">
+                    <div class="objLink">
+                        <a href="/about?name=${num.name}&object=planets">Read More</a>
+                    </div>
+                </div>
             </div>
             </c:forEach>
             <c:forEach var="numS" items="${listS}">
-                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numS.name}&object=stars';">
+                <div id="planetBox" class="itemBox">
                     <div class="itemImg">
                         <img src="${numS.image}" alt="planet or something else"/>
                     </div>
@@ -56,10 +61,15 @@
                     <div class="itemProp">
                         <span>Radius:&nbsp</span><span class="itemData">${numS.radius}&nbsp<c:if test="${numS.name == 'Sun'}"><c:out value="km" /></c:if><c:if test="${numS.name != 'Sun'}"><c:out value="Rs" /></c:if></span>
                     </div>
+                    <div class="itemProp" style="padding-top: 9px;">
+                        <div class="objLink">
+                            <a href="/about?name=${numS.name}&object=stars">Read More</a>
+                        </div>
+                    </div>
                 </div>
             </c:forEach>
             <c:forEach var="numG" items="${listG}">
-                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numG.name}&object=galaxies';">
+                <div id="planetBox" class="itemBox">
                     <div class="itemImg">
                         <img src="${numG.image}" alt="planet or something else"/>
                     </div>
@@ -72,10 +82,15 @@
                     <div class="itemProp">
                         <span>Type:&nbsp</span><span class="itemData">${numG.type}</span>
                     </div>
+                    <div class="itemProp" style="padding-top: 9px;">
+                        <div class="objLink">
+                            <a href="/about?name=${numG.name}&object=galaxies">Read More</a>
+                        </div>
+                    </div>
                 </div>
             </c:forEach>
             <c:forEach var="numSat" items="${listSat}">
-                <div id="planetBox" class="itemBox" onclick="location.href='/about?name=${numSat.name}&object=satellites';">
+                <div id="planetBox" class="itemBox">
                     <div class="itemImg">
                         <img src="${numSat.image}" alt="planet or something else"/>
                     </div>
@@ -90,6 +105,11 @@
                     </div>
                     <div class="itemProp">
                         <span>Planet:&nbsp</span><span class="itemData"><a href="/about?name=${numSat.planet}&object=planets" >${numSat.planet}</a></span>
+                    </div>
+                    <div class="itemProp" style="padding-top: 9px;">
+                        <div class="objLink">
+                            <a href="/about?name=${numSat.name}&object=satellites">Read More</a>
+                        </div>
                     </div>
                 </div>
             </c:forEach>

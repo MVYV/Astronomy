@@ -47,7 +47,7 @@ table
 .page_footer
 {
     width: 1440px;
-    margin: 0 auto 15px;
+    margin: 10px auto 15px;
 }
 .left_side, .page_main_content, .page_main_contentUnique, .reg_div, .page_main_contentU
 {
@@ -375,15 +375,15 @@ table
     color: #deb887;
     font-family: Verdana;
     font-size: 12px;
-    cursor: pointer;
+    /*cursor: pointer;*/
     transition: all 0.35s ease-in-out;
     /*display: table;*/
 }
-.itemBox:hover
-{
-    background: rgba(222,184,135,1);
-    color: #000000;
-}
+/*.itemBox:hover*/
+/*{*/
+    /*background: rgba(222,184,135,1);*/
+    /*color: #000000;*/
+/*}*/
 .itemProp
 {
     width: 100%;
@@ -394,11 +394,94 @@ table
     /*display: table-cell;*/
     /*vertical-align: middle;*/
 }
+.objLink
+{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+}
+.objLink a
+{
+    position: relative;
+    display: inline-block;
+    width: 50%;
+    /*height: 30px;*/
+    line-height: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    color: #deb887;
+    outline: none;
+    border: 1px solid rgba(110,121,128,.8);
+    border-top-color: rgba(0,0,0,.3);
+    border-radius: 5px;
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #525252),
+            color-stop(1, #1F1F1F)
+    );
+    background-image: -o-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -moz-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -webkit-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -ms-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: linear-gradient(to bottom, #525252 0%, #1F1F1F 100%);
+    /*background: rgb(206, 220, 231) linear-gradient(rgb(206,220,231), rgb(89,106,114));*/
+    box-shadow: 0 -1px rgba(10,21,28,.9) inset, 0 1px rgba(255,255,255,.5) inset;
+}
+.objLink a:hover
+{
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #1F1F1F),
+            color-stop(1, #525252)
+    );
+    background-image: -o-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: -moz-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: -webkit-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: -ms-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: linear-gradient(to bottom, #1F1F1F 0%, #525252 100%);
+}
+.objLink a:active
+{
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #525252),
+            color-stop(1, #1F1F1F)
+    );
+    background-image: -o-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -moz-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -webkit-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -ms-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: linear-gradient(to bottom, #525252 0%, #1F1F1F 100%);
+    box-shadow: 0 -1px rgba(255,255,255,.4) inset;
+}
+.objLink a:before
+{
+    content: "";
+    position: absolute;
+    top: -6.5px;
+    right: -6.5px;
+    bottom: -5.3px;
+    left: -6px;
+    z-index: -1;
+    border-radius: 5px;
+    background: linear-gradient(rgba(100, 100, 100, 0.3), rgba(100, 100, 100, 0.4));
+    /*background: rgba(100, 100, 100, 0.3);*/
+}
 .itemBox :last-child
 {
     border-bottom: none;
 }
-.itemBox, .itemProp, #smallNews, #largeNews, .oneNews
+.itemBox, .itemProp, #smallNews, #largeNews, .oneNews, .objLink
 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
