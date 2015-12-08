@@ -395,6 +395,17 @@ table
     /*display: table-cell;*/
     /*vertical-align: middle;*/
 }
+.itemProp a.itemLink
+{
+    color: #dcdcdc;
+    text-decoration: none;
+}
+.itemProp a.itemLink:hover
+{
+    color: #f5deb3;
+    text-decoration: underline;
+}
+
 .itemBox:hover .itemProp {
     -webkit-animation: color-animation .55s ease forwards;
     animation: color-animation .55s ease forwards;
@@ -774,6 +785,17 @@ table
 {
     border-bottom: 1px solid #deb887;
 }
+.rObjProp1 a.propLink
+{
+    color: #dcdcdc;
+    text-decoration: none;
+}
+.rObjProp1 a.propLink:hover
+{
+    color: #f5deb3;
+    text-decoration: underline;
+}
+
 .rObjProp:first-child, .rObjProp:last-child, .rObjProp1:first-child, .rObjProp1:last-child
 {
     border-bottom: none;
@@ -1081,12 +1103,12 @@ table
     padding: 10px;
     text-align: center;
 }
-.contactInfo a
+.contactInfo a, .pubBlock a
 {
     color: #dcdcdc;
     text-decoration: none;
 }
-.contactInfo a:hover
+.contactInfo a:hover, .pubBlock a:hover
 {
     color: #f5deb3;
     text-decoration: underline;
@@ -1110,3 +1132,12 @@ table
     text-align: center;
     padding-top: 15px;
 }
+.pubBlock
+{
+    padding: 10px;
+    font-family: Verdana;
+    font-size: 14px;
+    color: #deb887;
+    text-align: center;
+}
+

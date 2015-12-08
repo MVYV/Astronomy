@@ -104,7 +104,7 @@
                         <span>Temperature:&nbsp</span><span class="itemData">${numSat.temperature}&nbspK</span>
                     </div>
                     <div class="itemProp">
-                        <span>Planet:&nbsp</span><span class="itemData"><a href="/about?name=${numSat.planet}&object=planets" >${numSat.planet}</a></span>
+                        <span>Planet:&nbsp</span><span class="itemData"><a href="/about?name=${numSat.planet}&object=planets" class="itemLink">${numSat.planet}</a></span>
                     </div>
                     <div class="itemProp" style="padding-top: 9px;">
                         <div class="objLink">

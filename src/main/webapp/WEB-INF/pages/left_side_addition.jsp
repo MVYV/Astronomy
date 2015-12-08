@@ -133,7 +133,7 @@
                 <img src="${satellites.imageSmall}"/>
             </div>
             <div class="rObjProp1">
-                <p>${satellites.name} <a href="/about?name=${satellites.planet}&object=planets">(${satellites.planet})</a></p>
+                <p>${satellites.name} <a href="/about?name=${satellites.planet}&object=planets" class="propLink">(${satellites.planet})</a></p>
             </div>
             <div class="rObjProp1">
                 <p>Temperature:${satellites.temperature} K</p>

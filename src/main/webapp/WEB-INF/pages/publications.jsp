@@ -64,10 +64,12 @@
             </form>
         </sec:authorize>
         <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
+          <div class="pubBlock">
             <p>To create publication you have to be registered.</p>
             <p>
                 <a href="#modal_enter">SIGN IN</a>
             </p>
+            </div>
         </sec:authorize>
       </div>
     </div>

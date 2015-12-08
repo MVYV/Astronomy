@@ -67,7 +67,7 @@
                 </tr>
                 <tr>
                     <td>
-                        <a href="/authorization" id="authorization_link">Authorization</a>
+                        <a href="/authorization" id="authorization_link" class="modalA">Authorization</a>
                     </td>
                 </tr>
             </table>
