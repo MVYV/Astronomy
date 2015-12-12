@@ -158,7 +158,7 @@ table
 }
 .imageGallery, .page_main_contentU, #upperBox, #lowerBox, #loaderBox, .homeBox, .aboutSiteInfo, .aboutSiteImg,
 .page_main_content, .page_main_contentUnique, .reg_div, #about_object, .homeInfo, .contactInfo, .contactImg,
-.headerLang, .headerUpper, .headerList
+.headerLang, .headerUpper, .headerList, #ukr, #eng, #langBox, .langLinkBox, #langFooter
 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -1171,4 +1171,128 @@ table
     color: #deb887;
     text-align: center;
 }
-
+.bodyBox
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1F1F1F;
+    overflow: hidden;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+#langBox
+{
+    width: 1000px;
+    height: 500px;
+    top: 50%;
+    left: 50%;
+    margin-top: -250px;
+    margin-left: -500px;
+    position: absolute;
+    overflow: hidden;
+}
+#ukr, #eng
+{
+    width: 45%;
+    height: 100%;
+    float: left;
+    border: 1px solid #808080;
+    padding: 25px 15px 25px;
+    color: #deb887;
+    font-family: Verdana;
+    font-size: 24px;
+    text-align: center;
+}
+#ukr
+{
+    margin-right: 5%;
+}
+#eng
+{
+    margin-left: 5%;
+}
+.langLinkBox
+{
+    width: 50%;
+    height: 50px;
+    text-align: center;
+    padding-top: 55px;
+    float: left;
+}
+.langLinkBox a
+{
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    /*height: 30px;*/
+    line-height: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    vertical-align: middle;
+    text-align: center;
+    text-decoration: none;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    color: #deb887;
+    outline: none;
+    border: 1px solid rgba(110,121,128,.8);
+    border-top-color: rgba(0,0,0,.3);
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #525252),
+            color-stop(1, #1F1F1F)
+    );
+    background-image: -o-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -moz-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -webkit-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: -ms-linear-gradient(bottom, #525252 0%, #1F1F1F 100%);
+    background-image: linear-gradient(to bottom, #525252 0%, #1F1F1F 100%);
+    box-shadow: 0 -1px rgba(10,21,28,.9) inset, 0 1px rgba(255,255,255,.5) inset;
+}
+.langLinkBox a:hover
+{
+    background-image: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            color-stop(0, #1F1F1F),
+            color-stop(1, #525252)
+    );
+    background-image: -o-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: -moz-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: -webkit-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: -ms-linear-gradient(bottom, #1F1F1F 0%, #525252 100%);
+    background-image: linear-gradient(to bottom, #1F1F1F 0%, #525252 100%);
+}
+.langLink1, .langLink3
+{
+    border-radius: 5px 0 0 5px;
+}
+.langLink4, .langLink2
+{
+    border-radius: 0  5px 5px 0;
+}
+#langFooter
+{
+    width: 1000px;
+    height: 50px;
+    top: 100%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -500px;
+    position: absolute;
+    text-align: center;
+    color: #525252;
+    font-family: Verdana;
+    font-size: 16px;
+    text-shadow: 1px 0px 0px rgba(0, 0, 0, 1);
+}

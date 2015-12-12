@@ -144,11 +144,16 @@ table
     background: -ms-linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
     background: linear-gradient(top, rgba(220, 220, 220, 0.1) 0%, rgba(245, 245, 245, 0.1) 50%, rgba(220, 220, 220, 0.1) 100%);
 }
-#glassRef
+#glassRef, #glassRefUkr
 {
     display: block;
     color: #ffffff;
     text-decoration: none;
+}
+#glassRefUkr
+{
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .enter
 {
