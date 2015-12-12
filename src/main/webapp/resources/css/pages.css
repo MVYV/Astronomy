@@ -1,3 +1,13 @@
+*::selection
+{
+    color: #1c1c1c;
+    background-color: #deb887;
+}
+*::-moz-selection
+{
+    color: #1c1c1c;
+    background-color: #deb887;
+}
 table
 {
     border-spacing: 0;
@@ -147,7 +157,8 @@ table
     background: url("/resources/images/home/universe.jpg");
 }
 .imageGallery, .page_main_contentU, #upperBox, #lowerBox, #loaderBox, .homeBox, .aboutSiteInfo, .aboutSiteImg,
-.page_main_content, .page_main_contentUnique, .reg_div, #about_object, .homeInfo, .contactInfo, .contactImg
+.page_main_content, .page_main_contentUnique, .reg_div, #about_object, .homeInfo, .contactInfo, .contactImg,
+.headerLang, .headerUpper, .headerList
 {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -440,6 +451,9 @@ table
     text-align: center;
     text-decoration: none;
     user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
     color: #deb887;
     outline: none;
     border: 1px solid rgba(110,121,128,.8);
@@ -641,25 +655,42 @@ table
     font-size: 14px;
     text-align: justify;
 }
+.headerLang
+{
+    width: 1440px;
+    height: 25px;
+    font-size: 14px;
+    font-family: Verdana;
+    color: #deb887;
+    text-align: right;
+    padding-top: 5px;
+    padding-right: 10px;
+    overflow: visible;
+}
+.headerLang a
+{
+    color: #deb887;
+    text-decoration: none;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+.headerLang a:hover
+{
+    color: #dcdcdc;
+
+}
 .headerUpper
 {
     width: 1440px;
-    height: 175px;
+    height: 150px;
     text-align: center;
-    padding-top: 25px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 .headerList
 {
     width: 1440px;
     height: 25px;
-    box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    -o-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
 }
 #headerTable .headerLink
 {
