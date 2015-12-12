@@ -145,7 +145,8 @@
     </c:forEach>
 
     <c:forEach var="galaxies" items="${galaxies}">
-        <div class="rotationObject1" id="rotationObject${galaxies.id}" onclick="location.href='/about?name=${galaxies.name}&object=galaxies';">
+        <c:url value="/about?name=${galaxies.name}&object=galaxies" var="galax" />
+        <div class="rotationObject1" id="rotationObject${galaxies.id}" onclick="location.href='<c:out value="${galax}" escapeXml="true" />';">
             <div class="rObjProp1">
                 <img src="${galaxies.imageSmall}"/>
             </div>
