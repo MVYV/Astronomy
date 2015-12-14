@@ -63,6 +63,50 @@ public class RootController {
         return "linear_navigation";
     }
 
+    @RequestMapping(value = "/home_ukr")
+    public String getHomeUkr(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
+
+        return "home_ukr";
+    }
+
+    @RequestMapping(value = "/navigation")
+    public String getNavigation(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
+
+        return "navigation";
+    }
+
+    @RequestMapping(value = "/footer_ukr")
+    public String getFooterUkr(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
+
+        return "footer_ukr";
+    }
+
+    @RequestMapping(value = "/header_ukr")
+    public String getHeaderUkr(Model model){
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (!(authentication instanceof AnonymousAuthenticationToken)){
+            UserDetails userDetails = (UserDetails) authentication.getPrincipal();
+            model.addAttribute("username", userDetails.getUsername());
+        }
+
+        return "header_ukr";
+    }
+
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public String checkUser(
             @RequestParam("name") String name,
