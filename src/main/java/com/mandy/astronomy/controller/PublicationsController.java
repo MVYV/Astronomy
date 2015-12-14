@@ -132,9 +132,13 @@ public class PublicationsController {
             int idG = 1;
             Galaxies galaxy;
             for (int i = 0; i < 5; i++){
-                int rndm = randomG.get(i);
+                int rndm = 0;
+                if (randomG.get(i) == 7){
+                    rndm = randomG.get(5);
+                } else {
+                    rndm = randomG.get(i);
+                }
                 galaxy = galaxiesList.get(rndm);
-                System.out.println(rndm);
                 galaxy.setId(idG);
                 idG++;
                 galaxies.add(galaxy);

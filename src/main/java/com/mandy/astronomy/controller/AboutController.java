@@ -69,15 +69,15 @@ public class AboutController {
             int size = starsList.size();
             List<Stars> stars1 = new ArrayList<>();
             List<Integer> random = new ArrayList<>();
-            for (int i = 0; i < size; i++){
+            for (int i = 0; i < size; i++){ //creating list of numbers for left_side_addition
                 random.add(i);
             }
-            Collections.shuffle(random);
+            Collections.shuffle(random);    //shuffling numbers
             Stars star1;
             int id = 1;
             for (int i = 0; i < 5; i++){
                 int rndm = random.get(i);
-                star1 = starsList.get(rndm);
+                star1 = starsList.get(rndm);    //getting elements from database which will be on left_side_addition
                 System.out.println(rndm);
                 star1.setId(id);
                 id++;
@@ -144,9 +144,13 @@ public class AboutController {
             int idG = 1;
             Galaxies galaxy;
             for (int i = 0; i < 5; i++){
-                int rndm = randomG.get(i);
+                int rndm = 0;
+                if (randomG.get(i) == 7){
+                    rndm = randomG.get(5);
+                } else {
+                    rndm = randomG.get(i);
+                }
                 galaxy = galaxiesList.get(rndm);
-                System.out.println(rndm);
                 galaxy.setId(idG);
                 idG++;
                 galaxies.add(galaxy);
