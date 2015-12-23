@@ -124,6 +124,11 @@ table
     font-family: corduroy;
     font-size: 26px;
 }
+.homeBoxTitleUkr
+{
+    font-family: Verdana;
+    font-size: 26px;
+}
 .homeBox ul li
 {
     list-style: circle;

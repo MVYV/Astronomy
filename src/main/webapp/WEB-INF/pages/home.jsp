@@ -42,7 +42,7 @@
             <div class="homeBox" id="homeBox2" onclick="location.href='/universeobjects?object=stars';">
                 <div class="homeInfo">
                     <span class="homeBoxTitle">Stars</span>
-                    <p>A star is a luminous sphere of plasma held together by its own gravity. The nearest star to Earth is the Sun.
+                    <p>A star is a luminous sphere of plasma, held together by its own gravity. The nearest star to Earth is the Sun.
                         Other stars are visible from Earth during the night, appearing as a multitude of fixed luminous points
                         in the sky due to their immense distance from Earth. Historically, the most prominent stars
                         were grouped into constellations and asterisms, and the brightest stars gained proper names.

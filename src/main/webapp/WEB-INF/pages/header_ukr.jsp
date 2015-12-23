@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <html>
 <head>
-    <title>Contacts | Astronomy-mvyv.rhcloud.com</title>
+    <title></title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-    <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
-    <script src="<c:url value='/resources/js/formValidator.js' />" ></script>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
-    <link rel="shortcut icon" href="/resources/favicon.ico" type="image/x-icon">
 </head>
 <body>
-<div class="globalGlass">
-    <div class="page_nav">
-        <jsp:include page="header.jsp"></jsp:include>
+<div class="headerMain">
+    <div class="headerLang"><a href="/">ENG</a>&nbsp;|&nbsp;<a href="/lang_help">UKR</a> </div>
+    <div class="headerUpper">
+        <a href="/"><img src="/resources/titleLogo.png" width="800" border="0"></a>
     </div>
-    <div class="page_container">
-        <div class="left_side">
-            <jsp:include page="linear_navigation.jsp"></jsp:include>
-        </div>
-        <div class="page_main_content">
-            <div class="contactImg">
-                <img src="/resources/mvyvLogo.png" width="200" />
-            </div>
-            <div class="contactInfo">
+    <div class="headerList">
+        <table id="headerTable" border="0" style="font-family: Verdana;">
+            <tr>
+                <th class="headerLink" id="headerL"><a href="/about?name=Canis Major&object=constellations">Великий Пес</a></th>
+                <th class="headerLink"><a href="/about?name=Bootes&object=constellations">Волопас</a></th>
+                <th class="headerLink"><a href="/about?name=Lyra&object=constellations">Ліра</a></th>
+                <th class="headerLink"><a href="/about?name=Orion&object=constellations">Оріон</a></th>
+                <th class="headerLink"><a href="/about?name=Taurus&object=constellations">Телець</a></th>
+                <th class="headerLink"><a href="/about?name=Scorpius&object=constellations">Скорпіон</a></th>
+                <th class="headerLink"><a href="/about?name=Gemini&object=constellations">Близнята</a></th>
+                <th class="headerLink"><a href="/about?name=Cygnus&object=constellations">Лебідь</a></th>
+                <th class="headerLink"><a href="/about?name=Auriga&object=constellations">Візничий</a></th>
+                <th class="headerLink"><a href="/constellations">Більше...</a></th>
+            </tr>
+        </table>
+    </div>
+</div>
 
-            </div>
-        </div>
-        <div class="right_side">
-            <jsp:include page="left_side_addition.jsp"></jsp:include>
-        </div>
-    </div>
-    <div class="page_footer">
-        <jsp:include page="footer.jsp"></jsp:include>
-    </div>
-</div>
-<div class="page_global">
-</div>
+<div class="headerHide"></div>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="headerMain">
-  <div class="headerLang"><a href="#">ENG</a>&nbsp;|&nbsp;<a href="/lang_help">UKR</a> </div>
+  <div class="headerLang"><a href="/">ENG</a>&nbsp;|&nbsp;<a href="/lang_help">UKR</a> </div>
   <div class="headerUpper">
     <a href="/"><img src="/resources/titleLogo.png" width="800" border="0"></a>
   </div>
