@@ -35,7 +35,7 @@
         <div class="page_main_content">
             <div id="about_object">
                 <div id="objectInfo">
-                    <p class="objectInfoTitle"><%= request.getAttribute("name")%></p>
+                    <p class="objectInfoTitleUkr"><%= request.getAttribute("name")%></p>
                     <div style="<%= request.getAttribute("hiddenNewsImage")%>">
                         <img class="objectInfoImg" src="<%= request.getAttribute("mainImage")%>" width="400" height="225">
                     </div>
@@ -53,7 +53,7 @@
                 </div>
             </div>
             <div class="title_box" style="<%= request.getAttribute("hide")%>">
-                <p>See also:</p>
+                <p>Дивіться також:</p>
                 <p class="sub_title"><%= request.getAttribute("subTitle")%></p>
             </div>
             <table class="sortable" border="0" style="<%= request.getAttribute("hide")%>">

@@ -166,6 +166,8 @@ public class AboutController {
         String imagePath;
         String siteTitle;
         byte idPl = 1;
+        String ukrLangHelp;
+        String engLangHelp;
         if (objectU.equals("planets")){
             Planets planet = planetsService.getByName(name);
             siteTitle = planet.getName();
@@ -196,6 +198,15 @@ public class AboutController {
                 String hide = "display: none";
                 model.addAttribute("hide", hide);
             }
+            if (planet.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=planets";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=planets";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=planets";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("list", listSat);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("stars")){
@@ -210,6 +221,15 @@ public class AboutController {
 
             about = star.getAbout();
             String hide = "display: none";;
+            if (star.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=stars";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=stars";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=stars";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -226,6 +246,15 @@ public class AboutController {
 
             about = galaxy.getAbout();
             String hide = "display: none";
+            if (galaxy.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=galaxies";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=galaxies";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=galaxies";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -245,6 +274,15 @@ public class AboutController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             name = solarSystem.getName();
+            if (solarSystem.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=solarSystem";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=solarSystem";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=solarSystem";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("name", name);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("universe")){
@@ -259,6 +297,15 @@ public class AboutController {
 
             about = universe.getAbout();
             String hide = "display: none";
+            if (universe.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=universe";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=universe";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=universe";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -275,6 +322,15 @@ public class AboutController {
 
             about = satellite.getAbout();
             String hide = "display: none";
+            if (satellite.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=satellites";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=satellites";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=satellites";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);
@@ -285,6 +341,10 @@ public class AboutController {
             about = news.getText();
             imagePath = news.getImage();
             String hide = "display: none";
+            engLangHelp = "/about?name="+name+"&object=news";
+            ukrLangHelp = "/lang_help";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("mainImage", imagePath);
             model.addAttribute("hide", hide);
             model.addAttribute("hiddenImages", hide);
@@ -303,6 +363,15 @@ public class AboutController {
 
             about = constellation.getAbout();
             String hide = "display: none";
+            if (constellation.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=constellations";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=constellations";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=constellations";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", name);

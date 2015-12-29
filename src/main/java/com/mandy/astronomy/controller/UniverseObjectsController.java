@@ -154,6 +154,10 @@ public class UniverseObjectsController {
         if (objectU.equals("planets")){
             siteTitle = "Planets";
             List<Planets> list = planetsService.getAll();
+            String engLangHelp = "/universeobjects?object=planets";
+            String ukrLangHelp = "/universeobjects_ukr?object=planets";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("list", list);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("stars")){
@@ -161,6 +165,10 @@ public class UniverseObjectsController {
             List<Stars> listS = starsService.getAll();
             Collections.sort(listS);
             List<Constellations> constellationsList = constellationsService.getAll();
+            String engLangHelp = "/universeobjects?object=stars";
+            String ukrLangHelp = "/universeobjects_ukr?object=stars";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("constellationsList", constellationsList);
             model.put("listS", listS);
             model.put("siteTitle", siteTitle);
@@ -168,12 +176,20 @@ public class UniverseObjectsController {
             siteTitle = "Galaxies";
             List<Galaxies> listG = galaxiesService.getAll();
             Collections.sort(listG);
+            String engLangHelp = "/universeobjects?object=galaxies";
+            String ukrLangHelp = "/universeobjects_ukr?object=galaxies";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("listG", listG);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("satellites")){
             siteTitle = "Satellites";
             List<Satellites> listSat = satellitesService.getAll();
             Collections.sort(listSat);
+            String engLangHelp = "/universeobjects?object=satellites";
+            String ukrLangHelp = "/universeobjects_ukr?object=satellites";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("listSat", listSat);
             model.put("siteTitle", siteTitle);
         }

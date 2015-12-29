@@ -166,9 +166,11 @@ public class AboutUkrController {
         String imagePath;
         String siteTitle;
         byte idPl = 1;
+        String ukrLangHelp;
+        String engLangHelp;
         if (objectU.equals("planets")){
             Planets planet = planetsService.getByName(name);
-            siteTitle = planet.getName();
+            siteTitle = planet.getNameUkr();
             about = planet.getAboutUkr();
             model.addAttribute("about", about);
             imagePath = planet.getImageMain();
@@ -194,11 +196,20 @@ public class AboutUkrController {
                 String hide = "display: none";
                 model.addAttribute("hide", hide);
             }
+            if (planet.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=planets";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=planets";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=planets";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("list", listSat);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("stars")){
             Stars star = starsService.getByName(name);
-            siteTitle = star.getName();
+            siteTitle = star.getNameUkr();
             imagePath = star.getImageMain();
             model.addAttribute("mainImage", imagePath);
 
@@ -209,13 +220,22 @@ public class AboutUkrController {
             about = star.getAboutUkr();
             String hide = "display: none";
             String nameUkr = star.getNameUkr();
+            if (star.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=stars";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=stars";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=stars";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("galaxies")){
             Galaxies galaxy = galaxiesService.getByName(name);
-            siteTitle = galaxy.getName();
+            siteTitle = galaxy.getNameUkr();
             imagePath = galaxy.getImageMain();
             model.addAttribute("mainImage", imagePath);
 
@@ -226,13 +246,22 @@ public class AboutUkrController {
             about = galaxy.getAboutUkr();
             String hide = "display: none";
             String nameUkr = galaxy.getNameUkr();
+            if (galaxy.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=galaxies";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=galaxies";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=galaxies";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("solarSystem")){
             SolarSystem solarSystem = solarSystemService.getSolarSystem(idPl);
-            siteTitle = solarSystem.getName();
+            siteTitle = solarSystem.getNameUkr();
             imagePath = solarSystem.getMainImage();
             model.addAttribute("mainImage", imagePath);
 
@@ -246,11 +275,20 @@ public class AboutUkrController {
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             name = solarSystem.getName();
+            if (solarSystem.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=solarSystem";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=solarSystem";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=solarSystem";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("universe")){
             Universe universe = universeService.getUniverse(idPl);
-            siteTitle = universe.getName();
+            siteTitle = universe.getNameUkr();
             imagePath = universe.getMainImage();
             model.addAttribute("mainImage", imagePath);
 
@@ -261,13 +299,22 @@ public class AboutUkrController {
             about = universe.getAboutUkr();
             String hide = "display: none";
             String nameUkr = universe.getNameUkr();
+            if (universe.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=universe";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=universe";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=universe";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("satellites")){
             Satellites satellite = satellitesService.getByName(name);
-            siteTitle = satellite.getName();
+            siteTitle = satellite.getNameUkr();
             imagePath = satellite.getImageMain();
             model.addAttribute("mainImage", imagePath);
 
@@ -278,6 +325,15 @@ public class AboutUkrController {
             about = satellite.getAboutUkr();
             String hide = "display: none";
             String nameUkr = satellite.getNameUkr();
+            if (satellite.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=satellites";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=satellites";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=satellites";
+                ukrLangHelp = "/lang_help";
+            }
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", nameUkr);
@@ -288,6 +344,10 @@ public class AboutUkrController {
             about = news.getText();
             imagePath = news.getImage();
             String hide = "display: none";
+            engLangHelp = "/about?name="+name+"&object=news";
+            ukrLangHelp = "/lang_help";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.addAttribute("mainImage", imagePath);
             model.addAttribute("hide", hide);
             model.addAttribute("hiddenImages", hide);
@@ -296,7 +356,7 @@ public class AboutUkrController {
             model.put("siteTitle", siteTitle);
         } else if (objectU.equals("constellations")){
             Constellations constellation = constellationsService.getByName(name);
-            siteTitle = constellation.getName();
+            siteTitle = constellation.getNameUkr();
             imagePath = constellation.getMainImage();
             model.addAttribute("mainImage", imagePath);
 
@@ -307,6 +367,13 @@ public class AboutUkrController {
             about = constellation.getAboutUkr();
             String hide = "display: none";
             String nameUkr = constellation.getNameUkr();
+            if (constellation.getNameUkr() != ""){
+                engLangHelp = "/about?name="+name+"&object=constellations";
+                ukrLangHelp = "/about_ukr?name="+name+"&object=constellations";
+            } else {
+                engLangHelp = "/about?name="+name+"&object=constellations";
+                ukrLangHelp = "/lang_help";
+            }
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             model.addAttribute("name", nameUkr);

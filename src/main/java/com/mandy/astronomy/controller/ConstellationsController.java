@@ -40,6 +40,10 @@ public class ConstellationsController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        String engLangHelp = "/constellations";
+        String ukrLangHelp = "/constellations_ukr";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
 
         String title;
         String titleTwo;

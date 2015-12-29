@@ -9,6 +9,7 @@
     <META name="description" content="Site about astronomy"/>
     <META name="keywords" content="astronomy, universe, space, astronomy-mvyv.rhcloud.com"/>
     <link type="text/css" rel="stylesheet" href="/resources/css/global_navigation.css">
+    <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">
     <script src="<c:url value='http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js?ver=1.3.2' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.js' />" ></script>
     <script src="<c:url value='/resources/js/jquery.cycle.all.min.js' />" ></script>
@@ -27,6 +28,7 @@
 </head>
 <body>
 <div id="glassBox">
+    <div id="glassLang"><a href="${engLangHelp}">ENG</a>&nbsp;|&nbsp;<a href="${ukrLangHelp}">UKR</a></div>
     <div id="glassContainer">
         <div id="glassTitle">
             <span id="gTitle">ASTRONOMY</span>

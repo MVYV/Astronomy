@@ -53,7 +53,7 @@
                         <img src="${numS.image}" alt="planet or something else"/>
                     </div>
                     <div class="itemProp" style="font-weight: bold; text-transform: uppercase;">
-                            ${numS.name}
+                            ${numS.nameUkr}
                     </div>
                     <div class="itemProp">
                         <span>Дистанція до Землі:&nbsp</span><span class="itemData">${numS.distance}&nbsp<c:if test="${numS.name == 'Sun'}"><c:out value="км" /></c:if><c:if test="${numS.name != 'Sun'}"><c:out value="св. р." /></c:if></span>

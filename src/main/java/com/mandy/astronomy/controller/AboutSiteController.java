@@ -41,6 +41,10 @@ public class AboutSiteController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        String engLangHelp = "/about_site";
+        String ukrLangHelp = "/lang_help";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
 
         String title;
         String titleTwo;

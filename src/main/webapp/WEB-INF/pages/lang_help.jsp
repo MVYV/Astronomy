@@ -49,7 +49,7 @@
       </div>
     </div>
     <div id="langFooter">
-      <p>MVYV-Developing&copy</p>
+      <p>MVYV-Developing</p>
     </div>
   </div>
 </body>

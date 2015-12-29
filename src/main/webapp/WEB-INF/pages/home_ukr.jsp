@@ -24,7 +24,7 @@
             <jsp:include page="navigation.jsp"></jsp:include>
         </div>
         <div class="page_main_contentU">
-            <div class="homeBox" id="homeBox1" onclick="location.href='/universeobjects?object=planets';">
+            <div class="homeBox" id="homeBox1" onclick="location.href='/universeobjects_ukr?object=planets';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">ПЛАНЕТИ</span>
                     <p>Плане́та (грец. πλανήτης — той, що блукає) — кулястее тіло, що обертається навколо Сонця чи іншої зірки. Орбіта цього обертання дуже близька до еліпсу.
@@ -34,7 +34,7 @@
                         Планети, що перебувають поза межами Сонячної системи, називають екзопланетами.</p>
                 </div>
             </div>
-            <div class="homeBox" id="homeBox2" onclick="location.href='/universeobjects?object=stars';">
+            <div class="homeBox" id="homeBox2" onclick="location.href='/universeobjects_ukr?object=stars';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">ЗОРІ</span>
                     <p>Зоря — велетенське розжарене, самосвітне небесне тіло, у надрах якого ефективно відбуваються (або відбувались) термоядерні реакції.
@@ -44,7 +44,7 @@
                         Неозброєним оком на небі видно близько 6000 зір.</p>
                 </div>
             </div>
-            <div class="homeBox" id="homeBox3" onclick="location.href='/universeobjects?object=satellites';">
+            <div class="homeBox" id="homeBox3" onclick="location.href='/universeobjects_ukr?object=satellites';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">СУПУТНИКИ</span>
                     <p>Супутник — небесне тіло, яке рухається навколо планети або зірки. Запущені людиною у космос із дослідницькою метою пристрої,
@@ -55,7 +55,7 @@
                         Також виявлені супутники в деяких малих планет</p>
                 </div>
             </div>
-            <div class="homeBox" id="homeBox4" onclick="location.href='/universeobjects?object=galaxies';">
+            <div class="homeBox" id="homeBox4" onclick="location.href='/universeobjects_ukr?object=galaxies';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">ГАЛАКТИКИ</span>
                     <p>Гала́ктика (дав.-гр. Γαλαξίας — молочний) — велетенська гравітаційно-зв'язана система із зірок і зоряних скупчень, міжзоряного газу, пилу, і темної матері.
@@ -65,7 +65,7 @@
                         туманність Андромеди (видно в північній півкулі), Велику і Малу Магелланові Хмари (видно в південній півкулі).</p>
                 </div>
             </div>
-            <div class="homeBox" id="homeBox5" onclick="location.href='/constellations';">
+            <div class="homeBox" id="homeBox5" onclick="location.href='/constellations_ukr';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">СУЗІР'Я</span>
                     <p>Сузір'я — одна з 88 ділянок, на які поділена небесна сфера.
@@ -76,7 +76,7 @@
                         Насправді вони розташовані в нашій галактиці далеко одна від одної і лише випадково опиняються поруч, якщо їх розглядати саме з Землі.</p>
                 </div>
             </div>
-            <div class="homeBox" id="homeBox6" onclick="location.href='/about?name=solarSystem&object=solarSystem';">
+            <div class="homeBox" id="homeBox6" onclick="location.href='/about_ukr?name=solarSystem&object=solarSystem';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">СОНЯЧНА СИСТЕМА</span>
                     <p>Сонячна система — планетна система, що включає в себе центральну зірку — Сонце, і всі природні космічні об'єкти, що обертаються навколо Сонця.
@@ -89,7 +89,7 @@
                         </p>
                 </div>
             </div>
-            <div class="homeBox" id="homeBox7" onclick="location.href='/about?name=universe&object=universe';">
+            <div class="homeBox" id="homeBox7" onclick="location.href='/about_ukr?name=universe&object=universe';">
                 <div class="homeInfo">
                     <span class="homeBoxTitleUkr">ВСЕСВІТ</span>
                     <p>Всесвіт — весь матеріальний світ, різноманітний за формами, що їх приймає матерія та енергія, включаючи усі галактики, зорі, планети та інші космічні тіла.

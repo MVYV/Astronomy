@@ -38,6 +38,10 @@ public class NewsController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        String engLangHelp = "/news";
+        String ukrLangHelp = "/lang_help";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
 
         String title;
         String titleTwo;

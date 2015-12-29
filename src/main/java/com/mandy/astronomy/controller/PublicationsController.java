@@ -45,6 +45,10 @@ public class PublicationsController {
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        String engLangHelp = "/publications";
+        String ukrLangHelp = "/lang_help";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
 
         String title;
         String titleTwo;

@@ -155,7 +155,7 @@ public class UniverseObjectsUkrController {
         }
 
         if (objectU.equals("planets")){
-            siteTitle = "Planets";
+            siteTitle = "Планети";
             List<Planets> list = planetsService.getAll();
             List<Planets> planetsList = new ArrayList<Planets>();
             for (int i = 0; i < list.size(); i++){
@@ -164,10 +164,14 @@ public class UniverseObjectsUkrController {
                     planetsList.add(planet);
                 }
             }
+            String engLangHelp = "/universeobjects?object=planets";
+            String ukrLangHelp = "/universeobjects_ukr?object=planets";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("list", planetsList);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("stars")){
-            siteTitle = "Stars";
+            siteTitle = "Зорі";
             List<Stars> listS = starsService.getAll();
             List<Stars> starsList = new ArrayList<Stars>();
             for (int i = 0; i < listS.size(); i++){
@@ -176,11 +180,15 @@ public class UniverseObjectsUkrController {
                     starsList.add(star);
                 }
             }
+            String engLangHelp = "/universeobjects?object=stars";
+            String ukrLangHelp = "/universeobjects_ukr?object=stars";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             Collections.sort(listS);
             model.put("listS", starsList);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("galaxies")){
-            siteTitle = "Galaxies";
+            siteTitle = "Галактики";
             List<Galaxies> listG = galaxiesService.getAll();
             List<Galaxies> galaxiesList = new ArrayList<Galaxies>();
             for (int i = 0; i < listG.size(); i++){
@@ -190,10 +198,14 @@ public class UniverseObjectsUkrController {
                 }
             }
             Collections.sort(listG);
+            String engLangHelp = "/universeobjects?object=galaxies";
+            String ukrLangHelp = "/universeobjects_ukr?object=planets";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("listG", galaxiesList);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("satellites")){
-            siteTitle = "Satellites";
+            siteTitle = "Супутники";
             List<Satellites> listSat = satellitesService.getAll();
             List<Satellites> satellitesList = new ArrayList<Satellites>();
             for (int i = 0; i < listSat.size(); i++){
@@ -203,6 +215,10 @@ public class UniverseObjectsUkrController {
                 }
             }
             Collections.sort(listSat);
+            String engLangHelp = "/universeobjects?object=satellites";
+            String ukrLangHelp = "/universeobjects_ukr?object=satellites";
+            model.put("engLangHelp", engLangHelp);
+            model.put("ukrLangHelp", ukrLangHelp);
             model.put("listSat", satellitesList);
             model.put("siteTitle", siteTitle);
         }

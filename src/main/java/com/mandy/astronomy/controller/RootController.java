@@ -9,6 +9,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -22,7 +23,12 @@ public class RootController {
     private UsersService usersService;
 
     @RequestMapping(value = "/")
-    public String getIndex(){
+    public String getIndex(ModelMap model)
+    {
+        String engLangHelp = "/";
+        String ukrLangHelp = "/index_ukr";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
         return "index";
     }
 
@@ -32,12 +38,16 @@ public class RootController {
     }
 
     @RequestMapping(value = "/home")
-    public String getHome(Model model){
+    public String getHome(ModelMap model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        String engLangHelp = "/home";
+        String ukrLangHelp = "/home_ukr";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
 
         return "home";
     }
@@ -64,12 +74,16 @@ public class RootController {
     }
 
     @RequestMapping(value = "/home_ukr")
-    public String getHomeUkr(Model model){
+    public String getHomeUkr(ModelMap model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
             model.addAttribute("username", userDetails.getUsername());
         }
+        String engLangHelp = "/home";
+        String ukrLangHelp = "/home_ukr";
+        model.put("engLangHelp", engLangHelp);
+        model.put("ukrLangHelp", ukrLangHelp);
 
         return "home_ukr";
     }

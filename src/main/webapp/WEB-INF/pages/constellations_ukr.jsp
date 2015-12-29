@@ -3,7 +3,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title>Constellations | Astronomy-mvyv.rhcloud.com</title>
+    <title>Сузір'я | Astronomy-mvyv.rhcloud.com</title>
     <META http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <script src="<c:url value='/resources/js/jquery-1.11.3.js' />" ></script>
     <link type="text/css" rel="stylesheet" href="/resources/css/pages.css">

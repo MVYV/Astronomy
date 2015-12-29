@@ -642,12 +642,20 @@ table
 {
     padding: 10px;
 }
-.objectInfoTitle
+.objectInfoTitle, .objectInfoTitleUkr
 {
     text-align: center;
-    font-family: corduroy;
     font-size: 20px;
     margin-bottom: 5px;
+}
+.objectInfoTitle
+{
+    font-family: corduroy;
+}
+.objectInfoTitleUkr
+{
+    font-family: Verdana;
+    text-transform: uppercase;
 }
 .objectInfoImg
 {
@@ -672,19 +680,33 @@ table
     padding-right: 10px;
     overflow: visible;
 }
-.headerLang a
+#glassLang
 {
+    width: 1050px;
+    height: 25px;
+    top: 0;
+    left: 50%;
+    margin-left: -525px;
+    position: absolute;
+    font-size: 14px;
+    font-family: Verdana;
     color: #deb887;
+    text-align: right;
+    padding-top: 5px;
+    overflow: visible;
+}
+.headerLang a, #glassLang a
+{
+    color: #ffffff;
     text-decoration: none;
     user-select: none;
     -ms-user-select: none;
     -webkit-user-select: none;
     -moz-user-select: none;
 }
-.headerLang a:hover
+.headerLang a:hover, #glassLang a:hover
 {
-    color: #dcdcdc;
-
+    color: #deb887;
 }
 .headerUpper
 {
