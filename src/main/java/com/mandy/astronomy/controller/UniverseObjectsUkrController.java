@@ -1,7 +1,13 @@
 package com.mandy.astronomy.controller;
 
-import com.mandy.astronomy.entity.*;
-import com.mandy.astronomy.service.*;
+import com.mandy.astronomy.entity.Galaxies;
+import com.mandy.astronomy.entity.Planets;
+import com.mandy.astronomy.entity.Satellites;
+import com.mandy.astronomy.entity.Stars;
+import com.mandy.astronomy.service.GalaxiesService;
+import com.mandy.astronomy.service.PlanetsService;
+import com.mandy.astronomy.service.SatellitesService;
+import com.mandy.astronomy.service.StarsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.AnonymousAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -18,7 +24,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-public class UniverseObjectsController {
+public class UniverseObjectsUkrController {
 
     @Autowired
     private PlanetsService planetsService;
@@ -32,11 +38,8 @@ public class UniverseObjectsController {
     @Autowired
     private SatellitesService satellitesService;
 
-    @Autowired
-    private ConstellationsService constellationsService;
-
-    @RequestMapping(value = "/universeobjects", method = RequestMethod.GET)
-    public String getUniverseObject(
+    @RequestMapping(value = "/universeobjects_ukr", method = RequestMethod.GET)
+    public String getUniverseObjectUkr(
             @RequestParam("object") String objectU, ModelMap model)
     {
         UniverseObjectsController uoc = new UniverseObjectsController();
@@ -154,29 +157,55 @@ public class UniverseObjectsController {
         if (objectU.equals("planets")){
             siteTitle = "Planets";
             List<Planets> list = planetsService.getAll();
-            model.put("list", list);
+            List<Planets> planetsList = new ArrayList<Planets>();
+            for (int i = 0; i < list.size(); i++){
+                Planets planet = list.get(i);
+                if (planet.getNameUkr() != ""){
+                    planetsList.add(planet);
+                }
+            }
+            model.put("list", planetsList);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("stars")){
             siteTitle = "Stars";
             List<Stars> listS = starsService.getAll();
+            List<Stars> starsList = new ArrayList<Stars>();
+            for (int i = 0; i < listS.size(); i++){
+                Stars star = listS.get(i);
+                if (star.getNameUkr() != ""){
+                    starsList.add(star);
+                }
+            }
             Collections.sort(listS);
-            List<Constellations> constellationsList = constellationsService.getAll();
-            model.put("constellationsList", constellationsList);
-            model.put("listS", listS);
+            model.put("listS", starsList);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("galaxies")){
             siteTitle = "Galaxies";
             List<Galaxies> listG = galaxiesService.getAll();
+            List<Galaxies> galaxiesList = new ArrayList<Galaxies>();
+            for (int i = 0; i < listG.size(); i++){
+                Galaxies galaxy = listG.get(i);
+                if (galaxy.getNameUkr() != ""){
+                    galaxiesList.add(galaxy);
+                }
+            }
             Collections.sort(listG);
-            model.put("listG", listG);
+            model.put("listG", galaxiesList);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("satellites")){
             siteTitle = "Satellites";
             List<Satellites> listSat = satellitesService.getAll();
+            List<Satellites> satellitesList = new ArrayList<Satellites>();
+            for (int i = 0; i < listSat.size(); i++){
+                Satellites satellite = listSat.get(i);
+                if (satellite.getNameUkr() != ""){
+                    satellitesList.add(satellite);
+                }
+            }
             Collections.sort(listSat);
-            model.put("listSat", listSat);
+            model.put("listSat", satellitesList);
             model.put("siteTitle", siteTitle);
         }
-        return "universeobjects";
+        return "universeobjects_ukr";
     }
 }

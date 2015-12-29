@@ -40,12 +40,12 @@
     <div id="glassFooter">
         <table id="glassTable" border="0" style="font-family: Verdana;">
             <tr>
-                <th class="glassLink" id="glassL"><a href="/universeobjects?object=planets">Планети</a></th>
-                <th class="glassLink"><a href="/universeobjects?object=satellites">Супутники</a></th>
-                <th class="glassLink"><a href="/universeobjects?object=stars">Зорі</a></th>
-                <th class="glassLink"><a href="/universeobjects?object=galaxies">Галактики</a></th>
-                <th class="glassLink"><a href="/about?name=solarSystem&object=solarSystem">Сонячна Система</a></th>
-                <th class="glassLink"><a href="/about?name=universe&object=universe">Всесвіт</a></th>
+                <th class="glassLink" id="glassL"><a href="/universeobjects_ukr?object=planets">Планети</a></th>
+                <th class="glassLink"><a href="/universeobjects_ukr?object=satellites">Супутники</a></th>
+                <th class="glassLink"><a href="/universeobjects_ukr?object=stars">Зорі</a></th>
+                <th class="glassLink"><a href="/universeobjects_ukr?object=galaxies">Галактики</a></th>
+                <th class="glassLink"><a href="/about_ukr?name=solarSystem&object=solarSystem">Сонячна Система</a></th>
+                <th class="glassLink"><a href="/about_ukr?name=universe&object=universe">Всесвіт</a></th>
                 <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
                     <th class="glassLink"><a href="#modal_enter">Увійти</a></th>
                 </sec:authorize>

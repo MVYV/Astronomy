@@ -18,7 +18,7 @@ import java.util.Collections;
 import java.util.List;
 
 @Controller
-public class AboutController {
+public class AboutUkrController {
 
     @Autowired
     private PlanetsService planetsService;
@@ -44,8 +44,8 @@ public class AboutController {
     @Autowired
     private ConstellationsService constellationsService;
 
-    @RequestMapping(value = "/about", method = RequestMethod.GET)
-    public String getAbout(
+    @RequestMapping(value = "/about_ukr", method = RequestMethod.GET)
+    public String getAboutUkr(
             @RequestParam("name") String name,
             @RequestParam("object") String objectU, ModelMap model)
     {
@@ -169,7 +169,7 @@ public class AboutController {
         if (objectU.equals("planets")){
             Planets planet = planetsService.getByName(name);
             siteTitle = planet.getName();
-            about = planet.getAbout();
+            about = planet.getAboutUkr();
             model.addAttribute("about", about);
             imagePath = planet.getImageMain();
             model.addAttribute("mainImage", imagePath);
@@ -178,14 +178,12 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            subTitle = name + "'s satellites";
-            if (name.equals("Uranus")){
-                subTitle = name + "' satellites";
-            }
-            colOne = "Name";
-            colTwo = "Temperature (K)";
-            colThree = "Planet";
-            model.addAttribute("name", name);
+            subTitle = "Супутники";
+            colOne = "Ім'я";
+            colTwo = "Температура (K)";
+            colThree = "Планета";
+            String nameUkr = planet.getNameUkr();
+            model.addAttribute("name", nameUkr);
             model.addAttribute("subTitle", subTitle);
             model.addAttribute("colOne", colOne);
             model.addAttribute("colTwo", colTwo);
@@ -208,11 +206,12 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            about = star.getAbout();
-            String hide = "display: none";;
+            about = star.getAboutUkr();
+            String hide = "display: none";
+            String nameUkr = star.getNameUkr();
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
-            model.addAttribute("name", name);
+            model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("galaxies")){
             Galaxies galaxy = galaxiesService.getByName(name);
@@ -224,11 +223,12 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            about = galaxy.getAbout();
+            about = galaxy.getAboutUkr();
             String hide = "display: none";
+            String nameUkr = galaxy.getNameUkr();
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
-            model.addAttribute("name", name);
+            model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("solarSystem")){
             SolarSystem solarSystem = solarSystemService.getSolarSystem(idPl);
@@ -240,12 +240,13 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            about = solarSystem.getAbout();
+            about = solarSystem.getAboutUkr();
             String hide = "display: none";
+            String nameUkr = solarSystem.getNameUkr();
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
             name = solarSystem.getName();
-            model.addAttribute("name", name);
+            model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("universe")){
             Universe universe = universeService.getUniverse(idPl);
@@ -257,11 +258,12 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            about = universe.getAbout();
+            about = universe.getAboutUkr();
             String hide = "display: none";
+            String nameUkr = universe.getNameUkr();
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
-            model.addAttribute("name", name);
+            model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }else if (objectU.equals("satellites")){
             Satellites satellite = satellitesService.getByName(name);
@@ -273,11 +275,12 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            about = satellite.getAbout();
+            about = satellite.getAboutUkr();
             String hide = "display: none";
+            String nameUkr = satellite.getNameUkr();
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
-            model.addAttribute("name", name);
+            model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         } else if (objectU.equals("news")){
             News news = newsService.getByTitle(name);
@@ -301,13 +304,14 @@ public class AboutController {
             String [] imagesResult = imagesList.split(",");
             model.put("objectImages", imagesResult);
 
-            about = constellation.getAbout();
+            about = constellation.getAboutUkr();
             String hide = "display: none";
+            String nameUkr = constellation.getNameUkr();
             model.addAttribute("hide", hide);
             model.addAttribute("about", about);
-            model.addAttribute("name", name);
+            model.addAttribute("name", nameUkr);
             model.put("siteTitle", siteTitle);
         }
-        return "about";
+        return "about_ukr";
     }
 }

@@ -22,6 +22,12 @@ public class Universe {
     @Column(name = "universe_images")
     private String images;
 
+    @Column(name = "universe_name_ukr")
+    private String nameUkr;
+
+    @Column(name = "universe_about_ukr")
+    private String aboutUkr;
+
     public Universe(){}
 
     public Universe(String name, String about, String mainImage, String images){
@@ -69,5 +75,21 @@ public class Universe {
 
     public String getImages() {
         return images;
+    }
+
+    public void setNameUkr(String nameUkr) {
+        this.nameUkr = nameUkr;
+    }
+
+    public String getNameUkr() {
+        return nameUkr;
+    }
+
+    public void setAboutUkr(String aboutUkr) {
+        this.aboutUkr = aboutUkr;
+    }
+
+    public String getAboutUkr() {
+        return aboutUkr;
     }
 }

@@ -22,6 +22,9 @@ public class Stars implements Comparable<Stars>{
     @Column(name = "stars_about")
     private String about;
 
+    @Column(name = "stars_constellation")
+    private String constellation;
+
     @Column(name = "stars_image")
     private String image;
 
@@ -34,9 +37,18 @@ public class Stars implements Comparable<Stars>{
     @Column(name = "stars_imagesmall")
     private String imageSmall;
 
+    @Column(name = "stars_name_ukr")
+    private String nameUkr;
+
+    @Column(name = "stars_about_ukr")
+    private String aboutUkr;
+
+    @Column(name = "stars_constellation_ukr")
+    private String constellationUkr;
+
     public Stars(){}
 
-    public Stars(String name, double distance, double radius, String about, String image, String images, String imageMain, String imageSmall){
+    public Stars(String name, double distance, double radius, String about, String image, String images, String imageMain, String imageSmall, String constellation){
         this.name = name;
         this.distance = distance;
         this.radius = radius;
@@ -45,6 +57,7 @@ public class Stars implements Comparable<Stars>{
         this.images = images;
         this.imageMain = imageMain;
         this.imageSmall = imageSmall;
+        this.constellation = constellation;
     }
 
     public int compareTo(Stars star){
@@ -83,6 +96,14 @@ public class Stars implements Comparable<Stars>{
         return radius;
     }
 
+    public void setConstellation(String constellation) {
+        this.constellation = constellation;
+    }
+
+    public String getConstellation() {
+        return constellation;
+    }
+
     public void setAbout(String about){ this.about = about; }
 
     public String getAbout(){ return about; }
@@ -109,5 +130,29 @@ public class Stars implements Comparable<Stars>{
 
     public String getImageSmall() {
         return imageSmall;
+    }
+
+    public void setNameUkr(String nameUkr) {
+        this.nameUkr = nameUkr;
+    }
+
+    public String getNameUkr() {
+        return nameUkr;
+    }
+
+    public void setAboutUkr(String aboutUkr) {
+        this.aboutUkr = aboutUkr;
+    }
+
+    public String getAboutUkr() {
+        return aboutUkr;
+    }
+
+    public void setConstellationUkr(String constellationUkr) {
+        this.constellationUkr = constellationUkr;
+    }
+
+    public String getConstellationUkr() {
+        return constellationUkr;
     }
 }

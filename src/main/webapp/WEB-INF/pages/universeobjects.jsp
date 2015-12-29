@@ -48,6 +48,11 @@
             </div>
             </c:forEach>
             <c:forEach var="numS" items="${listS}">
+                <c:forEach var="constellations" items="${constellationsList}">
+                    <c:if test="${numS.constellation == constellations.name}">
+                        <c:set var="nameConstellation" value="${numS.name}"/>
+                    </c:if>
+                </c:forEach>
                 <div id="planetBox" class="itemBox">
                     <div class="itemImg">
                         <img src="${numS.image}" alt="planet or something else"/>
@@ -56,11 +61,35 @@
                             ${numS.name}
                     </div>
                     <div class="itemProp">
-                        <span>Distance to The Earth:&nbsp</span><span class="itemData">${numS.distance}&nbsp<c:if test="${numS.name == 'Sun'}"><c:out value="km" /></c:if><c:if test="${numS.name != 'Sun'}"><c:out value="ly" /></c:if></span>
+                        <span>Distance to The Earth:&nbsp</span><span class="itemData">${numS.distance}&nbsp
+                            <c:choose>
+                                <c:when test="${numS.name == 'Sun'}">
+                                    <c:out value="km" />
+                                </c:when>
+                                <c:when test="${numS.name == 'NML Cygni'}">
+                                    <c:out value="pc" />
+                                </c:when>
+                                <c:otherwise>
+                                    <c:out value="ly" />
+                                </c:otherwise>
+                            </c:choose>
+                        </span>
                     </div>
                     <div class="itemProp">
                         <span>Radius:&nbsp</span><span class="itemData">${numS.radius}&nbsp<c:if test="${numS.name == 'Sun'}"><c:out value="km" /></c:if><c:if test="${numS.name != 'Sun'}"><c:out value="Rs" /></c:if></span>
                     </div>
+                    <c:choose>
+                        <c:when test="${numS.name == nameConstellation}">
+                            <div class="itemProp">
+                                <span>Constellation:&nbsp</span><span class="itemData"><a href="/about?name=${numS.constellation}&object=constellations" class="itemLink">${numS.constellation}</a></span>
+                            </div>
+                        </c:when>
+                        <c:otherwise>
+                            <div class="itemProp">
+                                <span>Constellation:&nbsp</span><span class="itemData">${numS.constellation}</span>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
                     <div class="itemProp" style="padding-top: 9px;">
                         <div class="objLink">
                             <a href="/about?name=${numS.name}&object=stars">Read More</a>

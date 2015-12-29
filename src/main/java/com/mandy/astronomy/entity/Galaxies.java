@@ -33,6 +33,15 @@ public class Galaxies implements Comparable<Galaxies>{
 
     @Column(name = "galaxies_imagesmall")
     private String imageSmall;
+
+    @Column(name = "galaxies_name_ukr")
+    private String nameUkr;
+
+    @Column(name = "galaxies_about_ukr")
+    private String aboutUkr;
+
+    @Column(name = "galaxies_type_ukr")
+    private String typeUkr;
     
     public Galaxies(){}
 
@@ -111,5 +120,29 @@ public class Galaxies implements Comparable<Galaxies>{
 
     public String getImageSmall() {
         return imageSmall;
+    }
+
+    public void setNameUkr(String nameUkr) {
+        this.nameUkr = nameUkr;
+    }
+
+    public String getNameUkr() {
+        return nameUkr;
+    }
+
+    public void setAboutUkr(String aboutUkr) {
+        this.aboutUkr = aboutUkr;
+    }
+
+    public String getAboutUkr() {
+        return aboutUkr;
+    }
+
+    public void setTypeUkr(String typeUkr) {
+        this.typeUkr = typeUkr;
+    }
+
+    public String getTypeUkr() {
+        return typeUkr;
     }
 }

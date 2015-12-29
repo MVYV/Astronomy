@@ -13,7 +13,7 @@
 <div id="nav">
 
     <ul id="menu">
-        <li><span><a href="/home">ГОЛОВНА</a></span></li>
+        <li><span><a href="/home_ukr">ГОЛОВНА</a></span></li>
         <li><span><a href="#">ІНФОРМАЦІЯ</a></span>
             <ul>
                 <li><a href="/contacts">КОНТАКТИ</a></li>
@@ -24,15 +24,15 @@
         <li><span><a href="/publications">ПУБЛІКАЦІЇ</a></span></li>
         <li><span><a href="#">ТАБЛИЦІ</a></span>
             <ul>
-                <li><a href="/universeobjects?object=planets">ПЛАНЕТИ</a></li>
-                <li><a href="/universeobjects?object=satellites">СУПУТНИКИ</a></li>
-                <li><a href="/universeobjects?object=stars">ЗОРІ</a></li>
-                <li><a href="/universeobjects?object=galaxies">ГАЛАКТИКИ</a></li>
+                <li><a href="/universeobjects_ukr?object=planets">ПЛАНЕТИ</a></li>
+                <li><a href="/universeobjects_ukr?object=satellites">СУПУТНИКИ</a></li>
+                <li><a href="/universeobjects_ukr?object=stars">ЗОРІ</a></li>
+                <li><a href="/universeobjects_ukr?object=galaxies">ГАЛАКТИКИ</a></li>
             </ul>
         </li>
-        <li><span><a href="/constellations">СУЗІР'Я</a></span></li>
-        <li><span><a href="/about?name=solarSystem&object=solarSystem">СОНЯЧНА СИСТЕМА</a></span></li>
-        <li><span><a href="/about?name=universe&object=universe">ВСЕСВІТ</a></span></li>
+        <li><span><a href="/constellations_ukr">СУЗІР'Я</a></span></li>
+        <li><span><a href="/about_ukr?name=solarSystem&object=solarSystem">СОНЯЧНА СИСТЕМА</a></span></li>
+        <li><span><a href="/about_ukr?name=universe&object=universe">ВСЕСВІТ</a></span></li>
         <sec:authorize access="hasRole('ROLE_ANONYMOUS')">
             <li><span><a href="#modal_enter" title="">УВІЙТИ</a></span></li>
         </sec:authorize>

@@ -43,6 +43,24 @@ public class Constellations implements Comparable<Constellations>{
     @Column(name = "constellations_main_image")
     private String mainImage;
 
+    @Column(name = "constellations_name_ukr")
+    private String nameUkr;
+
+    @Column(name = "constellations_about_ukr")
+    private String aboutUkr;
+
+    @Column(name = "constellations_brightest_star_ukr")
+    private String brightestStarUkr;
+
+    @Column(name = "constellations_nearest_star_ukr")
+    private String nearestStarUkr;
+
+    @Column(name = "constellations_family_ukr")
+    private String familyUkr;
+
+    @Column(name = "constellations_area_ukr")
+    private String areaUkr;
+
     public Constellations(){}
 
     public Constellations(long id, String name, String about, String area, String brightestStar, String nearestStar, String mainStar, String quadrant, String family, String image, String images, String mainImage){
@@ -158,5 +176,53 @@ public class Constellations implements Comparable<Constellations>{
 
     public String getMainImage() {
         return mainImage;
+    }
+
+    public void setNameUkr(String nameUkr) {
+        this.nameUkr = nameUkr;
+    }
+
+    public String getNameUkr() {
+        return nameUkr;
+    }
+
+    public void setAboutUkr(String aboutUkr) {
+        this.aboutUkr = aboutUkr;
+    }
+
+    public String getAboutUkr() {
+        return aboutUkr;
+    }
+
+    public void setBrightestStarUkr(String brightestStarUkr) {
+        this.brightestStarUkr = brightestStarUkr;
+    }
+
+    public String getBrightestStarUkr() {
+        return brightestStarUkr;
+    }
+
+    public void setNearestStarUkr(String nearestStarUkr) {
+        this.nearestStarUkr = nearestStarUkr;
+    }
+
+    public String getNearestStarUkr() {
+        return nearestStarUkr;
+    }
+
+    public void setFamilyUkr(String familyUkr) {
+        this.familyUkr = familyUkr;
+    }
+
+    public String getFamilyUkr() {
+        return familyUkr;
+    }
+
+    public void setAreaUkr(String areaUkr) {
+        this.areaUkr = areaUkr;
+    }
+
+    public String getAreaUkr() {
+        return areaUkr;
     }
 }

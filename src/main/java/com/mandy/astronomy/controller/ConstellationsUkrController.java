@@ -10,37 +10,31 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
 @Controller
-public class UniverseObjectsController {
+public class ConstellationsUkrController {
 
     @Autowired
-    private PlanetsService planetsService;
+    private ConstellationsService constellationsService;
 
     @Autowired
     private StarsService starsService;
 
     @Autowired
-    private GalaxiesService galaxiesService;
+    private PlanetsService planetsService;
 
     @Autowired
     private SatellitesService satellitesService;
 
     @Autowired
-    private ConstellationsService constellationsService;
+    private GalaxiesService galaxiesService;
 
-    @RequestMapping(value = "/universeobjects", method = RequestMethod.GET)
-    public String getUniverseObject(
-            @RequestParam("object") String objectU, ModelMap model)
-    {
-        UniverseObjectsController uoc = new UniverseObjectsController();
-
+    @RequestMapping(value = "/constellations_ukr")
+    public String getConstellationsUkr(ModelMap model){
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         if (!(authentication instanceof AnonymousAuthenticationToken)){
             UserDetails userDetails = (UserDetails) authentication.getPrincipal();
@@ -49,13 +43,12 @@ public class UniverseObjectsController {
 
         String title;
         String titleTwo;
-        String siteTitle;
         int randomNum = (int) (Math.random()*10);
-        int rnd = randomNum/5;
+        int rnd = randomNum/4;
         System.out.println("rnd"+rnd);
         int rand = rnd + 2;
         System.out.println("rand"+rand);
-        if ((rnd == 0 || objectU.equals("planets")) && !objectU.equals("stars")){
+        if (rnd == 0){
             title = "STARS";
             model.addAttribute("title", title);
             List<Stars> starsList = starsService.getAll();
@@ -77,7 +70,7 @@ public class UniverseObjectsController {
                 stars1.add(star1);
             }
             model.put("stars", stars1);
-        } else if ((rnd == 1 || objectU.equals("stars")) && !objectU.equals("planets")){
+        } else {
             title = "PLANETS";
             model.addAttribute("title", title);
             List<Planets> planetsList = planetsService.getAll();
@@ -101,7 +94,7 @@ public class UniverseObjectsController {
             }
             model.put("planets", planets);
         }
-        if ((rand == 2 || objectU.equals("galaxies")) && !objectU.equals("satellites")){
+        if (rand == 2){
             titleTwo = "SATELLITES";
             model.addAttribute("titleTwo", titleTwo);
             List<Satellites> satellitesList = satellitesService.getAll();
@@ -123,7 +116,7 @@ public class UniverseObjectsController {
                 satellites.add(satellite);
             }
             model.put("satellites", satellites);
-        } else if ((rand == 3 || objectU.equals("satellites")) && !objectU.equals("galaxies")){
+        } else {
             titleTwo = "GALAXIES";
             model.addAttribute("titleTwo", titleTwo);
             List<Galaxies> galaxiesList = galaxiesService.getAll();
@@ -151,32 +144,18 @@ public class UniverseObjectsController {
             model.put("galaxies", galaxies);
         }
 
-        if (objectU.equals("planets")){
-            siteTitle = "Planets";
-            List<Planets> list = planetsService.getAll();
-            model.put("list", list);
-            model.put("siteTitle", siteTitle);
-        }else if (objectU.equals("stars")){
-            siteTitle = "Stars";
-            List<Stars> listS = starsService.getAll();
-            Collections.sort(listS);
-            List<Constellations> constellationsList = constellationsService.getAll();
-            model.put("constellationsList", constellationsList);
-            model.put("listS", listS);
-            model.put("siteTitle", siteTitle);
-        }else if (objectU.equals("galaxies")){
-            siteTitle = "Galaxies";
-            List<Galaxies> listG = galaxiesService.getAll();
-            Collections.sort(listG);
-            model.put("listG", listG);
-            model.put("siteTitle", siteTitle);
-        }else if (objectU.equals("satellites")){
-            siteTitle = "Satellites";
-            List<Satellites> listSat = satellitesService.getAll();
-            Collections.sort(listSat);
-            model.put("listSat", listSat);
-            model.put("siteTitle", siteTitle);
+        List<Constellations> constellationsList = constellationsService.getAll();
+        List<Stars> starsList = starsService.getAll();
+        List<Constellations> constellations = new ArrayList<Constellations>();
+        for (int i = 0; i < constellationsList.size(); i++){
+            Constellations constellation = constellationsList.get(i);
+            if (constellation.getNameUkr() != ""){
+                constellations.add(constellation);
+            }
         }
-        return "universeobjects";
+        Collections.sort(constellationsList);
+        model.put("starsList", starsList);
+        model.put("constellations", constellations);
+        return "constellations_ukr";
     }
 }

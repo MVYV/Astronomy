@@ -37,6 +37,12 @@ public class Planets {
     @Column(name = "planets_smallimage")
     private String imageSmall;
 
+    @Column(name = "planets_name_ukr")
+    private String nameUkr;
+
+    @Column(name = "planets_about_ukr")
+    private String aboutUkr;
+
     public Planets(){}
 
     public Planets(String name, int satellites, double radius,String about, double temperature, String image, String images, String  imageMain, String imageSmall){
@@ -125,5 +131,21 @@ public class Planets {
 
     public String getImageSmall() {
         return imageSmall;
+    }
+
+    public void setNameUkr(String nameUkr) {
+        this.nameUkr = nameUkr;
+    }
+
+    public String getNameUkr() {
+        return nameUkr;
+    }
+
+    public void setAboutUkr(String aboutUkr) {
+        this.aboutUkr = aboutUkr;
+    }
+
+    public String getAboutUkr() {
+        return aboutUkr;
     }
 }
